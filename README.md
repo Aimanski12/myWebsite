@@ -1,68 +1,38 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## My Website Page
 
-## Available Scripts
+> This is the repo of my website. I want to level-up my game so I decided to build my official website by my own hand. As of this time, this website is currently being developed by the owner. 
 
-In the project directory, you can run:
+[View it live from your browser.](https://aimanadlawan.com)<br>
 
-### `npm start`
+> Things I learned in this project;
+  * How to sketch design a website using figma.
+  * How to build a fully responsive website.
+  * How to use [React Router](https://reacttraining.com/react-router/).
+  * How to query data from a third party library using `axios` with the `async` and `await` promise.
+  * How to pass states aroun the application without any redux.
+  
+  > References:
+  * [Figma](https://www.figma.com/)
+  * [Rest Countries](https://restcountries.eu/)
+  * [API Frankfurter](https://www.frankfurter.app/) 
+  * [Axios](https://www.npmjs.com/package/axios)
+  * [Async and Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+  * [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+  * [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Contributing
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+If you find bugs in my website, pull requests are always welcome. You can [create an issue here](https://github.com/Aimanski12/ReactJS_Projects/issues/new).
+Your :sparkles: are also greatly appreciated.
 
-### `npm test`
+If you want to know my JS project you can see it [here](http://bit.ly/aiman-javascript-projects)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Author
 
-### `npm run build`
+[Aimanski](http://bit.ly/aiman-profile-github).
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## License 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Copyright © 2020, [Aimanski12](http://bit.ly/aiman-profile-github).
+Released under the [MIT License](LICENSE).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

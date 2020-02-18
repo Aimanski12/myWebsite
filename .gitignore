@@ -6,9 +6,10 @@
 /.firebase
 /.pnp
 .pnp.js
-.firebaserc
 firebase.json
 
+.firebaserc
+.gitignore
 
 
 # testing

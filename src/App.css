@@ -1,38 +1,321 @@
 .App {
   text-align: center;
+  padding: 0;
+  margin: 0;
+  font-family: 'Amarante';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+  background: #EEE4E4;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: #DFDFDF;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.home-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('/main-background.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.bottom-header {
+  width: 100%;
+  background: url('/bottom-header.svg') no-repeat center center scroll;
+  background-size: cover;
+  height: 165px;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 992px) {
+  .home-page {
+    background: url('/main-small-background-992.png') no-repeat center center fixed;
+    background-size: cover;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+@media only screen and (max-width: 568px) {
+  .home-page {
+    background: url('/main-small-background-568.png') no-repeat fixed;
+    background-size: cover;
+  }
+}
+
+
+@media only screen and (max-width: 420px) {
+  .home-page {
+    background: url('/main-small-background-420.png') no-repeat fixed;
+    background-size: contain;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section-projects {
+  width: 100%;
+  height: 600px;
+  font-family: 'Montserrat', 'Sans Serif';
+  color: #0d2147;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: linear-gradient(90.18deg, #EEE4E4 -4.21%, #F7E1E1 51.49%, #EEE4E4 112.04%);
 }
 
-.App-link {
-  color: #61dafb;
+.section-projects .project-features {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10%;
+  margin-bottom: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.project-features{
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+
+.project-features-scroll{
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+
+
+.features {
+  width: 26%;
+  margin: 0 10px;
+}
+
+.features h3 {
+  font-weight: 600;
+  font-size: 0.8em;
+}
+
+.features img{
+  width: 140px;
+}
+
+.features img:hover {
+  cursor: pointer;
+}
+
+.features p {
+  font-size: .62em;
+}
+
+
+
+.button {
+  width: 160px;
+  height: 50px;
+  background: teal;
+  margin: 0 auto !important;
+}
+
+
+
+@media(max-width: 1200px) {
+  .features p {
+    font-size: .55em;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media(max-width: 992px) {
+   .section-projects {
+     height: 1030px;
+   }
+
+  .section-projects .project-features {
+    flex-direction: column;
+    margin-bottom: 15px;
   }
+
+  .features {
+    width: 60%;
+    margin-bottom: 15px;
+    padding: 10px 0
+  }
+
+  .features img {
+    width: 130px;
+  }
+  .features p {
+    font-size: .55em;
+  }
+}
+
+
+@media(max-width: 768px) {
+  .section-projects {
+    height: 1000px;
+  }
+  .features {
+    width: 80%;
+  }
+
+  .section-projects .project-features {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  .features img {
+    width: 120px;
+  }
+
+  .features p {
+    font-size: .64em;
+  }
+}
+
+
+
+@media(max-width: 568px) {
+  .features {
+    width: 90%;
+  }
+  .features p {
+    font-size: .67em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.landing2 {
+  background: gray;
+  height: 100vh
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.default-color-gold {
+  color: #b19d5f
+}
+
+.default-color-dark {
+  color: #35424e
+}
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #121f2c;
+  /* background: linear-gradient(180deg, #0D2147 0%, #B19D5F 100%); */
+  transition: all 1.2s linear;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1a2839;
+  /* background: linear-gradient(358.97deg, #0D2147 0.03%, #B19D5F 102.54%); */
+  transition: all 1.2s linear;
 }

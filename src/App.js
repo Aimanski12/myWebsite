@@ -7,13 +7,11 @@ import HeaderText from './components/Header/Header'
 import SingleFeature from './components/Single-Feature/Single-Feature'
 import AboutMe from './components/About_Me/About_Me'
 
-import app_icon from './images/logo/app-icon.svg'
-import laptop_icon from './images/logo/laptop-icon.svg'
-import camera_icon from './images/logo/camera-icon.svg'
+import SectionProjects from './components/Section-Projects/Section-Projects'
 
 
-import Button from './components/Button/Button'
-
+// import Button from './components/Button/Button'
+import photo from './images/photos/photo.png'
 
 const App = () => {
 
@@ -48,27 +46,70 @@ const App = () => {
         <SingleFeature />
         <AboutMe />
 
-        <div className="section-projects" >
-          <div className="project-features project-features-scroll">
-            <div className="features">
-              <h3>Websites</h3>
-              <img src={laptop_icon} alt=""/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut earum animi cupiditate qui a laborum voluptas culpa, atque laudantium optio natus enim tenetur!</p>
-            </div>
-            <div className="features">
-              <h3>Apps</h3>
-              <img src={app_icon} alt=""/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut earum animi cupiditate qui a laborum voluptas culpa, atque laudantium optio natus enim tenetur!</p>
-            </div>
-            <div className="features">
-              <h3>Photography</h3>
-              <img src={camera_icon} alt=""/>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut earum animi cupiditate qui a laborum voluptas culpa, atque laudantium optio natus enim tenetur!</p>
-            </div>
-          </div>
-          <Button text={'View More'}/>
+        <SectionProjects />
 
+
+        <div className="section-blog">
+          <div className="section-blog-container">
+            
+            <div className="section-blog-item">
+              <div className="blog-image">
+                <img src="" alt=""/>
+              </div>
+              <div className="blog-desc">
+                <h2>Sample Text Is Here</h2>
+              </div>
+            </div>
+
+            <div className="section-blog-item">
+              <div className="blog-image">
+                <img src="" alt=""/>
+              </div>
+              <div className="blog-desc">
+                <h2>Sample Text Is Here</h2>
+              </div>
+            </div>
+
+            <div className="section-blog-item">
+              <div className="blog-image">
+                <img src="" alt=""/>
+              </div>
+              <div className="blog-desc">
+                <h2>Sample Text Is Here</h2>
+              </div>
+            </div>
+
+            <div className="section-blog-item">
+              <div className="blog-image">
+                <img src="" alt=""/>
+              </div>
+              <div className="blog-desc">
+                <h2>Sample Text Is Here</h2>
+              </div>
+            </div>
+
+            <div className="section-blog-item">
+              <div className="blog-image">
+                <img src="" alt=""/>
+              </div>
+              <div className="blog-desc">
+                <h2>Sample Text Is Here</h2>
+              </div>
+            </div>
+
+            <div className="section-blog-item">
+              <div className="blog-image">
+                <img src="" alt=""/>
+              </div>
+              <div className="blog-desc">
+                <h2>Sample Text Is Here</h2>
+              </div>
+            </div>
+
+          </div>
         </div>
+
+
 
         <div className="landing2">
 

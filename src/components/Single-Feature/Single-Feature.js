@@ -23,12 +23,12 @@ const Single_Feature = () => {
 
   return (
     <div className="single-feature">
-      <div className="single-feature-left">
+      <section className="single-feature-left">
         <h2>Lets build <span className="default-color-gold">Great Things</span> together and fulfill our <span className="default-color-dark">Dreams</span></h2>
         <p>Advancement in technology has been a power driver for individuals to rise and create their own path of success. If you have dreams, lets build it.</p>
         <Button text={btnText}/>
         {/* <button>Learn More</button> */}
-      </div>
+      </section>
       <div className="single-feature-right">
         <img src={coffee} alt="coffee-sliderImage"/>
       </div>

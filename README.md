@@ -1,6 +1,6 @@
 ## My Website Page
 
-> This is the repo of my website. I want to level-up my game so I decided to build my official website by my own hand. As of this time, this website is currently being developed by the owner. 
+> This site is currently on develpment stage.
 
 [View it live from your browser.](https://aimanadlawan.com) Hosted by [Firebase](https://firebase.com)<br>
 

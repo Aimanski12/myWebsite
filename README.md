@@ -2,20 +2,18 @@
 
 > This is the repo of my website. I want to level-up my game so I decided to build my official website by my own hand. As of this time, this website is currently being developed by the owner. 
 
-[View it live from your browser.](https://aimanadlawan.com)<br>
+[View it live from your browser.](https://aimanadlawan.com) Hosted by [Firebase](https://firebase.com)<br>
 
 > Things I learned in this project;
-  * How to sketch design a website using figma.
-  * How to build a fully responsive website.
+  * Hosting and deployment.
+  * Mobile and screen responsiveness.
+  * Designs and layouts.
   * How to use [React Router](https://reacttraining.com/react-router/).
   * How to query data from a third party library using `axios` with the `async` and `await` promise.
   * How to pass states aroun the application without any redux.
   
   > References:
   * [Figma](https://www.figma.com/)
-  * [Rest Countries](https://restcountries.eu/)
-  * [API Frankfurter](https://www.frankfurter.app/) 
-  * [Axios](https://www.npmjs.com/package/axios)
   * [Async and Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
   * [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
   * [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)

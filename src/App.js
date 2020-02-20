@@ -9,26 +9,18 @@ import AboutMe from './components/About_Me/About_Me'
 
 import SectionProjects from './components/Section-Projects/Section-Projects'
 
+import SectionBlog from './components/Blog/Blog'
 
-// import Button from './components/Button/Button'
-import photo from './images/photos/photo.png'
+import facebook from './images/logo/social/facebook-follow.svg'
+import github from './images/logo/social/github-follow.svg'
+import youtube from './images/logo/social/youtube-follow.svg'
+import linkedin from './images/logo/social/linkedin-follow.svg'
+import instagram from './images/logo/social/instagram-follow.svg'
 
 const App = () => {
 
   useEffect(() => {
-    window.addEventListener('scroll', (e)=>{
-      const w = window.innerWidth
-      const sectionProj = document.querySelector('.project-features')
-
-      // console.log(e.path[1].pageYOffset)
-      if (w > 900 && e.path[1].pageYOffset > 1180){
-        sectionProj.classList.add('project-features-scroll')
-      }
-      if (w > 900 && e.path[1].pageYOffset < 1180) {
-        sectionProj.classList.remove('project-features-scroll')
-      }
-      
-    })
+    // 
   })
   
 
@@ -48,68 +40,38 @@ const App = () => {
 
         <SectionProjects />
 
+        <SectionBlog />
+ 
 
-        <div className="section-blog">
-          <div className="section-blog-container">
-            
-            <div className="section-blog-item">
-              <div className="blog-image">
-                <img src="" alt=""/>
-              </div>
-              <div className="blog-desc">
-                <h2>Sample Text Is Here</h2>
-              </div>
+        <footer className='footer'>
+          <div className="footer-container">
+
+             
+            <div className="footer-social">
+              <img src={facebook} alt=""/>
+              <img src={github} alt=""/>
+              <img src={youtube} alt=""/>
+              <img src={linkedin} alt=""/>
+              <img src={instagram} alt=""/>
             </div>
 
-            <div className="section-blog-item">
-              <div className="blog-image">
-                <img src="" alt=""/>
+            <nav className='footer-nav' data-content-field='navigation'>
+              <div className='footer-nav-group'>
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Projects</a>
+                <a href="">Blogs</a>
+                <a href="">Contacts</a>
               </div>
-              <div className="blog-desc">
-                <h2>Sample Text Is Here</h2>
-              </div>
-            </div>
+            </nav>
 
-            <div className="section-blog-item">
-              <div className="blog-image">
-                <img src="" alt=""/>
-              </div>
-              <div className="blog-desc">
-                <h2>Sample Text Is Here</h2>
-              </div>
-            </div>
-
-            <div className="section-blog-item">
-              <div className="blog-image">
-                <img src="" alt=""/>
-              </div>
-              <div className="blog-desc">
-                <h2>Sample Text Is Here</h2>
-              </div>
-            </div>
-
-            <div className="section-blog-item">
-              <div className="blog-image">
-                <img src="" alt=""/>
-              </div>
-              <div className="blog-desc">
-                <h2>Sample Text Is Here</h2>
-              </div>
-            </div>
-
-            <div className="section-blog-item">
-              <div className="blog-image">
-                <img src="" alt=""/>
-              </div>
-              <div className="blog-desc">
-                <h2>Sample Text Is Here</h2>
-              </div>
+            <div className='footer-block-content'>
+              <p className='gray'>This website is currently on development stage.</p>
+              <p>© 2019 <span>aimanadlawan.com</span>.&nbsp;All rights reserved</p>
             </div>
 
           </div>
-        </div>
-
-
+        </footer>
 
         <div className="landing2">
 
@@ -120,5 +82,6 @@ const App = () => {
 }
 
 export default App;
+
 
 

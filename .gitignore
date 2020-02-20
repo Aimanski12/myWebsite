@@ -5,8 +5,11 @@
 /build
 /.firebase
 /.pnp
+/src
+/public
 .pnp.js
 firebase.json
+
 
 .firebaserc
 .gitignore

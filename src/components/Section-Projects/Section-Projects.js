@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Section-Projects.css'
 import Button from '../Button/Button'
 
@@ -7,6 +7,24 @@ import camera_icon from '../../images/logo/camera-icon.svg'
 import app_icon from '../../images/logo/app-icon.svg'
 
 const Section_Projects = () => {
+
+
+  useEffect(() => {
+    window.addEventListener('scroll', (e)=>{
+      const w = window.innerWidth
+      const sectionProj = document.querySelector('.project-features')
+
+      // console.log(e.path[1].pageYOffset)
+      if (w > 900 && e.path[1].pageYOffset > 1180){
+        sectionProj.classList.add('project-features-scroll')
+      }
+      if (w > 900 && e.path[1].pageYOffset < 1180) {
+        sectionProj.classList.remove('project-features-scroll')
+      }
+      
+    })
+  })
+    
 
 
   return (

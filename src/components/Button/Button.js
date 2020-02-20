@@ -6,7 +6,7 @@ const Button = (props) => {
 
 
   return(
-  <button>{props.text}</button>
+  <button>{props.text} &rarr;</button>
   )
 }
 export default Button

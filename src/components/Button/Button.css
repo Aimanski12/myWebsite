@@ -8,6 +8,13 @@ button {
   font-size: 0.55em;
   border: none;
   font-family: 'Montserrat', 'sans serif';
+  transition: all 0.4s ease-in;
+}
+
+button:hover {
+  background: linear-gradient(91.87deg, rgba(177, 157, 95, 0.68) 3.37%, #0D2147 99.66%);
+  /* font-size: .6em; */
+  transition: all 1s ease-in;
 }
 
 @media(max-width: 1200px) {

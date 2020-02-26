@@ -15,6 +15,7 @@
   > References:
   * [Figma](https://www.figma.com/)
   * [Async and Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+  * [Adobe Photoshop](https://www.adobe.com/)
   * [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
   * [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
 

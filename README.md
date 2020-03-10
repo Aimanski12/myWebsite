@@ -1,6 +1,6 @@
 ## My Website Page
 
-> :sunglasses: This site is currently on develpment stage. Thanks for viewing :sunglasses:
+> :sunglasses: This site is currently on development stage. Thanks for viewing. :sunglasses:
 
 [View it live from your browser.](https://aimanadlawan.com) Hosted by [Firebase](https://firebase.com)<br>
 

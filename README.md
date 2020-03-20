@@ -11,6 +11,7 @@
   * How to use [React Router](https://reacttraining.com/react-router/).
   * How to query data from a third party library using `axios` with the `async` and `await` promise.
   * How to pass states aroun the application without any redux.
+  * How to Design SVG Files
   
   > References:
   * [Figma](https://www.figma.com/)

@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.one {
+  position: absolute;
+  z-index: 55;
+  background: linear-gradient(180deg, #6A0D83 0%, #BB4687 23.96%, #D96A75 47.92%, #E9936E 71.88%, #DDA55F 93.75%);
+}
+
+.two {
+  position: absolute;
+  z-index: 50;
+  background: linear-gradient(180deg, #1D2229 0%, #392F74 24.48%, #6C4C94 50.52%, #BB4687 75.52%, #D96A75 100%);
+}
+
+.three {
+  position: absolute;
+  z-index: 45;
+  background: linear-gradient(180deg, #1D2229 0%, #2F3774 24.48%, #4C6094 50.52%, #677CB3 75.52%, #7E86D2 100%);
+}
+
+.four {
+  position: absolute;
+  z-index: 40;
+  background: linear-gradient(180deg, #1D2229 0%, #181D41 24.48%, #2A3A64 50.52%, #4B5B85 75.52%, #7277A7 100%);
+}
+
+.five {
+  position: absolute;
+  z-index: 35;
+  background: linear-gradient(180deg, #1D2229 0%, #22274F 24.48%, #135B8B 50.52%, #3389AB 75.52%, #7BA39E 100%);
+}
+
+.six {
+  position: absolute;
+  z-index: 30;
+  background: linear-gradient(180deg, #005086 0%, #318FB5 24.48%, #93ADAA 50.52%, #CDAE99 75.52%, #E49780 100%); 
+}
+
+.seven {
+  position: absolute;
+  z-index: 25;
+  background: linear-gradient(180deg, #F29A7F 0%, #EDC68D 24.48%, #DBD486 50.52%, #FDE67C 75.52%, #F4E76C 100%);
+}
+
+.eight {
+  position: absolute;
+  z-index: 20;
+  background: linear-gradient(180deg, #FCEB4D 0%, #F5F568 24.48%, #EEF082 50.52%, #EAED9D 75.52%, #E5E8AA 100%);
+}
+
+.nine {
+  position: absolute;
+  z-index: 15;
+  background: linear-gradient(180deg, #FFB402 0%, #FAC625 24.48%, #F7D25E 50.52%, #FFE182 75.52%, #E5E8AA 100%);
+}
+
+.ten {
+  position: absolute;
+  z-index: 10;
+  background: linear-gradient(180deg, #FD9616 0%, #FDA805 24.48%, #FFB402 50.52%, #FBBE00 75.52%, #FAD86E 100%);
+}
+
+.eleven {
+  position: absolute;
+  z-index: 5;
+  background: linear-gradient(180deg, #EE5D6C 0%, #FB9062 24.48%, #FFB559 50.52%, #F9CB3C 75.52%, #EECD64 100%);
+} 
+
+  
+.main {
+  position: absolute;
+  z-index: 5;
+  background: linear-gradient(180deg, #6A0D83 0%, #BB4687 23.96%, #D96A75 47.92%, #E9936E 71.88%, #DDA55F 93.75%);
+}
+
+
+.show {
+  animation: one 9s forwards;
+}
+@keyframes one {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.img1, .img2, .img3 {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  z-index: 60;  
+  /* background: red; */
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.img2 {
+  z-index: 65;
+}
+.img3 {
+  z-index: 70;
+}
+.img1 .layer1, .img2 .layer2, .img3 .layer3 {
+  width: 100%;
+  height: 150px;
+  /* background: teal; */
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  
+}
+.img1 svg, .img2 svg, .img3 svg {
+  padding: 0;
+  margin: 0;
+  /* width: 100%; */
+  position: absolute;
+  /* z-index: 65; */
+  bottom: 0 !important;
+}

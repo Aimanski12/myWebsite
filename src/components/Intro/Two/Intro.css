@@ -1,0 +1,28 @@
+.introTwo {
+  height: 100vh;
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.introTwo .face {
+  width: 427px;
+  /* height: 500px; */
+  height: calc(427px * 1.3);
+  background: gray;
+}
+
+.introTwo .headerText{
+  width: 573px;
+  height: 138px;
+  background: teal;
+}
+
+.introTwo .button {
+  width: 380px;
+  height: 80px;
+  background: orange;
+}

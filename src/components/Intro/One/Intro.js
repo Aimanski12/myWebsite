@@ -23,7 +23,7 @@ function Intro(){
       
       setTimeout(function(){
         intro.classList.add('zero')
-      }, 5000)
+      }, 4200)
 
       function run() {  
         for (let x = 0; x < bigPath.length; x++) {

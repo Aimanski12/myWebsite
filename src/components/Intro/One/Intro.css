@@ -11,7 +11,7 @@
 
 .zero{
   height: 0;
-  animation: hide 0.6s linear;
+  animation: hide 0.45s linear;
 }
 
 @keyframes hide {

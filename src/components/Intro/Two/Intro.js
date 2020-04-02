@@ -14,6 +14,7 @@ function Intro () {
 
   return (
     <div className="introTwo">
+      <h1>Sample Text</h1>
     </div>
   )
 }

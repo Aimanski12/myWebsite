@@ -1,14 +1,14 @@
 {
-  "short_name": "Website for Aiman Adlawan",
-  "name": "This is the official website for Aiman Adlawan",
+  "short_name": "Aiman Adlawan | Official Website",
+  "name": "Aiman Adlawan Official Website",
   "icons": [
     {
       "src": "aiman.png",
-      "sizes": "846x846",
-      "type": "image/x-icon"
+      "sizes": "64x64",
+      "type": "image/png"
     }
   ],
-  "start_url": ".",
+  "start_url": "http://localhost:3000/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

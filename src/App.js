@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import './App.css';
-import IntroOne from './components/Intro/One/Intro'
-import IntroTwo from './components/Intro/Two/Intro'
+import IntroOne from './containers/Intro/One/Intro'
+import IntroTwo from './containers/Intro/Two/Intro'
 
 function App() {
 
@@ -12,9 +12,11 @@ function App() {
 
 
   return (
-    <div className="app-wall">
-      <IntroOne />
-      <IntroTwo />
+    <div className="mainPage">
+      <div className="introPage">
+        <IntroOne />
+        <IntroTwo />
+      </div>
     </div>
   );
 }

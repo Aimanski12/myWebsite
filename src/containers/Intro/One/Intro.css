@@ -1,0 +1,57 @@
+.intro-write-name {
+  background: #3cb6b1;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.introSvgContainer{
+  width: 400px;
+  height: 264px;
+}
+
+.intro-write-name-close{
+  height: 0;
+  animation: closeIntro 0.45s linear;
+}
+
+svg {
+  width: 400px;
+  height: 264px;
+}
+
+@media(max-width: 768px) {
+  svg, .introSvgContainer {
+    width: 360px;
+    height: 238px;
+  }
+}
+
+@media(max-width: 568px) {
+  svg, .introSvgContainer {
+    width: 320px;
+    height: 212px;
+  }
+}
+
+@media(max-width: 320px) {
+  svg, .introSvgContainer {
+    width: 280px;
+    height: 185px;
+  }
+}
+
+/* intro animation close */
+@keyframes closeIntro {
+  0% {
+    height: 100vh;
+  }
+
+  100% {
+    height: 0vh;
+  }
+}

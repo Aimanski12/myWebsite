@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react'
+import './layer.css'
 
 function LayerTwo () {
   return (

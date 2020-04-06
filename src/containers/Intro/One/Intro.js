@@ -4,13 +4,14 @@ import SmallText from '../../../components/Svg/NameSvg/smallText'
 import anime from 'animejs'
 import './Intro.css'
 
-function Intro(){
+function Intro(props){
 
     useEffect(() => {
       const svgPath = document.querySelectorAll('.path');
       const bigPath = document.querySelectorAll('.bigText');
       const smallPath = document.querySelectorAll('.smallText');
       const intro = document.querySelector('.intro-write-name')
+      intro.style.backgroundColor = `#${props.themeColor}`
       anime({
         targets: svgPath,
         loop: false,
@@ -32,7 +33,7 @@ function Intro(){
 					bigPath[x].setAttribute('stroke', '#133736')
         }
         for (let x = 0; x < smallPath.length; x++) {
-					smallPath[x].setAttribute('stroke', '#47cbc7')
+					smallPath[x].setAttribute('stroke', `#${props.themeColor}`)
         }
       }
       run()

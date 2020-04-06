@@ -1,4 +1,4 @@
-export function drawLine(cx){
+export function drawLine(cx, color){
   let canvas = cx
 
   // values for the width and height
@@ -287,7 +287,7 @@ export function drawLine(cx){
       c.moveTo(points[x].moveTo.x, points[x].moveTo.y)
       c.lineTo(points[x].lineTo.x, points[x].lineTo.y)
       c.lineWidth = 1
-      c.strokeStyle = '#355452'
+      c.strokeStyle = `#${color}`
       c.stroke()
     }
     window.requestAnimationFrame(draw);

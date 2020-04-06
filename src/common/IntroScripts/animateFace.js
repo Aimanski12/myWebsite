@@ -1,5 +1,7 @@
 import anime from 'animejs'
-export function animateFace(photo){
+
+// function to animate face
+export function animateFace(photo, themeColor){
 
 
   const svgPath = photo
@@ -86,15 +88,14 @@ export function animateFace(photo){
           // not a significant layer
         }
         if (x === 2) {
-          el[y].setAttribute('fill', '#2d504d')
+          el[y].setAttribute('fill', `#${themeColor[3]}`)
         }
         if (x === 3) {
           // not a significant layer
-          el[y].setAttribute('fill', '#575f5e')
+          el[y].setAttribute('fill', `#${themeColor[2]}`)
         }
         if (x === 4) {
-          // el[y].setAttribute('fill', '#739e9c')
-          el[y].setAttribute('fill', '#65908e')
+          el[y].setAttribute('fill', `#${themeColor[1]}`)
         }
         if (x === 5) {
           // 
@@ -110,23 +111,28 @@ export function animateFace(photo){
   const textWrapper1 = document.querySelector('.text_intro_header .letters')
   const textWrapper2 = document.querySelector('.text_intro_subheader .letters')
 
+  // separate each text so that we can manipulate each text easily
   textWrapper1.innerHTML = textWrapper1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
   textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-  const topGreenText = document.querySelectorAll('.text_intro_header .letter')
-  for (let x = 0; x < topGreenText.length; x++) {
+  const topText = document.querySelectorAll('.text_intro_header .letter')
+
+  // assign color for the header text
+  for (let x = 0; x < topText.length; x++) {
     if (x >= 9 && x <= 13) {
-      topGreenText[x].classList.add('green')
+      topText[x].classList.add(themeColor[4])
     }
   }
 
-  const greenText = document.querySelectorAll('.text_intro_subheader .letter')
-  for (let x = 0; x < greenText.length; x++) {
+  const botmTxt = document.querySelectorAll('.text_intro_subheader .letter')
+
+  // assign color for the header text
+  for (let x = 0; x < botmTxt.length; x++) {
     if ((x >= 4 && x <= 8) || (x >= 18 && x <= 24)) {
-      greenText[x].classList.add('green')
+      botmTxt[x].classList.add(themeColor[4])
     }
     if ((x >= 9 && x <= 16) || (x >= 25 && x <= 33)) {
-      greenText[x].classList.add('dark_gray')
+      botmTxt[x].classList.add('dark_gray')
     }
   }
 

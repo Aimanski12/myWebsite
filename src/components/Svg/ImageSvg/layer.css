@@ -1,0 +1,49 @@
+.photo {
+  width: 335px;
+  height: 452px;
+}
+
+.intro-image-container {
+  width: 335px;
+  height: 452px;
+}
+
+.intro-image-container svg {
+  width: 350px;
+  height: 452px;
+}
+
+.intro-image-container .one {
+  position: absolute;
+  z-index: 2;
+}
+
+.intro-image-container .two {
+  position: absolute;
+  z-index: 4;
+}
+
+.intro-image-container .three {
+  position: absolute;
+  z-index: 6;
+}
+
+.intro-image-container .four {
+  position: absolute;
+  z-index: 8;
+}
+
+.intro-image-container .five {
+  position: absolute;
+  z-index: 10;
+}
+
+.intro-image-container .six {
+  position: absolute;
+  z-index: 12;
+}
+
+.intro-image-container .seven {
+  position: absolute;
+  z-index: 14;
+}

@@ -10,8 +10,10 @@ import LayerFour from '../../../components/Svg/ImageSvg/layer4'
 import LayerFive from '../../../components/Svg/ImageSvg/layer5'
 import LayerSix from '../../../components/Svg/ImageSvg/layer6'
 import LayerSeven from '../../../components/Svg/ImageSvg/layer7'
+import Button from '../../../components/Buttons/Button'
 
-function Intro () {
+
+function Intro (props) {
 
   useEffect(()=>{
     const s = document.querySelector('.intro-faceAnimate')
@@ -21,10 +23,10 @@ function Intro () {
       s.classList.add('intro-openFaceAnim')
     }, 3900)
     setTimeout(function () {
-      animateFace(photo)
+      animateFace(photo, props.themeColor)
     }, 4250)
     setTimeout(function(){
-      drawLine(canvas)
+      drawLine(canvas, props.themeColor[5])
     }, 10000)
   })
 
@@ -61,11 +63,8 @@ function Intro () {
         
         {/* area for the button */}
         <div className="button_intro">
-          <div className="button-container">
-            <div className="button-bkg">
-              <button>Explore Me</button>
-            </div>
-          </div>
+          <Button 
+            themeColor={props.themeColor[4]}/>
         </div>
         {/* button ends */}
 

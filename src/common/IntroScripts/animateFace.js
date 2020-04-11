@@ -1,53 +1,14 @@
 import anime from 'animejs'
 
 // function to animate face
-export function animateFace(photo, themeColor){
-
-
-  const svgPath = photo
-
-  // const s = document.querySelectorAll('svg')
-  // s[6].addEventListener('mouseenter', function () {
-  //   let tl = anime.timeline({
-  //     targets: svgPath,
-  //     delay: function (el, i) {
-  //       return i * 25
-  //     },
-  //     duration: 50, // Can be inherited
-  //     easing: 'easeOutExpo', // Can be inherited
-  //   });
-
-  //   tl
-  //     .add({
-  //       scale: 1.08,
-  //       easing: 'spring',
-  //     })
-  // })
-
-  // s[6].addEventListener('mouseout', function () {
-  //   let tl = anime.timeline({
-  //     targets: svgPath,
-  //     delay: function (el, i) {
-  //       return i * 25
-  //     },
-  //     duration: 50, // Can be inherited
-  //     easing: 'easeOutExpo', // Can be inherited
-  //   });
-
-  //   tl
-  //     .add({
-  //       scale: 1,
-  //       easing: 'spring',
-  //     })
-  // })
-
+export function animateFace(svgPath, themeColor){
 
   let tl = anime.timeline({
     targets: svgPath,
     delay: function (el, i) {
-      return i * 80
+      return i * 60
     },
-    duration: 200, // Can be inherited
+    duration: 130, // Can be inherited
     easing: 'easeOutExpo', // Can be inherited
   });
 
@@ -58,24 +19,66 @@ export function animateFace(photo, themeColor){
       easing: 'spring',
     })
     .add({
-      translateX: 150,
-      scale: 0.7,
+      translateX: findX(1),
+      translateY: findY(1),
+      scale: 0.4,
     })
     .add({
       opacity: .7,
-      scale: 0.3,
-      translateX: -150,
+      scale: 0.4,
+      translateX: findX(1),
+      translateY: findY(2),
     })
     .add({
-      translateX: 150,
-      scale: 1.3,
+      opacity: .7,
+      scale: 0.4,
+      translateX: findX(3),
+      translateY: findY(2),
+    })
+    .add({
+      opacity: .7,
+      scale: 0.4,
+      translateX: findX(3),
+      translateY: findY(1),
     })
     .add({
       opacity: 1,
       translateX: 0,
+      translateY: 0,
       scale: 1,
       easing: 'spring'
     })
+
+  // find x coordinate
+  function findX (n) {
+    const x = window.innerWidth
+    let number;
+    if(n === 1){
+      number = ((x * .1) * 6) * (-1)
+    }
+    if(n === 2){
+      number = ((x / 2) - (x * .1))
+    }
+    if(n === 3){
+      number = (x * .9)
+    }
+    return number
+  }
+  
+  // find y coordinate
+  function findY(n) {
+    const y = window.innerHeight
+    let number;
+    if (n === 1) {
+      number = ((y * .1) * 4) * (-1)
+    }
+    if(n === 2) {
+      number = ((y * .9))
+    }
+    return number
+  }
+
+
 
   function run() {
     for (let x = 0; x < svgPath.length; x++) {
@@ -148,7 +151,7 @@ export function animateFace(photo, themeColor){
         targets: '.text_intro_header .letter',
         translateY: ["1.1em", 0],
         translateZ: 0,
-        duration: 500,
+        duration: 420,
         delay: (el, i) => 50 * i
       })
       .add({
@@ -156,14 +159,15 @@ export function animateFace(photo, themeColor){
         translateY: ["1.1em", 0],
         opacity: 1,
         translateZ: 0,
-        duration: 500,
+        duration: 420,
         delay: (el, i) => 50 * i
       })
       .add({
         targets: '.button_intro',
-        duration: 1200,
+        duration: 420,
         opacity: 1,
         easing: 'easeInOutSine'
       })
-  }, 6000) 
+  }, 5000) 
 }
+

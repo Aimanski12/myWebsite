@@ -1,34 +1,38 @@
 import React, {useEffect} from 'react'
 import {drawLine} from '../../../common/IntroScripts/drawlines'
 import {animateFace} from '../../../common/IntroScripts/animateFace'
+import {introOverlay} from '../../../common/Helpers/introOverLay'
 import './Intro.css'
 
-import LayerOne from '../../../components/Svg/ImageSvg/layer1'
-import LayerTwo from '../../../components/Svg/ImageSvg/layer2'
-import LayerThree from '../../../components/Svg/ImageSvg/layer3'
-import LayerFour from '../../../components/Svg/ImageSvg/layer4'
-import LayerFive from '../../../components/Svg/ImageSvg/layer5'
-import LayerSix from '../../../components/Svg/ImageSvg/layer6'
-import LayerSeven from '../../../components/Svg/ImageSvg/layer7'
+import FaceLayers from '../../../components/Svg/ImageSvg/layerContainer'
 import Button from '../../../components/Buttons/Button'
 
 
 function Intro (props) {
 
   useEffect(()=>{
-    const s = document.querySelector('.intro-faceAnimate')
+    const faceDiv = document.querySelector('.intro-faceAnimate')
     const canvas = document.querySelector('#canvas')
     const photo = document.querySelectorAll('.photo')
     setTimeout(function(){
-      s.classList.add('intro-openFaceAnim')
+      faceDiv.classList.add('intro-openFaceAnim')
     }, 3900)
     setTimeout(function () {
       animateFace(photo, props.themeColor)
     }, 4250)
     setTimeout(function(){
       drawLine(canvas, props.themeColor[5])
-    }, 10000)
+    }, 9500)
   })
+
+
+  const click = (x, y) => {
+    const a = document.querySelector('.intro-overlay')
+    const c = document.querySelector('.overlay-cover')
+    introOverlay(x, y, a, c, props.themeColor[0])    
+  }
+
+
 
   return (
     <div className="intro-faceAnimate">
@@ -41,15 +45,7 @@ function Intro (props) {
       <div className="intro-faceAnimate-container">
 
       {/* div for the face to be animated */}
-        <div className="intro-image-container">
-          <LayerOne />
-          <LayerTwo />
-          <LayerThree />
-          <LayerFour />
-          <LayerFive />
-          <LayerSix />
-          <LayerSeven />
-        </div>
+          <FaceLayers />
 
         {/* area for the text */}
         <div className="text_intro">
@@ -64,11 +60,19 @@ function Intro (props) {
         {/* area for the button */}
         <div className="button_intro">
           <Button 
+            click={(x, y)=>click(x, y)}
             themeColor={props.themeColor[4]}/>
         </div>
         {/* button ends */}
 
       </div>
+
+
+      <div className="intro-overlay">
+        <div className="overlay-cover"></div>
+      </div>
+
+
     </div>
   )
 }

@@ -64,9 +64,9 @@
   }
 
   .button-background button {
-    height: 30px;
-    width: 184px;
-    border-radius: 15px;
+    height: 36px;
+    width: 188px;
+    border-radius: 18px;
     font-size: 0.75em;
   }
 }

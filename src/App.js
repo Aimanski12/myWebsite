@@ -4,43 +4,63 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import {colorGenerator} from './common/Helpers/colorGenerator'
+import {colorGenerator} from './common/HelperScripts/colorGenerator'
+import {domSeparator} from './common/HelperScripts/domSeparator'
+
 import './App.css';
-import IntroOne from './containers/Intro/One/Intro'
-import IntroTwo from './containers/Intro/Two/Intro'
+import MenuOverlay from './containers/MenuOverlay/MenuOverLay';
+import IndexPage from './containers/Index/Index'
 
 function App() {
 
   const [color, setColor] = useState([])
+  const [introAnim, setIntroAnim] = useState(false)
+
+  const [pages, pagesUpdate] = useState({
+    pages: ['home', 'about', 'projects', 'contacts']
+  })
 
   useEffect(() => {
     if(color <= 0) {
       setColor(colorGenerator())
     }
   }, [color])
+   
 
+  const elCollector = (x, y, event) => {
+    domSeparator(x, y, event, color)
+    setIntroAnim(true)
+  }
 
   return (
     <div className="mainPage">
-      <div className="mainPageContainer">
+      <div className="mainPageContainer" >
+
+        <MenuOverlay
+          closeMenu={(x, y)=>elCollector(x, y, 'closeMenu')}
+          introAnim={introAnim}
+          pages={pages}/>
+
+
         <Router>
           <Switch>
-            <Route exact path='/'>
-              <div className="introPage">
-                <IntroOne 
-                  themeColor={color[0]}/>
-                <IntroTwo
-                  themeColor={color} />
-              </div>
-            </Route>
-            <Route path='/home'>
 
+            {/* home route */}
+            <Route exact path='/'>
+              <IndexPage
+                 themeColor={color}
+                 animOvlay={(x, y, event)=>elCollector(x, y, event)} />
             </Route>
+            
+            {/* this is the about route */}
+            <Route path='/about'></Route>
+
           </Switch>
         </Router>
       </div>
     </div>
   );
 }
+
 
 export default App;

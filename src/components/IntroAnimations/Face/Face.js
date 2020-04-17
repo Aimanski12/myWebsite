@@ -1,10 +1,11 @@
 import React, {useEffect} from 'react'
+import './Face.css'
+
+
 import {drawLine} from '../../../common/IntroScripts/drawlines'
 import {animateFace} from '../../../common/IntroScripts/animateFace'
-import {introOverlay} from '../../../common/Helpers/introOverLay'
-import './Intro.css'
 
-import FaceLayers from '../../../components/Svg/ImageSvg/layerContainer'
+import FaceLayers from '../../../components/Svgs/FaceSvg/layerContainer'
 import Button from '../../../components/Buttons/Button'
 
 
@@ -14,24 +15,22 @@ function Intro (props) {
     const faceDiv = document.querySelector('.intro-faceAnimate')
     const canvas = document.querySelector('#canvas')
     const photo = document.querySelectorAll('.photo')
+
+    // open intro two div
     setTimeout(function(){
       faceDiv.classList.add('intro-openFaceAnim')
     }, 3900)
+
+    // run functin for animation
     setTimeout(function () {
       animateFace(photo, props.themeColor)
     }, 4250)
+
+    // draw lines after all animations has started
     setTimeout(function(){
       drawLine(canvas, props.themeColor[5])
     }, 9500)
   })
-
-
-  const click = (x, y) => {
-    const a = document.querySelector('.intro-overlay')
-    const c = document.querySelector('.overlay-cover')
-    introOverlay(x, y, a, c, props.themeColor[0])    
-  }
-
 
 
   return (
@@ -60,18 +59,12 @@ function Intro (props) {
         {/* area for the button */}
         <div className="button_intro">
           <Button 
-            click={(x, y)=>click(x, y)}
+            click={(x, y)=>props.closeIntro(x, y)}
             themeColor={props.themeColor[4]}/>
         </div>
         {/* button ends */}
 
       </div>
-
-
-      <div className="intro-overlay">
-        <div className="overlay-cover"></div>
-      </div>
-
 
     </div>
   )

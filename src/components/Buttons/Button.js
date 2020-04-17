@@ -1,5 +1,5 @@
 import React from 'react'
-import {generateBackground} from '../../common/Helpers/genBkgd'
+import {generateBackground} from '../../common/HelperScripts/genBkgd'
 import './Button.css'
 
 function Button (props) {

@@ -112,7 +112,7 @@
   opacity: 0;
 }
 
-.intro-overlay {
+/* .intro-overlay {
   position: absolute;
   z-index: 50;
   width: 100%;
@@ -130,7 +130,7 @@
   top: 0px;
   left: 0px;
   border-radius: 50%;
-}
+} */
 
 
 /* screen size 768px */

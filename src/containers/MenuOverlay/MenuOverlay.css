@@ -1,0 +1,291 @@
+.menu,
+.overlay,
+.homepage {
+  width: 100%;
+  position: absolute;
+}
+
+.menu,
+.overlay {
+  height: 100vh;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* menu css */
+.menu {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+
+  z-index: 50;
+  display: none;
+
+}
+
+.menu-container {
+  width: 417px;
+  height: 597px;
+}
+
+.menu-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-frame svg {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.menu-list-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+}
+
+.menu-wrapper {
+  height: 100%;
+  width: 300px;
+}
+
+.menu-header-text,
+.menu-bottom-text {
+  width: 100%;
+  height: 45px;
+  font-family: 'Ribeye', 'Sans Serif';
+}
+
+.menu-header-text span,
+.menu-bottom-text span {
+  display: inline-block;
+  line-height: 25px;
+  height: 25px;
+  font-size: 20px;
+  color: #AEC2B7;
+  opacity: 0;
+}
+
+.menu-list-items {
+  width: 100%;
+  height: 500px;
+}
+
+.menu-list-wrapper {
+  list-style: none;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.menu-item {
+  width: 100%;
+  font-family: 'Ribeye', 'Sans Serif';
+  font-size: 2.7em;
+  line-height: 80px;
+  margin: 7px auto;
+  height: 80px;
+  text-align: center;
+  opacity: 0;
+}
+
+.menu-link {
+  color: #AEC2B7;
+  text-decoration: none;
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+}
+
+.menu-bottom-text span:hover,
+.menu-link:hover {
+  cursor: pointer;
+}
+
+.menu-link:hover::after,
+.menu-bottom-text span:hover::after {
+  content: ' ';
+  display: block;
+  height: 2px;
+  background: #AEC2B7;
+  border-radius: 1px;
+  animation: 0.15s hoverBackground ease;
+}
+
+
+.menu-item-selected a {
+  color: #88968E
+}
+
+.menu-item-selected a:hover::after {
+  background: #88968E
+}
+
+@keyframes hoverBackground {
+  0% {
+    width: 0
+  }
+
+  100% {
+    width: 100%
+  }
+}
+
+@media (max-width:768px) {
+  .menu-container {
+    width: 390px;
+    height: 559px;
+  }
+
+  .menu-wrapper {
+    width: 250px;
+  }
+
+  .menu-header-text span,
+  .menu-bottom-text span {
+    font-size: 17px;
+    line-height: 20px;
+    height: 20px;
+  }
+
+  .menu-list-items {
+    height: 470px;
+  }
+
+  .menu-item {
+    font-size: 2.3em;
+  }
+
+  .menu-link {
+    height: 45px;
+    line-height: 45px;
+  }
+}
+
+@media (max-width:568px) {
+  .menu-container {
+    width: 350px;
+    height: 501px;
+  }
+
+  .menu-wrapper {
+    width: 220px;
+  }
+
+  .menu-header-text,
+  .menu-bottom-text {
+    height: 36px;
+  }
+
+  .menu-header-text span,
+  .menu-bottom-text span {
+    font-size: 15px;
+    line-height: 18px;
+    height: 18px;
+  }
+
+  .menu-list-items {
+    height: 428px;
+  }
+
+  .menu-item {
+    font-size: 1.8em;
+    line-height: 70px;
+    height: 70px;
+    margin: 5px auto;
+  }
+}
+
+@media (max-width:468px) {
+  .menu-container {
+    width: 300px;
+    height: 430px;
+  }
+
+  .menu-wrapper {
+    width: 200px;
+  }
+
+  .menu-header-text,
+  .menu-bottom-text {
+    height: 30px;
+  }
+
+  .menu-header-text span,
+  .menu-bottom-text span {
+    font-size: 11px;
+    line-height: 15px;
+    height: 15px;
+  }
+
+  .menu-list-items {
+    height: 370px;
+  }
+
+  .menu-item {
+    font-size: 1.6em;
+    line-height: 62px;
+    height: 62px;
+    margin: 4px auto;
+  }
+}
+
+@media (max-width:320px) {
+  .menu-container {
+    width: 240px;
+    height: 344px;
+  }
+
+  .menu-wrapper {
+    width: 170px;
+  }
+
+  .menu-header-text,
+  .menu-bottom-text {
+    height: 25px;
+  }
+
+  .menu-header-text span,
+  .menu-bottom-text span {
+    font-size: 11px;
+    line-height: 14px;
+    height: 14px;
+  }
+
+  .menu-list-items {
+    height: 294px;
+  }
+
+  .menu-item {
+    font-size: 1.4em;
+    line-height: 55px;
+    height: 55px;
+    margin: 4px auto;
+  }
+}
+
+/* menu css ends */
+
+
+
+/* overlay css */
+.overlay {
+  z-index: 35;
+  display: none;
+  overflow: hidden;
+}
+
+.overlay-container {
+  background: #1A5654;
+  position: absolute;
+}
+
+/* overlay css ends */

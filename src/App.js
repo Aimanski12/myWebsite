@@ -32,6 +32,9 @@ function App() {
     setIntroAnim(true)
   }
 
+  const a = navigator.userAgent
+  console.log(a)
+
   return (
     <div className="mainPage">
       <div className="mainPageContainer" >

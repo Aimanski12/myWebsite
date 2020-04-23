@@ -15,8 +15,8 @@ function Layer () {
 
   return (
     <div className="intro-image-container">
-      <LayerOne />
-      <LayerTwo />
+      {/* <LayerOne />
+      <LayerTwo /> */}
       <LayerThree />
       <LayerFour />
       <LayerFive />

@@ -1,4 +1,4 @@
-// generate the background according to the provided theme color
+// // generate the background according to the provided theme color
 // export function generateBackground(c) {
 //   const red = process.env.PUBLIC_URL + '/assets/images/buttonRed.png'
 //   const yellow = process.env.PUBLIC_URL + '/assets/images/buttonYellow.png'

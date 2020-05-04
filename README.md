@@ -1,28 +1,14 @@
 ## My Website Page
 
-> :sunglasses: This site is currently on development stage. Thanks for viewing. :sunglasses:
+> :sunglasses: This is the official repository of my website [www.aimanadlawan.com](https://aimanadlawan.com/). I decided to build my own website to share my projects to anybody who wants to use it. Currently, this website is on development stage however this repository shows all components and animation you can see in my website. :sunglasses:
 
-[View it live from your browser.](https://aimanadlawan.com) Hosted by [Firebase](https://firebase.com)<br>
+This project is an addition to a [React JS Projects]() I created before. As you can see the project numbering are ordered differently. If you want to see the whole project, you can click [here]().
 
-> Things I learned in this project;
-  * Hosting and deployment.
-  * Mobile and screen responsiveness.
-  * Designs and layouts.
-  * How to use [React Router](https://reacttraining.com/react-router/).
-  * How to query data from a third party library using `axios` with the `async` and `await` promise.
-  * How to pass states aroun the application without any redux.
-  * How to Design SVG Files
-  
-  > References:
-  * [Figma](https://www.figma.com/)
-  * [Async and Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
-  * [Adobe Photoshop](https://www.adobe.com/)
-  * [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-  * [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
+
 
 ## Contributing
 
-If you find bugs in my website, pull requests are always welcome. You can [create an issue here](https://github.com/Aimanski12/ReactJS_Projects/issues/new).
+If you want to contribute, pull requests are always welcome. You can [create an issue here](https://github.com/Aimanski12/myWebsite/issues/new).
 Your :sparkles: are also greatly appreciated.
 
 If you want to know my JS project you can see it [here](http://bit.ly/aiman-javascript-projects)

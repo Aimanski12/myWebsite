@@ -12,6 +12,7 @@ This project is an addition to a [React JS Projects]() I created before. As you 
 <details>
   <summary><strong>Route: /index (Work Page)</strong></summary>
 
+  >
   <details>
   <summary><strong>Intro</strong></summary>
 

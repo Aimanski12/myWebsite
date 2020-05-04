@@ -1,28 +1,19 @@
 ## My Website Page
 
-
-
-
 > :sunglasses: This is the official repository of my website. Currently, my website is on development stage, however this repository shows all components and animation you can see in my website. :sunglasses: 
 
-This project is an addition to a [React JS Projects]() I created before. As you can see the project numbering are ordered differently. If you want to see the whole project, click [here]().
+This project is an addition to a [React JS Projects](https://github.com/Aimanski12/ReactJS_Projects) I created before. As you can see the project numbering are ordered differently. If you want to see the whole project, click [here](https://github.com/Aimanski12/ReactJS_Projects).
 
 
+
+
+Route: / (Work Page)
 
 <details>
-  <summary><strong>Route: /index (Work Page)</strong></summary>
+  <summary><strong>01. Intro</strong></summary>
 
-> <details>
-  <summary><strong>Intro</strong></summary>
-
-### Overview :sunglasses:
-
-  > Currency converter app are one of the app ideas that really interests me most. I build this app to see how does the currency app works under the hood. Thank you for looking into this repo. All the data from this app are taken from [API Frankfurter](https://www.frankfurter.app/) and [Rest Countries](https://restcountries.eu/).
-
-  [View it live from your browser.](http://bit.ly/2tFL0A3) Deployed with Firebase<br>
-  [View project source code](https://github.com/Aimanski12/ReactJS_Projects/tree/proj18).<br>
-  [Watch Short Video Clip](https://youtu.be/Bz_-G6Oi6R0) <br>
-
+  ### Overview :sunglasses:
+  > This intro animation is inspired by Line Drawing animation library from animejs. It uses an SVG image to run the animation smoothly.
   <div float="left">
     <a href="https://youtu.be/Bz_-G6Oi6R0">
       <img src="https://github.com/Aimanski12/proj-resource/blob/master/libs/react/react18-currencyconverter.gif" alt="screen shot">
@@ -30,11 +21,6 @@ This project is an addition to a [React JS Projects]() I created before. As you 
   </div>
 
 </details>
-
-</details>
-
-
-
 
 
 ## Contributing

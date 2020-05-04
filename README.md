@@ -12,11 +12,10 @@ This project is an addition to a [React JS Projects]() I created before. As you 
 <details>
   <summary><strong>Route: /index (Work Page)</strong></summary>
 
-  >
-  <details>
+> <details>
   <summary><strong>Intro</strong></summary>
 
-    ### Overview :sunglasses:
+### Overview :sunglasses:
 
   > Currency converter app are one of the app ideas that really interests me most. I build this app to see how does the currency app works under the hood. Thank you for looking into this repo. All the data from this app are taken from [API Frankfurter](https://www.frankfurter.app/) and [Rest Countries](https://restcountries.eu/).
 
@@ -30,7 +29,7 @@ This project is an addition to a [React JS Projects]() I created before. As you 
     </a>
   </div>
 
-  </details>
+</details>
 
 </details>
 

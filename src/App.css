@@ -4,3 +4,28 @@
   text-align: center;
 }
 
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #3E3A3A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.font {
+  opacity: 0;
+}
+
+svg {
+  width: 500px;
+}
+
+.strokes {
+  stroke: #377370
+}
+
+.shadow {
+  opacity: 0;
+}

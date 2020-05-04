@@ -3,7 +3,7 @@
   "name": "Aiman Adlawan Official Website",
   "icons": [
     {
-      "src": "assets/images/aiman.png",
+      "src": "/aiman.png",
       "sizes": "64x64",
       "type": "image/png"
     }

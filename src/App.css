@@ -4,26 +4,3 @@
   text-align: center;
 }
 
-.mainPage,
-.mainPageContainer {
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-}
-
-.introPage {
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  position: absolute;
-  z-index: 45;
-  
-}
-
-
-.introAminations {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  z-index: 30;
-}

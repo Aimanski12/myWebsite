@@ -1,8 +1,10 @@
 ## My Website Page
 
-> :sunglasses: This is the official repository of my website. Currently, my website is on development stage, however this repository shows all components and animation you can see in my website. :sunglasses: 
+> :sunglasses: This is the official repository of my website [www.aimanadlawan.com](https://aimanadlawan.com). Currently, my website is on development stage, however this repository shows all components and animation you can see in my website. :sunglasses: 
 
-This project is an addition to a [React JS Projects](https://github.com/Aimanski12/ReactJS_Projects) I created before. As you can see the project numbering are ordered differently. If you want to see the whole project, click [here](https://github.com/Aimanski12/ReactJS_Projects).
+> Each section is branched from the master folder for easy reading. You can check on the branch tab and select any folder you want to open or you can click om any of the buttons below.
+
+> This project is an addition to [React JS Projects](https://github.com/Aimanski12/ReactJS_Projects) I had created before.  If you want to see the whole project, click [here](https://github.com/Aimanski12/ReactJS_Projects).
 
 
 
@@ -10,14 +12,13 @@ This project is an addition to a [React JS Projects](https://github.com/Aimanski
 Route: / (Work Page)
 
 <details>
-  <summary><strong>01. Intro</strong></summary>
+  <summary><strong>21. Intro</strong></summary>
 
   ### Overview :sunglasses:
   > This intro animation is inspired by Line Drawing animation library from animejs. It uses an SVG image to run the animation smoothly.
+  [View Source Code](https://github.com/Aimanski12/myWebsite/tree/proj_22)<br>
   <div float="left">
-    <a href="https://youtu.be/Bz_-G6Oi6R0">
-      <img src="https://github.com/Aimanski12/proj-resource/blob/master/libs/react/react18-currencyconverter.gif" alt="screen shot">
-    </a>
+    <img src="https://github.com/Aimanski12/myWebsite/blob/proj_media/01_intro.gif" alt="screen shot">
   </div>
 
 </details>

@@ -343,6 +343,7 @@
 .box-svgface-container{
   height: 352px;
   width: 200px;
+
 }
 .box svg {
   width: 100%;
@@ -353,7 +354,12 @@
 }
 .anim-text {
   width: 100%;
-  height: 120px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background: orange; */
 }
 
 /* h2 class */
@@ -368,30 +374,24 @@
   display: inline-block;
 }
 
-.text-intro-subheader-one, .text-intro-subheader-two, .text-intro-subheader-three{
-  width: 90%;
-  margin-left: 5%;
+.text-intro-subheader{
+  width: 500px;
   font-family: 'Ubuntu', Verdana, sans-serif;
   font-weight: 500;
-  font-size: .81em;
+  font-size: 1.09em;
   text-align: center;
   color: #DBDAC7;
   overflow: hidden;
   display: inline-block;
+  opacity: 0;
+  line-height: 1.5em;
 }
+
+
 
 .text-intro-header .letter {
   display: inline-block;
-  line-height: 1em;
-  opacity: 0;
-}
-
-.text-intro-subheader-one .letter,
-.text-intro-subheader-two .letter,
-.text-intro-subheader-three .letter {
-  display: inline-block;
-  line-height: 1em;
-  opacity: 0;
+  line-height: 1.5em;
 }
 
 
@@ -469,10 +469,24 @@
   .left-nav, .right-nav {
     display: none;
   }
+  .box {
+    width: 570px;
+  }
   .box-svgface-container {
     height: 317px;
     width: 180px;
   }
+  .text-intro-header {
+    font-size: 2.4em;
+  }
+  .text-intro-subheader {
+    width: 450px;
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+
+
+
 }
 
 /* css 667px under */
@@ -508,7 +522,7 @@
   }
 
   .box {
-    width: 568px;
+    width: 528px;
   }
   .box-svgface-container {
     height: 300px;
@@ -516,13 +530,14 @@
   }
   /* h2 class */
   .text-intro-header {
-    font-size: 2.1em;
+    font-size: 2.3em;
   }
-  .text-intro-subheader-one,
-  .text-intro-subheader-two,
-  .text-intro-subheader-three {
-    font-size: .76em;
+  .text-intro-subheader {
+    width: 420px;
+    font-size: 0.95em;
   }
+
+  
 }
 
 
@@ -551,7 +566,7 @@
   }
 
   .box {
-    width: 100%;
+    width: 420px;
   }
   
   .box-svgface-container {
@@ -561,13 +576,13 @@
   
   /* h2 class */
   .text-intro-header {
-    font-size: 2.1em;
+    font-size: 2.2em;
   }
 
-  .text-intro-subheader-one,
-  .text-intro-subheader-two,
-  .text-intro-subheader-three {
-     font-size: .67em;
+  .text-intro-subheader {
+    width: 380px;
+    font-size: 0.92em;
+    line-height: 1.4em;
    }
 }
 
@@ -576,11 +591,18 @@
     height: 264px;
     width: 150px;
   }
-  .text-intro-subheader-one,
-  .text-intro-subheader-two,
-  .text-intro-subheader-three {
-    font-size: .68em;
+  .box {
+    width: 300px;
   }
+  .text-intro-header{
+    font-size: 2.1em;
+  }
+  .text-intro-subheader {
+    width: 290px;
+    font-size: .87em;
+    line-height: 1.5em;
+  }
+
 }
 
 
@@ -596,13 +618,17 @@
     height: 229px;
     width: 130px;
   }
+   .box {
+     width: 280px;
+   }
+   
   .text-intro-header {
-    font-size: 1.9em;
+    font-size: 2em;
   }
-  .text-intro-subheader-one,
-  .text-intro-subheader-two,
-  .text-intro-subheader-three {
-    font-size: .62em;
+  .text-intro-subheader {
+    width: 270px;
+    font-size: .85em;
+    line-height: 1.55em;
   }
 }
 

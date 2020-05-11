@@ -1,7 +1,5 @@
 const textWrapper1 = document.querySelector('.text-intro-header .letters')
-const textWrapper2 = document.querySelector('.text-intro-subheader-one .letters')
-const textWrapper3 = document.querySelector('.text-intro-subheader-two .letters')
-const textWrapper4 = document.querySelector('.text-intro-subheader-three .letters')
+const textWrapper2 = document.querySelector('.text-intro-subheader')
 
 const img_container = document.querySelector('.img-container')
 const container = document.querySelector('.container')
@@ -14,15 +12,10 @@ const slide_down_svg = document.querySelector('.slide-down-svg')
 
 // separate each text so that we can manipulate each text easily
 textWrapper1.innerHTML = textWrapper1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-textWrapper3.innerHTML = textWrapper3.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-textWrapper4.innerHTML = textWrapper4.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
 
 
 const text1 = document.querySelectorAll('.text-intro-header .letter')
-const text2 = document.querySelectorAll('.text-intro-subheader-one .letter')
-const text3 = document.querySelectorAll('.text-intro-subheader-two .letter')
-const text4 = document.querySelectorAll('.text-intro-subheader-three .letter')
 
 // assign color for the header text
 for (let x = 0; x < text1.length; x++) {
@@ -30,95 +23,7 @@ for (let x = 0; x < text1.length; x++) {
     text1[x].classList.add('green')
   }
 }
-for (let x = 0; x < text2.length; x++) {
-  if (x >= 13 && x <= 28) {
-    text2[x].classList.add('green')
-  }
-}
-for (let x = 0; x < text3.length; x++) {
-  if (x >= 25 && x <= 38) {
-    text3[x].classList.add('green')
-  }
-}
-for (let x = 0; x < text4.length; x++) {
-  if (x >= 8 && x <= 17) {
-      text4[x].classList.add('green')
-    }
-  }
   
-  
-  
-  
-  
-  function samp(){
-    anime.timeline({})
-    .add({
-      targets: text1,
-      translateY: ["1.5em", 0],
-      translateZ: 0,
-      duration: 420,
-      opacity:1,
-      delay: (el, i) => 75 * i
-    })
-    .add({
-      targets: text2,
-      translateY: ["1em", 0],
-      translateZ: 0,
-      duration: 320,
-      opacity: 1,
-      delay: (el, i) => 40 * i
-    })
-  .add({
-    targets: text3,
-      translateY: ["1em", 0],
-      translateZ: 0,
-      duration: 320,
-      opacity: 1,
-      delay: (el, i) => 40 * i
-    })
-  .add({
-    targets: text4,
-    translateY: ["1em", 0],
-    translateZ: 0,
-    opacity: 1,
-    duration: 320,
-    delay: (el, i) => 40 * i
-  })
-}
-
-// samp()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -142,13 +47,11 @@ const face_svg = document.querySelectorAll('.svg-face')
 
 
 function animation2 () {
-
-
   anime({
     duration: 600,
     easing: 'linear',
     opacity: 0,
-    targets: [paths, text1, text2, text3, text4]
+    targets: [paths, text1, textWrapper2]
   });
     setTimeout(()=>{
       animatedFace()
@@ -233,28 +136,10 @@ function animatedFace(){
     delay: (el, i) => 75 * i
   })
   .add({
-    targets: text2,
-    translateY: ["1em", 0],
-    translateZ: 0,
-    duration: 320,
+    targets: textWrapper2,
     opacity: 1,
-    delay: (el, i) => 40 * i
-  })
-  .add({
-    targets: text3,
-    translateY: ["1em", 0],
-    translateZ: 0,
-    duration: 320,
-    opacity: 1,
-    delay: (el, i) => 40 * i
-    })
-  .add({
-    targets: text4,
-    translateY: ["1em", 0],
-    translateZ: 0,
-    opacity: 1,
-    duration: 320,
-    delay: (el, i) => 40 * i
+    easing: 'easeInOutSine',
+    duration: 1300,
   })
   .add({
     duration: 60000,
@@ -263,23 +148,13 @@ function animatedFace(){
     duration: 2000,
     easing: 'linear',
     opacity: 0,
-    targets: [paths, text1, text2, text3, text4]
+    targets: [paths, text1, textWrapper2]
   })
-  
   
 }
 
 
-
-
-
-
-
-
-
 const show = [img_container, navigation, slide_down_svg]
-
-
 
 
 function start() {
@@ -301,41 +176,22 @@ function start() {
       delay: (el, i) => 75 * i
     })
     .add({
-      targets: text2,
-      translateY: ["1em", 0],
-      translateZ: 0,
-      duration: 320,
+      targets: textWrapper2,
       opacity: 1,
-      delay: (el, i) => 40 * i
+      easing: 'easeInOutSine',
+      duration: 1300,
     })
-  .add({
-    targets: text3,
-      translateY: ["1em", 0],
-      translateZ: 0,
-      duration: 320,
+    .add({
+      targets: show,
       opacity: 1,
-      delay: (el, i) => 40 * i
+      duration: 3000,
     })
-  .add({
-    targets: text4,
-    translateY: ["1em", 0],
-    translateZ: 0,
-    opacity: 1,
-    duration: 320,
-    delay: (el, i) => 40 * i
-  })
-  .add({
-    targets: show,
-    opacity: 1,
-    duration: 3000,
-  })
-  
 
+    setTimeout(()=>{
+      container.style.overflow = 'visible'
+    },6000)
   setTimeout(()=>{
-    container.style.overflow = 'visible'
-  },10000)
-  setTimeout(()=>{
-    // animation2()
+    animation2()
   }, 70000)
 }
 

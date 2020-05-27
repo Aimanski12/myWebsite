@@ -1,0 +1,107 @@
+.section-message {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.section-mcontainer {
+  width: inherit;
+  height: inherit;
+}
+
+.section-message article {
+  min-height: 120px;
+
+}
+
+.section-mtext {
+  width: 100%;
+  text-align: center;
+  font-family: 'Ubuntu', verdana, sans-serif;
+  font-size: 1.6em;
+  line-height: 1.8em;
+  color: #EBE9CD;
+}
+
+@media (max-width: 1168px) {
+  .section-mtext {
+    font-size: 1.55em;
+  }
+}
+
+@media (max-width: 1068px) {
+  .section-mtext {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 968px) {
+  .section-message article {
+    min-height: 300px;
+  }
+  .section-mtext {
+    font-size: 1.45em;
+  }
+}
+
+@media (max-width: 868px) {
+  .section-mtext {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-message {
+    min-height: 125vh;
+  }
+  .section-message article {
+    min-height: 350px;
+  }
+  .section-mtext {
+    font-size: 1.35em;
+  }
+}
+
+@media (max-width: 668px) {
+  .section-mtext {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 568px) {
+  .section-mtext {
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 468px) {
+  .section-message {
+    min-height: 120vh;
+  }
+  .section-message article {
+    min-height: 300px;
+  }
+  .section-mtext {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 368px) {
+  .section-message {
+    min-height: 135vh;
+  }
+  
+  .section-message article {
+    min-height: 300px;
+  }
+  .section-mtext {
+    font-size: 1.15em;
+  }
+}
+
+
+
+
+
+
+
+

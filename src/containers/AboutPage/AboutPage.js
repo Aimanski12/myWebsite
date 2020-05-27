@@ -1,9 +1,13 @@
 import React from 'react'
+import './AboutPage.css'
 
-export default function AboutPage() {
+function AboutPage(props) {
+  console.log(props.st)
   return (
     <div>
-      <h1>About Page</h1>
+      <h1>About PAge</h1>  
     </div>
   )
 }
+
+export default AboutPage

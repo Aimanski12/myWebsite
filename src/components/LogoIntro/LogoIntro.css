@@ -8,13 +8,21 @@
   width: 550px;
 }
 
-.text-logo, .inner-shadow {
+
+.text-logo,
+.inner-shadow {
   opacity: 0;
 }
+
 
 .border {
   stroke: #377370;
 }
+
+.letters .green {
+  color: #2F8581;
+}
+
 
 @media (max-width: 868px) {
   .intro-logo svg {
@@ -25,6 +33,7 @@
 @media (max-width: 768px) {
   .intro-logo svg {
     width: 450px;
+
   }
 }
 

@@ -3,12 +3,14 @@ import {findBackground} from '../../../helpers/common/common'
 import SectionHeader from '../../../components/SectionHeader/SectionHeader'
 import Button from '../../../components/Button/Button'
 import DesignCard from '../../../components/MyDesignCard/MyDesignCard'
+import {designAnimateCards} from '../../../helpers/mydesign/mydesign'
 import {cardData} from '../../../helpers/mydesign/cardData'
 import './MyDesigns.css'
 
 function MyDesigns() {
 
   useEffect(()=>{
+    designAnimateCards(document)
     renderCards()
   })
 

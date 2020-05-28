@@ -1,0 +1,270 @@
+
+
+
+
+.footer {
+  width: 100%;
+  min-height: 500px;
+  background: #3E3A3A;
+  padding: 70px 0 100px 0;
+}
+
+.footer .section-header {
+  height: 200px;
+  margin-bottom: 40px;
+}
+
+.footer .header-title {
+  /* font-size: 3.5em; */
+}
+
+.footer article {
+  min-height: 120px;
+}
+
+.message-text {
+  width: 100%;
+  text-align: center;
+  font-family: 'Ubuntu', verdana, sans-serif;
+  font-size: 1.8em;
+  line-height: 1.8em;
+  color: #2F8581;
+}
+
+
+.footer-nav-container {
+  height: 180px;
+  /* background: orange; */
+}
+
+.footer-nav {
+  flex-direction: row;
+  width: 550px;
+  height: 60px;
+  border-bottom: 1px solid gray;
+}
+
+
+.footer-nav a {
+  width: 132px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Ubuntu';
+  color: #2F817D;
+  font-size: 1.3em;
+  border-right: 2px solid gray;
+}
+
+.footer-nav a:last-child {
+  border: none;
+}
+
+.footer-nav a:hover {
+  opacity: 0.7;
+}
+
+.footer-blocks {
+  width: 400px;
+  height: 100px;
+}
+
+.footer-blocks p{
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+  line-height: 40px;
+  font-family: 'Open Sans';
+  font-size: 0.9em;
+  color: gray;
+  height: 40px;
+  font-weight: 600;
+}
+
+.footer-blocks p a{
+  text-decoration: none;
+}
+
+.footer-blocks p a:hover {
+  opacity: 0.7;
+}
+
+.footer-nav-btn {
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 60px;
+}
+
+.footer-nav-btn a {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-nav-btn a img{
+  width: 100%;
+}
+
+.footer-nav-btn a img:hover {
+  opacity: .7;
+}
+
+
+.orange {
+  color: #F7AF7E
+}
+
+
+
+
+
+
+
+@media (max-width: 1268px) {
+  .footer .header-title {
+    /* font-size: 3.2em; */
+  }
+}
+
+@media (max-width: 1168px) {
+  .footer .header-title {
+    /* font-size: 3em; */
+  }
+
+  .footer-nav a {
+    font-size: 1.27em;
+  }
+}
+
+@media (max-width: 1068px) {
+  .footer .header-title {
+    /* font-size: 2.8em; */
+  }
+  .footer-nav-btn a {
+    width: 37px;
+    height: 37px;
+  }
+}
+
+@media (max-width: 968px) {
+  .footer .header-title {
+    /* font-size: 2.6em; */
+  }
+  .footer-nav a {
+    font-size: 1.21em;
+  }
+}
+
+@media (max-width: 868px) {
+  .footer .header-title {
+    /* font-size: 2.3em; */
+  }
+  .footer-nav-btn a {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  
+}
+
+@media (max-width: 668px) {
+  .footer .header-title {
+    /* font-size: 2em; */
+  }
+
+  .footer-nav {
+    width: 100%;
+  }
+
+  .footer-nav a {
+    font-size: 1.18em;
+  }
+
+  .footer-blocks p {
+    font-size: 0.85em;
+  }
+  .footer-nav-btn a {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
+@media (max-width: 568px) {
+   .footer-nav-container {
+     height: 350px;
+   }
+   .footer .section-header {
+     margin-bottom: 10px;
+   }
+
+   .footer-nav {
+     flex-direction: column;
+     height: 240px;
+   }
+
+  .footer-nav a {
+    border-right: none;
+    line-height: 50px;
+    margin-bottom: 5px;
+    height: 50px;
+    font-size: 1.25em;
+    font-weight: 600;
+  }
+
+  .footer-blocks p {
+    font-size: 0.69em;
+  }
+  
+}
+
+
+
+@media (max-width: 468px) {
+  
+  .footer .header-title {
+    /* margin-bottom: 40px; */
+  }
+  .footer .section-header {
+    height: 250px;
+  }
+
+  .footer-nav-container {
+    height: 390px;
+  }
+
+  .footer-blocks {
+    width: 100%;
+  }
+
+  .footer-blocks p {
+    font-size: 0.64em;
+  }
+
+}
+
+@media (max-width: 368px) {
+  .footer .section-header {
+    height: 280px;
+  }
+  
+  .footer .header-title {
+    /* margin-bottom: 30px; */
+  }
+
+  .footer-nav-container {
+    height: 390px;
+  }
+
+  .footer-blocks {
+    width: 100%;
+  }
+
+  .footer-blocks p {
+    font-size: 0.58em;
+  }
+
+}

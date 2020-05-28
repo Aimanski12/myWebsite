@@ -3,6 +3,7 @@ import SectionHeader from '../../../components/SectionHeader/SectionHeader'
 import {projData} from '../../../helpers/projects/projectsData'
 import {makeButton} from '../../../helpers/projects/projectScripts'
 import {findBackground} from '../../../helpers/common/common'
+import Button from '../../../components/Button/Button'
 import {slideCard} from '../../../helpers/projects/projectScripts'
 import ProjectCard from '../../../components/ProjectCards/ProjectCard'
 import './Projects.css'
@@ -101,9 +102,12 @@ function Projects() {
             onClick={()=> setSlides('right')}>→</i>
         </div>
 
-        <div className="proj-btn content-center">
-          <a href="/"><button className='prj-btn'>View More</button></a>
-        </div>
+        
+        <Button 
+          imate={false}
+          text={'View More'}/>
+
+        
 
         </div>
 

@@ -22,7 +22,7 @@ export function animateLogo (dom) {
         },
       });
     }
-  }, 10000)
+  }, 6000)
 }
 
 // function to animate when logo is hovered

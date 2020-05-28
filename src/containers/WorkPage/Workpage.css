@@ -1,28 +1,5 @@
 
 
-.samp {
-  width: 100%;
-  height: 100vh;
-  background: red;
-}
-.samp1 {
-  width: 100%;
-  height: 100vh;
-  background: teal;
-}
-
-.samp2 {
-  width: 100%;
-  height: 100vh;
-  background: yellow;
-}
-
-.samp3 {
-  width: 100%;
-  height: 100vh;
-  background: pink;
-}
-
 
 /* media queries when mobile screen is on mobile */
 @media screen and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
@@ -44,9 +21,7 @@
     height: 720px;
   }
 
-  .navbar,
-  .faceAnim,
-  .background {
+  .navbar, .faceAnim, .background, .section-message {
     min-height: 720px;
   }
 
@@ -62,6 +37,14 @@
 }
 
 
+
+@media screen and (max-width: 668px) and (orientation: landscape) {
+ 
+  .what-i-can-do {
+    height: 1200px;
+  }
+
+}
 
 
 

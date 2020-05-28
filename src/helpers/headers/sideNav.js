@@ -5,13 +5,17 @@ let scroll = false
 let time = null
 
 export function detectIfScrolledUp(dom, e) {
-  const el = sideNavsEl(dom)
+
   let scrollY = window.pageYOffset
+  
+  // find if the bottom is closer to the footer
+  let btmH = findTotalHieght(dom, scrollY)
+
+  const el = sideNavsEl(dom)
 
   if(window.innerWidth > 768){
-    if(scrollY > 350){
+    if(scrollY > 390 && btmH > 500){
       showSideNavs(el)
-      // showRight(el)
       if (time !== null) {
         clearTimeout(time)
       }
@@ -65,4 +69,12 @@ export function resize(dom) {
     el.leftnav.style.width = `${window.innerWidth * .1}px`
     el.rightnav.style.width = `${window.innerWidth * .1}px`
   }
+}
+
+
+
+
+function findTotalHieght(dom, y) {
+  let total = dom.body.scrollHeight - (y + window.innerHeight)
+  return total
 }

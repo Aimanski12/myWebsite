@@ -24,7 +24,8 @@ function Message(props) {
 
 
           <article className='content-align content-center '>
-            <p className='section-mtext'>It takes a lot of time and effort to create ideas from scratch. My passion and dedication has brought me to a level that would drive me to create and develop ideas with excitement and enjoyment.</p>
+            <p className='section-mtext'
+              style={{color: props.pColor}}>{props.articleText}</p>
 
             {button}
             

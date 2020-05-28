@@ -274,7 +274,6 @@
 
 .swipe {
   display: none;
-  margin-bottom: 20px;
   width: 100%;
   height: 50px;
   color: #DBDAC7;
@@ -550,46 +549,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.proj-btn {
-  width: 100%;
-  height: 80px;
-}
-
-.prj-btn {
-  width: 170px;
-  height: 40px;
-  background: #DBDAC7;
-  border: none;
-  border-radius: 4px;
-  font-family: 'Fresca';
-  font-size: 1.25em;
-  color: #1F6562;
-}
-
-.prj-btn:hover {
-  cursor: pointer;
-
-}
-
-.fadeBtn {
-  color: #FBF9D2;
-  background: #BCBCBC;
-  transition: all 0.3s linear;
-}

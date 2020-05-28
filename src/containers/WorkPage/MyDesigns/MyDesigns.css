@@ -104,14 +104,14 @@
   width: 347px;
   height: 564px;
   background: #175552;
-  border-radius: 20px;
+  border-radius: 10px;
   position: absolute;
   box-shadow: 10px 10px 10px rgba(60, 60, 60, 0.7);
 }
 
 .cards article {
-  width: 307px;
-  height: 524px;
+  width: 317px;
+  height: 534px;
   color: #DBDAC7;
 }
 
@@ -123,7 +123,7 @@
 .cards img {
   width: 100%;
   height: 327px;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 .cards h4 {
@@ -216,8 +216,8 @@
     height: 502px;
   }
   .cards article {
-    height: 464px;
-    width: 267px;
+    height: 474px;
+    width: 277px;
   }
   .cards figure {
     height: 284px;
@@ -266,8 +266,8 @@
     height: 442px;
   }
   .cards article {
-    height: 404px;
-    width: 227px;
+    height: 414px;
+    width: 237px;
   }
   .cards figure {
     height: 242px;
@@ -289,7 +289,7 @@
 
 @media(max-width: 768px) {
   .my-work {
-    height: 2940px;
+    height: 2840px;
   }
   .card-container {
     margin-top: 40px;
@@ -398,3 +398,17 @@
 
 
 
+.fadeIn {
+  opacity: 1;
+  animation: fade .300s linear;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

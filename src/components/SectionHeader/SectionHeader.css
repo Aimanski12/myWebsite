@@ -14,7 +14,7 @@
 .header-quote {
   /* color: #81858A; */
   line-height: 1.9em;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-family: 'Open Sans', verdana, sans-serif;
 }
 
@@ -23,7 +23,7 @@
     font-size: 3.5em;
   }
   .header-quote {
-    font-size: 1.15em;
+    font-size: 1.05em;
   }
 }
 
@@ -32,7 +32,7 @@
     font-size: 3.3em;
   }
   .header-quote {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 }
 
@@ -41,7 +41,7 @@
     font-size: 3.1em;
   }
   .header-quote {
-    font-size: 1.05em;
+    font-size: 0.95em;
   }
 }
 
@@ -54,7 +54,7 @@
     font-size: 2.9em;
   }
   .header-quote {
-    font-size: 1em;
+    font-size: 0.9em;
   }
 }
 

@@ -28,7 +28,7 @@ function App() {
     // close the intro animation one timer is done
     setTimeout(()=>{
       setIsDone(true)
-    }, 6300)
+    }, 5850)
   })
   return (
     <div className="main">
@@ -39,11 +39,11 @@ function App() {
               { animationIsDone ? 
                 <WorkPage /> : <LogoIntroAnimation /> }
             </Route>
-            <Route path="/contact">
-              <Contact />
-            </Route>
             <Route path="/about">
               <About />
+            </Route>
+            <Route path="/contact">
+              <Contact />
             </Route>
           </Switch>
         </Router>

@@ -21,7 +21,7 @@ export function logoIntroAnimation(dom) {
     .add({
       targets: el.font,
       opacity: 1,
-      duration: 1200,
+      duration: 1000,
       easing: 'easeInOutSine',
     })
     .add({
@@ -29,22 +29,22 @@ export function logoIntroAnimation(dom) {
       opacity: 1,
       stroke: '#73ADAA',
       easing: 'easeInOutSine',
-      duration: 850,
+      duration: 750,
     })
     .add({
-      duration: 800
+      duration: 600
     })
     .add({
       targets: el.top,
       translateY: 450,
       easing: 'easeInOutSine',
-      duration: 1600,
+      duration: 1400,
       begin: function(anim){
         anime({
           targets: el.bottom,
           translateY: -450,
           easing: 'easeInOutSine',
-          duration: 1600,
+          duration: 1400,
         })
       }
     })

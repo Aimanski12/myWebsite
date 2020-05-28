@@ -33,6 +33,14 @@ export function findBackground(b ) {
   const clock = process.env.PUBLIC_URL + '/assets/work/projects/clock.svg'
   const gif = process.env.PUBLIC_URL + '/assets/work/projects/giff.svg'
 
+  const beh = process.env.PUBLIC_URL + '/assets/work/footer/behance.png'
+  const dri = process.env.PUBLIC_URL + '/assets/work/footer/dribbble.png'
+  const goo = process.env.PUBLIC_URL + '/assets/work/footer/goodreads.png'
+  const lin = process.env.PUBLIC_URL + '/assets/work/footer/linkedin.png'
+  const twi = process.env.PUBLIC_URL + '/assets/work/footer/twitter.png'
+
+
+
   if (b === 'one') return one
   if (b === 'desktop') return desktop
   if (b === 'tablet') return tablet
@@ -46,6 +54,11 @@ export function findBackground(b ) {
   if (b === 'car') return car
   if (b === 'clock') return clock
   if (b === 'gif') return gif
+  if (b === 'beh') return beh
+  if (b === 'dri') return dri
+  if (b === 'goo') return goo
+  if (b === 'lin') return lin
+  if (b === 'twi') return twi
 }
 
 

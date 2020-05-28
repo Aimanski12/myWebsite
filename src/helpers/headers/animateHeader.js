@@ -19,10 +19,10 @@ export function animateHeaderPage(dom) {
 
   tl
     .add({
-      easing: 'easeInOutSine',
+      easing: 'linear',
       opacity: 1,
       targets: el.paths,
-      duration: 2500
+      duration: 1500
     })
     .add({
       targets: el.textHeader,
@@ -41,12 +41,12 @@ export function animateHeaderPage(dom) {
       targets: el.text2,
       opacity: 1,
       easing: 'easeInOutSine',
-      duration: 1300,
+      duration: 1000,
     })
     .add({
       targets: show,
       opacity: 1,
-      duration: 1200,
+      duration: 1000,
       complete: function (anim) {
         el.cont.style.overflow = 'visible'
         el.figure.style.display = 'flex'

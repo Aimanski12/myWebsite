@@ -9,6 +9,7 @@
 }
 
 .section-message article {
+  margin-top: 50px;
   min-height: 120px;
 
 }
@@ -36,7 +37,7 @@
 
 @media (max-width: 968px) {
   .section-message article {
-    min-height: 300px;
+    min-height: 200px;
   }
   .section-mtext {
     font-size: 1.45em;
@@ -49,12 +50,20 @@
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) and (orientation: landscape) {
+
   .section-message {
     min-height: 125vh;
   }
+}
+
+
+@media (max-width: 768px) {
+  /* .section-message {
+    min-height: 125vh;
+  } */
   .section-message article {
-    min-height: 350px;
+    min-height: 150px;
   }
   .section-mtext {
     font-size: 1.35em;
@@ -78,7 +87,7 @@
     min-height: 120vh;
   }
   .section-message article {
-    min-height: 300px;
+    min-height: 175px;
   }
   .section-mtext {
     font-size: 1.2em;

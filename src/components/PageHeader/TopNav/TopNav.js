@@ -1,6 +1,7 @@
 import React from 'react'
 import AimanSvgLogo from '../../Svg/AimanLogo/AimanSvgContainer'
 import {burgerNavOpen} from '../../../helpers/headers/burgerNav'
+import {Link} from 'react-router-dom'
 import {hoverInAnimate, hoverOutAnimate} from '../../../helpers/headers/topNav'
 
 
@@ -12,10 +13,18 @@ function TopNav (props) {
       <nav className="menu">
         <div className="menu_list">
           <ul>
-            <li className='active'><a href="/">Work</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="/">Blogs</a></li>
-            <li><a href="/">Contact</a></li>
+            <li className='active'>
+              <Link to='/'>Work</Link>
+            </li>
+            <li>
+              <Link to='/about'>About</Link>
+            </li>
+            <li>
+              <Link to='/'>Blogs</Link>
+            </li>
+            <li>
+              <Link to='/contact'>Contacts</Link>
+            </li>
           </ul>
         </div>
         <div className="menu_burger">

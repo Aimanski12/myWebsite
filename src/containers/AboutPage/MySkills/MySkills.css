@@ -1,0 +1,184 @@
+
+.my-skills {
+  width: 100%;
+  min-height: 100vh;
+  background: #3E3A3A
+}
+
+.my-skills-container {
+  width: inherit;
+  padding: 100px 0 100px 0;
+  height: inherit;
+}
+
+.message-text {
+  width: 100%;
+  text-align: center;
+  font-family: 'Ubuntu', verdana, sans-serif;
+  font-size: 1.8em;
+  line-height: 1.8em;
+  color: #EBE9CD;
+}
+
+.skill-wrapper {
+  min-height: 300px;
+  margin-top: 50px;
+}
+
+.skill-wrapper-cont {
+  width: 100%;
+  min-height: 110px;
+  padding: 30px 0 20px 0;
+  background: #3A3232;
+  border-radius: 10px;
+  margin-bottom: 80px;
+  box-shadow: 12px 12px 12px rgba(31,101,98,0.2);
+}
+
+.skill-wrapper h3 {
+  font-family: 'Ubuntu';
+  color: #EBE9CD;
+  font-size: 2em;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.skill-wrapper h3 span {
+  font-family: 'Ubuntu';
+  color: #2E817D;
+  font-size: 0.5em;
+  top: -20px;
+  position: relative;
+}
+
+.skill-wrapper ul {
+  list-style: none;
+  width: 100%;
+  min-height: 40px;
+}
+
+.skill-wrapper ul li {
+  width: 23%;
+  margin: 5px 1%;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  text-align: center;
+  color: #2E817D;
+  font-family: 'Open Sans';
+  font-size: 1.3em;
+}
+
+.skill-wrapper ul li span{
+  font-size: 0.65em;
+  position: relative;
+  top: -10px;
+  color: #EBE9CD;
+}
+
+
+
+
+
+
+
+@media (max-width: 1268px){
+  .skill-wrapper ul li {
+    font-size: 1.27em;
+  }
+}
+
+@media (max-width: 1168px) {
+  .skill-wrapper h3 {
+    font-size: 1.95em;
+  }
+  .skill-wrapper ul li {
+    font-size: 1.24em;
+  }
+}
+
+@media (max-width: 1068px) {
+  .skill-wrapper h3 {
+    font-size: 1.9em;
+  }
+  .skill-wrapper ul li {
+    font-size: 1.21em;
+  }
+}
+
+@media (max-width: 968px) {
+  .skill-wrapper h3 {
+    font-size: 1.85em;
+  }
+  .skill-wrapper ul li {
+    width: 31.333%;
+    margin: 5px 1%;
+  }
+}
+
+@media screen and (max-width: 896px) and (orientation: landscape) {
+  .my-skills {
+    min-height: 780px;
+  }
+}
+
+@media (max-width: 868px) {
+  .skill-wrapper h3 {
+    font-size: 1.8em;
+  }
+  .skill-wrapper ul li {
+    font-size: 1.18em;
+    width: 31.333%;
+    margin: 5px 1%;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-wrapper h3 {
+    font-size: 1.7em;
+  }
+  .skill-wrapper ul li {
+    font-size: 1.15em;
+  }
+}
+
+@media (max-width: 668px) {
+  .skill-wrapper h3 {
+    font-size: 1.6em;
+  }
+  .skill-wrapper ul li {
+    width: 50%;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 568px) {
+  .skill-wrapper h3 {
+    font-size: 1.5em;
+  }
+  .skill-wrapper ul li {
+    font-size: 1.12em;
+  }
+}
+
+@media (max-width: 468px) {
+  .skill-wrapper h3 {
+    font-size: 1.35em;
+  }
+  .skill-wrapper ul li {
+    font-size: 1.1em;
+    width: 50%;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 368px) {
+  .skill-wrapper h3 {
+    font-size: 1.2em;
+  }
+  .skill-wrapper ul li {
+    font-size: 1.08em;
+    width: 100%;
+    margin: 5px 0;
+  }
+}

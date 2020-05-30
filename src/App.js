@@ -9,11 +9,16 @@ import WorkPage from './containers/WorkPage/WorkPage'
 import About from './containers/AboutPage/AboutPage'
 import Contact from './containers/ContactPage/ContactPage'
 import LogoIntroAnimation from './components/LogoIntro/LogoIntro'
-import {resize} from './helpers/headers/sideNav'
-import {detectIfScrolledUp} from './helpers/headers/sideNav'
+import {resize} from './helpers/work/headers/sideNav'
+import {detectIfScrolledUp} from './helpers/work/headers/sideNav'
 
 function App() {
-  const [animationIsDone, setIsDone] = useState(true)
+  const [introIsDone, setIsDone] = useState(false)
+
+  const [navs, setNavs] = useState({
+    nav: ['Work', 'About', 'Blogs', 'Contact'],
+    active: 'Work'
+  })
   useEffect(()=>{
 
     // scroll event listener
@@ -28,19 +33,32 @@ function App() {
     // close the intro animation one timer is done
     setTimeout(()=>{
       setIsDone(true)
-    }, 5850)
+    }, 5850) 
+    
   })
+
+  const setNav = (n) => {
+    setNavs({
+      ...navs,
+      active: n
+    })
+  }
+
   return (
     <div className="main">
       <div className="container">
         <Router>
           <Switch>
             <Route  exact path="/">
-              { animationIsDone ? 
-                <WorkPage /> : <LogoIntroAnimation /> }
+              { introIsDone ? 
+                <WorkPage 
+                  click={(n)=>setNav(n)}
+                  navs={navs}/> : <LogoIntroAnimation /> }
             </Route>
             <Route path="/about">
-              <About />
+              <About 
+                click={(n)=>setNav(n)}
+                navs={navs}/>
             </Route>
             <Route path="/contact">
               <Contact />

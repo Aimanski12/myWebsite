@@ -1,24 +1,24 @@
 import React, {useEffect, useState} from 'react'
 import SectionHeader from '../../../components/SectionHeader/SectionHeader'
-import {projData} from '../../../helpers/projects/projectsData'
-import {makeButton} from '../../../helpers/projects/projectScripts'
+import {projData} from '../../../helpers/work/projects/projectsData'
+import {makeButton} from '../../../helpers/work/projects/projectScripts'
 import {findBackground} from '../../../helpers/common/common'
 import Button from '../../../components/Button/Button'
-import {slideCard} from '../../../helpers/projects/projectScripts'
+import {slideCard} from '../../../helpers/work/projects/projectScripts'
 import ProjectCard from '../../../components/ProjectCards/ProjectCard'
 import './Projects.css'
 
 
 function Projects() {
-
+  // initial state for the button cards
   const [buttons, setButtons] = useState({
     isSet: false,
     slides: 0,
     active: 0
   })
 
-  useEffect(()=>{
 
+  useEffect(()=>{
     if(buttons.isSet === false) {
       let data = makeButton()
       setButtons({
@@ -45,6 +45,7 @@ function Projects() {
   }, [buttons])
 
 
+  // project cards svg file
   const projCards = () => {
     let cards = projData.map((d, i)=>{
                   return <ProjectCard key={i} pNum={d.pNum} url={d.pUrl} img={d.pImg} ttl={d.pTit} prg={d.pDesc}/>
@@ -52,6 +53,7 @@ function Projects() {
               return cards
   } 
 
+  // button sliders 
   const createBtnSliders = () => {
     if(buttons.slides && buttons.slides !== 0) {
       let a = []
@@ -65,6 +67,7 @@ function Projects() {
     }
   }
 
+  // set the state for the btn when arrow is clicked
   const setSlides = (direction) => {
     let n = slideCard(buttons, direction)
     setButtons({ ...n, buttons })
@@ -101,16 +104,12 @@ function Projects() {
           <i className='swipe-right'
             onClick={()=> setSlides('right')}>→</i>
         </div>
-
         
         <Button 
           imate={false}
           text={'View More'}/>
 
-        
-
         </div>
-
       </div>
     </section>
   )

@@ -1,11 +1,25 @@
 import React from 'react'
 import AimanSvgLogo from '../../Svg/AimanLogo/AimanSvgContainer'
-import {burgerNavOpen} from '../../../helpers/headers/burgerNav'
+import {burgerNavOpen} from '../../../helpers/work/headers/burgerNav'
 import {Link} from 'react-router-dom'
-import {hoverInAnimate, hoverOutAnimate} from '../../../helpers/headers/topNav'
+import {hoverInAnimate, hoverOutAnimate} from '../../../helpers/work/headers/topNav'
 
 
 function TopNav (props) {
+
+  const navs = () => {
+    let a = props.navs
+    let c = a.nav.map((b, i)=>{
+        return (<li key={i} className={b === props.navs.active ? 'active' : null}>
+                  <Link 
+                    to={b === 'Work' ? '/' : `/${b}`}
+                    onClick={()=> props.click(b)}
+                    >{b}</Link></li>)
+      })
+    return c
+  }
+
+
   return (
     // menu display for screen over 768px
     <div className='navigation'>
@@ -13,18 +27,7 @@ function TopNav (props) {
       <nav className="menu">
         <div className="menu_list">
           <ul>
-            <li className='active'>
-              <Link to='/'>Work</Link>
-            </li>
-            <li>
-              <Link to='/about'>About</Link>
-            </li>
-            <li>
-              <Link to='/'>Blogs</Link>
-            </li>
-            <li>
-              <Link to='/contact'>Contacts</Link>
-            </li>
+            {navs()}
           </ul>
         </div>
         <div className="menu_burger">
@@ -33,7 +36,7 @@ function TopNav (props) {
               width="80" height="63" viewBox="0 0 80 63" 
               fill="none" xmlns="http://www.w3.org/2000/svg"
               onClick={(e)=>{
-                burgerNavOpen(document, e)
+                burgerNavOpen(document, e, props.page)
               }}>
               <rect width="80" height="10" rx="5" fill="#5EA19E" />
               <rect y="27" width="80" height="10" rx="5" fill="#5EA19E" />
@@ -42,7 +45,6 @@ function TopNav (props) {
           </div>
         </div>
       </nav>
-
 
       <div className="logo-wrapper">
         <h1 className='logo'

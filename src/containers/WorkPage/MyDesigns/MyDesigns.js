@@ -3,8 +3,8 @@ import {findBackground} from '../../../helpers/common/common'
 import SectionHeader from '../../../components/SectionHeader/SectionHeader'
 import Button from '../../../components/Button/Button'
 import DesignCard from '../../../components/MyDesignCard/MyDesignCard'
-import {designAnimateCards} from '../../../helpers/mydesign/mydesign'
-import {cardData} from '../../../helpers/mydesign/cardData'
+import {designAnimateCards} from '../../../helpers/work/mydesign/mydesign'
+import {cardData} from '../../../helpers/work/mydesign/cardData'
 import './MyDesigns.css'
 
 function MyDesigns() {

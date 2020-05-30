@@ -101,3 +101,17 @@ export function designCardsEl(dom) {
     btn : dom.querySelectorAll('.card-cards .card-overlay'),
   }
 }
+
+export function skillEl (dom){
+  return {
+    h : dom.querySelector('.header').offsetHeight,
+    g : dom.querySelector('.my-essentials').offsetHeight,
+    f : dom.querySelector('.section-message').offsetHeight,
+    langSpans : dom.querySelectorAll('.lang ul span'),
+    toolSpans : dom.querySelectorAll('.tools ul span'),
+    designSpans : dom.querySelectorAll('.design ul span'),
+    l : dom.querySelector('.lang').offsetHeight,
+    t : dom.querySelector('.tools').offsetHeight
+  }
+
+}

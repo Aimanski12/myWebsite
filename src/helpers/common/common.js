@@ -24,9 +24,9 @@ export function findBackground(b ) {
   const mobile = process.env.PUBLIC_URL + '/assets/work/whatican/mobile.png'
   const designone = process.env.PUBLIC_URL + '/assets/work/mydesign/01.png'
   const designtwo = process.env.PUBLIC_URL + '/assets/work/mydesign/02.png'
-  const designthree = process.env.PUBLIC_URL + '/assets/work/mydesign/03.jpg'
   const designfour = process.env.PUBLIC_URL + '/assets/work/mydesign/04.png'
   const mywork = process.env.PUBLIC_URL + '/assets/work/mydesign/background.png'
+  const designthree = process.env.PUBLIC_URL + '/assets/work/mydesign/03.jpg'
 
   const cam = process.env.PUBLIC_URL + '/assets/work/projects/camera.svg'
   const car = process.env.PUBLIC_URL + '/assets/work/projects/car.svg'
@@ -39,6 +39,19 @@ export function findBackground(b ) {
   const lin = process.env.PUBLIC_URL + '/assets/work/footer/linkedin.png'
   const twi = process.env.PUBLIC_URL + '/assets/work/footer/twitter.png'
 
+  const bib = process.env.PUBLIC_URL + '/assets/about/Bible.svg'
+  const boo = process.env.PUBLIC_URL + '/assets/about/Book.svg'
+  const foo = process.env.PUBLIC_URL + '/assets/about/Food.svg'
+  const han = process.env.PUBLIC_URL + '/assets/about/Hand.svg'
+  const hea = process.env.PUBLIC_URL + '/assets/about/Heart.svg'
+  const lap = process.env.PUBLIC_URL + '/assets/about/Laptop.svg'
+  const run = process.env.PUBLIC_URL + '/assets/about/Run.svg'
+  const sle = process.env.PUBLIC_URL + '/assets/about/Sleep.svg'
+
+  const bell = process.env.PUBLIC_URL + '/assets/about/Reluctant Genius.png'
+  const tesla = process.env.PUBLIC_URL + '/assets/about/Man out of time.png'
+  const tv = process.env.PUBLIC_URL + '/assets/about/The boy who invented the tv.png'
+  const eins = process.env.PUBLIC_URL + '/assets/about/The world as I see it.png'
 
 
   if (b === 'one') return one
@@ -59,6 +72,21 @@ export function findBackground(b ) {
   if (b === 'goo') return goo
   if (b === 'lin') return lin
   if (b === 'twi') return twi
+
+  if (b === 'bib') return bib
+  if (b === 'boo') return boo
+  if (b === 'foo') return foo
+  if (b === 'han') return han
+  if (b === 'hea') return hea
+  if (b === 'lap') return lap
+  if (b === 'run') return run
+  if (b === 'sle') return sle
+  if (b === 'bell') return bell
+  if (b === 'tesla') return tesla
+  if (b === 'tv') return tv
+  if (b === 'eins') return eins
+
+
 }
 
 

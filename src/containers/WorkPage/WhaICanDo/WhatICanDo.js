@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import {imageSlide, animateBubble} from '../../../helpers/whatICanDo/whatICanDo'
+import {imageSlide, animateBubble} from '../../../helpers/work/whatICanDo/whatICanDo'
 import SectionHeader from '../../../components/SectionHeader/SectionHeader'
 import {findBackground} from '../../../helpers/common/common'
 import Bubble from '../../../components/Svg/Bubble/Bubble'

@@ -21,13 +21,12 @@ function SideNavs (props) {
           </div>
         </nav>
       </aside>
-
       <aside className="right-sidenav">
         <div className='sidenav-fixed'>
           <div className="side-nav-logo">
             <a href="/">
               <AimanSvgContainer 
-                color={props.color} />
+              color={props.color} />
             </a>
           </div>
         </div>

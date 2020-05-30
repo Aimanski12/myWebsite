@@ -1,9 +1,9 @@
 import React from 'react'
 import SmallMenuFrameSvg from '../../Svg/SmallMenuFramSvg/SmallMenuFrameSvg'
 import AimanSvgContainer from '../../Svg/AimanLogo/AimanSvgContainer'
-import {burgerNavClose} from '../../../helpers/headers/burgerNav'
+import {burgerNavClose} from '../../../helpers/work/headers/burgerNav'
 
-function BurgerNav() {
+function BurgerNav(props) {
   return (
     <div className="slide-navbar">
       <div className="slide-menu-card">
@@ -14,7 +14,7 @@ function BurgerNav() {
         <div className="slide-menu-header content-center">
           <span 
             className='slide-text'
-            onClick={(e)=>{burgerNavClose(document, e)}}
+            onClick={(e)=>{burgerNavClose(document, e, props.page)}}
               >
             <AimanSvgContainer color={'#357E7B'}/>
           </span>
@@ -36,12 +36,9 @@ function BurgerNav() {
         </div>
         </div>
       </div>
-
       <div className="slide-menu-layover">
         <div className="slide-menu-background"></div>
       </div>
-
-
     </div>
   )
 }

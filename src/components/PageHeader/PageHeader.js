@@ -3,8 +3,8 @@ import BurgerNav from './BurgerNav/BurgerNav'
 import TopNav from './TopNav/TopNav'
 import SideNav from './SideNav/SideNav'
 import HeroOne from '../Svg/HeroSvg/HeroSvg'
-import {animateHeaderPage} from '../../helpers/headers/animateHeader'
-import {scrollDown } from '../../helpers/headers/scrollDownBtn'
+// import {animateHeaderPage} from '../../helpers/headers/animateHeader'
+import {scrollDown } from '../../helpers/work/headers/scrollDownBtn'
 import {findBackground} from '../../helpers/common/common'
 
 import './PageHeader.css'
@@ -12,16 +12,20 @@ import './PageHeader.css'
 function PageHeader(props) {
 
   useEffect(() => {
-    animateHeaderPage(document)
+    // animateHeaderPage(document)
   })
 
   return (
      <Fragment>
       <div className="navbar">
 
-        <BurgerNav />
+        <BurgerNav 
+          page={props.page}/>
         <TopNav 
-          color={'#357E7B'}/>
+          page={props.page}
+          click={(n)=>props.click(n)}
+          color={'#357E7B'}
+          navs={props.navs}/>
         <SideNav 
           color={'#868383'} />
         <figure className="slide-down-button">
@@ -45,7 +49,7 @@ function PageHeader(props) {
 
         <div className="anim-text content-center">
           <h2 className='text-intro-header'>
-            <span className='letters'>Hi! It's me Aiman.</span></h2>
+            <span className='letters'>{props.maintext}</span></h2>
             { props.page === 'one' ? 
               <p className='text-intro-subheader'>
                 <span className='letters'>I'm a <span className='green'>web/app </span> developer.</span>

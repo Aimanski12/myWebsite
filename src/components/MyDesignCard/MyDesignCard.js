@@ -3,7 +3,6 @@ import {findBackground} from '../../helpers/common/common'
 
 function MyDesignCard(props) {
 
-
   return (
     <div className={`card-cards content-center ${props.num}`}>
       <div className="cards content-center">

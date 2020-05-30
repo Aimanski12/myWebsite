@@ -3,8 +3,6 @@ import ButtonSvg from '../../components/Svg/Button/Button'
 import './Button.css'
 
 function Button(props) {
-
-
   // check if props image is true
   const img = props.image ? 
     <i className='envelop'>
@@ -15,7 +13,7 @@ function Button(props) {
       <a href="/">
         <button className='btn-mcommon content-center'>
           {img}
-            {props.text}</button>
+          {props.text}</button>
       </a>
     </div>
   )

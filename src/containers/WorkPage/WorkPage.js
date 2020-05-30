@@ -5,21 +5,27 @@ import MyDesigns from './MyDesigns/MyDesigns'
 import Message from '../../components/Message/Message'
 import Project from './Projects/Projects'
 import Footer from '../../components/Footer/Footer'
-import {flipCard} from '../../helpers/projects/projectScripts'
+import {animateHeaderPage} from '../../helpers/work/headers/animateHeader'
+import {flipCard} from '../../helpers/work/projects/projectScripts'
 import './WorkPage.css'
 
 
-function WorkPage() {
+function WorkPage(props) {
   useEffect(()=>{
     // flipcard is called to set the project 
     // cards to flip when clicked
     flipCard(document)
+    animateHeaderPage(document)
   })
 
   return (
     <Fragment>
       <header className='header'>
-        <Header page={'one'}/>
+        <Header 
+          click={(n)=> props.click(n)}
+          page={'one'}
+          maintext={`Hi! It's me Aiman.`}
+          navs={props.navs}/>
       </header>
 
       <WhatICanDo />

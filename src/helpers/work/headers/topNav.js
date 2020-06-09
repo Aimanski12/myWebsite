@@ -3,8 +3,8 @@ import {topNavLogoShadow} from  '../../common/elementSorter'
 
 let isAnimating = false
 // function to run for the logo to animate in 5sec
-export function animateLogo (dom) {
-  const el = topNavLogoShadow(dom)
+export function animateLogo () {
+  const el = topNavLogoShadow()
   setInterval(() => {
     if (!isAnimating) {
       for (let x = 0; x < el.length; x++) {
@@ -26,8 +26,8 @@ export function animateLogo (dom) {
 }
 
 // function to animate when logo is hovered
-export function hoverInAnimate(dom) {
-  const el = topNavLogoShadow(dom)
+export function hoverInAnimate() {
+  const el = topNavLogoShadow()
   if(!isAnimating){
     anime({
       opacity: 1,
@@ -44,8 +44,8 @@ export function hoverInAnimate(dom) {
 
 
 // function to run when mouse hoves out logo
-export function hoverOutAnimate (dom) { 
-  const el = topNavLogoShadow(dom)
+export function hoverOutAnimate () { 
+  const el = topNavLogoShadow()
   if (isAnimating) {
     anime({
       opacity: 0,

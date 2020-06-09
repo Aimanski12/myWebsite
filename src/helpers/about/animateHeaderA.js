@@ -40,12 +40,6 @@ export function animateHeaderPage(dom) {
       delay: (el, i) => 75 * i
     })
     .add({
-      targets: el.text2,
-      opacity: 1,
-      easing: 'easeInOutSine',
-      duration: 1000,
-    })
-    .add({
       targets: show,
       opacity: 1,
       duration: 1000,

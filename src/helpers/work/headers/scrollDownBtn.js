@@ -17,10 +17,6 @@ export function scrollDown(dom, e) {
     h = window.innerHeight - window.pageYOffset
   }
   
-  
-  // =  ? 
-  //           720 - window.pageYOffset : 
-  //             window.innerHeight - window.pageYOffset
   anime({
     targets: [d, b],
     duration: 900,

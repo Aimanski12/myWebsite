@@ -6,7 +6,7 @@ import './MySkills.css'
 function MySkills() {
   useEffect(() => {
     window.addEventListener('scroll', ()=>{
-      animateSkill(document)
+      animateSkill()
     }) 
   })
 

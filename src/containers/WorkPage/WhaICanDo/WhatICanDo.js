@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import {imageSlide, animateBubble} from '../../../helpers/work/whatICanDo/whatICanDo'
 import SectionHeader from '../../../components/SectionHeader/SectionHeader'
-import {findBackground} from '../../../helpers/common/common'
+import {img, im} from '../../../helpers/common/common'
 import Bubble from '../../../components/Svg/Bubble/Bubble'
 import './WhatICanDo.css'
 
@@ -41,20 +41,20 @@ function WhatICanDo() {
                 <figure className="content-center">
                   <div className='img-slide-wrapper content-center '>
                     <div className="img-slider-wrap">
-                      <img src={findBackground('desktop')} 
-                        className='img-desktop' alt=""/>
+                      <img src={img(4)} 
+                        className='img-desktop' alt={`${im[4]} cartoon`}/>
                     </div>
                   </div>
                   <div className="img-slide-wrapper content-center">
                     <div className="img-slider-wrap">
-                      <img src={findBackground('mobile')} 
-                        className='img-mobile' alt="" />
+                      <img src={img(5)} 
+                        className='img-mobile' alt={`${im[5]} cartoon`}/>
                     </div>
                   </div>
                   <div className="img-slide-wrapper content-center">
                     <div className="img-slider-wrap">
-                      <img src={findBackground('tablet')} 
-                        className='img-tablet' alt="" />
+                      <img src={img(6)} 
+                        className='img-tablet' alt={`${im[6]} cartoon`}/>
                     </div>
                   </div>
                 </figure>

@@ -11,14 +11,14 @@
   height: inherit;
 }
 
-.message-text {
+/* .message-text {
   width: 100%;
   text-align: center;
   font-family: 'Ubuntu', verdana, sans-serif;
   font-size: 1.8em;
   line-height: 1.8em;
   color: #EBE9CD;
-}
+} */
 
 .skill-wrapper {
   min-height: 300px;

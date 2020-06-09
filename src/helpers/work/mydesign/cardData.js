@@ -1,25 +1,25 @@
 export const cardData =  [
   { 
     num : 'card-two',
-    img : 'design1',
-    ttl : 'Table Reservation',
-    prg : 'A seamless reservation app for a restro bar in downtown Chicago. A user friendly and easy navigation.'
+    img : 8,
+    ttl : 'Coach Me',
+    prg : 'An application designed for athletes to help them find the right coach for their personal training.'
   },
   { 
     num : 'card-three',
-    img : 'design2',
+    img : 9,
     ttl : 'Table Reservation',
     prg : 'A seamless reservation app for a restro bar in downtown Chicago. A user friendly and easy navigation.'
   },
   {
     num : 'card-four',
-    img : 'design3',
+    img : 10,
     ttl : 'Table Reservation',
     prg : 'A seamless reservation app for a restro bar in downtown Chicago. A user friendly and easy navigation.'
   },
   {
     num : 'card-five',
-    img : 'design4',
+    img : 11,
     ttl : 'Table Reservation',
     prg : 'A seamless reservation app for a restro bar in downtown Chicago. A user friendly and easy navigation.'
   }

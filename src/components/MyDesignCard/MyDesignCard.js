@@ -1,5 +1,5 @@
 import React from 'react'
-import {findBackground} from '../../helpers/common/common'
+import {img, im} from '../../helpers/common/common'
 
 function MyDesignCard(props) {
 
@@ -8,7 +8,7 @@ function MyDesignCard(props) {
       <div className="cards content-center">
         <article>
           <figure>
-            <img src={findBackground(props.img)} alt="" />
+            <img src={img(props.img)} alt={`${im[props.img]} mockup`}/>
           </figure>
           <h4>{props.ttl}</h4>
           <p>{props.prg}</p>

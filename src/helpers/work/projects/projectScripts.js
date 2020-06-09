@@ -21,17 +21,21 @@ export function flipCard (dom) {
 // function to check for the size of the screen
 export function makeButton (){
   const lists = document.querySelector('.project-list')
-  lists.style.left = 0
-
-  let slides = 0
-  let w = window.innerWidth
-  // check for the size of the screen
-
-  w <= 468 ? slides = 8 : 
+  if(lists !== null){
+    lists.style.left = 0
+    
+    let slides = 0
+    let w = window.innerWidth
+    // check for the size of the screen
+    
+    w <= 468 ? slides = 8 : 
     w <= 668 ? slides = 4 : 
-      w <= 968 ? slides = 3 : slides = 0
-  let active = 0
-  return { slides, active }
+    w <= 968 ? slides = 3 : slides = 0
+    let active = 0
+    return { slides, active }
+  } else {
+    return null
+  }
 
 }
 

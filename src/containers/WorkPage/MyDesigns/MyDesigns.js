@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import {findBackground} from '../../../helpers/common/common'
+import {img, im} from '../../../helpers/common/common'
 import SectionHeader from '../../../components/SectionHeader/SectionHeader'
 import Button from '../../../components/Button/Button'
 import DesignCard from '../../../components/MyDesignCard/MyDesignCard'
@@ -27,7 +27,8 @@ function MyDesigns() {
   return (
      <section className="my-work content-center">
         <div className='my-work-container content-center'
-          style={{background: `url('${findBackground('mywork')}') center center`}}>
+          alt={im[7]}
+          style={{background: `url('${img(7)}') center center`}}>
 
         <SectionHeader 
           color='yellow'

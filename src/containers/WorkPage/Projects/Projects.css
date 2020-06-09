@@ -145,13 +145,6 @@
   height: 100%;
   position: absolute;
   z-index: 10;
-  /* backface-visibility: inherit; */
-  /* -webkit-transform: translate3d(0, 0, 0); */
-  /* -webkit-backface-visibility: hidden;
-  -moz-backface-visibility:hidden;
-  -ms-backface-visibility:hidden;
-  -o-backface-visibility:hidden;
-  visibility: visible; */
 }
 
 .crd-num {
@@ -193,23 +186,6 @@
   font-size: 1.5em;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .card-back {
   border-radius: 10px;
   position: absolute;
@@ -222,7 +198,6 @@
   -ms-backface-visibility:hidden;
   -o-backface-visibility:hidden;
   transform: rotateY(180deg);
-  /* -webkit-transform: translate3d(0, 0, 0); */
   visibility: visible;
   box-shadow: 8px 8px 8px rgba(60, 60, 60, 0.5);
 }
@@ -231,16 +206,13 @@
   cursor: pointer;
 }
 
-
 .card-back article {
   width: 80%;
   height: 90%;
 }
 
-
 .card-back .text-container {
   height: 60%;
-  /* background-color: orange; */
 }
 
 .card-back p {

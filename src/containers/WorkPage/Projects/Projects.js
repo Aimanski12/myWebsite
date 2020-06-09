@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import SectionHeader from '../../../components/SectionHeader/SectionHeader'
 import {projData} from '../../../helpers/work/projects/projectsData'
 import {makeButton} from '../../../helpers/work/projects/projectScripts'
-import {findBackground} from '../../../helpers/common/common'
+import {img} from '../../../helpers/common/common'
 import Button from '../../../components/Button/Button'
 import {slideCard} from '../../../helpers/work/projects/projectScripts'
 import ProjectCard from '../../../components/ProjectCards/ProjectCard'
@@ -31,6 +31,10 @@ function Projects() {
     // check the window width when resized
     window.addEventListener('resize', ()=>{
       let a = makeButton()
+      // if a return empty data or null then do nothing
+      if(a === null ) return 
+
+      // else we will change state
       if(a.slides !== buttons.slides){
        setButtons({
          ...buttons,
@@ -48,7 +52,13 @@ function Projects() {
   // project cards svg file
   const projCards = () => {
     let cards = projData.map((d, i)=>{
-                  return <ProjectCard key={i} pNum={d.pNum} url={d.pUrl} img={d.pImg} ttl={d.pTit} prg={d.pDesc}/>
+                  return <ProjectCard 
+                            key={i} 
+                            pNum={d.pNum} 
+                            url={d.pUrl} 
+                            img={d.img} 
+                            ttl={d.pTit} 
+                            prg={d.pDesc}/>
                 })
               return cards
   } 
@@ -77,7 +87,7 @@ function Projects() {
     <section className="my-projects">
       <div 
         className='my-projects-container content-center'
-        style={{background: `url('${findBackground('mywork')}') center center`}}>
+        style={{background: `url('${img(7)}') center center`}}>
 
       <SectionHeader 
         color='yellow'

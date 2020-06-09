@@ -1,9 +1,9 @@
 import anime from 'animejs'
-import {introLogoElements} from '../common/elementSorter'
+import {introLogoElements, hEl} from '../common/elementSorter'
 
 // logo intro animation function
-export function logoIntroAnimation(dom) {
-  const el = introLogoElements(dom)
+export function logoIntroAnimation() {
+  const el = introLogoElements()
   var tl = anime.timeline({
     easing: 'easeOutExpo',
     duration: 200
@@ -59,5 +59,17 @@ export function logoIntroAnimation(dom) {
     })
 }
 
+export function setNavWidth(){
+  if(window.innerWidth > 1600){
+    sz('1600px')
+  } else {
+    sz('100%')
+  }
+}
 
-
+function sz(s){
+  const el = hEl()
+  el.n.style.maxWidth = s
+  el.f.style.maxWidth = s
+  el.b.style.maxWidth = s
+}

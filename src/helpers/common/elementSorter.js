@@ -1,117 +1,134 @@
+
 // intro svg elements
-export function introLogoElements(dom) {
+export function introLogoElements() {
   return {
-    strokes: dom.querySelectorAll('.border'),
-    font: dom.querySelector('.text-logo'),
-    shadow: dom.querySelectorAll('.inner-shadow'),
-    top: dom.querySelector('.logo-intro-box-top'),
-    bottom: dom.querySelector('.logo-intro-box-bottom'),
-    intro: dom.querySelector('.intro-logo'),
+    strokes: q('.border', 'a'),
+    font: q('.text-logo'),
+    shadow: q('.inner-shadow', 'a'),
+    top: q('.logo-intro-box-top'),
+    bottom: q('.logo-intro-box-bottom'),
+    intro: q('.intro-logo'),
   }
 }
 
 // header elements
-export function headerEl(dom) {
+export function headerEl() {
   return {
-    thead: dom.querySelector('.text-intro-header .letters'),
-    imgcont: dom.querySelector('.img-container'),
-    cont: dom.querySelector('.container'),
-    nav: dom.querySelector('.navigation'),
-    arwsvg: dom.querySelector('.slide-down-svg'),
-    paths: dom.querySelectorAll('.svg-face path'),
-    text2: dom.querySelector('.text-intro-subheader'),
-    textHeader: dom.querySelector('.text-intro-header'),
-    figure: dom.querySelector('.article-2 figure'),
-    mywork: dom.querySelector('.my-work'),
-
+    thead: q('.text-intro-header .letters'),
+    imgcont: q('.img-container'),
+    cont: q('.container'),
+    nav: q('.navigation'),
+    arwsvg: q('.slide-down-svg'),
+    paths: q('.svg-face path', 'a'),
+    text2: q('.text-intro-subheader'),
+    textHeader: q('.text-intro-header'),
+    figure: q('.article-2 figure'),
+    mywork: q('.my-work'),
   }
 }
 
 // side nav elements
-export function sideNavsEl(dom) {
+export function sideNavsEl() {
   return {
-    lists: dom.querySelectorAll('.list-menu li'),
-    ulList: dom.querySelectorAll('.list-menu ul'),
-    sidelogo: dom.querySelector('.side-nav-logo a'),
+    lists: q('.list-menu li', 'a'),
+    ulList: q('.list-menu ul', 'a'),
+    sidelogo: q('.side-nav-logo a'),
   }
 }
 
 // nav logo elements
-export function topNavLogoShadow(dom) {
-  return dom.querySelectorAll('.shadow')
+export function topNavLogoShadow() {
+  return q('.shadow', 'a')
 }
 
-
 // slide navigation elements
-export function burgerNavEl(dom) {
+export function burgerNavEl() {
   return {
-    btn_menu: dom.querySelector('.btn-menu-burger'),
-    slide_navbar: dom.querySelector('.slide-navbar'),
-    menu_layover: dom.querySelector('.slide-menu-background'),
-    slide_menu_layover: dom.querySelector('.slide-menu-layover'),
-    svg_frame: dom.querySelectorAll('.svg-frame'),
-    menu_text: dom.querySelectorAll('.slide-text'),
-    cont: dom.querySelector('.container'),
-    slide_menu_header: dom.querySelector('.slide-menu-header span'),
-    figure: dom.querySelector('.article-2 figure'),
-    mywork: dom.querySelector('.my-work'),
+    btn_menu: q('.btn-menu-burger'),
+    slide_navbar: q('.slide-navbar'),
+    menu_layover: q('.slide-menu-background'),
+    slide_menu_layover: q('.slide-menu-layover'),
+    svg_frame: q('.svg-frame', 'a'),
+    menu_text: q('.slide-text', 'a'),
+    cont: q('.container'),
+    slide_menu_header: q('.slide-menu-header span'),
+    figure: q('.article-2 figure'),
+    mywork: q('.my-work'),
   }
 }
 
 // side navs parent elements
-export function resizeEl(dom) {
+export function resizeEl() {
   return {
-    leftnav: dom.querySelector('.left-sidenav'),
-    rightnav: dom.querySelector('.right-sidenav')
+    leftnav: q('.left-sidenav'),
+    rightnav: q('.right-sidenav')
   }
 }
 
 // bubble elements
-export function bubblEl(dom) {
+export function bubblEl() {
   return {
-    svg: dom.querySelector('.svg-bubble'),
-    b1: dom.querySelector('.b1'),
-    b2: dom.querySelector('.b2'),
-    b3: dom.querySelector('.b3'),
-    b4: dom.querySelector('.b4'),
-    b5: dom.querySelector('.b5'),
-    b6: dom.querySelector('.b6'),
-    b7: dom.querySelector('.b7'),
-    b8: dom.querySelector('.b8'),
-    b9: dom.querySelector('.b9'),
-    b10: dom.querySelector('.b10'),
-    b11: dom.querySelector('.b11'),
-    b12: dom.querySelector('.b12'),
-    all: dom.querySelectorAll('.svg-bubble circle')
+    svg: q('.svg-bubble'),
+    b1: q('.b1'),
+    b2: q('.b2'),
+    b3: q('.b3'),
+    b4: q('.b4'),
+    b5: q('.b5'),
+    b6: q('.b6'),
+    b7: q('.b7'),
+    b8: q('.b8'),
+    b9: q('.b9'),
+    b10: q('.b10'),
+    b11: q('.b11'),
+    b12: q('.b12'),
+    all: q('.svg-bubble circle', 'a')
   }
 }
 
 // slide image elements
-export function slideImage(dom) {
+export function slideImage() {
   return {
-    desktop: dom.querySelector('.img-desktop'),
-    celphone: dom.querySelector('.img-mobile'),
-    tablet: dom.querySelector('.img-tablet')
+    desktop: q('.img-desktop'),
+    celphone: q('.img-mobile'),
+    tablet: q('.img-tablet')
   }
 }
 
 // cards element
-export function designCardsEl(dom) {
+export function designCardsEl() {
   return {
-    btn : dom.querySelectorAll('.card-cards .card-overlay'),
+    btn : q('.card-cards .card-overlay', 'a'),
   }
 }
 
-export function skillEl (dom){
+// skil level dom
+export function skillEl (){
   return {
-    h : dom.querySelector('.header').offsetHeight,
-    g : dom.querySelector('.my-essentials').offsetHeight,
-    f : dom.querySelector('.section-message').offsetHeight,
-    langSpans : dom.querySelectorAll('.lang ul span'),
-    toolSpans : dom.querySelectorAll('.tools ul span'),
-    designSpans : dom.querySelectorAll('.design ul span'),
-    l : dom.querySelector('.lang').offsetHeight,
-    t : dom.querySelector('.tools').offsetHeight
+    h : q('.header'),
+    g : q('.my-essentials'),
+    f : q('.section-message'),
+    langSpans : q('.lang ul span', 'a'),
+    toolSpans : q('.tools ul span', 'a'),
+    designSpans : q('.design ul span', 'a'),
+    l : q('.lang'),
+    t : q('.tools')
   }
+}
 
+// nav headers
+export function hEl () {
+  return {
+    n : q('.navbar'),
+    f : q('.faceAnim'),
+    b : q('.background')
+  }
+}
+
+// function that return the queried element
+function q(el, a) {
+  if (a) {
+    return document.querySelectorAll(el)
+  } else {
+    return document.querySelector(el)
+  }
 }

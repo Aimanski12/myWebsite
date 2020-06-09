@@ -1,9 +1,21 @@
 import React from 'react'
-import {findBackground} from '../../../helpers/common/common'
+// import {findBackground} from '../../../helpers/common/common'
+import {img, im} from '../../../helpers/common/common'
 import SectionHeader from '../../../components/SectionHeader/SectionHeader'
 import './LifeEssential.css'
 
 function LifeEssential() {
+  const imL = [25,26,27,28,29,30,31,32]
+  const es = () => {
+    let a = imL.map((i, x) => {
+    return ( <li className='content-center' key={x}>
+              <figure className='content-center'>
+                <img src={img(i)} alt={`${im[i]} icon`} />
+              </figure>
+            </li> )
+      })
+    return a
+  }
 
   return (
     <section className="my-essentials">
@@ -17,47 +29,7 @@ function LifeEssential() {
 
           <div className="essential-icons content-align content-center">
             <ul className=''>
-              <li className='content-center'>
-                <figure className='content-center'>
-                  <img src={findBackground('bib')} alt="" />
-                </figure>
-              </li>
-              <li className='content-center'>
-                <figure className='content-center'>
-                  <img src={findBackground('boo')} alt="" />
-                </figure>
-              </li>
-              <li className='content-center'>
-                <figure className='content-center'>
-                  <img src={findBackground('foo')} alt="" />
-                </figure>
-              </li>
-              <li className='content-center'>
-                <figure className='content-center'>
-                  <img src={findBackground('han')} alt="" />
-                </figure>
-              </li>
-              <li className='content-center'>
-                <figure className='content-center'>
-                  <img src={findBackground('hea')} alt="" />
-                </figure>
-              </li>
-              <li className='content-center'>
-                <figure className='content-center'>
-                  <img src={findBackground('lap')} alt="" />
-                </figure>
-              </li>
-              <li className='content-center'>
-                <figure className='content-center'>
-                  <img src={findBackground('run')} alt="" />
-                </figure>
-              </li>
-              <li className='content-center'>
-                <figure className='content-center'>
-                  <img src={findBackground('sle')} alt="" />
-                </figure>
-              </li>
-
+              {es()}
             </ul>
           </div>
 

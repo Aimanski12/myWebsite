@@ -1,53 +1,53 @@
 export const projData = [
   {
     pNum: '121',
-    pImg: 'car',
+    img: 12,
     pTit: 'Automation',
     pUrl: '/',
     pDesc: 'A seamless reservation app for a restro bar in downtown Chicago.'
   },
   {
     pNum: '122',
-    pImg: 'cam',
+    img: 13,
     pTit: 'Camera',
     pUrl: '/',
     pDesc: 'A barcode scanner for the browser'
   },
   {
     pNum: '123',
-    pImg: 'gif',
+    img:  14,
     pTit: 'Image Searcher',
     pUrl: '/',
     pDesc: 'A seamless reservation app for a restro bar in downtown Chicago.'
   },
   {
     pNum: '124',
-    pImg: 'clock',
+    img: 15,
     pTit: 'Clock',
     pUrl: '/',
     pDesc: 'A seamless reservation app for a restro bar in downtown Chicago.'
   },
   {
     pNum: '125',
-    pImg: 'car',
+    img: 16,
     pTit: 'Automation',
     pUrl: '/',
     pDesc: 'A seamless reservation app for a restro bar in downtown Chicago.'
   }, {
     pNum: '126',
-    pImg: 'cam',
+    img: 17,
     pTit: 'Camera',
     pUrl: '/',
     pDesc: 'A barcode scanner for the browser'
   }, {
     pNum: '127',
-    pImg: 'gif',
+    img: 18,
     pTit: 'Image Searcher',
     pUrl: '/',
     pDesc: 'A seamless reservation app for a restro bar in downtown Chicago.'
   }, {
     pNum: '128',
-    pImg: 'clock',
+    img: 19,
     pTit: 'Clock',
     pUrl: '/',
     pDesc: 'A seamless reservation app for a restro bar in downtown Chicago.'

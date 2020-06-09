@@ -1,13 +1,11 @@
 .what-i-can-do {
   width: 100%;
-  height: 100vh;
+  height: 115vh;
   background: white;
 }
 
 .section-container {
   width: inherit;
-  position: relative;
-  top: -50px;
   height: inherit;
   background-size: cover;
 }

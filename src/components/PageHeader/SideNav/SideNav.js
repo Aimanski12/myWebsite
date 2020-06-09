@@ -1,9 +1,22 @@
 import React, {Fragment} from 'react'
+import {Link} from 'react-router-dom'
 import AimanSvgContainer from '../../Svg/AimanLogo/AimanSvgContainer'
 
 
 function SideNavs (props) {
 
+  const navs = () => {
+    let a = props.navs
+    let c = a.nav.map((b, i)=>{
+        return (
+      <li key={i} className={b === props.navs.active ? 'active' : null}>
+        <Link 
+          to={b === 'Work' ? '/' : `/${b}`}
+          onClick={()=> props.click(b)}
+          >{b}</Link></li>)
+      })
+    return c
+  }
 
   return (
     <Fragment>
@@ -12,10 +25,11 @@ function SideNavs (props) {
           <div className="list-wrapper">
             <div className="list-menu">
               <ul>
-                <li className='active'><a href="/">Work</a></li>
+                {navs()}
+                {/* <li className='active'><a href="/">Work</a></li>
                 <li><a href="/">About</a></li>
                 <li><a href="/">Blog</a></li>
-                <li><a href="/">Contact</a></li>
+                <li><a href="/">Contact</a></li> */}
               </ul>
             </div>
           </div>

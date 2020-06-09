@@ -1,5 +1,5 @@
 import React from 'react'
-import {findBackground} from '../../helpers/common/common'
+import {img, im} from '../../helpers/common/common'
 
 function ProjectCard(props) {
 
@@ -19,7 +19,7 @@ function ProjectCard(props) {
                   <span className='content-center'>{props.pNum}</span>
                 </div>
                 <div className="crd-svg content-center">
-                  <img src={findBackground(props.img)} alt="" />
+                  <img src={img(props.img)} alt={`${im[props.img]} icon`} />
                 </div>
                 <div className="crd-title content-center">
                   <p>{props.ttl}</p>

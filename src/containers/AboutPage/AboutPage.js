@@ -1,22 +1,39 @@
 import React, {Fragment, useEffect} from 'react'
 import Header from '../../components/PageHeader/PageHeader'
-import {findBackground} from '../../helpers/common/common'
+// import {findBackground} from '../../helpers/common/common'
 import Footer from '../../components/Footer/Footer'
 import Message from '../../components/Message/Message'
 import SectionHeader from '../../components/SectionHeader/SectionHeader'
 import LifeEssentials from './LifeEssentials/LifeEssential'
 import MySkills from './MySkills/MySkills'
+import {setNavWidth} from '../../helpers/logoIntro/logoIntro'
 import {animateHeaderPage} from '../../helpers/about/animateHeaderA'
+import {bklink} from '../../helpers/about/booksdata'
+import {img} from '../../helpers/common/common'
 import './AboutPage.css'
 
 function AboutPage(props) {
 
   useEffect(()=>{
+    // animate page
     animateHeaderPage(document)
-
-    const cont = document.querySelector('.container')
-    cont.style.overflow = 'visible'
+    // set nav max-width
+    setNavWidth()
   })
+
+  const bk = () =>{
+    let book = bklink.map((b, i) => {
+      return(
+          <figure className='content-center' key={i}>
+            <a href={b.link}
+              rel='noopener noreferrer'
+              target='_blank'>
+              <img src={img(b.img)} alt={`${b.title} book`}/>
+            </a></figure> )
+      })
+    return book
+  }
+
 
   return (
     <Fragment>
@@ -24,12 +41,12 @@ function AboutPage(props) {
         <Header 
           click={(n)=> props.click(n)}
           page={'two'}
+          img={1}
           maintext={'Get to know me.'}
           navs={props.navs}/>
       </header>
 
       <LifeEssentials />
-
 
       <Message 
         image={false}
@@ -57,27 +74,19 @@ function AboutPage(props) {
             author={'Jim Rohn'} />
             <article className='content-align content-center '>
               <p className='section-mtext'
-                style={{color: '#7E7070'}}>{`Reading is one of the thing I do to satisfy my curiosity. It helps me understand the world around me better than any social media feeds. Here are some of the reads I recommend to those who share the same curiosity with me.`}</p>
-
+                style={{color: '#7E7070'}}>{`Reading is one of the things I do to satisfy my curiosity. It helps me understand the world around me better than any social media feeds. Here are some of the reads I recommend to those who share the same curiosity with me.`}</p>
+ 
               <div className="content-align books-container">
-                <figure className='content-center'>
-                  <img src={findBackground('eins')} alt=""/>
-                </figure>
-                <figure className='content-center'>
-                  <img src={findBackground('bell')} alt=""/>
-                </figure>
-                <figure className='content-center'>
-                  <img src={findBackground('tesla')} alt=""/>
-                </figure>
-                <figure className='content-center'>
-                  <img src={findBackground('tv')} alt=""/>
-                </figure>
+                {bk()}
               </div>
                 <p className='section-mtext follow-reads' 
-                  style={{color: '#7E7070'}}>I have 132 reads. You can follow all of them <a href="/">here</a>.</p>
+                  style={{color: '#7E7070'}}>I have 132 reads. You can follow all of them 
+                  <a 
+                    // rel='noopener noreferrer'
+                    // target='_blank'
+                    href="https://www.goodreads.com/review/list/84826805"> here</a>.</p>
 
 
-              {/* {button} */}
             </article>
         </div>
       </section>

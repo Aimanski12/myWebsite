@@ -11,36 +11,51 @@ import Contact from './containers/ContactPage/ContactPage'
 import LogoIntroAnimation from './components/LogoIntro/LogoIntro'
 import {resize} from './helpers/work/headers/sideNav'
 import {detectIfScrolledUp} from './helpers/work/headers/sideNav'
+import {ckStor, ckPath} from './helpers/app/app'
+
 
 function App() {
   const [introIsDone, setIsDone] = useState(false)
 
   const [navs, setNavs] = useState({
     nav: ['Work', 'About', 'Blogs', 'Contact'],
-    active: 'Work'
+    active: 'Work',
+    loaded: false
   })
-  useEffect(()=>{
 
+  useEffect(()=>{
     // scroll event listener
     window.addEventListener('scroll', (e) => {
       detectIfScrolledUp(document, e)
     })
 
     // check if window is resized
-     window.addEventListener('resize', () => {
-       resize(document)
-     })
-    // close the intro animation one timer is done
-    setTimeout(()=>{
+    window.addEventListener('resize', () => {
+      resize(document)
+    })
+    
+    // check if storage is empty
+    !ckStor() ? stTrue() : stDone(true)
+
+    if(!navs.loaded){
+      setNav(ckPath(navs))
+    }
+  })
+
+  const stDone = () =>{ setIsDone(true) }
+  
+  // set isdone after animation finish
+  const stTrue = () =>{
+    setTimeout(()=>{ 
       setIsDone(true)
     }, 5850) 
-    
-  })
+  }
 
   const setNav = (n) => {
     setNavs({
       ...navs,
-      active: n
+      active: n,
+      loaded: true
     })
   }
 
@@ -55,13 +70,15 @@ function App() {
                   click={(n)=>setNav(n)}
                   navs={navs}/> : <LogoIntroAnimation /> }
             </Route>
-            <Route path="/about">
+            <Route path="/About">
               <About 
                 click={(n)=>setNav(n)}
                 navs={navs}/>
             </Route>
-            <Route path="/contact">
-              <Contact />
+            <Route path="/Contact">
+              <Contact 
+                click={(n)=>setNav(n)}
+                navs={navs}/>
             </Route>
           </Switch>
         </Router>

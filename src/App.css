@@ -3,7 +3,6 @@
   margin: 0;
 }
 
-
 .main {
   width: 100%;
   height: 100vh;
@@ -17,15 +16,12 @@
   overflow: hidden;
 }
 
-
-
 .content-center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
 
 /* css to make all contents aligned */
 .content-align {
@@ -118,21 +114,6 @@
 .gray p {
   color: #727171;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

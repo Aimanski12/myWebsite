@@ -3,14 +3,14 @@ import {burgerNavEl} from '../../common/elementSorter'
 import {radius} from '../../common/common'
 
 // funtion for the slideNav to open
-export function burgerNavOpen (dom, e, page) {
+export function burgerNavOpen (e, page) {
   let x, y;
-  const el = burgerNavEl(dom)
+  const el = burgerNavEl()
   x = e.clientX
   y = e.clientY
   let r = radius(x, y)
 
-  if(page === 'work'){
+  if(page === 'Work'){
     el.figure.style.display = 'none'
     el.mywork.style.display = 'none'
   }
@@ -55,8 +55,8 @@ export function burgerNavOpen (dom, e, page) {
 }
 
 // function to call for closing the slide navs
-export function burgerNavClose(dom, e, page) {
-   const el = burgerNavEl(dom)
+export function burgerNavClose(btn, page, click) {
+   const el = burgerNavEl()
    let x, y;
     x = 5
     y = 5
@@ -80,10 +80,10 @@ export function burgerNavClose(dom, e, page) {
       targets: el.svg_frame,
       opacity: 0,
       easing: 'easeInOutSine',
-      duration: 500,
+      duration: 300,
     })
     .add({
-      duration: 800,
+      duration: 500,
       targets: el.menu_layover,
       top: `${y}px`,
       left: `${x}px`,
@@ -93,13 +93,45 @@ export function burgerNavClose(dom, e, page) {
       complete: function (anim) {
         el.slide_navbar.style.display = 'none'
         el.cont.style.overflow = 'visible'
-        if(page==='work'){
-          el.figure.style.display = 'flex'
-          el.mywork.style.display = 'flex'
-        }
+        routLoc(btn, page, click, el)
       }
     }
   )
 }
       
 
+const routLoc = (btn, page, click, el) => {
+  if (btn === 'route') {
+    if (click === 'Work') {
+      if (page === 'Work') {
+        showFigs(el.figure, el.mywork)
+      } else {
+        location('')
+      }
+    } else {
+      if (page === 'Work') {
+        showFigs(el.figure, el.mywork)
+        location(click)
+      } else {
+        location(click)
+      }
+    }
+
+  } else if (btn === 'main') {
+    page === 'Work' ? showFigs(el.figure, el.mywork) : location('')
+  } else if (btn === 'back') {
+    if (page === 'Work') {
+      showFigs(el.figure, el.mywork)
+    }
+  }
+}
+
+
+const showFigs = (f, m) => {
+  f.style.display = 'flex'
+  m.style.display = 'flex'
+}
+
+const location = (path) => {
+  window.location.pathname = `/${path}`
+}

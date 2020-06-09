@@ -17,21 +17,37 @@ export const skills = {
 }
 
 let lang, tools, design =  false
+let time = null
 
-export function animateSkill (dom) {
-  const el = skillEl(dom)
-  const i = el.h + el.g + el.f
-
-  let height = (i - window.innerHeight)
-  let yOffset = window.pageYOffset
-  
-  let spans = [el.langSpans, el.toolSpans, el.designSpans]
-
-  if(window.innerHeight > 868){
-    checkWidth(600, height, yOffset, spans, el.l, el.t)
-  } else {
-    checkWidth(550, height, yOffset, spans, el.l, el.t)
+export function animateSkill () {
+  const el = skillEl()
+   
+  // this is to see if scroll has stopped
+  if (time !== null) {
+    clearTimeout(time)
   }
+  time = setTimeout(() => {
+      if(el.g === null || el.f === null || el.l === null || el.t === null) return
+      
+      let h = el.h.offsetHeight
+      let g = el.g.offsetHeight
+      let f = el.f.offsetHeight
+      let l = el.l.offsetHeight
+      let t = el.t.offsetHeight
+      
+      const i = h + g + f
+      
+      let height = (i - window.innerHeight)
+      let yOffset = window.pageYOffset
+      
+      let spans = [el.langSpans, el.toolSpans, el.designSpans]
+      
+      if(window.innerHeight > 868){
+          checkWidth(600, height, yOffset, spans, l, t)
+        } else {
+      checkWidth(550, height, yOffset, spans, l, t)
+    }
+  }, 800)
 }
 
 

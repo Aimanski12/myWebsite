@@ -1,0 +1,366 @@
+
+.connect-form {
+  width: 100%;
+  height: 900px;
+  position: relative;
+  top: -50px;
+  padding: 50px 0
+}
+
+.message-form-wrapper {
+  background: #1F6562;
+  height: 320px;
+  width: 700px;
+  border-radius: 20px;
+}
+
+.message-form {
+  width: 680px;
+  height: 300px;
+  background: #EBE9CD;
+  border-radius: 9px;
+  position: relative;
+}
+
+.input-container {
+  width: calc(100% - 30px);
+  height: 180px;
+  padding: 15px;
+}
+
+.input-container .input {
+  height: 50px;
+  margin: 8px;
+  width: calc(50% - 16px);
+}
+
+.input-container .message {
+  float: right;
+  position: relative;
+  height: 166px;
+  top: -182px;
+}
+
+.input-container input {
+  width: calc(100% - 30px);
+  height: 100%;
+  border-radius: 8px;
+  border: none;
+  font-family: 'Open Sans';
+  font-size: 1em;
+  color: gray;
+  padding: 0 15px
+}
+
+.input-container input:focus, .input-container textarea:focus, .formButton button {
+  outline: none;
+}
+
+.input-container textarea {
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  padding: 15px;
+  font-family: 'Open Sans';
+  font-size: 1em;
+  border-radius: 8px;
+  resize: none;
+  border: none;
+  color: gray
+}
+
+.form-button {
+  width: 100%;
+  height: 80px;
+  position: relative;
+  /* background: plum; */
+}
+
+.textAlert {
+  width: calc(70% - 25px);
+  align-items: flex-start;
+  padding-left: 25px;
+  height: 100%;
+  float: left;
+  /* background: green; */
+  position: relative;
+  top: -169px;
+}
+
+.textAlert p {
+  height: 40px;
+  font-family: 'Open Sans';
+  font-size: 0.85em;
+  color: gray
+}
+
+.textAlert a {
+  text-decoration: none;
+}
+
+.privacy {
+  font-weight: 600;
+  color: orange;
+  transition: all 300ms linear;
+}
+
+.privacy:hover {
+  color: gray;
+  transition: all 300ms linear;
+}
+
+.submit-button {
+  position: relative;
+  top: -169px;
+  width: 30%;
+  float: right;
+  height: 100%;
+  /* background: red; */
+
+}
+
+.submit-button button {
+  width: 65px;
+  height: 65px;
+  background: #1F6562;
+  border: none;
+  border-radius: 50%;
+  float: right;
+  margin: 5px 25px 5px 5px;
+  transition: all 300ms linear;
+}
+
+.submit-button button:hover {
+  background: #D0CEB4;
+  cursor: pointer;
+  transition: all 300ms linear;
+}
+
+.submit-button button:focus {
+  outline: none;
+}
+
+.submit-button button svg path {
+  transition: all 300ms linear;
+}
+
+.submit-button button:hover svg path {
+  fill: #1F6562;
+  cursor: pointer;
+  transition: all 300ms linear;
+}
+
+button svg {
+  width: 30px;
+  height: 30px;
+}
+
+
+
+
+/* css for thanks you message */
+.thankyoumessage {
+  width: 100%;
+  height: 100%;
+}
+
+.thankyoumessage h4 {
+  font-family: 'Averia Serif Libre';
+  font-size: 2.5em;
+  color: #1F6562;
+  height: 55px;
+}
+
+.thankyoumessage img {
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 50%;
+  opacity: 0;
+}
+
+.thanksmes1, .thankmes2 {
+  position: relative;
+  font-weight: 900;
+  font-size: 4em;
+}
+
+.thankmes1 .text-wrapper, .thankmes2 .text-wrapper{
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.thankmes1 .letter, .thankmes2 .letter {
+  display: inline-block;
+  line-height: 1em;
+  transform-origin: 0 0;
+}
+
+
+
+
+@media (max-width: 968px) {
+  .message-form-wrapper {
+    width: 620px;
+  }
+  .message-form {
+    width: 600px;
+  }
+  .input-container input {
+    font-size: .92em;
+  }
+  .input-container textarea {
+    font-size: 0.95em;
+  }
+  .thankyoumessage h4 {
+    font-size: 2.3em;
+  }
+}
+
+@media screen and (max-width: 896px) and (orientation: landscape) {
+  .connect-form {
+    height: 850px;
+  }
+}
+
+@media (max-width: 868px) {
+  .thankyoumessage h4 {
+    font-size: 2.1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .message-form-wrapper {
+    width: 580px;
+  }
+  .message-form {
+    width: 560px;
+  }
+  .thankyoumessage h4 {
+    font-size: 1.9em;
+    height: 45px;
+  }
+}
+
+@media (max-width: 668px) {
+  .message-form-wrapper {
+    width: 480px;
+    height: 580px;
+  }
+  .message-form {
+    width: 465px;
+    height: 565px;
+    border-radius: 12px;
+  }
+  
+  .input-container {
+    width: calc(100% - 30px);
+    height: 360px;
+    padding: 12px 16px;
+  }
+  .input-container .input {
+    width: calc(100% - 32px);
+    margin: 8px 16px;
+  }
+  .input-container .message {
+    float: none;
+    top: 0px;
+  }
+  .form-button {
+    height: 150px;
+  }
+  .textAlert {
+    top: 0px;
+    width: calc(100% - 30px);
+    float: none;
+    padding-left: 30px;
+    height: 50%;
+  }
+  .textAlert p {
+    height: 35px;
+    font-size: 0.8em;
+  }
+  .submit-button {
+    top: 0px;
+    width: 75px;
+    margin: 0 auto;
+    float: none;
+    height: 50%;
+  }
+  .submit-button button {
+    float: none;
+  }
+  .thankyoumessage h4 {
+    font-size: 1.7em;
+    height: 40px;
+  }
+}
+
+@media (max-width: 568px) {
+  .message-form-wrapper {
+    width: 380px;
+  }
+  .message-form {
+    width: 365px;
+  }
+  .input-container .input {
+    width: calc(100% - 16px);
+    margin: 8px 8px;
+  }
+  .textAlert {
+    width: calc(100% - 20px);
+    padding: 0 25px;
+  }
+  .thankyoumessage h4 {
+    font-size: 1.55em;
+    height: 35px;
+  }
+}
+
+@media (max-width: 468px) {
+  .message-form-wrapper {
+    width: 310px;
+    height: 600px;
+  }
+  .input-container {
+    width: calc(100% - 8px);
+    height: 360px;
+    padding: 4px 4px;
+  }
+  .message-form {
+    width: 295px;
+    height: 585px;
+  }
+  .textAlert {
+    top: 0px;
+    width: calc(100% - 26px);
+    padding: 0 16px;
+    margin-bottom: 20px;
+  }
+  .thankyoumessage h4 {
+    font-size: 1.40em;
+    height: 30px;
+  }
+}
+
+@media (max-width: 368px) {
+  .message-form-wrapper {
+    width: 280px;
+  }
+  .message-form {
+    width: 265px;
+  }
+  .thankyoumessage h4 {
+    font-size: 1.25em;
+    height: 25px;
+  }
+}
+
+.textAlert .red {
+  color: red
+}
+.textAlert .green {
+ color: #2F8581;
+}

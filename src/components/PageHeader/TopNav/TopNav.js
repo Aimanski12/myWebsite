@@ -36,7 +36,7 @@ function TopNav (props) {
               width="80" height="63" viewBox="0 0 80 63" 
               fill="none" xmlns="http://www.w3.org/2000/svg"
               onClick={(e)=>{
-                burgerNavOpen(document, e, props.page)
+                burgerNavOpen(e, props.navs.active)
               }}>
               <rect width="80" height="10" rx="5" fill="#5EA19E" />
               <rect y="27" width="80" height="10" rx="5" fill="#5EA19E" />

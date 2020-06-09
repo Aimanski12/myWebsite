@@ -8,10 +8,10 @@
   min-height: 230px;
   width: 680px;
   margin-top: 50px;
+  /* flex-direction: row; */
 }
 
 .books-container figure {
-  background: #1F6562;
   width: 150px;
   height: 100%;
   float: left;
@@ -37,6 +37,9 @@
   color: #1F6562;
 }
 
+.books-container a:hover{
+  opacity: 0.8;
+}
 
 
 @media screen and (max-width: 896px) and (orientation: landscape) {
@@ -131,43 +134,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.one, .two, .three {
-  height: 100vh;
-  width: 100%
-}
-
-.one {
-  background: paleturquoise;
-}
-
-.two {
-  background: pink;
-}
-
-.three {
-  background: peru;
-}

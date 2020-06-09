@@ -7,8 +7,6 @@
 }
 
 .my-essentials-container {
-  position: relative;
-  top: -50px;
   width: inherit;
   height: inherit;
   /* background: url('./assets/background1.png') no-repeat ; */

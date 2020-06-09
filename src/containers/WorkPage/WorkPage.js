@@ -7,6 +7,7 @@ import Project from './Projects/Projects'
 import Footer from '../../components/Footer/Footer'
 import {animateHeaderPage} from '../../helpers/work/headers/animateHeader'
 import {flipCard} from '../../helpers/work/projects/projectScripts'
+import {setNavWidth} from '../../helpers/logoIntro/logoIntro'
 import './WorkPage.css'
 
 
@@ -15,7 +16,10 @@ function WorkPage(props) {
     // flipcard is called to set the project 
     // cards to flip when clicked
     flipCard(document)
+    // animate page
     animateHeaderPage(document)
+    // set navbar max-with 1600
+    setNavWidth()
   })
 
   return (
@@ -24,6 +28,7 @@ function WorkPage(props) {
         <Header 
           click={(n)=> props.click(n)}
           page={'one'}
+          img={0}
           maintext={`Hi! It's me Aiman.`}
           navs={props.navs}/>
       </header>
@@ -43,7 +48,8 @@ function WorkPage(props) {
         pColor='#EBE9CD'
         articleText='It takes a lot of time and effort to create ideas from scratch. My passion and dedication has brought me to a level that would drive me to create and develop ideas with excitement and enjoyment.' />
 
-      <Project />
+      <Project
+        navs={props.navs} />
 
 
       <Message 

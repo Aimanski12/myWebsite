@@ -1,25 +1,21 @@
-import React, {Fragment, useEffect} from 'react'
+import React, {Fragment} from 'react'
 import BurgerNav from './BurgerNav/BurgerNav'
 import TopNav from './TopNav/TopNav'
 import SideNav from './SideNav/SideNav'
 import HeroOne from '../Svg/HeroSvg/HeroSvg'
-// import {animateHeaderPage} from '../../helpers/headers/animateHeader'
 import {scrollDown } from '../../helpers/work/headers/scrollDownBtn'
-import {findBackground} from '../../helpers/common/common'
+import {img, im} from '../../helpers/common/common'
 
 import './PageHeader.css'
 
 function PageHeader(props) {
-
-  useEffect(() => {
-    // animateHeaderPage(document)
-  })
-
   return (
      <Fragment>
       <div className="navbar">
 
         <BurgerNav 
+          click={(n)=>props.click(n)}
+          navs={props.navs}
           page={props.page}/>
         <TopNav 
           page={props.page}
@@ -27,6 +23,8 @@ function PageHeader(props) {
           color={'#357E7B'}
           navs={props.navs}/>
         <SideNav 
+          click={(n)=>props.click(n)}
+          navs={props.navs}
           color={'#868383'} />
         <figure className="slide-down-button">
           <div className="slide-down-btn">
@@ -60,7 +58,8 @@ function PageHeader(props) {
 
       <div className="background">
         <div className="img-container"
-          style={{background: `url('${findBackground(props.page)}') no-repeat center center`}}></div>
+          style={{background: `url('${img(props.img, 'p')}') no-repeat center center`}}
+          alt={`${im[props.img]} image`}></div>
       </div>
       
     </Fragment>

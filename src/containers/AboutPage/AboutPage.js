@@ -91,7 +91,9 @@ function AboutPage(props) {
         </div>
       </section>
 
-      <Footer />
+      <Footer 
+        click={(n)=> props.click(n)}
+        navs={props.navs}/>
     </Fragment>
   )
 }

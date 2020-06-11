@@ -63,7 +63,9 @@ function WorkPage(props) {
         pColor='#7E7070'
         articleText={`If you have a project that you need to get started, or you need help on your website, or just wanna say hi, let's get in touch.`} />
 
-      <Footer />
+      <Footer   
+        click={(n)=> props.click(n)}
+        navs={props.navs}/>
     
     </Fragment>
   )

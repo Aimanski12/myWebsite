@@ -15,10 +15,17 @@ function ContactPage(props) {
 
   const [vals, inputChange] = useForm({})
   const [conf, setConf] = useState(false)
+  const [anim, setAnim] = useState(false)
 
   useEffect(()=>{
     // animate page
-    animateHeaderPage()
+    if(!anim){
+      animateHeaderPage()
+    }
+
+    setTimeout(()=>{
+      setAnim(true)
+    }, 1200)
     // set nav max-width 1600
     setNavWidth()
   })
@@ -66,7 +73,9 @@ function ContactPage(props) {
             }
           </div>
         </section>
-      <Footer />
+      <Footer 
+        click={(n)=> props.click(n)}
+        navs={props.navs}/>
     </Fragment>
   )
 }

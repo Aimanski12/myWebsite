@@ -2,6 +2,8 @@ import anime from 'animejs'
 import {burgerNavEl} from '../../common/elementSorter'
 import {radius} from '../../common/common'
 
+let prSz;
+
 // funtion for the slideNav to open
 export function burgerNavOpen (e, page) {
   let x, y;
@@ -15,6 +17,8 @@ export function burgerNavOpen (e, page) {
     el.mywork.style.display = 'none'
   }
 
+  // if page is on privacy policy
+  hidePrvy(true)
 
   el.cont.style.overflow = 'hidden'
   el.slide_navbar.style.display = 'flex'
@@ -22,7 +26,7 @@ export function burgerNavOpen (e, page) {
   // Add children
   tl
     .add({
-      duration: 850,
+      duration: 550,
       targets: el.menu_layover,
       top: `${(r - y) * -1}px`,
       left: `${(r - x) * -1}px`,
@@ -80,25 +84,51 @@ export function burgerNavClose(btn, page, click) {
       targets: el.svg_frame,
       opacity: 0,
       easing: 'easeInOutSine',
-      duration: 300,
+      duration: 250,
     })
     .add({
-      duration: 500,
+      duration: 300,
       targets: el.menu_layover,
       top: `${y}px`,
       left: `${x}px`,
       width: `0px`,
       height: `0px`,
-      easing: 'easeInOutQuad',
+      easing: 'linear',
       complete: function (anim) {
         el.slide_navbar.style.display = 'none'
         el.cont.style.overflow = 'visible'
         routLoc(btn, page, click, el)
+        // if page is on privacy policy
+        hidePrvy(false)
       }
     }
   )
 }
-      
+
+
+// set the privacy size when button nav is clicked
+const hidePrvy = (set) => {
+  let path = window.location.pathname
+  if (path === '/privacy-policy') {
+    let p = document.querySelector('.privacy')
+    if(set){
+      prSz = p.offsetHeight
+      setPrvy(p, '100vh', 'hidden')
+    } else {
+      setPrvy(p, `${prSz}px`, 'hidden')
+    }
+  }
+}
+    
+// set the privacy size back to normal
+const setPrvy = (p, size, h) => {
+  p.style.height = size
+  p.style.overflow = h
+}
+
+
+
+
 
 const routLoc = (btn, page, click, el) => {
   if (btn === 'route') {
@@ -112,7 +142,7 @@ const routLoc = (btn, page, click, el) => {
       if (page === 'Work') {
         showFigs(el.figure, el.mywork)
         location(click)
-      } else {
+      } else if(page !== click){
         location(click)
       }
     }

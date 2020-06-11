@@ -12,11 +12,7 @@ export function animateHeaderPage() {
   el.cont.style.overflow = 'hidden'
 
   const text1 = document.querySelectorAll('.text-intro-header .letter')
-  // for (let x = 0; x < text1.length; x++) {
-  //   if (x >= 11 && x <= 12) {
-  //     text1[x].classList.add('green')
-  //   }
-  // }
+  
   let tl = anime.timeline({});
 
   tl
@@ -24,7 +20,7 @@ export function animateHeaderPage() {
       easing: 'linear',
       opacity: 1,
       targets: el.paths,
-      duration: 1500
+      duration: 300
     })
     .add({
       targets: el.textHeader,
@@ -35,18 +31,17 @@ export function animateHeaderPage() {
       targets: [text1],
       translateY: ["1.5em", 0],
       translateZ: 0,
-      duration: 420,
+      duration: 380,
       opacity: 1,
       delay: (el, i) => 75 * i
     })
     .add({
+      easing: 'linear',
       targets: show,
       opacity: 1,
-      duration: 1000,
+      duration: 320,
       complete: function (anim) {
         el.cont.style.overflow = 'visible'
-        // el.figure.style.display = 'flex'
-        // el.mywork.style.display = 'flex'
         animateLogo()
       }
     })

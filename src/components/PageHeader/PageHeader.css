@@ -266,9 +266,8 @@
 }
 
 .sidenav-fixed {
-  /* background: palegreen; */
-  width: inherit;
   height: 100%;
+  width: inherit;
   position: fixed;
 }
 
@@ -446,7 +445,7 @@
   z-index: 30;
   /* top: -200%; */
   /* width: 1600px; */
-  background: #3E3A3A;
+  background: #262626;
 }
 
 .img-container {

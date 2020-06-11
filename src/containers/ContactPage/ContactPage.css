@@ -97,17 +97,6 @@
   text-decoration: none;
 }
 
-.privacy {
-  font-weight: 600;
-  color: orange;
-  transition: all 300ms linear;
-}
-
-.privacy:hover {
-  color: gray;
-  transition: all 300ms linear;
-}
-
 .submit-button {
   position: relative;
   top: -169px;

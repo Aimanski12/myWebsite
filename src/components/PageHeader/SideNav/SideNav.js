@@ -1,9 +1,14 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useEffect} from 'react'
 import {Link} from 'react-router-dom'
+import {resize} from '../../../helpers/work/headers/sideNav'
 import AimanSvgContainer from '../../Svg/AimanLogo/AimanSvgContainer'
 
 
 function SideNavs (props) {
+
+  useEffect(()=>{
+    resize()
+  })
 
   const navs = () => {
     let a = props.navs

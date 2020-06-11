@@ -7,6 +7,7 @@ import {savetofirebase} from './savetofirebase'
 export const useForm = () => {
   const [state, setState ] = useState(formData)
   const inputChange = (e, f) => {
+    e.preventDefault()
     if(!e){
       let newState = state.map(s => {
         return { ...s, value: ''}

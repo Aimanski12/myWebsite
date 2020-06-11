@@ -14,8 +14,7 @@ export const savetofirebase = async (vals) => {
     user: getParser()
   }
   const d = getTime()
-
-  
+  let url = `https://aimanadlawansite.firebaseio.com/messages/${d.y}/${d.m}/${d.dy}_${d.de}.json`
   await axios.post(url, data)
     .then(res => {
       saved = true
@@ -32,8 +31,8 @@ const getTime = () => {
   return {
     y: date.getFullYear(),
     m: mn[date.getMonth()],
-    dy: date.getDay(),
-    de: dt[date.getDate()],
+    dy: date.getDate(),
+    de: dt[date.getDay() - 1],
   }
 }
 

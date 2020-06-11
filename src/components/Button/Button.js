@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom' 
 import ButtonSvg from '../../components/Svg/Button/Button'
 import './Button.css'
 
@@ -10,11 +11,11 @@ function Button(props) {
 
   return (
     <div className="btn-common content-center">
-      <a href="/">
+      <Link to="/Contact">
         <button className='btn-mcommon content-center'>
           {img}
           {props.text}</button>
-      </a>
+      </Link>
     </div>
   )
 }

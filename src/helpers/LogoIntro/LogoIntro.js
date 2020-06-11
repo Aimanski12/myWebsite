@@ -15,13 +15,13 @@ export function logoIntroAnimation() {
       strokeWidth: 2,
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'easeInOutSine',
-      duration: 800,
+      duration: 1000,
       delay: (el, i) => { return i * 80 }
     })
     .add({
       targets: el.font,
       opacity: 1,
-      duration: 1000,
+      duration: 500,
       easing: 'easeInOutSine',
     })
     .add({
@@ -29,7 +29,7 @@ export function logoIntroAnimation() {
       opacity: 1,
       stroke: '#73ADAA',
       easing: 'easeInOutSine',
-      duration: 750,
+      duration: 700,
     })
     .add({
       duration: 600

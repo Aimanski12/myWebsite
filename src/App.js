@@ -8,10 +8,11 @@ import './App.css';
 import WorkPage from './containers/WorkPage/WorkPage'
 import About from './containers/AboutPage/AboutPage'
 import Contact from './containers/ContactPage/ContactPage'
+import Privacy from './containers/Privacy/Privacy'
 import LogoIntroAnimation from './components/LogoIntro/LogoIntro'
 import {resize} from './helpers/work/headers/sideNav'
 import {detectIfScrolledUp} from './helpers/work/headers/sideNav'
-import {ckStor, ckPath} from './helpers/app/app'
+import {ckStor, ckPath, stStor} from './helpers/app/app'
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
     // check if storage is empty
     !ckStor() ? stTrue() : stDone(true)
 
+    // set navs active 
     if(!navs.loaded){
       setNav(ckPath(navs))
     }
@@ -48,9 +50,11 @@ function App() {
   const stTrue = () =>{
     setTimeout(()=>{ 
       setIsDone(true)
+      stStor()
     }, 5850) 
   }
 
+  // update state
   const setNav = (n) => {
     setNavs({
       ...navs,
@@ -71,14 +75,22 @@ function App() {
                   navs={navs}/> : <LogoIntroAnimation /> }
             </Route>
             <Route path="/About">
+              { introIsDone ? 
               <About 
                 click={(n)=>setNav(n)}
-                navs={navs}/>
+                navs={navs}/> : <LogoIntroAnimation /> }
             </Route>
             <Route path="/Contact">
+              { introIsDone ? 
               <Contact 
                 click={(n)=>setNav(n)}
-                navs={navs}/>
+                navs={navs}/> : <LogoIntroAnimation /> }
+            </Route>
+            <Route path="/privacy-policy">
+            { introIsDone ? 
+              <Privacy
+                click={(n)=>setNav(n)}
+                navs={navs}/> : <LogoIntroAnimation /> }
             </Route>
           </Switch>
         </Router>

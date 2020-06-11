@@ -5,15 +5,14 @@ export function ckStor () {
   let store = JSON.parse(localStorage.getItem('websession'))
   
   if (store === null) {
-    stStor()
     hsStor = false
   } else {
     let time = new Date().getTime()
     let exp = (time - store.time) / 1000
     if(exp > 3600) {
-      stStor()
       hsStor = false
     } else {
+      stStor()
       hsStor = true
     }
   }
@@ -33,7 +32,7 @@ export function ckPath (navs) {
 }
 
 // set store
-function stStor () {
+export function stStor () {
   let data = {
     intro: true,
     time: new Date().getTime()

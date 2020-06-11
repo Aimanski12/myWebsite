@@ -5,22 +5,29 @@ import SectionHeader from '../../components/SectionHeader/SectionHeader'
 import {img, im} from '../../helpers/common/common'
 import './Footer.css'
 
-function Footer() {
+function Footer(props) {
 
   const setLinks = () => {
     let l = fData.map((f, i )=> {
       return (
         <a className='content-center' 
-           href={f.link} key={i}
-           rel='noopener noreferrer'
-           target='_blank'>
-          <img src={img(f.img)} alt={`${im[f.img]} icon`} /></a>
-      )
+          href={f.link} key={i}
+          rel='noopener noreferrer' target='_blank'>
+          <img src={img(f.img)} alt={`${im[f.img]} icon`} /></a> )
     })
     return l
   }
 
-  setLinks()
+ const navs = () => {
+    let a = props.navs
+    let c = a.nav.map((b, i)=>{
+        return (<Link key={i}
+                    to={b === 'Work' ? '/' : `/${b}`}
+                    onClick={()=> props.click(b)}>{b}</Link>)
+      })
+    return c
+  }
+  
   return (
     <footer className="footer content-center">
       <SectionHeader 
@@ -30,13 +37,10 @@ function Footer() {
         author='Henry Royce' />
       <div className="footer-nav-container content-align content-center">
         <nav className='footer-nav content-center'>
-          <Link to='/'>Work</Link>
-          <Link to='/about'>About</Link>
-          <Link to='/'>Blogs</Link>
-          <Link to='/contact'>Contact</Link>
+          {navs()}
         </nav>
         <div className="footer-blocks content-center content-align">
-          <p>&copy; <span className='green'>Aiman Adlawan</span>. All rights reserved. <a href="/"><span className='orange'>Privacy Policy</span></a>.</p>
+          <p>&copy; <span className='green'>Aiman Adlawan</span>. All rights reserved. <Link to="/privacy-policy" target='_blank'><span className='orange'>Privacy Policy</span></Link>.</p>
           <nav className='footer-nav-btn content-center'>
             {setLinks()}
           </nav>

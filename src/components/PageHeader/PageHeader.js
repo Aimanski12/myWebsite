@@ -3,8 +3,8 @@ import BurgerNav from './BurgerNav/BurgerNav'
 import TopNav from './TopNav/TopNav'
 import SideNav from './SideNav/SideNav'
 import HeroOne from '../Svg/HeroSvg/HeroSvg'
-import {scrollDown } from '../../helpers/work/headers/scrollDownBtn'
-import {img, im} from '../../helpers/common/common'
+import {scrollDown } from '../../utils/work/headers/scrollDownBtn'
+import {img, im} from '../../utils/common/common'
 
 import './PageHeader.css'
 

@@ -13,3 +13,16 @@ module.exports = function (app) {
     })
   );
 };
+
+module.exports = function (app) {
+  app.use(
+    '/api',
+    createProxyMiddleware({
+      target: '/https://geoip.nekudo.com',
+      changeOrigin: true,
+      withCredentials: true,
+      contentType: 'application/json',
+      cacheControl: 'no-cache'
+    })
+  );
+};

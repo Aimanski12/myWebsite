@@ -1,6 +1,6 @@
 import React, {Fragment, useEffect} from 'react'
 import {Link} from 'react-router-dom'
-import {resize} from '../../../helpers/work/headers/sideNav'
+import {resize} from '../../../utils/work/headers/sideNav'
 import AimanSvgContainer from '../../Svg/AimanLogo/AimanSvgContainer'
 
 

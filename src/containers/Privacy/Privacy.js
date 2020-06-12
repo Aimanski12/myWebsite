@@ -2,9 +2,9 @@ import React, {Fragment, useEffect} from 'react'
 import BurgerNav from '../../components/PageHeader/BurgerNav/BurgerNav'
 import TopNav from '../../components/PageHeader/TopNav/TopNav'
 import SideNav from '../../components/PageHeader/SideNav/SideNav'
-import {animatePrivacyPage} from '../../helpers/privacy/animateprivacy'
+import {animatePrivacyPage} from '../../utils/privacy/animateprivacy'
 import Footer from '../../components/Footer/Footer'
-import {setNavWidth} from '../../helpers/privacy/animateprivacy'
+import {setNavWidth} from '../../utils/privacy/animateprivacy'
 import './Privacy.css'
 
 function Privacy(props) {

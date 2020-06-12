@@ -5,9 +5,9 @@ import MyDesigns from './MyDesigns/MyDesigns'
 import Message from '../../components/Message/Message'
 import Project from './Projects/Projects'
 import Footer from '../../components/Footer/Footer'
-import {animateHeaderPage} from '../../helpers/work/headers/animateHeader'
-import {flipCard} from '../../helpers/work/projects/projectScripts'
-import {setNavWidth} from '../../helpers/logoIntro/logoIntro'
+import {animateHeaderPage} from '../../utils/work/headers/animateHeader'
+import {flipCard} from '../../utils/work/projects/projectScripts'
+import {setNavWidth} from '../../utils/logoIntro/logoIntro'
 import './WorkPage.css'
 
 

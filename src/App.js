@@ -10,9 +10,9 @@ import About from './containers/AboutPage/AboutPage'
 import Contact from './containers/ContactPage/ContactPage'
 import Privacy from './containers/Privacy/Privacy'
 import LogoIntroAnimation from './components/LogoIntro/LogoIntro'
-import {resize} from './helpers/work/headers/sideNav'
-import {detectIfScrolledUp} from './helpers/work/headers/sideNav'
-import {ckStor, ckPath, stStor} from './helpers/app/app'
+import {resize} from './utils/work/headers/sideNav'
+import {detectIfScrolledUp} from './utils/work/headers/sideNav'
+import {ckStor, ckPath, stStor, visitor} from './utils/app/app'
 
 
 function App() {
@@ -40,6 +40,7 @@ function App() {
 
     // set navs active 
     if(!navs.loaded){
+      visitor()
       setNav(ckPath(navs))
     }
   })

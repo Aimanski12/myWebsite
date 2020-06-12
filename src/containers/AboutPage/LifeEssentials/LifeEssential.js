@@ -1,6 +1,6 @@
 import React from 'react'
 // import {findBackground} from '../../../helpers/common/common'
-import {img, im} from '../../../helpers/common/common'
+import {img, im} from '../../../utils/common/common'
 import SectionHeader from '../../../components/SectionHeader/SectionHeader'
 import './LifeEssential.css'
 

@@ -1,15 +1,14 @@
 import React, {Fragment, useEffect} from 'react'
 import Header from '../../components/PageHeader/PageHeader'
-// import {findBackground} from '../../helpers/common/common'
 import Footer from '../../components/Footer/Footer'
 import Message from '../../components/Message/Message'
 import SectionHeader from '../../components/SectionHeader/SectionHeader'
 import LifeEssentials from './LifeEssentials/LifeEssential'
 import MySkills from './MySkills/MySkills'
-import {setNavWidth} from '../../helpers/logoIntro/logoIntro'
-import {animateHeaderPage} from '../../helpers/about/animateHeaderA'
-import {bklink} from '../../helpers/about/booksdata'
-import {img} from '../../helpers/common/common'
+import {setNavWidth} from '../../utils/logoIntro/logoIntro'
+import {animateHeaderPage} from '../../utils/about/animateHeaderA'
+import {bklink} from '../../utils/about/booksdata'
+import {img} from '../../utils/common/common'
 import './AboutPage.css'
 
 function AboutPage(props) {
@@ -40,7 +39,7 @@ function AboutPage(props) {
       <header className='header'>
         <Header 
           click={(n)=> props.click(n)}
-          page={'two'}
+          page={'one'}
           img={1}
           maintext={'Get to know me.'}
           navs={props.navs}/>

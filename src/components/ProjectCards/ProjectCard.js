@@ -1,5 +1,5 @@
 import React from 'react'
-import {img, im} from '../../helpers/common/common'
+import {img, im} from '../../utils/common/common'
 
 function ProjectCard(props) {
 

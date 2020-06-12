@@ -1,8 +1,8 @@
 import React from 'react'
 import AimanSvgLogo from '../../Svg/AimanLogo/AimanSvgContainer'
-import {burgerNavOpen} from '../../../helpers/work/headers/burgerNav'
+import {burgerNavOpen} from '../../../utils/work/headers/burgerNav'
 import {Link} from 'react-router-dom'
-import {hoverInAnimate, hoverOutAnimate} from '../../../helpers/work/headers/topNav'
+import {hoverInAnimate, hoverOutAnimate} from '../../../utils/work/headers/topNav'
 
 
 function TopNav (props) {

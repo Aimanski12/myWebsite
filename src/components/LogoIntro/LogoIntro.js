@@ -3,7 +3,7 @@ import LogoText from '../Svg/IntroLogoSvg/LogoText'
 import LogoBorder from '../Svg/IntroLogoSvg/LogoBorder'
 import LogoShadow from '../Svg/IntroLogoSvg/LogoShadow'
 import LogoBoxCover from '../Svg/IntroLogoSvg/LogoBoxCover'
-import {logoIntroAnimation} from '../../helpers/logoIntro/logoIntro'
+import {logoIntroAnimation} from '../../utils/logoIntro/logoIntro'
 import './LogoIntro.css'
 
 const IntroLogoSvg = () => {

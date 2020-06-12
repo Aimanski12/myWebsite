@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react'
-import {img, im} from '../../../helpers/common/common'
+import {img, im} from '../../../utils/common/common'
 import SectionHeader from '../../../components/SectionHeader/SectionHeader'
 import Button from '../../../components/Button/Button'
 import DesignCard from '../../../components/MyDesignCard/MyDesignCard'
-import {designAnimateCards} from '../../../helpers/work/mydesign/mydesign'
-import {cardData} from '../../../helpers/work/mydesign/cardData'
+import {designAnimateCards} from '../../../utils/work/mydesign/mydesign'
+import {cardData} from '../../../utils/work/mydesign/cardData'
 import './MyDesigns.css'
 
 function MyDesigns() {

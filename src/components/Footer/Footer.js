@@ -1,8 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {fData} from '../../helpers/common/footerlinks'
+import {fData} from '../../utils/common/footerlinks'
 import SectionHeader from '../../components/SectionHeader/SectionHeader'
-import {img, im} from '../../helpers/common/common'
+import {img, im} from '../../utils/common/common'
 import './Footer.css'
 
 function Footer(props) {

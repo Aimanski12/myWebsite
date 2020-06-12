@@ -13,7 +13,6 @@ export const useForm = () => {
         return { ...s, value: ''}
       })
       setState(state => ([...newState]))
-      console.log(state, newState)
     } else {
       // this is update all input values
       e.persist()
@@ -38,8 +37,7 @@ export const focus = (i) => {
   alertMes(i)
 }
 
-
-// function to 
+// function for the alert message when input has error
 const alertMes = (n, t) => {
   const p = document.querySelector('.messageAlert')
   p.style.color = 'gray'
@@ -53,13 +51,11 @@ const alertMes = (n, t) => {
   }
 }
 
-
 // function to set the alert message
 const stM = (p, c, m) => {
   p.innerHTML = m
   p.style.color = c
 }
- 
 
 // validate if all inputs are not empty strings
 const  checkArray = (vals) => {
@@ -80,7 +76,6 @@ const  checkArray = (vals) => {
   }
   return a
 }
-
 
 // function to validate in each input has valid values
 export const submit = async (e, vals) => {

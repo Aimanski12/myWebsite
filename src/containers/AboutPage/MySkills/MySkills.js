@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import {animateSkill, skills} from '../../../helpers/about/skillsAnimate'
+import {animateSkill, skills} from '../../../utils/about/skillsAnimate'
 import SectionHeader from '../../../components/SectionHeader/SectionHeader'
 import './MySkills.css'
 

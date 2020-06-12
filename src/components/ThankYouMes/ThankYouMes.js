@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
-import {thankyouMes} from '../../helpers/contact/thanksyoumes'
-import {img} from '../../helpers/common/common'
+import {thankyouMes} from '../../utils/contact/thanksyoumes'
+import {img} from '../../utils/common/common'
 
 function ThankYouMes() {
 

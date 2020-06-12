@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
-import {imageSlide, animateBubble} from '../../../helpers/work/whatICanDo/whatICanDo'
+import {imageSlide, animateBubble} from '../../../utils/work/whatICanDo/whatICanDo'
 import SectionHeader from '../../../components/SectionHeader/SectionHeader'
-import {img, im} from '../../../helpers/common/common'
+import {img, im} from '../../../utils/common/common'
 import Bubble from '../../../components/Svg/Bubble/Bubble'
 import './WhatICanDo.css'
 

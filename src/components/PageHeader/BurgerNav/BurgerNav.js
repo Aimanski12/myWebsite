@@ -1,7 +1,7 @@
 import React from 'react'
 import SmallMenuFrameSvg from '../../Svg/SmallMenuFramSvg/SmallMenuFrameSvg'
 import AimanSvgContainer from '../../Svg/AimanLogo/AimanSvgContainer'
-import {burgerNavClose} from '../../../helpers/work/headers/burgerNav'
+import {burgerNavClose} from '../../../utils/work/headers/burgerNav'
 
 function BurgerNav(props) {
 

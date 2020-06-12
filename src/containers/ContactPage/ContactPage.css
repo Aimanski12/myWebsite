@@ -95,6 +95,8 @@
 
 .textAlert a {
   text-decoration: none;
+  font-size: 1em;
+  font-weight: 600;
 }
 
 .submit-button {
@@ -103,8 +105,6 @@
   width: 30%;
   float: right;
   height: 100%;
-  /* background: red; */
-
 }
 
 .submit-button button {
@@ -142,8 +142,6 @@ button svg {
   width: 30px;
   height: 30px;
 }
-
-
 
 
 /* css for thanks you message */

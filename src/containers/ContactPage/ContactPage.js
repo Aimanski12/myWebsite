@@ -1,14 +1,15 @@
 import React, {Fragment, useEffect, useState} from 'react'
+import {Link} from 'react-router-dom'
 import Header from '../../components/PageHeader/PageHeader'
 import Footer from '../../components/Footer/Footer'
 import ButtonEnvelop from '../../components/Svg/ButtonEnvelop/ButtonEnvelop'
 import SectionHeader from '../../components/SectionHeader/SectionHeader'
-import {animateHeaderPage} from '../../helpers/contact/animateHeaderA'
-import {useForm, submit} from '../../helpers/contact/formValidations'
+import {animateHeaderPage} from '../../utils/contact/animateHeaderA'
+import {useForm, submit} from '../../utils/contact/formValidations'
 import ContactForm from '../../components/ContactForm/ContactForm'
-import {formData} from '../../helpers/contact/formsData'
+import {formData} from '../../utils/contact/formsData'
 import ThankYouMes from '../../components/ThankYouMes/ThankYouMes'
-import {setNavWidth} from '../../helpers/logoIntro/logoIntro'
+import {setNavWidth} from '../../utils/logoIntro/logoIntro'
 import './ContactPage.css'
 
 function ContactPage(props) {
@@ -40,7 +41,7 @@ function ContactPage(props) {
       <header className='header'>
         <Header 
           click={(n)=> props.click(n)}
-          page={'two'}
+          page={'one'}
           img={3}
           maintext={`Let's connect.`}
           navs={props.navs}/>
@@ -64,7 +65,7 @@ function ContactPage(props) {
                   <div className="textAlert content-center">
                     <p className='messageAlert'>* required<span></span></p>
                     <p>by clicking submit you argee the 
-                      <a href='/'><span className='privacy'> Privacy Policy</span></a></p>
+                      <Link to='/privacy-policy' target='_blank' className='orange'><span className='privacy'> Privacy Policy</span></Link></p>
                   </div>
                   <ButtonEnvelop />
                 </div>

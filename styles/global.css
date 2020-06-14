@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&family=Fresca&family=Jomhuria&family=Ubuntu&family=Open+Sans&family=Anton&display=swap');
+
+* {
+
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1600px;
+  height: 100vh;
+  margin: 0 auto;
+  background: #3E3A3A;
+  overflow: hidden;
+}
+
+.content-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* css to make all contents aligned */
+.content-align {
+  min-height: 100px;
+  width: 1014px;
+}
+
+@media (max-width: 1268px) {
+  .content-align {
+    width: 934px;
+  }
+}
+
+@media (max-width: 1168px) {
+  .content-align {
+    width: 854px;
+  }
+}
+
+@media (max-width: 1068px) {
+  .content-align {
+    width: 774px;
+  }
+}
+
+@media (max-width: 968px) {
+  .content-align {
+    width: 694px;
+  }
+}
+
+@media (max-width: 868px) {
+  .content-align {
+    width: 614px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-align {
+    width: 620px;
+  }
+}
+
+@media (max-width: 668px) {
+  .content-align {
+    width: 520px;
+  }
+}
+
+@media (max-width: 568px) {
+  .content-align {
+    width: 420px;
+  }
+}
+
+@media (max-width: 468px) {
+  .content-align {
+    width: 320px;
+    margin: 5% auto;
+  }
+}
+
+
+@media (max-width: 368px) {
+  .content-align {
+    width: 280px;
+    margin: 10% auto;
+  }
+}
+
+
+/* css color for header */
+.green h2 {
+  color: #2F8581;
+}
+
+.green p {
+  color: #81858A;
+}
+
+
+.yellow h2, .gray h2 {
+  color: #EBE9CD;
+}
+
+.yellow p {
+  color: #83B4B2;
+}
+
+.gray p {
+  color: #727171;
+}
+
+
+
+
+
+
+

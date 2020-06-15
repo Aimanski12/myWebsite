@@ -28,7 +28,7 @@ function WorkPage(props) {
           click={(n)=> props.click(n)}
           page={'one'}
           img={0}
-          maintext={`Hi! It's me Aiman.`}
+          maintext={`Hi! It's me PotPot.`}
           navs={props.navs}/>
       </header>
 

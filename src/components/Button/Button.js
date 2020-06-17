@@ -9,13 +9,20 @@ function Button(props) {
     <i className='envelop'>
         <ButtonSvg /> </i> : null
 
+  const btn = <button 
+                className='btn-mcommon content-center'>{img}{props.text}</button>
+
+  const links = props.external ? 
+          <a href={props.link}
+            target='_blank'
+            rel='noopener noreferrer'> {btn} </a> : 
+              <Link to={'/'}> {btn} </Link>
+
+
+
   return (
     <div className="btn-common content-center">
-      <Link to="/Contact">
-        <button className='btn-mcommon content-center'>
-          {img}
-          {props.text}</button>
-      </Link>
+      {links}
     </div>
   )
 }

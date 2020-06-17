@@ -22,8 +22,8 @@ function Footer(props) {
     let a = props.navs
     let c = a.nav.map((b, i)=>{
         return (<Link key={i}
-                    to={b === 'Work' ? '/' : `/${b}`}
-                    onClick={()=> props.click(b)}>{b}</Link>)
+                    to={b === 'home' ? '/' : `/${b}`}
+                    onClick={()=> props.click(b)}>{b.toUpperCase()}</Link>)
       })
     return c
   }

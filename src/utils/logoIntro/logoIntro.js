@@ -1,5 +1,5 @@
 import anime from 'animejs'
-import {introLogoElements, hEl} from '../common/elementSorter'
+import {introLogoElements} from '../common/elementSorter'
 
 // logo intro animation function
 export function logoIntroAnimation() {
@@ -59,17 +59,3 @@ export function logoIntroAnimation() {
     })
 }
 
-export function setNavWidth(){
-  if(window.innerWidth > 1600){
-    sz('1600px')
-  } else {
-    sz('100%')
-  }
-}
-
-function sz(s){
-  const el = hEl()
-  el.n.style.maxWidth = s
-  el.f.style.maxWidth = s
-  el.b.style.maxWidth = s
-}

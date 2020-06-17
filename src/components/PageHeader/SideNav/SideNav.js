@@ -1,13 +1,13 @@
 import React, {Fragment, useEffect} from 'react'
 import {Link} from 'react-router-dom'
-import {resize} from '../../../utils/work/headers/sideNav'
+// import {resize} from '../../../utils/common/resize'
 import AimanSvgContainer from '../../Svg/AimanLogo/AimanSvgContainer'
 
 
 function SideNavs (props) {
 
   useEffect(()=>{
-    resize()
+    // resize()
   })
 
   const navs = () => {
@@ -16,9 +16,9 @@ function SideNavs (props) {
         return (
       <li key={i} className={b === props.navs.active ? 'active' : null}>
         <Link 
-          to={b === 'Work' ? '/' : `/${b}`}
+          to={b === 'home' ? '/' : `/${b}`}
           onClick={()=> props.click(b)}
-          >{b}</Link></li>)
+          >{b.toUpperCase()}</Link></li>)
       })
     return c
   }

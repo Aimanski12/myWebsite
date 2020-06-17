@@ -23,6 +23,7 @@
   font-size: 1.3em;
   color: #1F6562;
   text-decoration: none;
+  transition: all 0.3s linear;
 }
 .btn-common svg {
   width: 100%;

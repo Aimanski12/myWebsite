@@ -24,10 +24,6 @@ export function img(b){
 }
 
 
-
-
-
-
 // function for sorting radius
 export function radius(x1, y1) {
   let x2, y2, inW, inH;

@@ -4,13 +4,14 @@ import TopNav from '../../components/PageHeader/TopNav/TopNav'
 import SideNav from '../../components/PageHeader/SideNav/SideNav'
 import {animatePrivacyPage} from '../../utils/privacy/animateprivacy'
 import Footer from '../../components/Footer/Footer'
-import {setNavWidth} from '../../utils/privacy/animateprivacy'
+import {setNavWidth, resize} from '../../utils/common/resize'
 import './Privacy.css'
 
 function Privacy(props) {
   useEffect(()=>{
     animatePrivacyPage()
-    setNavWidth()
+    setNavWidth(false)
+    window.addEventListener('resize', ()=> resize(false))
   })
   return (
     <Fragment>

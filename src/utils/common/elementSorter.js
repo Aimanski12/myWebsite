@@ -101,20 +101,6 @@ export function designCardsEl() {
   }
 }
 
-// skil level dom
-export function skillEl (){
-  return {
-    h : q('.header'),
-    g : q('.my-essentials'),
-    f : q('.section-message'),
-    langSpans : q('.lang ul span', 'a'),
-    toolSpans : q('.tools ul span', 'a'),
-    designSpans : q('.design ul span', 'a'),
-    l : q('.lang'),
-    t : q('.tools')
-  }
-}
-
 // nav headers
 export function hEl () {
   return {

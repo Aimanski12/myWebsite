@@ -1,8 +1,6 @@
 import anime from 'animejs'
-import {headerEl, hEl } from '../common/elementSorter'
-import {
-  animateLogo
-} from '../work/headers/topNav'
+import {headerEl} from '../common/elementSorter'
+import {animateLogo} from '../work/headers/topNav'
 
 // start function for animating hero
 export function animatePrivacyPage() {
@@ -31,16 +29,3 @@ export function animatePrivacyPage() {
 }
 
 
-
-export function setNavWidth() {
-  if (window.innerWidth > 1600) {
-    sz('1600px')
-  } else {
-    sz('100%')
-  }
-}
-
-function sz(s) {
-  const el = hEl()
-  el.n.style.maxWidth = s
-}

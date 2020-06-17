@@ -10,7 +10,7 @@ import About from './containers/AboutPage/AboutPage'
 import Contact from './containers/ContactPage/ContactPage'
 import Privacy from './containers/Privacy/Privacy'
 import LogoIntroAnimation from './components/LogoIntro/LogoIntro'
-import {resize} from './utils/work/headers/sideNav'
+// import {resize} from './utils/work/headers/sideNav'
 import {detectIfScrolledUp} from './utils/work/headers/sideNav'
 import {ckStor, ckPath, stStor, visitor} from './utils/app/app'
 
@@ -19,8 +19,8 @@ function App() {
   const [introIsDone, setIsDone] = useState(false)
 
   const [navs, setNavs] = useState({
-    nav: ['Work', 'About', 'Blogs', 'Contact'],
-    active: 'Work',
+    nav: ['home', 'about', 'contact'],
+    active: 'home',
     loaded: false
   })
 
@@ -31,9 +31,9 @@ function App() {
     })
 
     // check if window is resized
-    window.addEventListener('resize', () => {
-      resize(document)
-    })
+    // window.addEventListener('resize', () => {
+    //   resize()
+    // })
     
     // check if storage is empty
     !ckStor() ? stTrue() : stDone(true)

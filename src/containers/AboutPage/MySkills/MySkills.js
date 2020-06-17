@@ -1,23 +1,20 @@
-import React, {useEffect} from 'react'
-import {animateSkill, skills} from '../../../utils/about/skillsAnimate'
+import React from 'react'
+import {skills, skillLogo} from '../../../utils/about/skillsAnimate'
 import SectionHeader from '../../../components/SectionHeader/SectionHeader'
+import Button from '../../../components/Button/Button'
 import './MySkills.css'
 
 function MySkills() {
-  useEffect(() => {
-    window.addEventListener('scroll', ()=>{
-      animateSkill()
-    }) 
-  })
 
-
-  const show = (skill) => {
-    return ( <ul>{
-              skill.map((s, i)=> {
-                return ( <li key={i}>{s}<span></span></li> )
-              })
-            }</ul>
-          )
+  const show = () => {
+    return skills.map((s, i)=>{
+      return ( <li key={i} className='content-center'>
+              <img src={`${skillLogo(s)}`} 
+                alt={`${s.toLowerCase()} icon`} />
+              <span>{s}</span>
+            </li>
+      )
+    })
   }
 
   return (
@@ -25,31 +22,22 @@ function MySkills() {
         <div className="my-skills-container content-center">
 
         <SectionHeader 
-          color='gray'
-          title='My Skills.'
+          color='yellow'
+          title='Skills.'
           quote='The future belongs to those who learn more skills and combine them in creative ways.'
           author='Oscar Wilde' />
 
-          <div className="skill-wrapper content-align">
-
-            <div className="skill-wrapper-cont lang content-align content-center">
-              <h3>langauge <span>level 10</span></h3>
-                {show(skills.language.skill)}
-            </div>
-            
-            
-            <div className="skill-wrapper-cont tools content-align content-center">
-              <h3>tools / frameworks <span>level 10</span></h3>
-                {show(skills.tools.skill)}
-            </div>
-            
-            <div className="skill-wrapper-cont design content-align content-center">
-              <h3>design tools <span>level 10</span></h3>
-                {show(skills.design.skill)}
-            </div>
-
-          </div>
-
+        <div className='skill-wrapper content-align'>
+          <ul className='skill-list'>
+            {show()}
+          </ul>
+        </div>
+        
+        <Button 
+          text={'View Projects'}
+          external={false}
+          link={'/'}
+          image={false}/>
         </div>
       </section>
   )

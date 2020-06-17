@@ -7,7 +7,7 @@ import Project from './Projects/Projects'
 import Footer from '../../components/Footer/Footer'
 import {animateHeaderPage} from '../../utils/work/headers/animateHeader'
 import {flipCard} from '../../utils/work/projects/projectScripts'
-import {setNavWidth} from '../../utils/logoIntro/logoIntro'
+import {setNavWidth, resize} from '../../utils/common/resize'
 import './WorkPage.css'
 
 
@@ -17,9 +17,13 @@ function WorkPage(props) {
     // cards to flip when clicked
     flipCard(document)
     // animate page
-    animateHeaderPage(document)
+    animateHeaderPage()
     // set navbar max-with 1600
-    setNavWidth()
+    setNavWidth(true)
+
+    // check if window is resized
+    window.addEventListener('resize', () => resize(true))
+
   })
 
   return (
@@ -55,6 +59,7 @@ function WorkPage(props) {
       <Message 
         image={true}
         text='Message Me'
+        click={(n)=> props.click(n)}
         background={'white'}
         color='green'
         title={`Need help with building your website?`}

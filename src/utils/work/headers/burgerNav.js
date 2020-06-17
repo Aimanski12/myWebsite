@@ -12,7 +12,7 @@ export function burgerNavOpen (e, page) {
   y = e.clientY
   let r = radius(x, y)
 
-  if(page === 'Work'){
+  if(page === 'home'){
     el.figure.style.display = 'none'
     el.mywork.style.display = 'none'
   }
@@ -132,14 +132,14 @@ const setPrvy = (p, size, h) => {
 
 const routLoc = (btn, page, click, el) => {
   if (btn === 'route') {
-    if (click === 'Work') {
-      if (page === 'Work') {
+    if (click === 'home') {
+      if (page === 'home') {
         showFigs(el.figure, el.mywork)
       } else {
         location('')
       }
     } else {
-      if (page === 'Work') {
+      if (page === 'home') {
         showFigs(el.figure, el.mywork)
         location(click)
       } else if(page !== click){
@@ -148,9 +148,9 @@ const routLoc = (btn, page, click, el) => {
     }
 
   } else if (btn === 'main') {
-    page === 'Work' ? showFigs(el.figure, el.mywork) : location('')
+    page === 'home' ? showFigs(el.figure, el.mywork) : location('')
   } else if (btn === 'back') {
-    if (page === 'Work') {
+    if (page === 'home') {
       showFigs(el.figure, el.mywork)
     }
   }

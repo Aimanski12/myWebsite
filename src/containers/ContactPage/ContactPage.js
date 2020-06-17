@@ -9,7 +9,7 @@ import {useForm, submit} from '../../utils/contact/formValidations'
 import ContactForm from '../../components/ContactForm/ContactForm'
 import {formData} from '../../utils/contact/formsData'
 import ThankYouMes from '../../components/ThankYouMes/ThankYouMes'
-import {setNavWidth} from '../../utils/logoIntro/logoIntro'
+import {setNavWidth, resize} from '../../utils/common/resize'
 import './ContactPage.css'
 
 function ContactPage(props) {
@@ -28,7 +28,8 @@ function ContactPage(props) {
       setAnim(true)
     }, 1200)
     // set nav max-width 1600
-    setNavWidth()
+    window.addEventListener('resize', ()=>resize(true))
+    setNavWidth(true)
   })
 
   const submitForm = async (e) => {

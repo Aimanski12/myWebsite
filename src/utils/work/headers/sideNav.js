@@ -1,5 +1,5 @@
 import anime from 'animejs'
-import {sideNavsEl, resizeEl} from  '../../common/elementSorter'
+import {sideNavsEl} from  '../../common/elementSorter'
 
 let scroll = false
 let time = null
@@ -58,23 +58,6 @@ function hideSideNav(el){
     }
   });
 }
-
-
-// function for resizing the side navs
-export function resize(dom) {
-  const el = resizeEl(dom)
-  if(el.leftnav !== null || el.rightnav !== null){
-    if (window.innerWidth >= 1600) {
-      el.leftnav.style.width = '160px'
-      el.rightnav.style.width = '160px'
-    } else {
-      el.leftnav.style.width = `${window.innerWidth * .1}px`
-      el.rightnav.style.width = `${window.innerWidth * .1}px`
-    }
-  }
-}
-
-
 
 
 function findTotalHieght(dom, y) {

@@ -12,7 +12,7 @@ function BurgerNav(props) {
                 onClick={()=>{burgerNavClose('route', props.navs.active, b)}}
                 className={`slide-menu-item 
             slide-text ${b === props.navs.active ? ' active' : null}`}>
-          <span>{b}</span>
+          <span>{b.toUpperCase()}</span>
         </li>)
       })
     return c
@@ -23,35 +23,35 @@ function BurgerNav(props) {
     <div className="slide-navbar">
       <div className="slide-menu-card">
 
-      <SmallMenuFrameSvg />
+        <SmallMenuFrameSvg />
               
-      <div className="slide-menu-list">
-        <div className="slide-menu-header content-center">
-          <span 
-            className='slide-text'
-            onClick={()=>{burgerNavClose('main', props.navs.active)}}
-              >
-            <AimanSvgContainer color={'#357E7B'}/>
-          </span>
-        </div>
-        <nav className="slide-menu-items">
-          <ul className='slide-menu-wrapper'>
-            {links()}
-            {/* <li className="slide-menu-item slide-text active">
-              <a href="/" className='menu-link'>Work</a></li>
-            <li className="slide-menu-item slide-text">
-              <a href="/" className='menu-link'>About</a></li>
-            <li className="slide-menu-item slide-text">
-              <a href="/" className='menu-link'>Blogs</a></li>
-            <li className="slide-menu-item slide-text">
-              <a href="/" className='menu-link'>Contact</a></li> */}
-          </ul>
-        </nav>
-        <div className="slide-menu-bottom">
-          <span className='menu-close slide-text'
-            onClick={()=>{burgerNavClose('back', props.navs.active)}}>
-              Close</span>
-        </div>
+        <div className="slide-menu-list">
+          <div className="slide-menu-header content-center">
+            <span 
+              className='slide-text'
+              onClick={()=>{burgerNavClose('main', props.navs.active)}}
+                >
+              <AimanSvgContainer color={'#357E7B'}/>
+            </span>
+          </div>
+          <nav className="slide-menu-items">
+            <ul className='slide-menu-wrapper'>
+              {links()}
+              {/* <li className="slide-menu-item slide-text active">
+                <a href="/" className='menu-link'>Work</a></li>
+              <li className="slide-menu-item slide-text">
+                <a href="/" className='menu-link'>About</a></li>
+              <li className="slide-menu-item slide-text">
+                <a href="/" className='menu-link'>Blogs</a></li>
+              <li className="slide-menu-item slide-text">
+                <a href="/" className='menu-link'>Contact</a></li> */}
+            </ul>
+          </nav>
+          <div className="slide-menu-bottom">
+            <span className='menu-close slide-text'
+              onClick={()=>{burgerNavClose('back', props.navs.active)}}>
+                Close</span>
+          </div>
         </div>
       </div>
       <div className="slide-menu-layover">

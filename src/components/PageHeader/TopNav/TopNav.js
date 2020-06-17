@@ -12,9 +12,9 @@ function TopNav (props) {
     let c = a.nav.map((b, i)=>{
         return (<li key={i} className={b === props.navs.active ? 'active' : null}>
                   <Link 
-                    to={b === 'Work' ? '/' : `/${b}`}
+                    to={b === 'home' ? '/' : `/${b}`}
                     onClick={()=> props.click(b)}
-                    >{b}</Link></li>)
+                    >{b.toUpperCase()}</Link></li>)
       })
     return c
   }

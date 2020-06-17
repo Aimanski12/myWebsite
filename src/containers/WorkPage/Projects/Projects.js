@@ -98,7 +98,7 @@ function Projects() {
       <div className='projects-container content-center'>
 
         <article className='content-align content-center project-article-header'> 
-          <p>Coding is one of the things I like to do. Here are some of the few things that I have accomplished. Feel free to use them whenever you want.</p>
+          <p>Coding is one of the things I like to do. Here are some of the few things that I have accomplished. Feel free to play with them whenever you want.</p>
         </article>
 
         <div className="content-center projects-lists">
@@ -115,9 +115,12 @@ function Projects() {
             onClick={()=> setSlides('right')}>→</i>
         </div>
         
+        
         <Button 
-          imate={false}
-          text={'View More'}/>
+          text={'View Projects'}
+          external={false}
+          link={'/projects'}
+          image={false}/>
 
         </div>
       </div>

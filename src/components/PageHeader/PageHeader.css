@@ -1,11 +1,11 @@
 
 .header {
-  width: inherit;
+  max-width: 1600px;
   height: 100vh;
 }
 
 .navbar, .faceAnim, .background {
-  width: 100%;
+  max-width: 1600px;
   height: 100vh;
   position: absolute;
 }
@@ -213,7 +213,8 @@
 
 .menu_list a {
   text-decoration: none;
-  font-size: 1.3em;
+  font-weight: 600;
+  font-size: 1.2em;
   color: #CABEBE;
   font-family: 'Ubuntu', verdana, sans-serif;
 }
@@ -467,7 +468,7 @@
     width: 90px;
   }
   .menu_list a {
-    font-size: 1.27em;
+    font-size: 1.18em;
   }
   .list-menu li {
     font-size: 1.21em;
@@ -487,7 +488,7 @@
     width: 85px;
   }
   .menu_list a {
-    font-size: 1.23em;
+    font-size: 1.16em;
   }
   .list-menu li {
     font-size: 1.19em;
@@ -505,7 +506,7 @@
     width: 85px;
   }
   .menu_list a {
-    font-size: 1.2em;
+    font-size: 1.14em;
   }
   .list-menu li {
     font-size: 1.16em;
@@ -524,7 +525,7 @@
     width: 85px;
   }
   .menu_list a {
-    font-size: 1.17em;
+    font-size: 1.14em;
   }
   .box {
     height: 400px;
@@ -543,7 +544,7 @@
     width: 85px;
   }
   .menu_list a {
-    font-size: 1.14em;
+    font-size: 1.13em;
   }
   .list-menu li {
     font-size: 1.1em;

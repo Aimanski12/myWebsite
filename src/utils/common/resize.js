@@ -2,7 +2,7 @@ import {resizeEl, hEl} from './elementSorter'
 
 // this function is called on every page to resize the 
 // side nav every resizing event
-export function resize(page) {
+export function resize() {
   const el = resizeEl()
   // if the width is less than 768 leftnav and right nav is null
   if (el.leftnav !== null || el.rightnav !== null) {
@@ -14,24 +14,40 @@ export function resize(page) {
       el.rightnav.style.width = `${window.innerWidth * .1}px`
     }
   }
-  setNavWidth(page)
+  setNavWidth()
 }
 
 // this function is called upon page load 
 // to set the navbar, faceAnim, and background to its right size
-export function setNavWidth(page) {
-  if (window.innerWidth > 1600) {
-    sz('1600px', page)
-  } else {
-    sz('100%', page)
-  }
+export function setNavWidth() {
+  let w = window.innerWidth
+  if (w > 1600) {
+    sz('1600px')
+    hContent('1280px')
+  } else if (w <= 768) {
+    sz('100%')
+    hContent(`100%`)
+  } else if(w <= 1600){
+    sz('100%')
+    hContent(`${Math.floor(w*.8)}px`)
+  } 
+  
 }
 
-function sz(s, page) {
+function sz(s) {
   const el = hEl()
-  el.n.style.width = s
-  el.f.style.width = s
-  if(page) {
-    el.b.style.width = s
-  }
+  setWidth(el.n, s)
+  setWidth(el.sNav, s)
+
+}
+
+function hContent (s) {
+  const el = hEl()
+  setWidth(el.hCont, s)
+
+}
+
+
+function setWidth(el, w){
+  el.style.width = w
 }

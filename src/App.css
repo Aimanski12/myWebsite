@@ -82,7 +82,7 @@
 @media (max-width: 468px) {
   .content-align {
     width: 320px;
-    margin: 5% auto;
+    margin: 0 auto;
   }
 }
 
@@ -90,7 +90,7 @@
 @media (max-width: 368px) {
   .content-align {
     width: 280px;
-    margin: 10% auto;
+    margin: 0 auto;
   }
 }
 

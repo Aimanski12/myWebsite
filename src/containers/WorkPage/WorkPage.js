@@ -28,14 +28,12 @@ function WorkPage(props) {
 
   return (
     <Fragment>
-      <header className='header'>
-        <Header 
-          click={(n)=> props.click(n)}
-          page={'one'}
-          img={0}
-          maintext={`Hi! It's me Aiman.`}
-          navs={props.navs}/>
-      </header>
+      <Header 
+        click={(n)=> props.click(n)}
+        page={'one'}
+        img={0}
+        maintext={`Hi! It's me Aiman.`}
+        navs={props.navs}/>
 
       <WhatICanDo />
       <MyDesigns />

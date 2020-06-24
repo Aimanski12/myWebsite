@@ -5,7 +5,8 @@ import {animateLogo} from './topNav'
 // start function for animating hero
 export function animateHeaderPage(dom) {
   const el = headerEl(dom)
-  const show = [el.imgcont, el.nav, el.arwsvg]
+  // const show = [el.imgcont, el.nav, el.arwsvg]
+  const show = [el.nav, el.arwsvg]
   el.thead.innerHTML =
     el.thead.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
   el.cont.style.overflow = 'hidden'

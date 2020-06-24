@@ -33,6 +33,7 @@ export function sideNavsEl() {
     lists: q('.list-menu li', 'a'),
     ulList: q('.list-menu ul', 'a'),
     sidelogo: q('.side-nav-logo a'),
+    
   }
 }
 
@@ -106,7 +107,9 @@ export function hEl () {
   return {
     n : q('.navbar'),
     f : q('.faceAnim'),
-    b : q('.background')
+    b : q('.background'),
+    sNav: q('.side-navigation'),
+    hCont: q('.header-content')
   }
 }
 

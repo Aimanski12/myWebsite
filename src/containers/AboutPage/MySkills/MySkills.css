@@ -14,7 +14,7 @@
 
 
 .skill-wrapper {
-  height: 450px;
+  height: 600px;
   margin-top: 50px;
   padding: 30px 0;
   background: rgba(230, 230, 230, 0.03);
@@ -23,7 +23,7 @@
 .skill-list {
   margin: 0 auto;
   width: 910px;
-  height: 450px;
+  height: 600px;
   list-style: none;
 }
 
@@ -42,8 +42,12 @@
 
 
 @media (max-width: 1268px) {
+  .skill-wrapper {
+    height: 580px;
+  }
   .skill-list {
     width: 874px;
+    height: 580px;
   }
 
   .skill-list li {
@@ -54,12 +58,12 @@
 
 @media (max-width: 1168px) {
   .skill-wrapper {
-    height: 600px;
+    height: 750px;
   }
 
   .skill-list {
     width: 794px;
-    height: 600px;
+    height: 750px;
   }
 
   .skill-list li {
@@ -69,8 +73,12 @@
 }
 
 @media (max-width: 1068px) {
+  .skill-wrapper {
+    height: 700px;
+  }
   .skill-list {
     width: 714px;
+    height: 700px;
   }
 
   .skill-list li {
@@ -81,12 +89,12 @@
 
 @media (max-width: 968px) {
   .skill-wrapper {
-    height: 750px;
+    height: 900px;
   }
 
   .skill-list {
     width: 654px;
-    height: 750px;
+    height: 900px;
   }
 
   .skill-list li {
@@ -97,12 +105,12 @@
 
 @media (max-width: 868px) {
   .skill-wrapper {
-    height: 650px;
+    height: 790px;
   }
 
   .skill-list {
     width: 554px;
-    height: 650px;
+    height: 790px;
   }
 
   .skill-list li {
@@ -114,12 +122,12 @@
 @media (max-width: 668px) {
   .skill-wrapper {
     padding: 0;
-    height: 900px;
+    height: 1050px;
   }
 
   .skill-list {
     width: 100%;
-    height: 900px;
+    height: 1050px;
   }
 
   .skill-list li {
@@ -134,11 +142,11 @@
 
 @media (max-width: 568px) {
   .skill-wrapper {
-    height: 1000px;
+    height: 1260px;
   }
 
   .skill-list {
-    height: 1000px;
+    height: 1260px;
   }
 
   .skill-list li {
@@ -157,11 +165,11 @@
 
 @media (max-width: 468px) {
   .skill-wrapper {
-    height: 1440px;
+    height: 1820px;
   }
 
   .skill-list {
-    height: 1440px;
+    height: 1820px;
   }
 
   .skill-list li {
@@ -176,11 +184,11 @@
 
 @media (max-width: 368px) {
   .skill-wrapper {
-    height: 1320px;
+    height: 1690px;
   }
 
   .skill-list {
-    height: 1320px;
+    height: 1690px;
   }
 
   .skill-list li {

@@ -39,14 +39,14 @@ function ContactPage(props) {
 
   return (
     <Fragment>
-      <header className='header'>
-        <Header 
-          click={(n)=> props.click(n)}
-          page={'one'}
-          img={3}
-          maintext={`Let's connect.`}
-          navs={props.navs}/>
-      </header>
+      {/* <header className='header'> */}
+      <Header 
+        click={(n)=> props.click(n)}
+        page={'one'}
+        img={3}
+        maintext={`Let's connect.`}
+        navs={props.navs}/>
+      {/* </header> */}
 
       <section className='content-center content-align connect-form'>
         <SectionHeader 

@@ -24,7 +24,8 @@ function SideNavs (props) {
   }
 
   return (
-    <Fragment>
+  <Fragment>
+    <div className='side-navigation'>
       <aside className="left-sidenav">
         <nav className="sidenav-fixed">
           <div className="list-wrapper">
@@ -50,7 +51,8 @@ function SideNavs (props) {
           </div>
         </div>
       </aside>
-    </Fragment>
+    </div>
+  </Fragment>
   )
 }
 

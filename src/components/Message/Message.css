@@ -14,44 +14,66 @@
 
 }
 
-.section-mtext {
-  width: 100%;
+.section-mtext, .section-abouttext {
+  width: 90%;
+  width: 0 auto;
   text-align: center;
   font-family: 'Ubuntu', verdana, sans-serif;
-  font-size: 1.6em;
+  font-size: 1.3em;
   line-height: 1.8em;
   color: #EBE9CD;
 }
 
+.section-abouttext {
+  width: 90%;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 1.15em;
+  color: #4c4d53;
+  margin-bottom: 25px;
+  line-height: 1.6em;
+}
+
+.section-abouttext a {
+  text-decoration: none;
+  color: #2EAFAA;
+  font-weight: 600;
+}
+
+
 @media (max-width: 1168px) {
-  .section-mtext {
-    font-size: 1.55em;
-  }
+  /* .section-mtext {
+    font-size: 1.35em;
+  } */
 }
 
 @media (max-width: 1068px) {
-  .section-mtext {
-    font-size: 1.5em;
-  }
+  /* .section-mtext {
+    font-size: 1.3em;
+  } */
 }
 
 @media (max-width: 968px) {
   .section-message article {
     min-height: 200px;
   }
-  .section-mtext {
-    font-size: 1.45em;
+  /* .section-mtext {
+    font-size: 1.37em;
+  } */
+  .section-abouttext {
+    width: 95%;
+    font-size: 1.11em;
+    line-height: 1.7em;
   }
 }
 
 @media (max-width: 868px) {
-  .section-mtext {
-    font-size: 1.4em;
-  }
+  /* .section-mtext {
+    font-size: 1.35em;
+  } */
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
-
   .section-message {
     min-height: 125vh;
   }
@@ -59,26 +81,31 @@
 
 
 @media (max-width: 768px) {
-  /* .section-message {
-    min-height: 125vh;
-  } */
   .section-message article {
     min-height: 150px;
   }
   .section-mtext {
-    font-size: 1.35em;
+    width: 100%;
+    margin: 0;
+    text-align: justify;
+    font-size: 1.25em;
   }
 }
 
 @media (max-width: 668px) {
   .section-mtext {
-    font-size: 1.3em;
+    font-size: 1.25em;
+  }
+  .section-abouttext {
+    font-size: 1.08em;
+    line-height: 1.7em;
+    width: 100%;
   }
 }
 
 @media (max-width: 568px) {
   .section-mtext {
-    font-size: 1.25em;
+    font-size: 1.18em;
   }
 }
 
@@ -90,7 +117,7 @@
     min-height: 175px;
   }
   .section-mtext {
-    font-size: 1.2em;
+    font-size: 1.12em;
   }
 }
 
@@ -98,7 +125,6 @@
   .section-message {
     min-height: 135vh;
   }
-  
   .section-message article {
     min-height: 300px;
   }

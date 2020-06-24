@@ -1,19 +1,22 @@
 
 .header {
   max-width: 1600px;
-  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  /* background: rgba(210,210,210,0.5) */
 }
 
-.navbar, .faceAnim, .background {
+.navbar, .faceAnim {
   max-width: 1600px;
   height: 100vh;
+  /* z-index: 100; */
   position: absolute;
 }
 
 
 /* navigation */
 .navbar {
-  z-index: 50;
+  /* z-index: 200; */
   overflow: hidden;
 }
 
@@ -21,8 +24,7 @@
   width: 80%;
   height: 50px;
   margin: 0 10%;
-  z-index: 30;
-  position: relative;
+  z-index: 200;position: relative;
   top: 40px;
   opacity: 0;
 }
@@ -248,7 +250,13 @@
 
 
 
-
+.side-navigation {
+  width: 1600px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  /* background: orange; */
+}
 
 
 /* left navigation */
@@ -257,7 +265,7 @@
   position: relative;
   width: 10%;
   height: calc(100vh);
-  top: -50px;
+  /* top: -50px; */
   /* background: red; */
   float: left;
 }
@@ -344,7 +352,7 @@
 .slide-down-button {
   width: 100%;
   height: 10vh;
-  margin-top: calc(85vh - 50px);
+  /* margin-top: calc(85vh - 50px); */
   /* background: orange; */
 }
 
@@ -376,19 +384,43 @@
   cursor: pointer;
 }
 
+
+
+
+.header-content {
+  width: 1280px;
+  height: 100vh;
+  /* top: 90px; */
+  margin: 0px auto;
+  /* margin-left: 160px; */
+  /* background:rgba(210,210,210,0.2); */
+  position: relative;
+  z-index: 150;
+  /* background: orange; */
+}
+
+
+
+
+
 /* face animation */
 .faceAnim {
   /* top: -100%; */
   /* width: 1600px; */
   /* background: red; */
+  display: none;
   z-index: 40;
 }
 
 .box {
-  height: 80vh;
+  height: 100%;
+  width: 100%;
+  /* background: orange; */
+  /* opacity: 0.5; */
 }
 
 .box-svgface-container {
+  margin-top: 70px;
   height: 352px;
   width: 200px;
 }
@@ -398,7 +430,7 @@
   height: 100%;
 }
 
-.box path {
+.box-svgface-container path {
   opacity: 0;
 }
 
@@ -443,11 +475,21 @@
 
 /* background */
 .background {
-  z-index: 30;
-  /* top: -200%; */
-  /* width: 1600px; */
-  background: #262626;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  background: gray;
+  opacity: 0.5;
 }
+
+/* .background {
+  z-index: 30;
+  top: -200%;
+  width: 1600px;
+  background: #262626;
+} */
 
 .img-container {
   width: 100%;
@@ -528,7 +570,7 @@
     font-size: 1.14em;
   }
   .box {
-    height: 400px;
+    /* height: 400px; */
   }
   .list-menu li {
     font-size: 1.13em;
@@ -561,6 +603,7 @@
 
 /* css 768px under */
 @media (max-width: 768px) {
+  
   .navigation {
     width: 100%;
     margin: 0;
@@ -607,6 +650,7 @@
     display: none;
   }
   .box-svgface-container {
+    /* margin-top: 50px; */
     height: 317px;
     width: 180px;
   }

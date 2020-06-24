@@ -17,7 +17,7 @@
     height: 900px;
   }
 
-  .header {
+  .header, .header-content {
     height: 720px;
   }
 
@@ -25,15 +25,20 @@
     min-height: 720px;
   }
 
+  .box {
+    height: 650px;
+  }
+
+
   .slide-navbar,
   .slide-menu-layover {
     min-height: 720px;
   }
 
-  .slide-down-button {
+  /* .slide-down-button {
     height: 60px;
     margin-top: calc(780px - 230px);
-  }
+  } */
 }
 
 

@@ -48,8 +48,8 @@ function MyDesigns() {
           link={'https://www.behance.net/aimanadlawan'}
           image={false}/>
 
-        </div>
-      </section>
+      </div>
+    </section>
   )
 }
 

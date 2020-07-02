@@ -1,0 +1,158 @@
+
+
+.navbar-menu {
+  height: 90px;
+  width: 90px;
+  float: right;
+  margin-right: 180px;
+  position: relative;
+  top: -7.5px;
+  /* background: red; */
+}
+
+.navbar-menu div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.front {
+  z-index: 780;
+  /* background: red; */
+}
+
+.middle {
+  z-index: 760;
+}
+
+.back {
+  z-index: 740;
+}
+
+.middle-span, .back-span {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+}
+
+.front-text {
+  color: #EBE9CD;
+  font-size: 1.18em;
+  letter-spacing: -0.01em;
+}
+
+.front-text:hover {
+  cursor: pointer;
+}
+
+.front svg {
+  width: 25px;
+}
+
+@media (max-width: 1268px) {
+  .navbar-menu {
+    width: 90px;
+    height: 90px;
+    margin-right: 144px;
+  }
+  .front svg {
+    width: 24px
+  }
+  .front-text{
+    font-size: 1.17em;
+  }
+}
+
+@media (max-width: 1168px) {
+  .navbar-menu {
+    margin-right: 128px;
+  }
+  .front svg {
+    width: 23px
+  }
+  .front-text {
+    font-size: 1.15em;
+  }
+}
+
+@media (max-width: 1068px) {
+  .navbar-menu {
+    margin-right: 112px;
+    width: 80px;
+    height: 80px;
+  }
+  .front-text {
+    font-size: 1.14em;
+  }
+}
+
+@media (max-width: 968px) {
+  .navbar-menu {
+    margin-right: 96px;
+  }
+  .front svg {
+    width: 22px
+  }
+}
+
+@media (max-width: 868px) {
+  .navbar-menu {
+    width: 70px;
+    height: 70px;
+    margin-right: 80px;
+  }
+  .front svg {
+    width: 21px
+  }
+  .front-text {
+    font-size: 1.13em;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    width: 65px;
+    height: 65px;
+    margin-right: 64px;
+  }
+  .front svg {
+    width: 20px
+  }
+  .front-text {
+    font-size: 1.11em;
+  }
+}
+
+@media (max-width: 668px) {
+  .navbar-menu {
+    top: -12.5px;
+    margin-right: 48px;
+  }
+  .front svg {
+    width: 19px
+  }
+  .front-text {
+    font-size: 1.12em;
+  }
+}
+
+@media (max-width: 568px) {
+  .navbar-menu {
+    margin-right: 32px;
+  }
+  .front svg {
+    width: 18px
+  }
+  .front-text {
+    font-size: 1.11em;
+  }
+}
+
+@media (max-width: 468px) {
+  .front svg {
+    width: 18px
+  }
+  .front-text {
+    font-size: 1em;
+  }
+}

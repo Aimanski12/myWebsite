@@ -1,14 +1,14 @@
 {
-  "short_name": "Aiman Adlawan | Official Website",
-  "name": "Official Website of Aiman Adlawan",
+  "short_name": "Aiman Adlawan official website",
+  "name": "Aiman Adlawan official website",
   "icons": [
     {
-      "src": "assets/images/aiman-website-logo.png",
-      "sizes": "64x64",
-      "type": "image/png"
+      "src": "images/brand-icon-logo.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
     }
   ],
-  "start_url": "https://aimanski.web.app",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

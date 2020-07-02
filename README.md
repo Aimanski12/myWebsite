@@ -1,42 +1,68 @@
-## My Website Page
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-> :sunglasses: This is the official repository of my website [www.aimanadlawan.com](https://aimanadlawan.com). Currently, my website is on development stage, however this repository shows all components and animation you can see in my website. :sunglasses: 
+## Available Scripts
 
-> Each section is branched from the master folder for easy reading. You can check on the branch tab and select any folder you want to open or you can click om any of the buttons below.
+In the project directory, you can run:
 
-> This project is an addition to [React JS Projects](https://github.com/Aimanski12/ReactJS_Projects) I had created before.  If you want to see the whole project, click [here](https://github.com/Aimanski12/ReactJS_Projects).
+### `npm start`
 
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
+### `npm test`
 
-Route: / (Work Page)
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-<details>
-  <summary><strong>21. Intro</strong></summary>
+### `npm run build`
 
-  ### Overview :sunglasses:
-  > This intro animation is inspired by Line Drawing animation library from animejs. It uses an SVG image to run the animation smoothly.
-  [View Source Code](https://github.com/Aimanski12/myWebsite/tree/proj_22)<br>
-  <div float="left">
-    <img src="https://github.com/Aimanski12/myWebsite/blob/proj_media/01_intro.gif" alt="screen shot">
-  </div>
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-</details>
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Contributing
+### `npm run eject`
 
-If you want to contribute, pull requests are always welcome. You can [create an issue here](https://github.com/Aimanski12/myWebsite/issues/new).
-Your :sparkles: are also greatly appreciated.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you want to know my JS project you can see it [here](http://bit.ly/aiman-javascript-projects)
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Author
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-[Aimanski](http://bit.ly/aiman-profile-github).
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## License 
+## Learn More
 
-Copyright © 2020, [Aimanski12](http://bit.ly/aiman-profile-github).
-Released under the [MIT License](LICENSE).
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

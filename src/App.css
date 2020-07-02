@@ -1,122 +1,36 @@
 * {
-  padding: 0;
   margin: 0;
-}
-
-.main {
-  width: 100%;
-  height: 100vh;
-  /* background: red; */
-  scroll-behavior: smooth;
+  padding: 0;
+  font-family: 'Poppins', Helvetica, Verdana;
+  letter-spacing: -0.05em;
+  font-weight: 600;
 }
 
 .container {
-  max-width: 1600px;
+  width: 100%;
   height: 100vh;
-  margin: 0 auto;
-  background: #3E3A3A;
-  /* background: orange; */
-  overflow: hidden;
-  scroll-behavior: smooth;
+  /* overflow: hidden; */
+} 
+
+/* set container screen to 720px when screen is on portrait */
+@media screen and (max-width: 896px) and (orientation: landscape) {
+  .container {
+    height: 720px;
+  }
 }
 
-.content-center {
+/* global class to center elements */
+.content-center{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-/* css to make all contents aligned */
-.content-align {
-  min-height: 100px;
-  width: 1014px;
-}
-
-@media (max-width: 1268px) {
-  .content-align {
-    width: 934px;
-  }
-}
-
-@media (max-width: 1168px) {
-  .content-align {
-    width: 854px;
-  }
-}
-
-@media (max-width: 1068px) {
-  .content-align {
-    width: 774px;
-  }
-}
-
-@media (max-width: 968px) {
-  .content-align {
-    width: 694px;
-  }
-}
-
-@media (max-width: 868px) {
-  .content-align {
-    width: 614px;
-  }
-}
-
-@media (max-width: 768px) {
-  .content-align {
-    width: 620px;
-  }
-}
-
-@media (max-width: 668px) {
-  .content-align {
-    width: 520px;
-  }
-}
-
-@media (max-width: 568px) {
-  .content-align {
-    width: 420px;
-  }
-}
-
-@media (max-width: 468px) {
-  .content-align {
-    width: 320px;
-    margin: 0 auto;
-  }
-}
-
-
-@media (max-width: 368px) {
-  .content-align {
-    width: 280px;
-    margin: 0 auto;
-  }
-}
-
-
-/* css color for header */
-.green h2 {
-  color: #2F8581;
-}
-
-.green p {
-  color: #81858A;
-}
-
-
-.yellow h2, .gray h2 {
-  color: #EBE9CD;
-}
-
-.yellow p {
-  color: #83B4B2;
-}
-
-.gray p {
-  color: #727171;
+.main-container {
+  width: 1600px;
+  height: 100vh;
+  margin: 0 auto;
 }
 
 
@@ -125,3 +39,109 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: #313D43;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.div {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background: gray;
+}
+
+.one {
+  background: lightyellow;
+}
+
+.two {
+  background: lightblue;
+}

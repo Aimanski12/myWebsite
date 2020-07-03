@@ -1,19 +1,22 @@
 import React from 'react'
 import {imageUrl} from '../../../utils/common/common'
-import Menu from '../../Nav/TopNav/Menu'
+import MenuList from '../../MenuList/TopMenuList/Menu'
 import Copyright from '../../Footer/CopyRight/CopyRight'
 import SocialIcons from '../../Footer/SocialIcons/SocialIcons'
 import './MenuWrapper.css'
 
-function MenuWrapper() {
+function MenuWrapper(props) {
+  
   return (
     <div className="menu-wrapper">
       <div className="menu-s menu-left">
-        <img src={imageUrl('menu-dots', 'png')} alt=""/>
+        <img className='square-img' src={imageUrl('menu-dots', 'png')} alt="sqaure-dots"/>
       </div>
       <div className="menu-s menu-middle">
         <div className=" content-center nav-container">
-          <Menu />
+          <MenuList 
+            menuList={props.menuList}
+            activeRoute={props.activeRoute} />
         </div>
         <div className="content-center nav-footer">
           <Copyright />
@@ -25,7 +28,6 @@ function MenuWrapper() {
           container='social-navicons'
           colorMode='#313D43' />
       </div>
-      
     </div>
   )
 }

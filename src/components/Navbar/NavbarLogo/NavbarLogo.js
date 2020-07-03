@@ -3,7 +3,7 @@ import BrandLogo from '../../../components/Svgs/BrandLogo/BrandLogo'
 import {animateLogo} from '../../../utils/common/navbarLogo'
 import './NavbarLogo.css'
 
-function NavbarLogo() {
+function NavbarLogo(props) {
 
   useEffect(()=>{
     animateLogo()
@@ -13,7 +13,7 @@ function NavbarLogo() {
   return (
     <div className="navbar-logo">
       <a href="/">
-        <BrandLogo />
+        <BrandLogo colorMode={props.colorMode} />
       </a>
     </div>
   )

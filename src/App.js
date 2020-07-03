@@ -1,10 +1,14 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import {resize} from './utils/common/common'
 import Navbar from './components/Navbar/Navbar'
 import Menu from './components/MenuContainer/MenuContainer'
 
 function App() {
+
+  const menu = ['home', 'about', 'projects', 'contact']
+
+  const [activeRoute, useActive] = useState('home')
 
   useEffect(()=>{
     resize()
@@ -16,8 +20,11 @@ function App() {
 
       <div className="main-container">
 
-        <Navbar />        
-        <Menu />
+        <Navbar 
+          activeRoute={activeRoute} />        
+        <Menu 
+          menuList={menu}
+          activeRoute={activeRoute} />
 
         
 

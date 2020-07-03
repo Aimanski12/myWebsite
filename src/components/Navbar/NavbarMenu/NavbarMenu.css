@@ -18,7 +18,7 @@
 
 .front {
   z-index: 780;
-  /* background: red; */
+  /* background: orange; */
 }
 
 .middle {
@@ -39,6 +39,7 @@
   color: #EBE9CD;
   font-size: 1.18em;
   letter-spacing: -0.01em;
+  /* background: red; */
 }
 
 .front-text:hover {

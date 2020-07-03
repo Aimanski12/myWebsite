@@ -23,6 +23,7 @@ export function resizeElements() {
 export function navHoverElements() {
   return {
     middle: qEl('middle-span', 0),
+    close_paths: qEl('menu-close path', 0),
     back: qEl('back-span', 0),
     front: qEl('front-text', 0)
   }
@@ -36,5 +37,18 @@ export function logoElements() {
     b: qEl('bottom-line', 0),
     l: qEl('left-line', 0),
     s: qEl('shadow', 1)
+  }
+}
+
+// menu click animation elements
+export function menuClickElements () {
+  return {
+    container: qEl('container', 0),
+    menu_runners: qEl('menu-runners', 1),
+    square_img: qEl('square-img', 0),
+    right_icons: qEl('right-icons', 0),
+    menu_list_container: qEl('menu-list-container', 1),
+    copyright_runner: qEl('copyright-runner', 0),
+    social_navicons: qEl('social-navicons', 0)
   }
 }

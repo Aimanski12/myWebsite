@@ -1,10 +1,8 @@
-
 .menu-container {
   width: 1600px;
   height: 100vh;
   z-index: 700;
   position: absolute;
-  background: #0C5D5A;
 }
 
 .menu-wrapper, .menu-runner{
@@ -15,12 +13,11 @@
 
 .menu-wrapper {
   z-index: 650;
-  background: #0C5E5A;
+  overflow: hidden;
 }
 
 .menu-runner {
   z-index: 600;
-  background: red;
 }
 
 @media screen and (max-width: 896px) and (orientation: landscape) {

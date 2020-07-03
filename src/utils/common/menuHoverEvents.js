@@ -1,13 +1,17 @@
 import {navHoverElements} from './elementSorter'
 import anime from 'animejs'
 
-
-export function mouseEnter () {
+// function to run when mouse enter on menu a
+export function mouseEnter (colorModes, event) {
   const el = navHoverElements()
-  
+
+  let front;
+  if(event==='close') front = el.front
+  if(event === 'open') front = el.close_paths
   anime({
-    targets: el.front,
-    color: '#0C5E5A',
+    targets: front,
+    color: colorModes.back,
+    fill: colorModes.back,
     duration: 200,
     easing: 'easeInQuad',
     begin: function (anim) {
@@ -18,25 +22,31 @@ export function mouseEnter () {
   })
   anime({
     targets: el.back,
-    background: '#EBE9CD',
-    duration: 200,
+    background: colorModes.main,
+    duration: 150,
     width: '90%',
     height: '90%',
     easing: 'easeOutSine'
   })
 }
 
-export function mouseOut () {
+// function to run when mouse moves out of the menu area
+export function mouseOut (colorModes, event) {
   const el = navHoverElements()
+  
+  let front;
+  if (event === 'close') front = el.front
+  if (event === 'open') front = el.close_paths
   anime({
-    targets: el.front,
-    color: '#EBE9CD',
+    targets: front,
+    color: colorModes.main,
+    fill: colorModes.main,
     duration: 200,
     easing: 'easeInQuad'
   })
   anime({
     targets: el.middle,
-    background: '#313D43',
+    background: colorModes.back,
     duration: 200,
     width: '100%',
     height: '100%',

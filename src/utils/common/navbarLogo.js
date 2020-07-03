@@ -15,13 +15,6 @@ export function animateLogo(){
     strokeDashoffset: [anime.setDashoffset, 0],
     duration: 1000,
   })
-  // .add({
-  //   targets: el.s,
-  //   strokeWidth: 8,
-  //   stroke: '#B6B6B6',
-  //   strokeDashoffset: [anime.setDashoffset, 0],
-  //   duration: 800,
-  // })
   .add({
     duration: 800
   })

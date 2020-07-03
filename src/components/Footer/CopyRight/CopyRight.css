@@ -8,7 +8,8 @@
 .copyright-runner {
   width: 100%;
   height: 100%;
-  /* transform: translateY(100%); */
+  /* background: gray; */
+  transform: translateY(100%);
 }
 
 .copyright p {
@@ -43,6 +44,16 @@
 @media (max-width: 1068px) {
   .copyright p {
     font-size: 12px;
+  }
+
+  .privacy {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 868px) {
+  .copyright p {
+    font-size: 11px;
   }
 
   .privacy {

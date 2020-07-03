@@ -1,4 +1,3 @@
-
 import React, {useState} from 'react'
 import './Navbar.css'
 import NavbarLogo from './NavbarLogo/NavbarLogo'
@@ -6,6 +5,7 @@ import NavbarMenu from './NavbarMenu/NavbarMenu'
 import {mouseOut, mouseEnter} from '../../utils/common/menuHoverEvents'
 import {findColorModes} from '../../utils/data/navbarColorModes'
 import {openMenu, closeMenu} from '../../utils/common/menuClickEvents'
+import {navHoverElements} from '../../utils/common/elementSorter'
 import anime from 'animejs'
 
 function Navbar(props) {
@@ -30,6 +30,7 @@ function Navbar(props) {
 
   // close menu function
   const closeMenuBtn = () => {
+    const el = navHoverElements()
     // call function to close animation
     closeMenu()
 
@@ -55,6 +56,9 @@ function Navbar(props) {
       .add({
         targets: n,
         opacity: 1,
+        complete: function (anim) {
+          el.middle.style.color = colorModes.close.main          
+        }
       })
     }
 
@@ -110,12 +114,12 @@ function Navbar(props) {
   return (
     <div className="navbar-container">
       <NavbarLogo 
-        colorMode={isOpen ? colorModes.open.main : colorModes.close.main}/>
+        colorMode={isOpen ? colorModes.open.main : colorModes.close.main} />
       <NavbarMenu 
         open={isOpen}
         clicked={clicked}
         mouseEnter={(isOpen)=>{hoverIn(isOpen)}}
-        mouseOut={(isOpen)=>{hoverOut(isOpen)}}/>
+        mouseOut={(isOpen)=>{hoverOut(isOpen)}} />
     </div>
   )
 }

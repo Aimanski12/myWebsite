@@ -19,18 +19,19 @@
 .top-layover-logo {
   width: 180px;
   height: 220px;
+  /* background: red; */
 }
 
-.top-layover-logo img {
+.top-layover-logo svg {
   width: 180px
 }
 
 .top-loading {
   font-family: 'Poppins', Helvetica, Verdana;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 600;
   letter-spacing: -0.05em;
-  color: #565C60;
+  color: #949175;
   height: 40px;
   width: 100%;
   line-height: 40px;
@@ -39,6 +40,7 @@
 
 .top-layover-runner {
   z-index: 900;
+  
 }
 
 .top-runner {
@@ -47,7 +49,7 @@
   /* change runner width for animation */
   width: 100%;
   height: 100vh;
-  background: #313D43;
+  /* background: #313D43; */
 }
 
 
@@ -56,11 +58,11 @@
     width: 150px;
     height: 190px;
   }
-  .top-layover-logo img {
+  .top-layover-logo svg {
     width: 150px
   }
   .top-loading {
-    font-size: 1.15em;
+    font-size: 0.98em;
   }
 }
 
@@ -70,12 +72,12 @@
     height: 180px;
   }
 
-  .top-layover-logo img {
+  .top-layover-logo svg {
     width: 140px
   }
 
   .top-loading {
-    font-size: 1.11em;
+    font-size: 0.95em;
   }
 }
 
@@ -85,11 +87,11 @@
     height: 170px;
   }
 
-  .top-layover-logo img {
+  .top-layover-logo svg {
     width: 130px
   }
 
   .top-loading {
-    font-size: 0.95em;
+    font-size: 0.9em;
   }
 } 

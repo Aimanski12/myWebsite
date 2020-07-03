@@ -39,7 +39,6 @@
   color: #EBE9CD;
   font-size: 1.18em;
   letter-spacing: -0.01em;
-  /* background: red; */
 }
 
 .front-text:hover {
@@ -52,8 +51,8 @@
 
 @media (max-width: 1268px) {
   .navbar-menu {
-    width: 90px;
-    height: 90px;
+    width: 85px;
+    height: 85px;
     margin-right: 144px;
   }
   .front svg {
@@ -126,8 +125,10 @@
 
 @media (max-width: 668px) {
   .navbar-menu {
-    top: -12.5px;
+    top: -10px;
     margin-right: 48px;
+    width: 60px;
+    height: 60px;
   }
   .front svg {
     width: 19px
@@ -139,21 +140,30 @@
 
 @media (max-width: 568px) {
   .navbar-menu {
-    margin-right: 32px;
+    width: 55px;
+    height: 55px;
+    margin-right: 25px;
+    top: -7.5px;
   }
   .front svg {
-    width: 18px
+    width: 17px
   }
   .front-text {
-    font-size: 1.11em;
+    font-size: 1em;
   }
 }
 
 @media (max-width: 468px) {
+  .navbar-menu {
+    top: -3px;
+    width: 48px;
+    height: 48px;
+    margin-right: 25px;
+  }
   .front svg {
-    width: 18px
+    width: 13px
   }
   .front-text {
-    font-size: 1em;
+    font-size: 0.82em;
   }
 }

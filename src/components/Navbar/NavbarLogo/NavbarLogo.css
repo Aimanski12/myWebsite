@@ -61,13 +61,13 @@
 
 @media (max-width: 568px) {
   .navbar-logo {
-    margin-left: 32px;
+    margin-left: 40px;
   }
 }
 
 @media (max-width: 468px) {
   .navbar-logo {
-    margin-left: 20px;
+    margin-left: 30px;
   }
 }
 

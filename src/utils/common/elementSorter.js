@@ -32,11 +32,10 @@ export function navHoverElements() {
 // logo element animation
 export function logoElements() {
   return {
-    t: qEl('top-line', 0),
-    r: qEl('right-line', 0),
-    b: qEl('bottom-line', 0),
-    l: qEl('left-line', 0),
-    s: qEl('shadow', 1)
+    t: qEl('navbar-logo .top-line', 0),
+    r: qEl('navbar-logo .right-line', 0),
+    b: qEl('navbar-logo .bottom-line', 0),
+    l: qEl('navbar-logo .left-line', 0),
   }
 }
 
@@ -50,5 +49,15 @@ export function menuClickElements () {
     menu_list_container: qEl('menu-list-container', 1),
     copyright_runner: qEl('copyright-runner', 0),
     social_navicons: qEl('social-navicons', 0)
+  }
+}
+
+
+export function topLayoverElements() {
+  return {
+    svg: qEl('top-layover-logo svg', 0),
+    text: qEl('top-loading', 0),
+    runner: qEl('top-runner', 0),
+    top: qEl('top-layover', 0),
   }
 }

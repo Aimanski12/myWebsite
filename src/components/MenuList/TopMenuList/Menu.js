@@ -1,6 +1,7 @@
 import React from 'react'
 import './Menu.css'
 import {mouseEnter, mouseOut} from '../../../utils/common/menuListEvents'
+import {routeBtnClicked} from '../../../utils/common/topLayerAnim'
 
 export default function Menu(props) {
 
@@ -11,7 +12,8 @@ export default function Menu(props) {
                 <div className={`content-center list-front ${menu===props.activeRoute ? 'active' : null}`}>
                   <span className='menu-list-text'
                     onMouseEnter={(e)=>mouseEnter(e)}
-                    onMouseOut={(e)=>mouseOut(e)} >{menu}</span>
+                    onMouseOut={(e)=>mouseOut(e)}
+                    onClick={()=>routeBtnClicked(`/${menu}`)} >{menu}</span>
                 </div>
                 <div className={`content-center list-back ${menu===props.activeRoute ? 'active' : null}`}>
                   <span className='menu-list-backer'>{menu}</span>
@@ -29,3 +31,4 @@ export default function Menu(props) {
     </nav>
   )
 }
+

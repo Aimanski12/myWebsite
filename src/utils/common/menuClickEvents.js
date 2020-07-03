@@ -68,6 +68,9 @@ export function closeMenu () {
     duration: 275,
     width: '0%',
     delay: (el, i) => { return i * 120 },
+    complete: function (anim) {
+      el.container.style.overflow = 'visible'
+    }
   })
 
 }

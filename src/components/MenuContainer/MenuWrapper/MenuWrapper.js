@@ -14,12 +14,10 @@ function MenuWrapper(props) {
       </div>
       <div className="menu-s menu-middle">
         <div className=" content-center nav-container">
-          <MenuList 
-            menuList={props.menuList}
-            activeRoute={props.activeRoute} />
+          <MenuList />
         </div>
         <div className="content-center nav-footer">
-          <Copyright />
+          <Copyright fromTop={true}/>
         </div>
       </div>
       <div className="menu-s menu-right">

@@ -5,6 +5,7 @@ export function openMenu () {
   const el = menuClickElements()
   
   el.container.style.overflow = 'hidden'
+  el.menu_container.style.display  = 'block'
   el.social_navicons.style.transform = 'translateY(100%)'
   el.copyright_runner.style.transform = 'translateY(100%)'
   
@@ -52,7 +53,7 @@ function show (el) {
 }
 
 
-export function closeMenu () {
+export function closeMenu (closeContainer) {
   const el = menuClickElements()
   el.right_icons.style.overflow = 'hidden'
 
@@ -69,7 +70,10 @@ export function closeMenu () {
     width: '0%',
     delay: (el, i) => { return i * 120 },
     complete: function (anim) {
-      el.container.style.overflow = 'visible'
+      if(closeContainer) {
+        el.container.style.overflow = 'visible'
+      }
+      el.menu_container.style.display = 'none'
     }
   })
 

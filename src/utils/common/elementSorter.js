@@ -48,7 +48,8 @@ export function menuClickElements () {
     right_icons: qEl('right-icons', 0),
     menu_list_container: qEl('menu-list-container', 1),
     copyright_runner: qEl('copyright-runner', 0),
-    social_navicons: qEl('social-navicons', 0)
+    social_navicons: qEl('social-navicons', 0),
+    menu_container: qEl('menu-container', 0)
   }
 }
 
@@ -59,5 +60,6 @@ export function topLayoverElements() {
     text: qEl('top-loading', 0),
     runner: qEl('top-runner', 0),
     top: qEl('top-layover', 0),
+    container: qEl('container', 0)
   }
 }

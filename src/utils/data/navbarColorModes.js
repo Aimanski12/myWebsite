@@ -1,8 +1,8 @@
-const green = '#0C5D5A'
-const cream = '#EBE9CD'
-const dark = '#313D43'
-const gray = '#CDCDCD'
-const light = '#F4F4F4'
+export const green = '#0C5D5A'
+export const cream = '#EBE9CD'
+export const dark = '#313D43'
+export const gray = '#CDCDCD'
+export const light = '#F4F4F4'
 
 
 export function findColorModes (activeRoute) {
@@ -10,7 +10,10 @@ export function findColorModes (activeRoute) {
     return color.path === activeRoute
   })
   return {
-    close: colorModes[0],
+    close: {
+      main: colorModes[0].main,
+      back: colorModes[0].back
+    },
     open: openColorModes
   }
 } 

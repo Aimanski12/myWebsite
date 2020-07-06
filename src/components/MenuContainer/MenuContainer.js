@@ -4,12 +4,10 @@ import MenuRunner from './MenuRunner/MenuRunner'
 import './MenuContainer.css'
 
 
-function MenuContainer(props) {
+function MenuContainer() {
   return (
     <div className="menu-container">
-      <MenuWrapper
-        menuList={props.menuList}
-        activeRoute={props.activeRoute} />
+      <MenuWrapper />
       <MenuRunner />
     </div>
   )

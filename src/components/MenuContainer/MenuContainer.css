@@ -2,6 +2,7 @@
   width: 1600px;
   height: 100vh;
   z-index: 700;
+  display: none;
   position: absolute;
 }
 

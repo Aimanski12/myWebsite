@@ -1,0 +1,12 @@
+.home {
+  width: 100%;
+  min-height: 100vh;
+  background: green;
+}
+
+
+@media screen and (max-width: 896px) and (orientation: landscape) {
+  .home {
+    height: 720px;
+  }
+}

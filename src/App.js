@@ -19,6 +19,8 @@ import Projects from './containers/Projects/Projects'
 import Contacts from './containers/Contacts/Contacts'
 import Credentials from './containers/Credentials/Credentials'
 import Privacy from './containers/Privacy/Privacy'
+import NotFound from './containers/NotFound/NotFound'
+
 
 class App extends React.Component {
 
@@ -39,8 +41,11 @@ class App extends React.Component {
     let session = await checkSessionStorage()
     this.props.checkBrowserSession(session)
   }
+
+  
   render(){ 
-    
+    // console.log(this.props.state)
+
   return (
     <div className="container">
       <TopLayOver/>
@@ -52,27 +57,27 @@ class App extends React.Component {
           <Switch>
             <Route exact path='/'>
               { this.props.redirect.isTrue ? 
-                <Redirect to={this.props.redirect.pathname} /> : <Home /> }
+                <Redirect to={this.props.redirect.pathname} /> : null }
               <Home />
             </Route>
             <Route path='/about'>
               { this.props.redirect.isTrue ? 
-                  <Redirect to={this.props.redirect.pathname} /> : <About />}
+                  <Redirect to={this.props.redirect.pathname} /> : null}
               <About />
             </Route>
             <Route path='/projects'>
               { this.props.redirect.isTrue ? 
-                  <Redirect to={this.props.redirect.pathname} /> : <Projects />}
+                  <Redirect to={this.props.redirect.pathname} /> : null}
               <Projects />
             </Route>  
             <Route path='/contacts'>
               { this.props.redirect.isTrue ? 
-                  <Redirect to={this.props.redirect.pathname} /> : <Contacts />}
+                  <Redirect to={this.props.redirect.pathname} /> : null}
               <Contacts />
             </Route>
             <Route path='/credentials'>
               { this.props.redirect.isTrue ? 
-                  <Redirect to={this.props.redirect.pathname} /> : <Credentials />}
+                  <Redirect to={this.props.redirect.pathname} /> : null}
               <Credentials />
             </Route>
             <Route path='/privacy'>
@@ -80,10 +85,12 @@ class App extends React.Component {
                 <Redirect to={this.props.redirect.pathname} /> : null}
               <Privacy />
             </Route>
+            <Route path='/*' component={NotFound} >
+              { this.props.redirect.isTrue ? 
+                <Redirect to={this.props.redirect.pathname} /> : null}
+            </Route>
           </Switch>
         </Router>
-
-        
       </div>      
     </div>
   )}

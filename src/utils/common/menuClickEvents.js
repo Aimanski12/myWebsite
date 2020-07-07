@@ -3,7 +3,6 @@ import {menuClickElements} from './elementSorter'
 
 export function openMenu () {
   const el = menuClickElements()
-  console.log(el)
   
   el.container.style.overflow = 'hidden'
   el.menu_container.style.display  = 'block'

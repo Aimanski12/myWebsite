@@ -2,9 +2,9 @@ import React, {useEffect} from 'react'
 import * as action from '../../store/actions/index'
 import {closeTopLayer} from '../../utils/common/topLayerAnim'
 import {connect} from 'react-redux'
-import './Home.css'
+import './NotFound.css'
 
-function Home(props) {
+function NotFound(props) {
 
   useEffect(() => {
     if (props.redirect.isTrue) {
@@ -17,9 +17,13 @@ function Home(props) {
   })
 
   return (
-    <div className="home">
-      
-    </div>
+     <>
+      <div className='content-center div'>
+        <h1>Page is not found</h1>
+      </div>
+      <div className="div one"></div>
+      <div className="div two"></div>
+    </>
   )
 }
 
@@ -36,4 +40,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(mapStateToProps, mapDispatchToProps)(NotFound)

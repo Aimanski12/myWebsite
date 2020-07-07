@@ -6,16 +6,23 @@ export const light = '#F4F4F4'
 
 
 export function findColorModes (activeRoute) {
+  //ifthe route match any on the given color routes
   let colorModes = menuColorModes.filter(color => {
     return color.path === activeRoute
   })
+  
+  // if does not match to any of the given color routes
+  if(colorModes.length === 0) {
+    colorModes = [menuColorModes[12]]
+  }
+
+  // return the output color
   return {
     close: {
       main: colorModes[0].main,
       back: colorModes[0].back
     },
     open: openColorModes,
-    
   }
 } 
 
@@ -77,6 +84,11 @@ const menuColorModes = [
   },
   {
     path: 'project6',
+    main: green,
+    back: cream
+  },
+  {
+    path: 'error',
     main: green,
     back: cream
   },

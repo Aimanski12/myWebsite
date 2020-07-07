@@ -30,7 +30,7 @@ function runTopAnimation (el) {
   tl.add({
     targets: [el.svg, el.text],
     opacity: 1,
-    duration: 1700,
+    duration: 1000,
   })
   .add({
     duration: 500,
@@ -86,7 +86,7 @@ function runTopAnimation (el) {
     targets: [el.runner],
     height: 0,
     easing: 'easeInSine',
-    duration: 800,
+    duration: 500,
   })
   .add({
     duration: 100,

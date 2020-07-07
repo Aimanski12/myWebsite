@@ -11,7 +11,7 @@ function TopLayover(props) {
     if(!props.hasSession){
       setTimeout(()=>{
       props.setSession(true)
-      }, 9000)
+      }, 9500)
     }
   })
   

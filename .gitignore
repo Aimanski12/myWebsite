@@ -13,6 +13,7 @@
 .firebase
 firebase.json
 /src/utils/sessionData
+/src/utils/data
 
 # misc
 .DS_Store

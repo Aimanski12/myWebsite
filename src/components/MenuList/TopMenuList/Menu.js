@@ -1,29 +1,36 @@
 import React from 'react'
 import * as action from '../../../store/actions/index'
 import {connect} from 'react-redux'
-import './Menu.css'
 import {mouseEnter, mouseOut} from '../../../utils/common/menuListEvents'
 import {navHoverElements} from '../../../utils/common/elementSorter'
 import {closeMenu} from '../../../utils/common/menuClickEvents'
-import {routeBtnClicked} from '../../../utils/common/topLayerAnim'
+import {openTopLayer} from '../../../utils/common/topLayerAnim'
 import anime from 'animejs'
+import './Menu.css'
 
 function Menu(props) {
 
-  const menuClicked = (path) => {
-    
+  const menuClicked = (uPath) => {
+    let path = uPath === 'home' ? '' : uPath
+    // if menu is open then run animation
+    // to close the menu
     if (props.isOpen) {
       closeMenuBtn()
     } 
 
+    // set the isOpen menu state to close
     props.setMenu(false)
     
-    setTimeout(()=>{
-      routeBtnClicked(path)
-      
-    },1000)
 
+    setTimeout(()=>{
+      openTopLayer()
+      setTimeout(() => {
+        props.setRedirect(true, `/${path}`)
+      }, 800)
+    }, 800)
+    
   }
+  
 
   // close menu function
   const closeMenuBtn = () => {
@@ -61,15 +68,15 @@ function Menu(props) {
     return props.menus.map((menu, i )=>{
       return <li className='menu-list' key={i}>
               <div className='menu-list-container'>
-                <div className={`content-center list-front 
-                  ${menu === props.activeRoute ? 'active' : null}`}>
+                <div className={`content-center list-front
+                  ${menu === props.activeRoute ? 'active' : ''}`}>
                   <span className='menu-list-text'
                     onMouseEnter={(e)=>mouseEnter(e)}
                     onMouseOut={(e)=>mouseOut(e)}
-                    onClick={()=>menuClicked(`/${menu}`)} >{menu}</span>
+                    onClick={()=>menuClicked(`${menu}`)} >{menu}</span>
                 </div>
                 <div className={`content-center list-back 
-                  ${menu === props.activeRoute ? 'active' : null}`}>
+                  ${menu === props.activeRoute ? 'active' : ''}`}>
                   <span className='menu-list-backer'>{menu}</span>
                 </div>
               </div>
@@ -101,7 +108,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     setPage: () => { dispatch(action.setPageLocation()) },
     setMenu: (val) => { dispatch(action.menuIsOpen(val)) },
-    setAnimating: (val) => { dispatch(action.setAnimating(val)) },
+    setRedirect: (istrue, path) => { dispatch(action.setRedirect(istrue, path))}
   }
 }
 

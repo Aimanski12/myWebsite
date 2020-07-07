@@ -5,24 +5,30 @@ import * as action from '../../../store/actions/index'
 import {navHoverElements} from '../../../utils/common/elementSorter'
 import {closeMenu} from '../../../utils/common/menuClickEvents'
 import anime from 'animejs'
-import {routeBtnClicked} from '../../../utils/common/topLayerAnim'
+import {openTopLayer} from '../../../utils/common/topLayerAnim'
 
 
 function CopyRight(props) {
 
-  const menuClicked = (path) => {
+  const menuClicked = () => {
+    // check if the privacy icon clicked is from 
+    // the top menu not from the footer
     if(props.fromTop){
+      // close the opened menu
       if (props.isOpen) closeMenuBtn() 
 
+      // set menu state to false to close the navbar and change color
       props.setMenu(false)
       
       setTimeout(() => {
-        routeBtnClicked(path)
-      }, 1000)
+        openTopLayer()
+        setTimeout(()=>{
+          props.setRedirect(true, '/privacy')
+        },800)
+      }, 800)
     } else {
-      routeBtnClicked(path)
+      openTopLayer()
     }
-
   }
 
   // close menu function
@@ -56,7 +62,6 @@ function CopyRight(props) {
       })
   }
 
-
   return (
     <div className="copyright">
       <div className="content-center copyright-runner">
@@ -73,15 +78,13 @@ const mapStateToProps = (state) => {
   return {
     colorModes : state.state.colorModes,
     isOpen: state.state.isOpen,
-    isAnimating: state.state.isAnimating,
-    isClicked: state.state.isClicked
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    setAnimating: (val) => { dispatch(action.setAnimating(val)) },
     setMenu: (val) => { dispatch(action.menuIsOpen(val)) },
+    setRedirect: (istrue, path) => {dispatch(action.setRedirect(istrue, path))}
   }
 }
 

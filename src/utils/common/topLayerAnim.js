@@ -2,14 +2,31 @@ import {topLayoverElements} from './elementSorter'
 import anime from 'animejs'
 
 // function for intro animation
-export function introAnim () {
+export function introAnim (hasSession) {
   const el = topLayoverElements()
-  el.container.style.overflow = 'hidden'
-  el.svg.style.opacity = 0
-  el.text.style.opacity = 0
 
+  // if it has a session no animation to run
+  if(hasSession === true){
+    el.top.style.display = 'none'
+  } 
+
+  // if it has no session then we will run the animation
+  if(hasSession === false) {
+    el.top.style.display = 'block'
+    el.container.style.overflow = 'hidden'
+    el.svg.style.opacity = 0
+    el.text.style.opacity = 0
+    el.top.style.display = 'block'
+    el.runner.style.height = '100vh'
+    el.runner.style.width = '100%'
+    runTopAnimation(el)
+  }
+}
+
+// function to run if the browser has no sessions
+function runTopAnimation (el) {
   let tl = anime.timeline({easing: 'easeInSine'})
-
+  
   tl.add({
     targets: [el.svg, el.text],
     opacity: 1,
@@ -75,25 +92,30 @@ export function introAnim () {
     duration: 100,
     complete: function (anim) {
       el.top.style.display = 'none'
-      el.runner.style.height = '100%'
+      el.runner.style.height = '100vh'
       el.runner.style.width = '0'
       el.container.style.overflow = 'visible'
     }
   })
+
 }
 
-export function routeBtnClicked (path) {
+
+// function to open and run the top layer animation
+export function openTopLayer () {
   const el = topLayoverElements()
 
   el.top.style.display = 'block'
   el.container.style.overflow = 'hidden'
-  el.svg.style.opacity = 0
+  el.runner.style.height = '100vh'
+  el.runner.style.width = '0'
+  el.svg.style.width = '70%'
 
   let tl = anime.timeline({easing: 'easeInSine'})
   tl
   .add({
     targets: el.runner,
-    duration: 700,
+    duration: 500,
     width: '100%',
     complete: function (anim) {
       anime({
@@ -104,32 +126,48 @@ export function routeBtnClicked (path) {
     } 
   })
   .add({
-    duration: 800,
+    duration: 500,
     begin: function (anim) {
       el.runner.style.right = 0
       el.runner.style.float = 'right'
-    },
-    complete: function (anim) {
-      anime({
-        targets: el.svg,
-        opacity: 0,
-        duration: 300,
-      })
     }
+  })
+}
+
+
+// function for closing the top layer
+export function closeTopLayer () {
+  const el = topLayoverElements()
+  el.top.style.display = 'block'
+  el.container.style.overflow = 'hidden'
+  el.runner.style.height = '100vh'
+  el.runner.style.width = '100%'
+  el.runner.style.right = 0
+  el.runner.style.float = 'right'
+  el.svg.style.width = '70%'
+
+let tl = anime.timeline({easing: 'easeInSine'})
+  tl
+  .add({
+    duration: 400,
   })
   .add({
     targets: el.runner,
     duration: 500,
     width: '0%',
+    begin: function (anim) {
+      el.svg.style.opacity = 0
+    } 
   })
   .add({
     duration: 40,
     complete: function (anim) {
       el.top.style.display = 'none'
-      el.runner.style.left = '0'
-      el.runner.style.float = 'left'
       el.container.style.overflow = 'visible'
+      el.runner.style.height = '100vh'
+      el.runner.style.width = '100%'
+      el.runner.style.left = 0
+      el.runner.style.float = 'left'
     }
   })
-
 }

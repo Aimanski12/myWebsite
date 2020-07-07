@@ -46,12 +46,11 @@ export const menuIsOpen = (val) => dispatch => {
 }
 
 // function to see if there is a session stored
-export const isSeen = (val) => dispatch => {
+export const checkBrowserSession = (val) => dispatch => {
   dispatch({
-    type: actionType.ISSEEN,
+    type: actionType.HASBROWSERSESSION,
     payload: {
-      isSeen: val,
-      userId: null
+      hasSession: val,
     }
   })
 }
@@ -60,7 +59,18 @@ export const setTopClicked = (val) => dispatch => {
   dispatch({
     type: actionType.ISCLICKED,
     payload: {
-      isClicked: val
+      topOverLayIsRunning: val
+    }
+  })
+}
+
+
+export const setRedirect = (istrue, path) => dispatch => {
+  dispatch({
+    type: actionType.SETREDIRECT,
+    payload: {
+      isTrue: istrue,
+      pathname: path  
     }
   })
 }

@@ -4,8 +4,9 @@
 export {
   menuIsOpen,
   setTopClicked,
-  isSeen,
+  checkBrowserSession,
   checkPageLocation,
   setAnimating,
-  setPageLocation
+  setPageLocation,
+  setRedirect
 } from './app'

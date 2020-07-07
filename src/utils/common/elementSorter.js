@@ -49,7 +49,9 @@ export function menuClickElements () {
     menu_list_container: qEl('menu-list-container', 1),
     copyright_runner: qEl('copyright-runner', 0),
     social_navicons: qEl('social-navicons', 0),
-    menu_container: qEl('menu-container', 0)
+    menu_container: qEl('menu-container', 0),
+    text_active: qEl('active .menu-list-text', 0),
+    backer_active: qEl('active .menu-list-backer', 0)
   }
 }
 

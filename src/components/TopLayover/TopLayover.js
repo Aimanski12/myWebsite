@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react'
+import * as action from '../../store/actions/index'
 import BrandLogo from '../Svgs/BrandLogo/BrandLogo'
 import {connect} from 'react-redux'
 import {introAnim} from '../../utils/common/topLayerAnim'
@@ -6,20 +7,23 @@ import './TopLayover.css'
 
 function TopLayover(props) {
   useEffect(()=>{
-    if(!props.isSeen) {
-      introAnim()
+    introAnim(props.hasSession)
+    if(!props.hasSession){
+      setTimeout(()=>{
+      props.setSession(true)
+      }, 9000)
     }
   })
-
+  
   return (
     <div className="top-layover">
       <div className="top-layover-container content-center">
         <div className="top-layover-logo content-center">
           <BrandLogo 
-            colorMode={'#AAA893'}/>
-          {props.isSeen ? null : 
+            colorMode={'#E3E1C3'}/>
+          {props.hasSession ? null : 
           <p className='top-loading'
-            style={{'color': '#AAA893'}}>
+            style={{'color': '#F0EED2'}}>
               We are loading . . .</p> }
         </div>
       </div>
@@ -33,10 +37,17 @@ function TopLayover(props) {
 
 const mapStateToProps = (state) => {
   return {
-    isSeen: state.state.isSeen,
+    state: state.state,
+    hasSession: state.state.hasSession,
     colorModes: state.state.colorModes,
-    isClicked: state.state.isClicked
+    topOverLayIsRunning: state.state.topOverLayIsRunning
   }
 }
 
-export default connect(mapStateToProps)(TopLayover)
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    setSession: (val) => { dispatch(action.checkBrowserSession(val)) }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TopLayover)

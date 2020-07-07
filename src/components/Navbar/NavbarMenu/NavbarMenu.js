@@ -105,6 +105,8 @@ function NavbarMenu(props) {
       mouseOut(props.colorModes.close, 'close')
   }
 
+  // console.log(props.isAnimating)
+
   return (
     <div className="navbar-menu">
       <div className="front content-center">

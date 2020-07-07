@@ -3,14 +3,15 @@ import * as actionType from '../actions/actionTypes'
 import {cream, dark, green} from '../../utils/data/navbarColorModes'
 
 const initialState = {
-  menus: ['home', 'about', 'projects', 'contact'],
-  activeRoute: '/',
-  activeRoute1: '/',
-  isSeen: false,
-  userId: null,
+  menus: ['home', 'about', 'projects', 'contacts'],
+  activeRoute: 'home',
+  hasSession: '',
   isAnimating: false,
   isOpen: false,
-  isClicked: false,
+  redirect: {
+    isTrue: false,
+    pathname: ''
+  },
   colorModes: {
     close: {
       main: cream, 
@@ -43,14 +44,25 @@ const isClicked = (state, data) => {
   return updateObject(state, data)
 }
 
+const setRedirect = (state, data) => {
+  return {
+    ...state,
+    redirect: {
+      isTrue: data.isTrue,
+      pathname: data.pathname
+    }
+  }
+}
+
 const initState = (state = initialState, action) => {
   switch(action.type){
     case ( actionType.ACTIVEROUTE ): return setActiveRoute(state, action.payload);
     case ( actionType.SETACTIVEROUTE ): return setActiveRoute(state, action.payload);
-    case ( actionType.ISSEEN ): return isSeen(state, action.payload);
+    case (actionType.HASBROWSERSESSION): return isSeen(state, action.payload);
     case ( actionType.SETANIMATING ): return isAnimating(state, action.payload);
     case ( actionType.MENUISOPEN ): return menuIsOpen(state, action.payload)
     case ( actionType.ISCLICKED ): return isClicked(state, action.payload);
+    case (actionType.SETREDIRECT): return setRedirect(state, action.payload);
     default: return initialState
   }
 }

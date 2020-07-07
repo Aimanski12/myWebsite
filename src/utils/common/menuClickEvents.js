@@ -3,11 +3,19 @@ import {menuClickElements} from './elementSorter'
 
 export function openMenu () {
   const el = menuClickElements()
+  console.log(el)
   
   el.container.style.overflow = 'hidden'
   el.menu_container.style.display  = 'block'
   el.social_navicons.style.transform = 'translateY(100%)'
   el.copyright_runner.style.transform = 'translateY(100%)'
+  
+  if(el.text_active && el.backer_active){
+    el.backer_active.style.transform = 'translateY(-15px)'
+    el.text_active.style.color = '#C6C4AF'
+    el.backer_active.style.color = '#2C6664'
+  }
+
   
   for(let x=0; x<4; x++){
     el.menu_list_container[x].style.transform = 'translateY(100%)'
@@ -48,6 +56,7 @@ function show (el) {
     opacity: 1,
     complete: function (anim) {
       el.right_icons.style.overflow = 'visible'
+      
     }
   })
 }
@@ -70,10 +79,15 @@ export function closeMenu (closeContainer) {
     width: '0%',
     delay: (el, i) => { return i * 120 },
     complete: function (anim) {
+      el.menu_container.style.display = 'none'
       if(closeContainer) {
         el.container.style.overflow = 'visible'
       }
-      el.menu_container.style.display = 'none'
+
+      if (el.text_active && el.backer_active) {
+        el.text_active.style.color = '#2C6664'
+        el.backer_active.style.color = '#0C5D5A'
+      }
     }
   })
 

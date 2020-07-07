@@ -1,5 +1,6 @@
 import React from 'react'
 import Social from '../../Svgs/Socials/Socials'
+
 import {socials} from '../../../utils/data/socials'
 import './SocialIcons.css'
 

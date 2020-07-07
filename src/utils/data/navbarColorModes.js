@@ -14,7 +14,8 @@ export function findColorModes (activeRoute) {
       main: colorModes[0].main,
       back: colorModes[0].back
     },
-    open: openColorModes
+    open: openColorModes,
+    
   }
 } 
 

@@ -23,6 +23,7 @@
 }
 
 .top-layover-logo svg {
+  opacity: 0;
   width: 160px
 }
 
@@ -33,6 +34,7 @@
   letter-spacing: -0.05em;
   color: #B1B099;
   height: 40px;
+  opacity: 0;
   width: 100%;
   line-height: 40px;
   text-align: center;

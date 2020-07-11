@@ -12,12 +12,8 @@
   /* overflow: hidden; */
 } 
 
-/* set container screen to 720px when screen is on portrait */
-@media screen and (max-width: 896px) and (orientation: landscape) {
-  .container {
-    height: 720px;
-  }
-}
+
+
 
 /* global class to center elements */
 .content-center{
@@ -33,21 +29,253 @@
   margin: 0 auto;
 }
 
+/* this is the css class for every
+page. this is the wrapper container*/
+.main, .top {
+  width: 100%;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+
+/* the css for the containers that will slide up */
+.slideUp-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* z-index: 200; */
+  /* transform: translateY(100%); */
+}
+
+.slideBacker-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* z-index: 100; */
+  /* transform: translateY(100%); */
+}
+
+/* set container screen to 720px when screen is on portrait */
+@media screen and (max-width: 896px) and (orientation: landscape) {
+  .container, .main {
+    min-height: 720px;
+  }
+  .top, .top-background-container {
+    min-height: 720px;
+  }
+  .top-container {
+    position: static;
+    min-height: 720px;
+  }
+}
+
+
+
+.header-text {
+  font-size: 3.2em;
+}
+.desc {
+  font-size: 1.1em;
+}
+.head2 {
+  font-size: 1.6em;
+  }
+
+@media (max-width: 1468px) {
+  .header-text {
+    font-size: 3.1em;
+  }
+  .desc {
+    font-size: 1.08em;
+  }
+  .head2 {
+    font-size: 1.58em;
+  }
+}
+
+@media (max-width: 1368px) {
+  .header-text {
+    font-size: 3em;
+  }
+  .desc {
+    font-size: 1.06em;
+  }
+  .head2 {
+    font-size: 1.56em;
+  }
+}
+
+@media (max-width: 1268px) {
+  .header-wrapper {
+    width: 70%
+  }
+  .header-text {
+    font-size: 2.85em;
+  }
+  .desc {
+    font-size: 1.04em;
+  }
+  .head2 {
+    font-size: 1.54em;
+  }
+}
+
+@media (max-width: 1168px) {
+  .header-text {
+    font-size: 2.7em;
+  }
+  .desc {
+    font-size: 1.02em;
+  }
+  .head2 {
+    font-size: 1.52em;
+  }
+}
+
+@media (max-width: 1068px) {
+  .header-text {
+    font-size: 2.6em;
+  }
+  .header-wrapper {
+    width: 75%
+  }
+  .desc {
+    font-size: 1.02em;
+  }
+  .head2 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 968px) {
+  .header-text {
+    font-size: 2.5em;
+  }
+  .header-wrapper {
+    width: 80%
+  }
+  .desc {
+    font-size: 1em;
+  }
+  .head2 {
+    font-size: 1.48em;
+  }
+}
+
+@media (max-width: 868px) {
+  .header-text {
+    font-size: 2.4em;
+  }
+  .header-wrapper {
+    width: 85%
+  }
+  .desc {
+    font-size: 0.98em;
+  }
+  .head2 {
+    font-size: 1.46em;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-text {
+    font-size: 2.3em;
+  }
+  .header-wrapper {
+    width: 95%
+  }
+  .desc {
+    font-size: 0.96em;
+  }
+  .head2 {
+    font-size: 1.44em;
+  }
+}
+
+@media (max-width: 668px) {
+  .header-text {
+    font-size: 2.2em;
+  }
+  .desc {
+    font-size: 0.96em;
+  }
+  .head2 {
+    font-size: 1.42em;
+  }
+}
+
+@media (max-width: 568px) {
+  .header-text {
+    font-size: 2.1em;
+  }
+  .desc {
+    font-size: 0.94em;
+  }
+  .head2 {
+    font-size: 1.4em;
+  }
+}
+
+
+@media (max-width: 468px) {
+  .header-text {
+    font-size: 1.8em;
+  }
+  .desc {
+    font-size: 0.92em;
+  }
+  .head2 {
+    font-size: 1.38em;
+  }
+}
+
+@media (max-width: 368px) {
+  .header-text {
+    font-size: 1.7em;
+  }
+  .desc {
+    font-size: 0.9em;
+  }
+  .head2 {
+    font-size: 1.36em;
+  }
+}
 
 
 
 
 
 
+.show-container {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
 
+.reveal {
+  display: block;
+  transform: translateY(0%);
+}
 
+.runner {
+  display: inline-block;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  right: left;
+  position: absolute;
+  background: #A12C65;
+  z-index: 50;
+}
 
+.sub-reveal-container {
+  overflow: hidden;
+}
 
-
-
-
-
-
+.sub-reveal {
+  display: block;
+  transform: translateY(0%);
+}
 
 
 
@@ -126,7 +354,7 @@
   width: 100%;
   height: 100vh;
   margin: 0 auto;
-  background: gray;
+  background: pink;
 }
 
 .one {

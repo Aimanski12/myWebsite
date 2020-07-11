@@ -90,7 +90,7 @@ const menuColorModes = [
   {
     path: 'error',
     main: green,
-    back: cream
+    back: gray
   },
 ]
 

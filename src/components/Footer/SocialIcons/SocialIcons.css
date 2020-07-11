@@ -1,5 +1,5 @@
 
-.right-icons {
+.right-icons, .left-icons {
   width: 35px;
   height: 330px;
   position: absolute;
@@ -8,39 +8,75 @@
   overflow: hidden;
 }
 
+.left-icons{
+  top: calc(100vh - 380px);
+  left: 200px;
+  /* background: green; */
+  overflow: visible;
+}
+
 .social-navicons {
   width: 100%;
   height: 100%;
   justify-content: space-evenly;
   transform: translateY(100%);
-  /* transition: all 0.4s ease-in; */
 }
 
-/* .show {
-  transform: translateY(0%);
-  transition: all 0.4s ease-in;
-} */
+.header-social-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 
-.social-navicons a{
+.social-navicons a, .header-social-icons a{
   width: 100%;
   height: 35px;
 }
 
-.social-navicons a svg:hover {
+.social-navicons a svg:hover, .header-social-icons a svg:hover {
   transform: scale(1.2);
   transition: all 0.1s ease-in;
 }
 
-.social-navicons a svg {
+
+.social-navicons a svg, .header-social-icons a svg {
   width: 100%;
   height: 100%;
   transition: all 0.2s ease-in;
+}
+
+.header-social-icons {
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  /* transform: translateY(0%); */
+}
+
+@media (max-width: 1500px) {
+  .left-icons {
+    left: 180px
+  }
+}
+
+@media (max-width: 1468px) {
+  .left-icons {
+    left: 160px
+  }
+}
+
+@media (max-width: 1368px) {
+  .left-icons {
+    left: 140px
+  }
 }
 
 @media (max-width: 1268px){
   .right-icons {
     right: 144px; 
     width: 34px;
+  }
+  .left-icons {
+    left: 130px
   }
   .social-navicons a {
     height: 34px;
@@ -52,18 +88,35 @@
     right: 128px;
     width: 33px;
   }
+  .left-icons {
+    left: 120px
+  }
   .social-navicons a {
     height: 33px;
   }
 }
 
+@media (max-width: 1110px) {
+  .left-icons {
+    left: 100px
+  }
+}
 @media (max-width: 1068px) {
   .right-icons {
     right: 112px;
     width: 32px;
   }
+  .left-icons {
+    left: 80px
+  }
   .social-navicons a {
     height: 32px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .left-icons {
+    left: 60px
   }
 }
 
@@ -76,14 +129,35 @@
     height: 31px;
   }
 }
+@media (max-width: 900px) {
+  .left-icons {
+    left: 60px
+  }
+}
+
+/* set container screen to 720px when screen is on portrait */
+@media screen and (max-width: 896px) and (orientation: landscape) {
+  .left-icons {
+    top: calc(720px - 380px);
+  }
+}
 
 @media (max-width: 868px) {
   .right-icons {
     right: 80px;
     width: 25px;
   }
+  .left-icons {
+    left: 70px
+  }
   .social-navicons a {
     height: 25px;
+  }
+}
+
+@media (max-width: 800px) {
+  .left-icons {
+    left: 40px
   }
 }
 
@@ -94,6 +168,9 @@
     margin: 0 -135px 0 0;
     width: 270px;
     height: 22px;
+  }
+  .left-icons {
+    display: none;
   }
   .social-navicons {
     flex-direction: row;
@@ -107,31 +184,17 @@
 @media (max-width: 668px) {
   .right-icons {
     bottom: 18px;
-    /* margin: 0 -155px 0 0;
-    width: 310px; */
-  }
-}
-
-@media (max-width: 568px) {
-  .right-icons {
-    /* bottom: 18px; */
-    /* margin: 0 -125px 0 0;
-    width: 250px; */
   }
 }
 
 @media (max-width: 468px) {
   .right-icons {
     bottom: 14px;
-    /* margin: 0 -145px 0 0;
-    width: 290px; */
   }
 }
 
 @media (max-width: 368px) {
   .right-icons {
     bottom: 10px;
-    /* margin: 0 -140px 0 0;
-    width: 280px; */
   }
 }

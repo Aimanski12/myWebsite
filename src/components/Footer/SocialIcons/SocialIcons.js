@@ -19,10 +19,8 @@ function FooterIcons(props) {
   }
 
   return (
-    <div className={props.arrangement}>
-      <div className={`content-center ${props.container}`}>
-        {socialsIcon()}
-      </div>
+    <div className={`content-center ${props.container}`}>
+      {socialsIcon()}
     </div>
   )
 }

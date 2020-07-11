@@ -8,5 +8,6 @@ export {
   checkPageLocation,
   setAnimating,
   setPageLocation,
-  setRedirect
+  setRedirect,
+  resetRedirect
 } from './app'

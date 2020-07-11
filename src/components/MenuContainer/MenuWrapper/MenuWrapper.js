@@ -9,9 +9,9 @@ function MenuWrapper(props) {
   
   return (
     <div className="menu-wrapper">
-      <div className="menu-s menu-left">
+      <aside className="menu-s menu-left">
         <img className='square-img' src={imageUrl('menu-dots', 'png')} alt="sqaure-dots"/>
-      </div>
+      </aside>
       <div className="menu-s menu-middle">
         <div className=" content-center nav-container">
           <MenuList />
@@ -20,12 +20,15 @@ function MenuWrapper(props) {
           <Copyright fromTop={true}/>
         </div>
       </div>
-      <div className="menu-s menu-right">
-        <SocialIcons 
-          arrangement='right-icons'
-          container='social-navicons'
-          colorMode='#313D43' />
-      </div>
+      <aside className="menu-s menu-right">
+        {/* arrangement is for the left or right locations
+        container is for the social navicons */}
+        <div className='right-icons'>
+          <SocialIcons 
+            container='social-navicons'
+            colorMode='#313D43' />
+        </div>
+      </aside>
     </div>
   )
 }

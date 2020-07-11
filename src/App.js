@@ -30,8 +30,8 @@ class App extends React.Component {
   }
 
   async componentDidMount(){
-    // resize the window upon loading
-    resize()
+    // // resize the window upon loading
+    // resize()
     // resize the window when screen is resized
     window.addEventListener('resize', resize)
 
@@ -40,12 +40,14 @@ class App extends React.Component {
 
     let session = await checkSessionStorage()
     this.props.checkBrowserSession(session)
+
   }
 
   
   render(){ 
+    
     // console.log(this.props.state)
-
+    
   return (
     <div className="container">
       <TopLayOver/>

@@ -8,6 +8,7 @@ const initialState = {
   hasSession: '',
   isAnimating: false,
   isOpen: false,
+  pageData: false,
   redirect: {
     isTrue: false,
     pathname: ''
@@ -47,9 +48,22 @@ const isClicked = (state, data) => {
 const setRedirect = (state, data) => {
   return {
     ...state,
+    activeRoute: data.activeRoute,
+    colorModes: data.colorModes,
+    pageData: data.pageData,
     redirect: {
       isTrue: data.isTrue,
       pathname: data.pathname
+    }
+  }
+}
+
+const resetRedirect = (state, data) => {
+  return {
+    ...state,
+    redirect: {
+      ...state.redirect,
+      isTrue: data.isTrue,
     }
   }
 }
@@ -63,6 +77,7 @@ const initState = (state = initialState, action) => {
     case ( actionType.MENUISOPEN ): return menuIsOpen(state, action.payload)
     case ( actionType.ISCLICKED ): return isClicked(state, action.payload);
     case (actionType.SETREDIRECT): return setRedirect(state, action.payload);
+    case (actionType.RESETREDIRECT): return resetRedirect(state, action.payload);
     default: return initialState
   }
 }

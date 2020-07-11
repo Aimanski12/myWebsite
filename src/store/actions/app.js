@@ -1,6 +1,7 @@
 import * as actionType from './actionTypes'
 import {checkRoute} from '../../utils/storeUtils/common'
 import {findColorModes} from '../../utils/data/navbarColorModes'
+import {findPageData} from '../../utils/data/pageData/index'
 
 // function to check the current page route
 export const checkPageLocation = () => dispatch => {
@@ -9,7 +10,8 @@ export const checkPageLocation = () => dispatch => {
     type: actionType.ACTIVEROUTE,
     payload: {
       activeRoute: location,
-      colorModes: findColorModes(location)
+      colorModes: findColorModes(location),
+      pageData: findPageData(location)
     }
   })
 }
@@ -66,11 +68,24 @@ export const setTopClicked = (val) => dispatch => {
 
 
 export const setRedirect = (istrue, path) => dispatch => {
+  let location = checkRoute(path)
   dispatch({
     type: actionType.SETREDIRECT,
     payload: {
       isTrue: istrue,
-      pathname: path  
+      pathname: path,
+      activeRoute: location,
+      pageData: findPageData(location),
+      colorModes: findColorModes(location) 
+    }
+  })
+}
+
+export const resetRedirect = (istrue) => dispatch => {
+  dispatch({
+    type: actionType.RESETREDIRECT,
+    payload: {
+      isTrue: istrue,
     }
   })
 }

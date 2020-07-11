@@ -15,7 +15,8 @@ export function resizeElements() {
     navbar_container: qEl('navbar-container', 0),
     menu_container: qEl('menu-container', 0),
     menu_wrapper: qEl('menu-wrapper', 0),
-    menu_runner: qEl('menu-runner', 0)
+    menu_runner: qEl('menu-runner', 0),
+    top_container: qEl('top-container', 0)
   }
 }
 

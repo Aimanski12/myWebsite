@@ -106,8 +106,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    setPage: () => { dispatch(action.setPageLocation()) },
     setMenu: (val) => { dispatch(action.menuIsOpen(val)) },
+    checkPage: () => {dispatch(action.checkPageLocation())},
     setRedirect: (istrue, path) => { dispatch(action.setRedirect(istrue, path))}
   }
 }

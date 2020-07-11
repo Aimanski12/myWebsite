@@ -153,7 +153,7 @@ let tl = anime.timeline({easing: 'easeInSine'})
   })
   .add({
     targets: el.runner,
-    duration: 500,
+    duration: 400,
     width: '0%',
     begin: function (anim) {
       el.svg.style.opacity = 0

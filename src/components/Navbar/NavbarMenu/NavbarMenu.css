@@ -49,11 +49,23 @@
   width: 25px;
 }
 
+@media (max-width: 1468px) {
+   .navbar-menu {
+     margin-right: 167px;
+   }
+}
+
+@media (max-width: 1368px) {
+  .navbar-menu {
+    margin-right: 152px;
+  }
+}
+
 @media (max-width: 1268px) {
   .navbar-menu {
     width: 85px;
     height: 85px;
-    margin-right: 144px;
+    margin-right: 139px;
   }
   .front svg {
     width: 24px
@@ -65,7 +77,7 @@
 
 @media (max-width: 1168px) {
   .navbar-menu {
-    margin-right: 128px;
+    margin-right: 126px;
   }
   .front svg {
     width: 23px

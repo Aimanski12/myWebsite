@@ -1,9 +1,9 @@
 import React from 'react'
-import SocialIcons from '../../Footer/SocialIcons/SocialIcons'
+import SocialIcons from '../../FooterItem/SocialIcons/SocialIcons'
 
-function SocialIcon(props) {
+function SocialIcon() {
   return (
-    <aside className='left-icons'>
+    <aside className='left-align left-icons'>
       <div className="header-social-container show">
         <SocialIcons 
           container='header-social-icons'

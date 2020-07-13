@@ -1,0 +1,50 @@
+.footer-wrapper {
+  min-height: 220px;
+  padding: 90px 0 90px 0;
+  width: 100%;
+  background: #313D43;
+}
+
+.quote-p {
+  color: #D6D4BE;
+}
+
+.quote {
+  letter-spacing: -0.01em;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.author {
+  letter-spacing: -0.01em;
+}
+
+.footer-socialIcons {
+  width: 330px;
+  height: 35px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1068px) {
+  .quote {
+    font-size: 1.35em;
+  }
+}
+
+@media (max-width: 568px){
+  .quote-p {
+   width: 95%;
+   margin: 0 auto
+  }
+  .quote {
+    font-size: 1.3em;
+  }
+  
+}
+
+@media (max-width: 468px) {
+  .footer-socialIcons {
+    width: 290px;
+    height: 35px;
+  }
+}

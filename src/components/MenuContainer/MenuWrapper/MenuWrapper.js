@@ -1,8 +1,8 @@
 import React from 'react'
 import {imageUrl} from '../../../utils/common/common'
 import MenuList from '../../MenuList/TopMenuList/Menu'
-import Copyright from '../../Footer/CopyRight/CopyRight'
-import SocialIcons from '../../Footer/SocialIcons/SocialIcons'
+import Copyright from '../../FooterItem/CopyRight/CopyRight'
+import SocialIcons from '../../FooterItem/SocialIcons/SocialIcons'
 import './MenuWrapper.css'
 
 function MenuWrapper(props) {
@@ -17,7 +17,7 @@ function MenuWrapper(props) {
           <MenuList />
         </div>
         <div className="content-center nav-footer">
-          <Copyright fromTop={true}/>
+          <Copyright fromTop={true} pColor='#C6C4AF' />
         </div>
       </div>
       <aside className="menu-s menu-right">

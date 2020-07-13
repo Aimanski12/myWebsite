@@ -1,9 +1,12 @@
 import React, {useEffect} from 'react'
 import * as action from '../../store/actions/index'
 import {closeTopLayer} from '../../utils/common/topLayerAnim'
-import Header from '../../components/Header/Header'
 import {resize} from '../../utils/common/common'
 import {connect} from 'react-redux'
+import Header from '../../components/Header/Header'
+import SectionBlocks from '../../components/SectionBlocks/SectionBlocks'
+import Footer from '../../components/Footer/Footer'
+import Skills from './Skills/Skills'
 import './About.css'
 
 function About(props) {
@@ -21,10 +24,10 @@ function About(props) {
   return (
     <div className="main">
       <Header />
-
-      <div className="div"></div>
-      <div className="div one"></div>
-      <div className="div two"></div>
+      <SectionBlocks />
+      <Skills />
+      
+      <Footer />
     </div>
   )
 }

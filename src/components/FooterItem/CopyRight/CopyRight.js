@@ -65,7 +65,7 @@ function CopyRight(props) {
   return (
     <div className="copyright">
       <div className="content-center copyright-runner">
-        <p>© Aiman Adlawan 2020. All right reserved.</p>
+        <p style={{color: props.pColor}}>© Aiman Adlawan 2020. All rights reserved.</p>
         <span 
           className='privacy'
           onClick={menuClicked}>Privacy Policy.</span>

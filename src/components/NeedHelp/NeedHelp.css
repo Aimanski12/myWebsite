@@ -1,0 +1,178 @@
+
+.needhelp-container {
+  width: 100%;
+  height: 100vh;
+  background: #F0F0F0;
+}
+
+.needhelp-background {
+  width:100%;
+  height:100%;
+  /* margin: 9px; */
+  
+}
+
+
+.needhelp-text-block {
+  min-height: calc(100vh - 18px);
+  margin-left: 200px;
+  overflow: auto
+}
+
+
+.needhelp-title-block {
+  width: 100%;
+  min-height: 200px;
+  margin-top: calc(100vh - 420px);
+}
+
+
+
+
+
+.needhelp-wrapper {
+  width: 55%;
+  /* background: orange; */
+  min-height: 200px;
+}
+
+.sub-reveal-container {
+  margin-top: 10px;
+}
+
+.sub-reveal {
+  line-height: 2em;
+  letter-spacing: -0.01em;
+  text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1500px){
+  .needhelp-text-block {
+    margin-left: 180px;
+  }
+}
+
+@media (max-width: 1468px) {
+  .needhelp-text-block {
+    margin-left: 160px;
+  }
+}
+
+@media (max-width: 1368px) {
+  .needhelp-text-block {
+    margin-left: 140px;
+  }
+}
+
+@media (max-width: 1268px) {
+  .needhelp-text-block {
+    margin-left: 130px;
+  }
+  .needhelp-wrapper {
+    width: 55%
+  }
+}
+
+@media (max-width: 1168px) {
+  .needhelp-text-block {
+    margin-left: 120px;
+  }
+}
+
+@media (max-width: 1110px) {
+  .needhelp-text-block {
+    margin-left: 110px;
+  }
+}
+
+@media (max-width: 1068px) {
+  .needhelp-text-block {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .needhelp-text-block {
+    margin-left: 60px;
+  }
+}
+
+/* set container screen to 720px when screen is on portrait */
+@media screen and (max-width: 896px) and (orientation: landscape) {
+  .needhelp-container {
+    min-height: 720px;
+  }
+  .needhelp-title-block {
+    margin-top: calc(720px - 350px);
+  }
+}
+
+@media (max-width: 868px) {
+  .needhelp-text-block {
+    margin-left: 70px;
+  }
+  .needhelp-wrapper {
+    width: 65%
+  }
+}
+
+@media (max-width: 800px) {
+  .needhelp-text-block {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .needhelp-text-block {
+    margin: 0 auto;
+  }
+  .needhelp-wrapper {
+    width: 70%
+  }
+}
+
+@media (max-width: 668px) {
+
+}
+
+@media (max-width: 568px) {
+  .needhelp-wrapper {
+    width: 78%
+  }
+} 
+
+@media (max-width: 468px) {
+  .needhelp-wrapper {
+    width: 90%
+  }
+  .needhelp-title-block {
+    margin-top: calc(100vh - 370px);
+  }
+}
+
+@media (max-width: 368px) {
+  .needhelp-wrapper {
+    width: 95%
+  }
+}
+
+
+.samp {
+  width: 100%;
+  height: 30vh;
+  background: limegreen;
+}
+
+

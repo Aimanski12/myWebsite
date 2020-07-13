@@ -2,6 +2,9 @@ import React, {useEffect} from 'react'
 import * as action from '../../store/actions/index'
 import {closeTopLayer} from '../../utils/common/topLayerAnim'
 import Header from '../../components/Header/Header'
+import SectionBlocks from '../../components/SectionBlocks/SectionBlocks'
+import NeedHelp from '../../components/NeedHelp/NeedHelp'
+import Footer from '../../components/Footer/Footer'
 import {resize} from '../../utils/common/common'
 import {connect} from 'react-redux'
 import './Home.css'
@@ -21,10 +24,13 @@ function Home(props) {
   return (
     <div className="main">
       <Header />
+      <SectionBlocks />
 
-      <div className="div"></div>
-      {/* <div className="div one"></div>
-      <div className="div two"></div> */}
+      <div className="samp"></div>
+
+      <NeedHelp />
+      <Footer />
+      <div className="samp"></div>
     </div>
   )
 }

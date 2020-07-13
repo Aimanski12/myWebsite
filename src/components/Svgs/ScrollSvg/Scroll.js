@@ -1,14 +1,21 @@
 import React from 'react'
 import WithTexts from './ScrollSvgs/WithTexts'
-import WithoutText from './ScrollSvgs/WithoutText'
+import Arrowright from './ScrollSvgs/ArrowRight'
+import Envelop from './ScrollSvgs/Envelop'
 
 function Scroll(props) {
-
   let svg;
-  if(props.withText){
+
+  if(props.type === 'withText'){
     svg = <WithTexts colors={props.colors} />
-  } else {
-    svg = <WithoutText colors={props.colors} />
+  } 
+  
+  if(props.type === 'arrow') {
+    svg = <Arrowright colors={props.colors} />
+  }
+
+  if(props.type === 'envelop') {
+    svg = <Envelop colors={props.colors} />
   }
 
   return (

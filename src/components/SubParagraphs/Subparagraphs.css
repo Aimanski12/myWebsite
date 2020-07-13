@@ -1,59 +1,30 @@
-/* <h2 className="p-wrapper">
-  <span className="p-container show">
-    <div className="p-reveal">Background</div>
-    <div className="p-runner"></div>
-  </span>
-</h2> */
-
 .paragraphs {
   padding: 40px 0 80px;
   width: 100%;
   min-height: 150px;
-  /* background: orange; */
 }
-
 
 .p-wrapper {
   display: block;
 }
 
-/* .p-container {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  color: #EBE9CD;
-} */
-
 .p-reveal  {
   letter-spacing: -0.02em;
-  /* display: block; */
-  /* transform: translateY(50%); */
-}
-
-.p-runner {
-  /* display: inline-block;
-  width: 0%;
-  height: 100%;
-  top: 0;
-  position: absolute;
-  background: #A12C65;
-  z-index: 50; */
 }
 
 .p-desc {
   margin-top: 10px;
-  /* font-size: 1.1em; */
-  /* overflow: hidden; */
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
-
-
 
 .p-desc-content {
   letter-spacing: -0.01em;
-  /* color: #AAA88B; */
-  /* display: block; */
   line-height: 2em;
   text-align: justify;
-  /* transform: translateY(50%); */
 }
+
+.p-links {
+  margin-bottom: 50px;
+}
+
+

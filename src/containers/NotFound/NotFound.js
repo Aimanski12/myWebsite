@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import * as action from '../../store/actions/index'
 import {closeTopLayer} from '../../utils/common/topLayerAnim'
 import {connect} from 'react-redux'
+import Footer from '../../components/Footer/Footer'
 import {resize} from '../../utils/common/common'
 import './NotFound.css'
 
@@ -25,6 +26,7 @@ function NotFound(props) {
         <h1 style={{'color': props.colorModes.close.main}}>Page Not Found</h1>
 
       </header>
+      <Footer />
       <div className="div"></div>
       <div className="div one"></div>
       <div className="div two"></div>

@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import * as action from '../../store/actions/index'
 import {closeTopLayer} from '../../utils/common/topLayerAnim'
 import Header from '../../components/Header/Header'
+import Footer from '../../components/Footer/Footer'
 import {resize} from '../../utils/common/common'
 import {connect} from 'react-redux'
 import './Contacts.css'
@@ -22,7 +23,7 @@ function Contacts(props) {
     <div className="main">
       <Header />  
 
-    
+      <Footer />
       <div className="div"></div>
       <div className="div one"></div>
       <div className="div two"></div>

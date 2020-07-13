@@ -11,7 +11,7 @@ import './Header.css'
 
 function Header(props) {
   let data = props.headerPageData
-  console.log(data)
+  
 
   let headerContent = data ? (
     <div className='top-background-container'
@@ -57,16 +57,9 @@ function Header(props) {
 
 const mapStateToProps = (state) => {
   return {
-    redirect: state.state.redirect,
     colorModes: state.state.colorModes,
     headerPageData: state.state.pageData
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    // resetRedirect: (istrue) =>{dispatch(action.resetRedirect(istrue))},
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Header)
+export default connect(mapStateToProps)(Header)

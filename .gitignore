@@ -9,11 +9,12 @@
 
 # production
 /build
-/.firebase
-.firebase
+/.firebaserc
 firebase.json
 /src/utils/sessionData
 /src/utils/data
+/src/utils/data/navbarColorModes.js
+/src/utils/data/socials.js
 
 # misc
 .DS_Store

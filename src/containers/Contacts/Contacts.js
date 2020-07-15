@@ -3,6 +3,7 @@ import * as action from '../../store/actions/index'
 import {closeTopLayer} from '../../utils/common/topLayerAnim'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
+import Message from './Message/Message'
 import {resize} from '../../utils/common/common'
 import {connect} from 'react-redux'
 import './Contacts.css'
@@ -22,11 +23,8 @@ function Contacts(props) {
   return (
     <div className="main">
       <Header />  
-
-      <Footer />
-      <div className="div"></div>
-      <div className="div one"></div>
-      <div className="div two"></div>
+      <Message /> 
+      <Footer /> 
     </div>
   )
 }

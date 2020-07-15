@@ -7,7 +7,7 @@ function Hero(props) {
     <figure className='hero-wrapper'>
       <span className='hero-cover show'>
         <img className='img-reveal' src={imageUrl(props.data.image, 'png')} alt=""/>
-        <div className="img-runner"></div>
+        <div className="runner"></div>
       </span>
     </figure>
   )

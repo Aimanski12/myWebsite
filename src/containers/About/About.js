@@ -5,6 +5,7 @@ import {resize} from '../../utils/common/common'
 import {connect} from 'react-redux'
 import Header from '../../components/Header/Header'
 import SectionBlocks from '../../components/SectionBlocks/SectionBlocks'
+import FollowMyReads from './FollowMyReads/FollowMyReads'
 import Footer from '../../components/Footer/Footer'
 import Skills from './Skills/Skills'
 import './About.css'
@@ -26,7 +27,7 @@ function About(props) {
       <Header />
       <SectionBlocks />
       <Skills />
-      
+      <FollowMyReads />
       <Footer />
     </div>
   )

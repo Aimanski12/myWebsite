@@ -23,7 +23,7 @@
 .needhelp-title-block {
   width: 100%;
   min-height: 200px;
-  margin-top: calc(100vh - 420px);
+  margin-top: calc(100vh - 46vh);
 }
 
 
@@ -31,7 +31,7 @@
 
 
 .needhelp-wrapper {
-  width: 55%;
+  width: 52%;
   /* background: orange; */
   min-height: 200px;
 }
@@ -80,9 +80,7 @@
   .needhelp-text-block {
     margin-left: 130px;
   }
-  .needhelp-wrapper {
-    width: 55%
-  }
+
 }
 
 @media (max-width: 1168px) {
@@ -169,10 +167,5 @@
 }
 
 
-.samp {
-  width: 100%;
-  height: 30vh;
-  background: limegreen;
-}
 
 

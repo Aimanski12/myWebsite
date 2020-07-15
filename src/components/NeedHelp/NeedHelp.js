@@ -16,14 +16,14 @@ function NeedHelp() {
 
 
           <div className="needhelp-wrapper">
-            <h2 className="header-text head2">
+            <h2 className="head2">
               <span className="show-container show">
-                <div className="reveal element"
+                <div className="reveal"
                 style={{color: '#347A78'}}>{'Need help with building'}</div>
                 <div className="runner"></div>
               </span>
               <span className="show-container show">
-                <div className="reveal element"
+                <div className="reveal"
                 style={{color: '#347A78'}}>{'your website?'}</div>
                 <div className="runner"></div>
               </span>

@@ -6,8 +6,9 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import * as action from './store/actions/index'
+import './App2.css'
 import './App.css';
+import * as action from './store/actions/index'
 import {resize} from './utils/common/common'
 import {checkSessionStorage} from './utils/sessiondata/sessionsStorage'
 import Navbar from './components/Navbar/Navbar'
@@ -20,7 +21,6 @@ import Contacts from './containers/Contacts/Contacts'
 import Credentials from './containers/Credentials/Credentials'
 import Privacy from './containers/Privacy/Privacy'
 import NotFound from './containers/NotFound/NotFound'
-
 
 class App extends React.Component {
 

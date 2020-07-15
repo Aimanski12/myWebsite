@@ -21,15 +21,15 @@
 .privacy {
   font-size: 13px;
   color: orange;
-  transform: scale(1);
-  transition: all 0.1s linear;
+  /* transform: scale(1); */
+  transition: all 0.15s linear;
 }
 
 .privacy:hover {
   color: #FFCD72;
   cursor: pointer;
-  transition: all 0.1s linear;
-  transform: scale(1.02);
+  transition: all 0.15s linear;
+  /* transform: scale(1.01); */
 }
 
 @media (max-width: 1268px) {

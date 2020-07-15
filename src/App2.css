@@ -1,0 +1,143 @@
+/* this file is for the css styles of the section wrapper and the projects */
+
+.section-container {
+  width: 100%;
+  min-height: 600px;
+  
+}
+
+.section-background {
+  width: calc(100% - 18px);
+  height: 100%;
+  padding: 120px 0;
+  margin: 0 9px 0 9px;
+}
+
+
+.section-wrapper {
+  width: 1000px;
+  min-height: 200px;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.section-article-wrapper{
+  width: 100%;
+}
+
+
+
+@media (max-width: 1568px){
+  .section-wrapper {
+    width: 950px;
+  }
+}
+
+@media (max-width: 1468px) {
+  .section-wrapper {
+    width: 875px;
+  }
+  /* .section-article-wrapper {
+    width: 57%;
+  } */
+}
+
+@media (max-width: 1368px) {
+  .section-wrapper {
+    width: 820px;
+  }
+  /* .section-article-wrapper {
+    width: 60%;
+  } */
+}
+
+@media (max-width: 1268px) {
+  .section-wrapper {
+    width: 750px;
+  }
+  /* .section-article-wrapper {
+    width: 63%;
+  } */
+}
+
+@media (max-width: 1168px) {
+  .section-wrapper {
+    width: 700px
+  }
+  /* .section-article-wrapper {
+    width: 67%;
+  } */
+}
+
+@media (max-width: 1068px) {
+  .section-wrapper {
+    width: 720px;
+  }
+  /* .section-article-wrapper {
+    width: 72%;
+  } */
+}
+
+@media (max-width: 968px) {
+  .section-wrapper {
+    width: 640px;
+  }
+  /* .section-article-wrapper {
+    width: 76%;
+  } */
+}
+
+@media (max-width: 868px) {
+  .section-wrapper {
+    width: 560px;
+  }
+  /* .section-article-wrapper {
+    width: 80%;
+  } */
+}
+
+@media (max-width: 800px) {
+  /* .section-wrapper {
+    width: 85%;
+  } */
+}
+
+@media (max-width: 768px) {
+  .section-wrapper {
+    width: 560px;
+  }
+  /* .section-article-wrapper {
+    width: 87%;
+  } */
+}
+
+@media (max-width: 668px) {
+  .section-wrapper {
+    width: 530px;
+  }
+  /* .section-article-wrapper {
+    width: 92%;
+  } */
+}
+
+@media (max-width: 568px) {
+  .section-wrapper {
+    width: 430px;
+  }
+  /* .section-article-wrapper {
+    width: 100%;
+  } */
+}
+
+@media (max-width: 468px) {
+  .section-wrapper {
+    width: 96%;
+  }
+}
+
+@media (max-width: 368px) {
+  .section-wrapper {
+    width: 98%;
+  }
+}

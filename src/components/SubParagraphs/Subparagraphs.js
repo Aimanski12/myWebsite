@@ -15,7 +15,7 @@ function Subparagraphs(props) {
         </h3>
         <p className="sub-reveal-container p-desc desc show">
           <span className="sub-reveal p-desc-content"
-            style={{color: props.data.textColors.secondary}}> 
+            style={{color: props.data.textColors.secondary, fontWeight: props.data.title[0] ===  'About me.' ? 500 : 600}}> 
             {text.text}</span>
         </p>
       </Fragment>
@@ -30,12 +30,16 @@ function Subparagraphs(props) {
         <Fragment>
           <p className="sub-reveal-container p-desc p-links desc show">
             <span className="sub-reveal p-desc-content"
-              style={{color: props.data.textColors.secondary}}> 
-              I'm excited to <a href="/"><span className='links'>connect</span></a> with you great people like you.</span>
+              style={{color: props.data.textColors.secondary, fontWeight: 500}}> 
+              I'm excited to 
+                <a href="/" 
+                  rel='noopener noreferrer'
+                  target='_blank'>
+                    <span className='links'> connect</span></a> with you great people like you.</span>
           </p>
           <p className="sub-reveal-container p-desc p-links desc show">
             <span className="sub-reveal p-desc-content"
-              style={{color: props.data.textColors.secondary}}> 
+              style={{color: props.data.textColors.secondary, fontWeight: 500}}> 
               Click <span className='links'>here</span> to see some of my credentials.</span>
             </p> 
           </Fragment> : null }

@@ -30,7 +30,6 @@ function Home(props) {
 
       <NeedHelp />
       <Footer />
-      <div className="samp"></div>
     </div>
   )
 }

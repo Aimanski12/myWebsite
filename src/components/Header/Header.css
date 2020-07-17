@@ -6,8 +6,8 @@
 
 .top-background-container {
   width: calc(100% - 18px);
-  min-height: calc(100vh - 18px);
-  margin: 9px;
+  min-height: calc(100vh - 9px);
+  margin: 0px 9px 0px 9px;
 }
 
 
@@ -188,8 +188,3 @@
 
 
 
-.sa {
-  width: 50px;
-  height: 750px;
-  /* background: lightseagreen; */
-}

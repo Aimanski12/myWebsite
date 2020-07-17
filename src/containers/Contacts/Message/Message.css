@@ -4,13 +4,9 @@
   background: #F0F0F0
 }
 
-.message-background {
-  /* padding: 100px 0; */
-}
-
 .message-container {
   width: 700px;
-  height: 800px;
+  height: 750px;
   margin: 0 auto;
 }
 
@@ -27,7 +23,6 @@
   padding: 5% 0;
   margin: 0 auto;
   min-height: 100%;
-  /* background: rgba(90,90,90,0.1); */
 }
 
 .required {
@@ -81,13 +76,13 @@ form {
   padding: 15px 25px 10px 25px;
 }
 
+/* Edge */
 ::-webkit-input-placeholder {
-  /* Edge */
   color: #7D9796
 }
 
+/* Internet Explorer 10-11 */
 :-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
   color: #7D9796
 }
 
@@ -99,20 +94,19 @@ form {
   outline: none;
 }
 
-
 .button-area {
   width: 100%;
   height: 80px;
-  margin-top: 10px;
-  /* background: rgba(120, 120, 120, 0.3); */
+  margin-top: 20px;
 }
 
 .notice {
   height: 100%;
-  width: calc(100% - 70px);
+  width: calc(100% - 80px);
   justify-content: flex-end;
   align-items: flex-start;
-  color: #2C6664
+  color: #2C6664;
+  float: left
 }
 
 .notice span {
@@ -120,9 +114,7 @@ form {
 }
 
 .m-privacy {
-  /* font-size: 13px; */
   color: orange;
-  /* transform: scale(1); */
   transition: all 0.15s linear;
 }
 
@@ -130,7 +122,28 @@ form {
   color: gray;
   cursor: pointer;
   transition: all 0.15s linear;
-  /* transform: scale(1.01); */
+}
+
+.submit-button-wrapper {
+  width: 80px;
+  height: 80px;
+  float: right;
+}
+
+.submit-button-wrapper button {
+  width: 80px;
+  height: 80px;
+  background: #2C6664;
+  border: none;
+  border-radius: 50%;
+}
+
+.submit-button-wrapper button:focus {
+  outline: none;
+}
+
+.submit-button-wrapper button svg {
+  width: 40px;
 }
 
 
@@ -161,9 +174,38 @@ form {
 @media(max-width: 768px) {
   .message-container {
     width: 500px;
+    height: 770px;
   }
   .form-container {
     width: 90%;
+  }
+  .button-area {
+    height: 160px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .notice {
+    height: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .submit-button-wrapper {
+    width: 100%;
+    height: 80px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .submit-button-wrapper button {
+    width: 80px;
+    height: 80px;
+  }
+  .submit-button-wrapper button svg {
+    width: 40px;
   }
 }
 
@@ -178,6 +220,7 @@ form {
 
 @media(max-width: 568px) {
   .message-container {
+    height: 790px;
     width: 90%;
   }
   .message-wrapper {
@@ -188,6 +231,22 @@ form {
   }
   .input-field {
     border-radius: 0 5px 5px 0;
+  }
+  .notice {
+    height: 60px;
+  }
+  .notice span {
+    display: block;
+  }
+  .submit-button-wrapper {
+    margin-top: 20px;
+  }
+  .submit-button-wrapper button {
+    width: 70px;
+    height: 70px;
+  }
+  .submit-button-wrapper button svg {
+    width: 35px;
   }
 }
 
@@ -210,13 +269,3 @@ form {
     font-size: 0.95em;
   }
 }
-
-
-
-
-
-
-
-
-
-

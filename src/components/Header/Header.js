@@ -4,6 +4,7 @@ import ScrollBtn from './ScrollBtn/ScrollBtn'
 import SocialIcons from './SocialIcon/SocialIcon'
 import HeaderText from '../HeaderTextBlock/HeaderTextBlock'
 import Subparagraphs from '../SubParagraphs/Subparagraphs'
+import Credentials from '../../containers/Credentials/Credential/Credential'
 import Hero from './Hero/Hero'
 
 import {connect} from 'react-redux'
@@ -26,11 +27,14 @@ function Header(props) {
           {data.headers.withImage.isTrue ? 
             <Hero data={data.headers.withImage}/> : null }
 
-          <HeaderText data={data.headers} />
+            <HeaderText data={data.headers} />
 
 
           {data.headers.subParagraph.isTrue ? 
             <Subparagraphs data={data.headers} /> : null }
+
+          {data.headers.withCredentials.isTrue ? 
+            <Credentials data={data.headers} /> : null }
 
         </div>
       </article>
@@ -63,3 +67,4 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(Header)
+

@@ -6,7 +6,6 @@ import './FollowMyReads.css'
 function FollowMyReads(props) {
 
   let data = props.pageData
-  console.log(data)
 
   // section title
   let title = data ? (

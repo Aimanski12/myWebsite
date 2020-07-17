@@ -48,7 +48,7 @@ page. this is the wrapper container*/
 .main, .top {
   width: 100%;
   min-height: 100vh;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
 
@@ -98,6 +98,9 @@ page. this is the wrapper container*/
 .head3 {
   font-size: 1.6em;
 }
+.head4 {
+  font-size: 1.4em;
+}
 
 .left-align {
   left: 200px
@@ -135,6 +138,10 @@ page. this is the wrapper container*/
   .head3 {
     font-size: 1.58em;
   }
+  .head4 {
+    font-size: 1.38em;
+  }
+
   .left-align {
     left: 160px
   }
@@ -158,6 +165,9 @@ page. this is the wrapper container*/
   }
   .head3 {
     font-size: 1.56em;
+  }
+  .head4 {
+    font-size: 1.36em;
   }
   .left-align {
     left: 140px
@@ -186,6 +196,9 @@ page. this is the wrapper container*/
   .head3 {
     font-size: 1.54em;
   }
+  .head4 {
+    font-size: 1.34em;
+  }
   .left-align {
     left: 130px
   }
@@ -209,6 +222,9 @@ page. this is the wrapper container*/
   }
   .head3 {
     font-size: 1.52em;
+  }
+  .head4 {
+    font-size: 1.32em;
   }
   .left-align {
     left: 120px
@@ -249,6 +265,9 @@ page. this is the wrapper container*/
   .head3 {
     font-size: 1.5em;
   }
+  .head4 {
+    font-size: 1.3em;
+  }
   .left-align {
     left: 80px
   }
@@ -288,6 +307,9 @@ page. this is the wrapper container*/
   .head3 {
     font-size: 1.48em;
   }
+  .head4 {
+    font-size: 1.28em;
+  }
 }
 
 @media (max-width: 900px) {
@@ -318,6 +340,9 @@ page. this is the wrapper container*/
   }
   .head3 {
     font-size: 1.46em;
+  }
+  .head4 {
+    font-size: 1.26em;
   }
   .left-align {
     left: 70px
@@ -352,6 +377,9 @@ page. this is the wrapper container*/
   .head3 {
     font-size: 1.44em;
   }
+  .head4 {
+    font-size: 1.24em;
+  }
   .left-align, .right-align {
     width: 560px;
     right: 0;
@@ -376,6 +404,9 @@ page. this is the wrapper container*/
   .head3 {
     font-size: 1.42em;
   }
+  .head4 {
+    font-size: 1.22em;
+  }
   .left-align, .right-align {
     width: 530px;
   }
@@ -396,6 +427,9 @@ page. this is the wrapper container*/
   }
   .head3 {
     font-size: 1.4em;
+  }
+  .head4 {
+    font-size: 1.2em;
   }
   .left-align, .right-align {
     width: 430px;
@@ -418,6 +452,9 @@ page. this is the wrapper container*/
   }
   .head3 {
     font-size: 1.38em;
+  }
+  .head4 {
+    font-size: 1.18em;
   }
   .left-align, .right-align {
     width: 96%;

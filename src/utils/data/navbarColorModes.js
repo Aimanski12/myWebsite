@@ -40,7 +40,7 @@ const menuColorModes = [
   {
     path: 'projects',
     main: cream,
-    back: green
+    back: '#145250'
   },
   {
     path: 'contacts',
@@ -89,8 +89,8 @@ const menuColorModes = [
   },
   {
     path: 'error',
-    main: green,
-    back: gray
+    main: cream,
+    back: green
   },
 ]
 

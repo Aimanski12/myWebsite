@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import * as action from '../../store/actions/index'
 import {closeTopLayer} from '../../utils/common/topLayerAnim'
 import {connect} from 'react-redux'
+import Error from './NotFound/NotFound'
 import Footer from '../../components/Footer/Footer'
 import {resize} from '../../utils/common/common'
 import './NotFound.css'
@@ -20,16 +21,8 @@ function NotFound(props) {
 
   return (
      <div className="main">
-      <header 
-        className='top content-center' 
-        style={{'background': props.colorModes.close.back}}>
-        <h1 style={{'color': props.colorModes.close.main}}>Page Not Found</h1>
-
-      </header>
+      <Error />
       <Footer />
-      <div className="div"></div>
-      <div className="div one"></div>
-      <div className="div two"></div>
     </div>
   )
 }
@@ -37,7 +30,6 @@ function NotFound(props) {
 const mapStateToProps = (state) => {
   return {
     redirect: state.state.redirect,
-    colorModes: state.state.colorModes
   }
 }
 

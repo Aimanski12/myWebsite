@@ -3,6 +3,8 @@ import * as action from '../../store/actions/index'
 import {closeTopLayer} from '../../utils/common/topLayerAnim'
 import {connect} from 'react-redux'
 import Footer from '../../components/Footer/Footer'
+import Header from '../../components/Header/Header'
+import OtherProjects from './OtherProjects/OtherProjects'
 import {resize} from '../../utils/common/common'
 import './Projects.css'
 
@@ -20,16 +22,9 @@ function Projects(props) {
 
   return (
     <div className="main">
-      <header 
-        className='top content-center' 
-        style={{'background': props.colorModes.close.back}}>
-        <h1 style={{'color': props.colorModes.close.main}}>Project Page</h1>
-
-      </header>
+      <Header />
+      <OtherProjects />
       <Footer />
-      <div className="div"></div>
-      <div className="div one"></div>
-      <div className="div two"></div>
     </div>
   )
 }

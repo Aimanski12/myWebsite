@@ -1,5 +1,5 @@
 import React from 'react'
-import Envelop from '../../Svgs/ScrollSvg/Scroll'
+import Envelop from '../../Svgs/Logos/Logos'
 import './WithBox.css'
 
 function WithBox(props) {

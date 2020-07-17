@@ -1,5 +1,20 @@
+let routes = ['home', 'about', 'projects', 'contacts', 'privacy', 'credentials']
 
+// this function will generate a return the current route
+// for the state
 export const checkRoute = (route) => {
    let r = route.slice(1, 50)
-   return (r === '' ? 'home' : r)
+   let url = r === '' ? 'home' : r
+   let b;
+   let a = routes.filter(route => {
+           return route === url
+         })
+   
+   if(a[0] === undefined) {
+      b = 'notFound'
+   } else {
+      b = a[0]
+   }
+   
+   return b
 }

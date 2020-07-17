@@ -1,0 +1,38 @@
+
+
+.error-back {
+  width: 100%;
+  height: 100vh;
+}
+
+.error-back img{
+  width: 100%;
+  height: 100%;
+}
+
+
+.error-message {
+  margin-top: calc(100vh - 45vh);
+  height: 200px;
+  width: 400px;
+  /* background: rgba(90,90,90, 0.5); */
+  color: #EBE9CD
+}
+
+.error-message button {
+  margin-top: 35px;
+}
+
+/* set container screen to 720px when screen is on portrait */
+@media screen and (max-width: 896px) and (orientation: landscape) {
+  .error-back {
+    height: 720px;
+  }
+}
+
+
+@media (max-width: 568px) {
+  .error-message {
+    width: 100%;
+  }
+}

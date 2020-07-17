@@ -35,7 +35,7 @@ class App extends React.Component {
     // resize the window when screen is resized
     window.addEventListener('resize', resize)
 
-    // check current pagelocation to render colormodes
+    // check current pagelocation to render page data
     this.props.checkPage()
 
     let session = await checkSessionStorage()
@@ -87,7 +87,11 @@ class App extends React.Component {
                 <Redirect to={this.props.redirect.pathname} /> : null}
               <Privacy />
             </Route>
-            <Route path='/*' component={NotFound} >
+            <Route path='*' component={NotFound} >
+              { this.props.redirect.isTrue ? 
+                <Redirect to={this.props.redirect.pathname} /> : null}
+            </Route>
+            <Route path='*/*' component={NotFound} >
               { this.props.redirect.isTrue ? 
                 <Redirect to={this.props.redirect.pathname} /> : null}
             </Route>

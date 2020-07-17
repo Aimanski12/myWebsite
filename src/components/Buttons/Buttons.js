@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../Svgs/ScrollSvg/Scroll'
+import Button from '../Svgs/Logos/Logos'
 import WithBox from './WithBox/WithBox'
 
 function Buttons(props) {

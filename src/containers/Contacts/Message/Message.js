@@ -62,13 +62,13 @@ function Message() {
 
                   <div className="button-area">
                     <div className="content-center notice desc">
-                      <span>By clicking send you agree the <span className='m-privacy'> privacy policy</span>.</span>
+                      <span>By clicking send you agree the <span className='m-privacy'> privacy policy.</span></span>
                     </div>
-                    <div className="button">
+                    <div className="submit-button-wrapper">
                       <button type='submit'>
-                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="paper-plane" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                          <path fill="#EBE9CD" d="M440 6.5L24 246.4c-34.4 19.9-31.1 70.8 5.7 85.9L144 379.6V464c0 46.4 59.2 65.5 86.6 28.6l43.8-59.1 111.9 46.2c5.9 2.4 12.1 3.6 18.3 3.6 8.2 0 16.3-2.1 23.6-6.2 12.8-7.2 21.6-20 23.9-34.5l59.4-387.2c6.1-40.1-36.9-68.8-71.5-48.9zM192 464v-64.6l36.6 15.1L192 464zm212.6-28.7l-153.8-63.5L391 169.5c10.7-15.5-9.5-33.5-23.7-21.2L155.8 332.6 48 288 464 48l-59.4 387.3z"></path>
-                        </svg>
+                        <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M26.5473 1.05715L1.12452 15.7194C0.131744 16.2897 0.257898 17.6715 1.24519 18.0882L7.07571 20.5337L22.834 6.65009C23.1357 6.38141 23.5635 6.79266 23.3057 7.10521L10.0924 23.1986V27.6126C10.0924 28.9067 11.6557 29.4166 12.4235 28.479L15.9065 24.2404L22.7408 27.1027C23.5196 27.4317 24.4082 26.9437 24.5508 26.1047L28.5 2.41701C28.6865 1.30939 27.4962 0.508827 26.5473 1.05715Z" fill="#EBE9CD"/>
+                          </svg>
                       </button>
                     </div>
 

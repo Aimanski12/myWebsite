@@ -1,0 +1,126 @@
+
+.other-projects {
+  /* width: 100%;
+  min-height: 100vh; */
+  background: #F0F0F0;
+} 
+
+
+.other-proj-wrapper {
+  width: 1200px;
+}
+
+.github-page {
+  color: #ABA98F;
+}
+
+.github-page:hover {
+  color: #40817E
+}
+
+.proj-wrapper {
+  /* min-height: 520px; */
+  /* background: red; */
+}
+
+.project-lists {
+  width: 100%;
+  /* min-height: 200px; */
+}
+
+.project-list-wrapper {
+  width: 80%;
+  min-height: 100px;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.project-list {
+  width: 50%;
+  float: left;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.proj-list {
+  display: inline;
+}
+
+.proj-list-number {
+  float: left;
+  margin-right: 25px;
+  color: #596469;
+  height: 35px;
+  padding-top: 2px;
+  align-items: center;
+  /* background: red; */
+}
+.p-list-number {
+  line-height: 35px;
+  width: 50px
+}
+
+.p-list-number svg {
+  width: 30px;
+}
+
+.proj-list-name {
+  color: #40817E;
+  display: inline-block;
+  margin: 0;
+  line-height: 30px;
+}
+
+.p-list-name {
+  line-height: 30px;
+}
+
+.proj-list-name svg {
+  width: 20px;
+  padding-top: 13px;
+  margin-right: 10px;
+}
+
+@media (max-width: 1368px){
+  .project-list-wrapper {
+    width: 85%;
+  }
+}
+
+@media (max-width: 1268px) {
+  .project-list-wrapper {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1168px) {
+  .project-list-wrapper {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1068px) {
+  .project-list-wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 868px) {
+  .project-list {
+    width: 100%;
+  }
+  .proj-wrapper {
+    min-height: 780px;
+  }
+}
+
+
+@media (max-width: 568px) {
+  .project-list {
+    margin-bottom: 5px;
+  }
+  .proj-list-number {
+    margin-right: 10px;
+  }
+}
+

@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import * as action from '../../store/actions/index'
 import {closeTopLayer} from '../../utils/common/topLayerAnim'
 import {connect} from 'react-redux'
+import PrivacyPolicy from './Privacy/Privacy'
 import Footer from '../../components/Footer/Footer'
 import {resize} from '../../utils/common/common'
 import './Privacy.css'
@@ -21,16 +22,8 @@ function Privacy(props) {
 
   return (
     <div className="main">
-      <header 
-        className='top content-center' 
-        style={{'background': props.colorModes.close.back}}>
-        <h1 style={{'color': props.colorModes.close.main}}>Privacy Page</h1>
-
-      </header>
+      <PrivacyPolicy />
       <Footer />
-      <div className="div"></div>
-      <div className="div one"></div>
-      <div className="div two"></div>
     </div>
   )
 }
@@ -38,7 +31,6 @@ function Privacy(props) {
 const mapStateToProps = (state) => {
   return {
     redirect: state.state.redirect,
-    colorModes: state.state.colorModes
   }
 }
 

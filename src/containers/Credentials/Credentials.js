@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import * as action from '../../store/actions/index'
 import {closeTopLayer} from '../../utils/common/topLayerAnim'
 import {connect} from 'react-redux'
+import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import {resize} from '../../utils/common/common'
 import './Credentials.css'
@@ -20,16 +21,8 @@ function Credentials(props) {
 
   return (
     <div className="main">
-      <header 
-        className='top content-center' 
-        style={{'background': props.colorModes.close.back}}>
-        <h1 style={{'color': props.colorModes.close.main}}>Credentials Page</h1>
-
-      </header>
+      <Header />
       <Footer />
-      <div className="div"></div>
-      <div className="div one"></div>
-      <div className="div two"></div>
     </div>
   )
 }

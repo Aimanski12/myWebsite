@@ -14,39 +14,38 @@ import {checkSessionStorage} from './utils/sessiondata/sessionsStorage'
 import Navbar from './components/Navbar/Navbar'
 import TopLayOver from './components/TopLayover/TopLayover'
 import Menu from './components/MenuContainer/MenuContainer'
-import Home from './containers/Home/Home'
-import About from './containers/About/About'
-import Projects from './containers/Projects/Projects'
-import Contacts from './containers/Contacts/Contacts'
-import Credentials from './containers/Credentials/Credentials'
-import Privacy from './containers/Privacy/Privacy'
 import NotFound from './containers/NotFound/NotFound'
+
+import {routesDesc} from './utils/data/routeData'
 
 class App extends React.Component {
 
   constructor(props){
     super(props);
-    this.active = 'home'
+    this.active = 'home';
   }
 
+  
+  
   async componentDidMount(){
     // // resize the window upon loading
     // resize()
     // resize the window when screen is resized
     window.addEventListener('resize', resize)
-
+    
     // check current pagelocation to render page data
-    this.props.checkPage()
-
+    // this.props.checkPage()
+    
     let session = await checkSessionStorage()
     this.props.checkBrowserSession(session)
-
+    
   }
-
+  
   
   render(){ 
     
-    // console.log(this.props.state)
+    let redirect = ( this.props.redirect.isTrue ?
+                <Redirect to={this.props.redirect.pathname} /> : null )
     
   return (
     <div className="container">
@@ -57,43 +56,8 @@ class App extends React.Component {
 
         <Router>
           <Switch>
-            <Route exact path='/'>
-              { this.props.redirect.isTrue ? 
-                <Redirect to={this.props.redirect.pathname} /> : null }
-              <Home />
-            </Route>
-            <Route path='/about'>
-              { this.props.redirect.isTrue ? 
-                  <Redirect to={this.props.redirect.pathname} /> : null}
-              <About />
-            </Route>
-            <Route path='/projects'>
-              { this.props.redirect.isTrue ? 
-                  <Redirect to={this.props.redirect.pathname} /> : null}
-              <Projects />
-            </Route>  
-            <Route path='/contacts'>
-              { this.props.redirect.isTrue ? 
-                  <Redirect to={this.props.redirect.pathname} /> : null}
-              <Contacts />
-            </Route>
-            <Route path='/credentials'>
-              { this.props.redirect.isTrue ? 
-                  <Redirect to={this.props.redirect.pathname} /> : null}
-              <Credentials />
-            </Route>
-            <Route path='/privacy'>
-              { this.props.redirect.isTrue ? 
-                <Redirect to={this.props.redirect.pathname} /> : null}
-              <Privacy />
-            </Route>
-            <Route path='*' component={NotFound} >
-              { this.props.redirect.isTrue ? 
-                <Redirect to={this.props.redirect.pathname} /> : null}
-            </Route>
-            <Route path='*/*' component={NotFound} >
-              { this.props.redirect.isTrue ? 
-                <Redirect to={this.props.redirect.pathname} /> : null}
+            {routesDesc(this.props.redirect)}
+            <Route path='*' component={NotFound} >{redirect}
             </Route>
           </Switch>
         </Router>
@@ -112,7 +76,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    checkPage: () => {dispatch(action.checkPageLocation())},
+    // checkPage: () => {dispatch(action.checkPageLocation())},
     checkBrowserSession: (val) => {dispatch(action.checkBrowserSession(val))}
   }
 }

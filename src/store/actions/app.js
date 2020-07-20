@@ -4,14 +4,13 @@ import {findColorModes} from '../../utils/data/navbarColorModes'
 import {findPageData} from '../../utils/data/pageData/index'
 
 // function to check the current page route
-export const checkPageLocation = () => dispatch => {
-  let location = checkRoute(window.location.pathname)
+export const checkPageLocation = (page) => dispatch => {
   dispatch({
     type: actionType.ACTIVEROUTE,
     payload: {
-      activeRoute: location,
-      colorModes: findColorModes(location),
-      pageData: findPageData(location)
+      activeRoute: page,
+      colorModes: findColorModes(page),
+      pageData: findPageData(page)
     }
   })
 }

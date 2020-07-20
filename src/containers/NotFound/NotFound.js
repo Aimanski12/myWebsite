@@ -10,6 +10,7 @@ import './NotFound.css'
 function NotFound(props) {
 
   useEffect(() => {
+    if (!props.pageData) props.checkPage('notFound')
     if (props.redirect.isTrue) {
       closeTopLayer()
       setTimeout(() => {
@@ -21,7 +22,7 @@ function NotFound(props) {
 
   return (
      <div className="main">
-      <Error />
+      <Error data={props.pageData}/>
       <Footer />
     </div>
   )
@@ -30,13 +31,14 @@ function NotFound(props) {
 const mapStateToProps = (state) => {
   return {
     redirect: state.state.redirect,
+    pageData: state.state.pageData,
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
     resetRedirect: (istrue) => { dispatch(action.resetRedirect(istrue)) },
-    // checkPage: () => {dispatch(action.checkPageLocation())},
+    checkPage: (page) => {dispatch(action.checkPageLocation(page))},
   }
 }
 

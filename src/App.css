@@ -26,7 +26,11 @@ a {
   /* overflow: hidden; */
 } 
 
-
+.top-container {
+  width: 1600px;
+  min-height: 100vh;
+  position: relative;
+}
 
 
 /* global class to center elements */
@@ -233,7 +237,7 @@ page. this is the wrapper container*/
     right: 120px;
   }
   .text-span {
-    width: 1048px;
+    width: 890px;
   }
 }
 
@@ -245,7 +249,7 @@ page. this is the wrapper container*/
     right: 100px;
   }
   .text-span {
-    width: 910px;
+    width: 850px;
   }
 }
 
@@ -275,7 +279,7 @@ page. this is the wrapper container*/
     right: 80px;
   }
   .text-span {
-    width: 908px;
+    width: 780px;
   }
 }
 
@@ -287,7 +291,7 @@ page. this is the wrapper container*/
     right: 60px;
   }
   .text-span {
-    width: 880px;
+    width: 740px;
   }
 }
 
@@ -320,7 +324,7 @@ page. this is the wrapper container*/
     right: 60px;
   }
   .text-span {
-    width: 780px;
+    width: 680px;
   }
 
 }
@@ -351,7 +355,7 @@ page. this is the wrapper container*/
     right: 70px;
   }
   .text-span {
-    width: 708px;
+    width: 660px;
   }
 }
 
@@ -515,81 +519,3 @@ page. this is the wrapper container*/
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.div {
-  width: 100%;
-  height: 100vh;
-  margin: 0 auto;
-  background: pink;
-}
-
-.one {
-  background: lightyellow;
-}
-
-.two {
-  background: lightblue;
-}

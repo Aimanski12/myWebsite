@@ -1,0 +1,307 @@
+.short-project-container{
+  width: 100%;
+  max-height: 3000px;
+  padding: 40px 0 1px 0;
+  background: #145250;
+}
+
+.short-project-wrapper {
+  width: 100%;
+  height: 450px;
+  margin-bottom: 40px;
+
+}
+
+
+
+.project-img-desc {
+  height: 450px;
+  position: absolute;
+  z-index: 150;
+  overflow: hidden;
+}
+
+.project-image {
+  position: absolute;
+  background-size: cover;
+  height: 450px;
+  margin-top: 0;
+  z-index: 50;
+}
+
+.img-backer {
+  height: 450px;
+  position: relative;
+  /* background: #2C6F6C; */
+  z-index: 100;
+  opacity: 0.8;
+}
+
+.project-text-desc {
+  height: 450px;
+  position: absolute;
+  z-index: 200;
+  /* background: rgba(190,190,190,0.3); */
+  overflow: hidden;
+}
+
+.project-text-wrapper {
+  width: 92%;
+  margin: 0 4%;
+  height: 200px;
+  margin-top: 250px;
+  /* background: orange; */
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+}
+
+.project-text-alignleft{
+  /* background: red; */
+  width: 50%;
+  float: left;
+}
+
+.project-text-alignright {
+  /* background: orange; */
+  width: 50%;
+  float: right;
+}
+
+.button-wrapper {
+  width: 180px;
+  margin-top: 110px;
+  height: 45px;
+  float: right;
+  /* background: teal; */
+  opacity: 0;
+  border-radius: 7px;
+}
+
+.button-wrapper:hover{
+  cursor: pointer;
+}
+
+.button-wrapper span {
+  color: #F0EED4;
+  font-weight: 200;
+}
+
+
+@media (max-width: 1468px) {
+  .short-project-wrapper,
+  .project-img-desc,
+  .project-image,
+  .img-backer,
+  .project-text-desc {
+    height: 413px;
+  }
+
+  .button-wrapper {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 1368px) {
+  .short-project-wrapper,
+  .project-img-desc,
+  .project-image,
+  .img-backer,
+  .project-text-desc {
+    height: 375px;
+  }
+
+  .project-text-wrapper {
+    margin-top: 220px;
+  }
+
+}
+
+@media (max-width: 1268px) {
+  .short-project-wrapper,
+  .project-img-desc,
+  .project-image,
+  .img-backer,
+  .project-text-desc {
+    height: 357px;
+  }
+  .project-text-wrapper {
+    margin-top: 205px;
+  }
+}
+
+@media (max-width: 1168px) {
+  .short-project-wrapper,
+  .project-img-desc,
+  .project-image,
+  .img-backer,
+  .project-text-desc {
+    height: 319px;
+  }
+  .project-text-wrapper {
+    margin-top: 190px;
+  }
+  .button-wrapper {
+    margin-top: 50px;
+  }
+}
+
+
+@media (max-width: 968px) {
+  .short-project-wrapper,
+  .project-img-desc,
+  .project-image,
+  .img-backer,
+  .project-text-desc {
+    height: 300px;
+  }
+  .project-text-wrapper {
+    margin-top: 160px;
+  }
+  .button-wrapper {
+    margin-top: 50px;
+  }
+}
+
+
+
+
+@media (max-width: 868px) {
+  .short-project-wrapper {
+    height: 410px;
+  }
+
+  /* .short-project-wrapper .projects-wrapper {
+    width: 100%;
+
+  } */
+
+  .img-backer{
+    opacity: 0;
+  }
+  .project-img-desc{
+    height: 263px;
+    position: relative;
+  }
+  .project-image{
+    height: 263px;
+  }
+  .project-text-desc {
+    position: relative;
+    height: 147px;
+  }
+  .project-text-wrapper {
+    margin-top: 30px;
+    height: 100px;
+  }
+
+  .project-text-wrapper .desc {
+    margin-top: -10px !important
+  }
+
+  .project-text-alignleft p {
+    margin-bottom: 10px;
+  }
+
+  .button-wrapper {
+    background: none;
+    width: 100px;
+    opacity: 1;
+    margin-top: 40px;
+  }
+}
+
+
+@media (max-width: 768px){
+  .img-backer, .project-img-desc, .project-image, .project-text-desc {
+    margin: 0 auto;
+  }
+
+  /* this css will make the width od the parent to 100 percent making the child 100% too */
+  .short-project-wrapper .projects-wrapper {
+    width: 100%;
+  }
+
+  /* this makes the width 100%. the original css media screen higher size is at the app2.css file */
+  .project-img-desc,
+  .project-image,
+  .img-backer,
+  .project-text-desc {
+    width: 100%;
+  }
+
+  .short-project-wrapper {
+    height: 391px;
+  }
+
+  .project-img-desc, .project-image {
+    height: 254px;
+  }
+
+  .project-text-desc {
+    height: 137px;
+  }
+}
+
+@media (max-width: 668px) {
+  .short-project-wrapper {
+    height: 348px;
+  }
+  .project-img-desc, .project-image {
+    height: 221px;
+  }
+  .project-text-desc {
+    height: 127px;
+  }
+}
+
+
+
+
+@media (max-width: 568px) {
+  .short-project-wrapper {
+    height: 319px;
+  }
+
+  .project-img-desc, .project-image {
+    height: 192px;
+  }
+  .project-text-alignleft {
+    width: 70%;
+  }
+  .project-text-alignright {
+    width: 30%;
+  }
+}
+
+
+
+@media (max-width: 468px) {
+  .short-project-wrapper {
+    height: 339px;
+  }
+  .project-img-desc, .project-image {
+    height: 162px;
+  }
+  .project-text-desc {
+    height: 177px;
+  }
+  .project-text-alignleft, .project-text-alignright {
+    width: 100%;
+  }
+  .button-wrapper {
+    margin-top: 00px;
+    float: left;
+  }
+}
+
+@media (max-width: 368px) {
+  .short-project-wrapper {
+    height: 307px;
+  }
+  .project-img-desc, .project-image {
+    height: 130px;
+  }
+}

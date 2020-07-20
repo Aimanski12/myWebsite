@@ -27,3 +27,4 @@ export function resize(){
     el.top_container.style.width = '1600px'
   }
 }
+

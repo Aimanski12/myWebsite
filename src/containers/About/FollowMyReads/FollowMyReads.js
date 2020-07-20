@@ -70,7 +70,7 @@ function FollowMyReads(props) {
             </h2>
             <p className="sub-reveal-container desc show">{topDesc}</p>
             <figure  className='section-article-wrapper book-icons'>
-              <div className='books-container'>
+              <div className='content-center books-container'>
                 {books}
               </div>
             </figure>

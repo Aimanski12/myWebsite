@@ -1,8 +1,4 @@
-.top-container {
-  width: 1600px;
-  min-height: 100vh;
-  position: relative;
-}
+
 
 .top-background-container {
   width: calc(100% - 18px);

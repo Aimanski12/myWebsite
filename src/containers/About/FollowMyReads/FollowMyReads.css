@@ -12,6 +12,7 @@
 .books-container {
   margin-top: 15px;
   min-height: 40px;
+  flex-direction: row;
   /* background: red; */
 }
 
@@ -75,6 +76,10 @@
 }
 
 @media (max-width: 768px) {
+  .books-container{
+    display: block;
+  }
+
   .book-icons {
     width: 350px;
   }

@@ -42,6 +42,8 @@ form {
   display: flex;
   width: 100%;
   margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 3px rgba(190,190,190,0.5);
 }
 
 /* Style the form icons */
@@ -136,6 +138,7 @@ form {
   background: #2C6664;
   border: none;
   border-radius: 50%;
+  transition: all .2s ease-in;
 }
 
 .submit-button-wrapper button:focus {
@@ -144,8 +147,24 @@ form {
 
 .submit-button-wrapper button svg {
   width: 40px;
+  transition: all 0.2s ease-in;
 }
 
+.submit-button-wrapper button:hover {
+  cursor: pointer;
+  background: #AAAAAA;
+  transition: all 0.2s ease-in;
+}
+
+.submit-button-wrapper button svg path {
+  /* fill: #EBE9CD */
+  transition: all 0.2s ease-in;
+}
+
+.submit-button-wrapper button:hover svg path{
+  fill: #2C6664;
+  transition: all 0.2s ease-in;
+}
 
 @media(max-width: 1268px){
   .message-container {
@@ -231,6 +250,9 @@ form {
   }
   .input-field {
     border-radius: 0 5px 5px 0;
+  }
+  .input-container textarea {
+    border-radius: 5px;
   }
   .notice {
     height: 60px;

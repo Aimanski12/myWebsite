@@ -11,6 +11,9 @@ import './Contacts.css'
 function Contacts(props) {
 
   useEffect(() => {
+    if (!props.pageData) props.checkPage('contacts')
+
+    // console.log('redirect', props.redirect)
     if (props.redirect.isTrue) {
       closeTopLayer()
       setTimeout(() => {
@@ -32,12 +35,14 @@ function Contacts(props) {
 const mapStateToProps = (state) => {
   return {
     redirect: state.state.redirect,
+    pageData: state.state.pageData,
     colorModes: state.state.colorModes
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    checkPage: (page) => {dispatch(action.checkPageLocation(page))},
     resetRedirect: (istrue) => { dispatch(action.resetRedirect(istrue)) },
   }
 }

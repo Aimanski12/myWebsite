@@ -3,6 +3,9 @@ import Github from './GithubProject'
 import Design from './Designs'
 
 function GithubProjects(props) {
+  let links = <a href='/'>
+                <span className='links github-page'> github page</span>
+              </a>
 
   return (
    <article className='section-article-wrapper proj-wrapper'>
@@ -17,16 +20,16 @@ function GithubProjects(props) {
 
         <p className="sub-reveal-container desc show">
           <span className="sub-reveal"
-            style={{color: '#596469'}}>{props.data.desc}<a href='/'><span className='links github-page'> github page</span></a>.
+            style={{color: '#596469'}}>{props.data.desc}{props.data.withLinks ? links : null}.
           </span>
         </p>
       </div>
     
 
       <div className="project-lists">
-        <ul className='project-list-wrapper'>
-          {props.data.withLinks ? <Github projects={props.data.otherProjects}/> : <Design designs={props.data.platforms}/>}
-        </ul>
+        {props.data.withLinks ? 
+        <Github projects={props.data.otherProjects} /> : 
+        <Design designs={props.data.platforms} /> }
       </div>
 
     </article>

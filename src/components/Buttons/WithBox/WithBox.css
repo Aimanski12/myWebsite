@@ -7,23 +7,23 @@
   background: #C6C4AF;
   border: none;
   border-radius: 6px;
-  transition: all 0.15s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .box-button:hover{
   cursor: pointer;
   background: #347A78;
-  transition: all 0.15s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .box-button:hover svg path{
   fill: #D6D4BE;
-  transition: all 0.15s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .box-button:hover span{
   color: #D6D4BE;
-  transition: all 0.15s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .box-button:focus {
@@ -37,7 +37,8 @@
 
 .box-button span {
   font-size: 1.2em;
-  color: #347A78
+  color: #347A78;
+  transition: all 0.2s ease-in;
 }
 
 

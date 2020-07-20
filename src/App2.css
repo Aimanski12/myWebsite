@@ -1,9 +1,7 @@
 /* this file is for the css styles of the section wrapper and the projects */
-
 .section-container {
   width: 100%;
   min-height: 600px;
-  
 }
 
 .section-background {
@@ -11,7 +9,6 @@
   height: 100%;
   padding: 120px 0;
   margin: 0 9px 0 9px;
-  
 }
 
 
@@ -23,18 +20,24 @@
   margin-bottom: 20px;
 }
 
-.projects-wrapper {
+.projects-wrapper, .project-header-wrapper {
   width: 1200px;
   min-height: 200px;
   margin: 0 auto;
+  /* background: rgba(90,90,90,0.1); */
 }
 
 .section-article-wrapper{
-  
   width: 100%;
 }
 
 
+.project-img-desc,
+.project-image,
+.img-backer,
+.project-text-desc {
+  width: 1200px;
+}
 
 @media (max-width: 1568px){
   .section-wrapper {
@@ -46,7 +49,11 @@
   .section-wrapper {
     width: 875px;
   }
-  .projects-wrapper {
+  .projects-wrapper, .project-header-wrapper,
+  .project-img-desc,
+  .project-image,
+  .img-backer,
+  .project-text-desc {
     width: 1100px;
   }
   /* .section-article-wrapper {
@@ -58,7 +65,11 @@
   .section-wrapper {
     width: 820px;
   }
-  .projects-wrapper {
+  .projects-wrapper, .project-header-wrapper,
+  .project-img-desc,
+  .project-image,
+  .img-backer,
+  .project-text-desc {
     width: 1000px;
   }
   /* .section-article-wrapper {
@@ -70,7 +81,11 @@
   .section-wrapper {
     width: 750px;
   }
-  .projects-wrapper {
+  .projects-wrapper, .project-header-wrapper,
+  .project-img-desc,
+  .project-image,
+  .img-backer,
+  .project-text-desc {
     width: 950px;
   }
   /* .section-article-wrapper {
@@ -82,8 +97,12 @@
   .section-wrapper {
     width: 700px
   }
-  .projects-wrapper {
-    width: 900px;
+  .projects-wrapper, .project-header-wrapper,
+  .project-img-desc,
+  .project-image,
+  .img-backer,
+  .project-text-desc {
+    width: 850px;
   }
   /* .section-article-wrapper {
     width: 67%;
@@ -94,7 +113,8 @@
   .section-wrapper {
     width: 720px;
   }
-  .projects-wrapper {
+
+  .projects-wrapper, .project-header-wrapper {
     width: 850px;
   }
   /* .section-article-wrapper {
@@ -106,7 +126,12 @@
   .section-wrapper {
     width: 640px;
   }
-  .projects-wrapper {
+
+  .projects-wrapper, .project-header-wrapper,
+  .project-img-desc,
+  .project-image,
+  .img-backer,
+  .project-text-desc {
     width: 800px;
   }
   /* .section-article-wrapper {
@@ -118,7 +143,13 @@
   .section-wrapper {
     width: 560px;
   }
-  .projects-wrapper {
+
+  /* the css lower than this size is at the short projects.css file */
+  .projects-wrapper, .project-header-wrapper,
+  .project-img-desc,
+  .project-image,
+  .img-backer,
+  .project-text-desc {
     width: 700px;
   }
   /* .section-article-wrapper {
@@ -136,7 +167,7 @@
   .section-wrapper {
     width: 560px;
   }
-  .projects-wrapper {
+  .projects-wrapper, .project-header-wrapper {
     width: 90%;
   }
   /* .section-article-wrapper {
@@ -157,7 +188,7 @@
   .section-wrapper {
     width: 430px;
   }
-  .projects-wrapper {
+  .projects-wrapper, .project-header-wrapper {
     width: 94%;
   }
   /* .section-article-wrapper {
@@ -169,7 +200,7 @@
   .section-wrapper {
     width: 96%;
   }
-  .projects-wrapper {
+  .projects-wrapper, .project-header-wrapper {
     width: 96%;
   }
 }

@@ -11,8 +11,10 @@ import Skills from './Skills/Skills'
 import './About.css'
 
 function About(props) {
+  let blockData = props.pageData ? props.pageData.withBlocks : null
 
   useEffect(() => {
+    if (!props.pageData) props.checkPage('about')
     if (props.redirect.isTrue) {
       closeTopLayer()
       setTimeout(() => {
@@ -25,7 +27,8 @@ function About(props) {
   return (
     <div className="main">
       <Header />
-      <SectionBlocks />
+      { blockData ? <SectionBlocks data={blockData} 
+                      color={props.colors.open.back} /> : null}
       <Skills />
       <FollowMyReads />
       <Footer />
@@ -36,12 +39,14 @@ function About(props) {
 const mapStateToProps = (state) => {
   return {
     redirect: state.state.redirect,
-    colorModes: state.state.colorModes
+    colors: state.state.colorModes,
+    pageData: state.state.pageData,
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    checkPage: (page) => {dispatch(action.checkPageLocation(page))},
     resetRedirect: (istrue) => {dispatch(action.resetRedirect(istrue))},
   }
 }

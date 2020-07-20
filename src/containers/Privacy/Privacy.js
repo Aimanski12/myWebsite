@@ -10,6 +10,7 @@ import './Privacy.css'
 function Privacy(props) {
 
   useEffect(()=>{
+    if (!props.pageData) props.checkPage('privacy')
     if(props.redirect.isTrue){
       closeTopLayer()
       setTimeout(()=>{
@@ -31,11 +32,13 @@ function Privacy(props) {
 const mapStateToProps = (state) => {
   return {
     redirect: state.state.redirect,
+    pageData: state.state.pageData,
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    checkPage: (page) => {dispatch(action.checkPageLocation(page))},
     resetRedirect: (istrue) => { dispatch(action.resetRedirect(istrue)) },
   }
 }

@@ -66,3 +66,23 @@ export function topLayoverElements() {
     container: qEl('container', 0)
   }
 }
+
+export function projectResizeEl() {
+  return {
+    img_desc: qEl('project-img-desc', 1),
+    project_img: qEl('project-image', 1),
+    img_backer: qEl('img-backer', 1),
+    project_text_desc: qEl('project-text-desc', 1),
+  }
+}
+
+export function hoverProjectEl (el) {
+  let parent = el.closest('.projects-wrapper')
+  return {
+    img : parent.querySelector('.project-img'),
+    img_backer : parent.querySelector('.img-backer'),
+    title : parent.querySelector('.p-reveal'),
+    desc : parent.querySelector('.p-desc-content'),
+    button : parent.querySelector('.button-wrapper')
+  }
+}

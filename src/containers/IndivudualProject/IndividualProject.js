@@ -1,4 +1,6 @@
-import React, {useEffect, Fragment} from 'react'
+import React, {useEffect} from 'react'
+import Header from './Header/Header'
+import ProjectBody from './ProjectBody/ProjectBody'
 import Footer from '../../components/Footer/Footer'
 import './IndividualProject.css'
 
@@ -9,23 +11,11 @@ function IndividualProject() {
   })
 
   return (
-    <Fragment>
-
-      <section className="section-container other-projects">
-        <div className="section-background">
-        {/* this is the template for the projects
-        width must be 1200px */}
-          <div className="projects-wrapper">
-            <article className='section-article-wrapper'>
-              dsapml
-            </article>
-          </div>
-        </div>
-      </section>
-
-
+    <div className="main">
+      <Header />
+      <ProjectBody />
       <Footer />
-    </Fragment>
+    </div>
   )
 }
 

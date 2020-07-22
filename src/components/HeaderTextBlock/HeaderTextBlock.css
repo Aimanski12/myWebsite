@@ -1,7 +1,7 @@
-.header-wrapper {
+/* .header-wrapper {
   width: 65%;
   min-height: 200px;
-}
+} */
 
 .sub-reveal-container {
   margin-top: 10px;
@@ -14,7 +14,7 @@
   /* font-weight: 500; */
 }
 
-@media (max-width: 1268px) {
+/* @media (max-width: 1268px) {
   .header-wrapper {
     width: 70%
   }
@@ -42,4 +42,4 @@
   .header-wrapper {
     width: 95%
   }
-}
+} */

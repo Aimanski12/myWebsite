@@ -87,6 +87,10 @@ page. this is the wrapper container*/
   }
 }
 
+.header-wrapper {
+  width: 65%;
+  min-height: 200px;
+}
 
 
 .header-text {

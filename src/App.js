@@ -2,9 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux'
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
+  Switch
 } from "react-router-dom";
 import './App2.css'
 import './App.css';
@@ -14,9 +12,7 @@ import {checkSessionStorage} from './utils/sessiondata/sessionsStorage'
 import Navbar from './components/Navbar/Navbar'
 import TopLayOver from './components/TopLayover/TopLayover'
 import Menu from './components/MenuContainer/MenuContainer'
-import NotFound from './containers/NotFound/NotFound'
-
-import {routesDesc} from './utils/data/routeData'
+import {findRoute} from './utils/data/routeData'
 
 class App extends React.Component {
 
@@ -24,12 +20,10 @@ class App extends React.Component {
     super(props);
     this.active = 'home';
   }
-
-  
   
   async componentDidMount(){
     // // resize the window upon loading
-    // resize()
+    resize()
     // resize the window when screen is resized
     window.addEventListener('resize', resize)
     
@@ -38,32 +32,24 @@ class App extends React.Component {
     
     let session = await checkSessionStorage()
     this.props.checkBrowserSession(session)
-    
   }
   
-  
   render(){ 
-    
-    let redirect = ( this.props.redirect.isTrue ?
-                <Redirect to={this.props.redirect.pathname} /> : null )
-    
-  return (
-    <div className="container">
-      <TopLayOver/>
-      <div className="main-container">
-        <Navbar />       
-        <Menu />
-
-        <Router>
-          <Switch>
-            {routesDesc(this.props.redirect)}
-            <Route path='*' component={NotFound} >{redirect}
-            </Route>
-          </Switch>
-        </Router>
-      </div>      
-    </div>
-  )}
+    return (
+      <div className="container">
+        <TopLayOver/>
+        <div className="main-container">
+          <Navbar />       
+          <Menu />
+          <Router>
+            <Switch>
+              {findRoute(this.props.redirect)}
+            </Switch>
+          </Router>
+        </div>      
+      </div>
+    )
+  }
 }
 
 const mapStateToProps = (state) => {

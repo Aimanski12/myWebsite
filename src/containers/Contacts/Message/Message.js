@@ -10,26 +10,26 @@ function Message() {
         style={{background: 
       `url('${imageUrl('light-dotted-background-whole', 'png')}') repeat center top`}} >
 
-        <div className="message-container">
+        <div className="message-container show">
           <div className="message-wrapper">
             <div className="form-container">
                 <h2 className='head2'
                   style={{color: '#2C6664', lineHeight: '50px'}}>
-                  <span className='show-container show'>
-                    <div className='reveal'>
+                  <span className='show-container'>
+                    <div className=''>
                       <span>Message me.</span>
                     </div>
                     <div className='runner'></div>
                   </span>
                 </h2>
-                <p className="sub-reveal-container desc show">
-                  <span className="sub-reveal"
+                <p className="sub-reveal-container desc">
+                  <span className=""
                   style={{color: '#2C6664', fontWeight: 500, marginTop: '0px'}}> 
                     Few details should be good enough.</span>
                 </p>
 
-                <p className="sub-reveal-container desc show" style={{marginTop: '30px'}}>
-                  <span className="sub-reveal p-desc-content required"
+                <p className="sub-reveal-container desc" style={{marginTop: '30px'}}>
+                  <span className="p-desc-content required"
                     style={{color: '#2C6664', fontWeight: 500}}> 
                     * required</span>
                 </p>

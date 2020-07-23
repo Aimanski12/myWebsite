@@ -58,32 +58,32 @@ const menuColorModes = [
     back: light
   },
   {
-    path: 'project1',
+    path: '/projects/projectsone',
     main: cream,
     back: green
   },
   {
-    path: 'project2',
+    path: '/projects/projectstwo',
     main: green,
     back: gray
   },
   {
-    path: 'project3',
+    path: '/projects/projectsthree',
     main: green,
     back: cream
   },
   {
-    path: 'project4',
+    path: '/projects/projectsfour',
     main: cream,
     back: green
   },
   {
-    path: 'project5',
+    path: '/projects/projectsfive',
     main: green,
     back: gray
   },
   {
-    path: 'project6',
+    path: '/projects/projectssix',
     main: green,
     back: cream
   },

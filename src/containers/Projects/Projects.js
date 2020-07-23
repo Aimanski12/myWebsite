@@ -6,6 +6,8 @@ import Footer from '../../components/Footer/Footer'
 import ProjectHeader from './ProjectHeader/ProjectHeader'
 import OtherProjects from './OtherProjects/OtherProjects'
 import {resize} from '../../utils/common/common'
+import {loadSlideElements, slideInElementsOnScroll} from '../../utils/pageAnimation/slideInElementsOnscroll'
+import {resizeProjectWrapper} from '../../utils/pageAnimation/projectsHoverAnimations'
 import './Projects.css'
 
 // import {Route} from 'react-router-dom'
@@ -14,7 +16,12 @@ import './Projects.css'
 function Projects(props) {
 
   useEffect(()=>{
+    // if the page is loaded directly, we will set the page data 
+    // by calling this function
     if (!props.pageData) props.checkPage('projects')
+
+    // if the redirect is true, then we will set it to false to 
+    // close the toplayover
     if(props.redirect.isTrue){
       closeTopLayer()
       setTimeout(()=>{
@@ -22,13 +29,21 @@ function Projects(props) {
       }, 1200)
     }
     resize()
+
+
+     loadSlideElements()
+     window.addEventListener('scroll', slideInElementsOnScroll)
+
+     setTimeout(() => {
+       resizeProjectWrapper(props.activeRoute)
+     }, 120)
   })
 
   return (
     <div className="main">
       <ProjectHeader />
       <OtherProjects />
-      <Footer />
+      <Footer  show={true}/>
       {/* <Route exact path='/projects/project-one'>
         <ProjectOne />
       </Route> */}
@@ -40,6 +55,7 @@ const mapStateToProps = (state) => {
   return {
     redirect: state.state.redirect,
     pageData: state.state.pageData,
+    activeRoute: state.state.activeRoute,
     colorModes: state.state.colorModes
   }
 }

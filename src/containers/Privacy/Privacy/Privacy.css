@@ -28,13 +28,18 @@
 
 .privacy-container h3 {
   color: #448683;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.privacy-container .sub-reveal-container {
+  margin-bottom: 45px;
 }
 
 .privacy-container h4 {
   color: #448683;
   margin-bottom: 20px;
 }
+
 
 @media(max-width: 1368px) {
   .privacy-container {

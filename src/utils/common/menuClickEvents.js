@@ -1,9 +1,11 @@
 import anime from 'animejs'
 import {menuClickElements} from './elementSorter'
 
+// this function is for the dark green menu background
+// this will run when the use clicks the menu icon
 export function openMenu () {
   const el = menuClickElements()
-  
+    
   el.container.style.overflow = 'hidden'
   el.menu_container.style.display  = 'block'
   el.social_navicons.style.transform = 'translateY(100%)'
@@ -15,11 +17,11 @@ export function openMenu () {
     el.backer_active.style.color = '#2C6664'
   }
 
-  
   for(let x=0; x<4; x++){
     el.menu_list_container[x].style.transform = 'translateY(100%)'
   }
 
+  // run the the dark green background
   anime({
     targets: el.menu_runners,
     duration: 400,
@@ -32,6 +34,8 @@ export function openMenu () {
   })
 }
 
+// this will show the other element for menu page.
+// these elements are the social icons, squaure image, privacy
 function show (el) {
   anime({
     targets: el.menu_list_container,
@@ -60,7 +64,8 @@ function show (el) {
   })
 }
 
-
+// this function is for the menu item. this will 
+// close the menu when the user clicks any of the item
 export function closeMenu (closeContainer) {
   const el = menuClickElements()
   el.right_icons.style.overflow = 'hidden'

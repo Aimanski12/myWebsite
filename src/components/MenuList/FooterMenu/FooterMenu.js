@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react'
 import {connect} from 'react-redux'
+import {pageTransition} from '../../../utils/pageAnimation/pageTransitionAnim'
 import * as action from '../../../store/actions/index'
 import './FooterMenu.css'
 
@@ -7,7 +8,9 @@ function FooterMenu(props) {
   let menusList = props.menus.map((menu, i)=>{
     return (
       <Fragment key={i}>
-      <li  className='footer-menu'>{menu}</li>
+      <a href={`/${menu === 'home' ? '' : menu}`}>
+        <li  className='footer-menu'>{menu}</li>
+      </a>
       {i < 3 ? <span>|</span> : null }
       </Fragment>
     )

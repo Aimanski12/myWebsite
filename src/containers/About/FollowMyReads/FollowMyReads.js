@@ -27,10 +27,10 @@ function FollowMyReads(props) {
         <div className="book-wrapper" key={i}>
           <span className="show-container show">
             <a href={`https://${book.link}`} 
-              className='book-link'
+              className='reveal book-link'
               rel='noopener noreferrer'
               target='_blank'>
-              <div className="reveal">
+              <div className="">
                   <img className='book-icon' 
                     src={imageUrl(book.img, 'png')} 
                     alt={book.alt}/>

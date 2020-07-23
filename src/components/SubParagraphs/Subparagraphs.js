@@ -1,4 +1,7 @@
 import React, {Fragment} from 'react'
+import * as action from '../../store/actions/index'
+import {pageTransition} from '../../utils/pageAnimation/pageTransitionAnim'
+import {connect} from 'react-redux'
 import './Subparagraphs.css'
 
 function Subparagraphs(props) {
@@ -32,7 +35,7 @@ function Subparagraphs(props) {
             <span className="sub-reveal p-desc-content"
               style={{color: props.data.textColors.secondary, fontWeight: 500}}> 
               I'm excited to 
-                <a href="/" 
+                <a href="https://www.linkedin.com/" 
                   rel='noopener noreferrer'
                   target='_blank'>
                     <span className='links'> connect</span></a> with you great people like you.</span>
@@ -40,11 +43,25 @@ function Subparagraphs(props) {
           <p className="sub-reveal-container p-desc p-links desc show">
             <span className="sub-reveal p-desc-content"
               style={{color: props.data.textColors.secondary, fontWeight: 500}}> 
-              Click <span className='links'>here</span> to see some of my credentials.</span>
+              Click <span className='links'
+                onClick={()=>{
+                  pageTransition()
+                  setTimeout(() => {
+                    props.setRedirect(true, `/credentials`)
+                  }, 1000)
+                }}>here</span> to see some of my credentials.</span>
             </p> 
           </Fragment> : null }
     </article>
   )
 }
 
-export default Subparagraphs
+const mapDispatchToProps = (dispatch) => {
+  return {
+    // setMenu: (val) => { dispatch(action.menuIsOpen(val)) },
+    // checkPage: () => {dispatch(action.checkPageLocation())},
+    setRedirect: (istrue, path) => { dispatch(action.setRedirect(istrue, path)) }
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Subparagraphs);

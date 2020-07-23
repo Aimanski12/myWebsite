@@ -29,12 +29,19 @@
   /* right: 200px; */
   overflow: hidden;
   /* background: red; */
+  transition: all 0.15s ease-in;
+}
+
+.scroll-btn-container:hover {
+  cursor: pointer;
+  transform: translateY(10px);
+  transition: all 0.45s ease-in;
 }
 
 .scroll-cover {
   width: 100%;
   height: 100%;
-  /* transform: translateY(50%); */
+  /* transform: translateY(100%); */
 }
 
 @media (max-width: 1568px) {

@@ -5,12 +5,18 @@ import {connect} from 'react-redux'
 import PrivacyPolicy from './Privacy/Privacy'
 import Footer from '../../components/Footer/Footer'
 import {resize} from '../../utils/common/common'
+import {resizeProjectWrapper} from '../../utils/pageAnimation/projectsHoverAnimations'
 import './Privacy.css'
 
 function Privacy(props) {
 
   useEffect(()=>{
+    // if the page is loaded directly, we will set the page data 
+    // by calling this function
     if (!props.pageData) props.checkPage('privacy')
+
+    // if the redirect is true, then we will set it to false to 
+    // close the toplayover
     if(props.redirect.isTrue){
       closeTopLayer()
       setTimeout(()=>{
@@ -18,13 +24,18 @@ function Privacy(props) {
       }, 1200)
     }
     resize()
+
+    
+    setTimeout(() => {
+      resizeProjectWrapper(props.activeRoute)
+    }, 120)
   })
     
 
   return (
     <div className="main">
       <PrivacyPolicy />
-      <Footer />
+      <Footer show={false}/>
     </div>
   )
 }
@@ -33,6 +44,7 @@ const mapStateToProps = (state) => {
   return {
     redirect: state.state.redirect,
     pageData: state.state.pageData,
+    activeRoute: state.state.activeRoute,
   }
 }
 

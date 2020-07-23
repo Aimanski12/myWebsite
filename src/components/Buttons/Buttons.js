@@ -10,6 +10,7 @@ function Buttons(props) {
   
   if(props.type === 'withBox') {
     button = <WithBox 
+              link={props.link}
               text={props.text} 
               withSvg={props.withSvg} 
               colors={props.colors}/> 
@@ -24,4 +25,4 @@ function Buttons(props) {
   )
 }
 
-export default Buttons
+export default Buttons;

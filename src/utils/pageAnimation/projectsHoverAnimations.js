@@ -73,7 +73,16 @@ export function mouseOut(e) {
 
 // function to run when the screen is resize less than or greater than 868
 // this will put the opacity or scaling back to its original size
-export function resizeEls () {
+export function resizeProjectWrapper (route) {
+  if(route === 'home' || route === 'projects'){
+    window.addEventListener('resize', resize)
+  } else {
+    window.removeEventListener('resize', resize)
+  }
+}
+
+
+export function resize() {
   const p = document.querySelectorAll('.projects-wrapper')
   if(window.innerWidth <= 868){
     for (let x = 0; x < 3; x++){

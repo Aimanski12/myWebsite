@@ -28,6 +28,9 @@ function CopyRight(props) {
       }, 800)
     } else {
       openTopLayer()
+      setTimeout(() => {
+        props.setRedirect(true, '/privacy')
+      }, 800)
     }
   }
 

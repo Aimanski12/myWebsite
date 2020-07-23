@@ -13,7 +13,6 @@ import './Header.css'
 function Header(props) {
   let data = props.headerPageData
   
-
   let headerContent = data ? (
     <div className='top-background-container'
       style={{background: 

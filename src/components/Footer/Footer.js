@@ -4,17 +4,17 @@ import Copyright from '../FooterItem/CopyRight/CopyRight'
 import SocialIcons from '../FooterItem/SocialIcons/SocialIcons'
 import './Footer.css'
 
-function Footer() {
+function Footer(props) {
   return (
     <footer className='content-center footer-wrapper'>
-      <span className='show-container show'>
-        <div className='reveal'>
+      <span className={`show-container ${props.show ? 'show' : null}`}>
+        <div className={`${props.show ? 'reveal' : null}`}>
           <p className='content-center quote-p'>
             <span className='quote'>Take the best that exist and make it better.</span>
             <span className='author'>-&nbsp; Henry Royce &nbsp;-</span>
           </p>
         </div>
-        <div className='runner'></div>
+        <div className={`${props.show ? 'runner' : null}`}></div>
       </span>
 
       <FooterMenu />

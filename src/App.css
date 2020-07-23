@@ -6,6 +6,11 @@
   font-weight: 600;
 }
 
+body, html{
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
 }
@@ -497,7 +502,7 @@ page. this is the wrapper container*/
 
 .reveal {
   display: block;
-  transform: translateY(0%);
+  transform: translateY(100%);
 }
 
 .runner {
@@ -516,7 +521,7 @@ page. this is the wrapper container*/
 
 .sub-reveal {
   display: block;
-  transform: translateY(0%);
+  transform: translateY(100%);
 }
 
 

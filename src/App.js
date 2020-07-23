@@ -13,6 +13,9 @@ import Navbar from './components/Navbar/Navbar'
 import TopLayOver from './components/TopLayover/TopLayover'
 import Menu from './components/MenuContainer/MenuContainer'
 import {findRoute} from './utils/data/routeData'
+// import {scrollEffect} from './utils/pageAnimation/smoothScrollEffect'
+import {resizeProjectWrapper} from './utils/pageAnimation/projectsHoverAnimations'
+
 
 class App extends React.Component {
 
@@ -27,11 +30,14 @@ class App extends React.Component {
     // resize the window when screen is resized
     window.addEventListener('resize', resize)
     
+    resizeProjectWrapper(this.props.activeRoute)
     // check current pagelocation to render page data
     // this.props.checkPage()
     
     let session = await checkSessionStorage()
     this.props.checkBrowserSession(session)
+
+    // scrollEffect()
   }
   
   render(){ 

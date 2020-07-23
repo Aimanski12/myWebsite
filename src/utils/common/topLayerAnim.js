@@ -145,6 +145,7 @@ export function closeTopLayer () {
   el.runner.style.right = 0
   el.runner.style.float = 'right'
   el.svg.style.width = '70%'
+  const nav = document.querySelector('.navbar-container')
 
 let tl = anime.timeline({easing: 'easeInSine'})
   tl
@@ -168,6 +169,7 @@ let tl = anime.timeline({easing: 'easeInSine'})
       el.runner.style.width = '100%'
       el.runner.style.left = 0
       el.runner.style.float = 'left'
+      nav.style.opacity = 1
     }
   })
 }

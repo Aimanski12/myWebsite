@@ -20,7 +20,6 @@ function Menu(props) {
 
     // set the isOpen menu state to close
     props.setMenu(false)
-    
 
     setTimeout(()=>{
       openTopLayer()
@@ -28,9 +27,7 @@ function Menu(props) {
         props.setRedirect(true, `/${path}`)
       }, 800)
     }, 800)
-    
   }
-  
 
   // close menu function
   const closeMenuBtn = () => {
@@ -44,24 +41,24 @@ function Menu(props) {
       easing: 'easeInQuad',
       duration: 200,
     })
-    tl.add({
-        targets: n,
-        opacity: 0,
-      })
-      .add({
-        duration: 10,
-        complete: function (anim) {
-          props.setMenu(!props.isOpen)
-        }
-      })
-      .add({
-        targets: n,
-        opacity: 1,
-        complete: function (anim) {
-          el.middle.style.color = props.colorModes.close.main
-          
-        }
-      })
+    tl
+    .add({
+      targets: n,
+      opacity: 0,
+    })
+    .add({
+      duration: 10,
+      complete: function (anim) {
+        props.setMenu(!props.isOpen)
+      }
+    })
+    .add({
+      targets: n,
+      opacity: 1,
+      complete: function (anim) {
+        el.middle.style.color = props.colorModes.close.main
+      }
+    })
   }
   
   const menuList = () => {

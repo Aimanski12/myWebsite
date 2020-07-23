@@ -1,4 +1,5 @@
-let routes = ['home', 'about', 'projects', 'contacts', 'privacy', 'credentials']
+let routes = [
+   'home', 'about', 'projects', 'contacts', 'privacy', 'credentials', 'projects/projectone', 'projects/projecttwo', 'projects/projectthree', 'projects/projectfour', 'projects/projectfive', 'projects/projectsix']
 
 // this function will generate a return the current route
 // for the state

@@ -29,6 +29,7 @@
   z-index: 50;
 }
 
+
 .img-backer {
   height: 450px;
   position: relative;
@@ -56,6 +57,8 @@
 .project-img {
   width: 100%;
   height: 100%;
+  opacity: 0;
+  transform: translateY(0);
 }
 
 .project-text-alignleft{
@@ -75,9 +78,14 @@
   margin-top: 110px;
   height: 45px;
   float: right;
-  /* background: teal; */
   opacity: 0;
   border-radius: 7px;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(90,90,90,0.3);
+}
+
+.button-wrapper:focus {
+  outline: none;
 }
 
 .button-wrapper:hover{
@@ -87,6 +95,7 @@
 .button-wrapper span {
   color: #F0EED4;
   font-weight: 200;
+  font-size: 0.95em;
 }
 
 
@@ -162,6 +171,9 @@
   }
   .button-wrapper {
     margin-top: 50px;
+  }
+  .button-wrapper span {
+    font-size: .92em;
   }
 }
 
@@ -242,6 +254,9 @@
 
   .project-text-desc {
     height: 137px;
+  }
+  .button-wrapper span {
+    font-size: .9em;
   }
 }
 

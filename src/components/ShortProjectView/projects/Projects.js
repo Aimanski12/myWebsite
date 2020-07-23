@@ -1,13 +1,26 @@
 import React, {Fragment, useEffect} from 'react'
+import * as action from '../../../store/actions/index'
+import {connect} from 'react-redux'
 import {imageUrl} from '../../../utils/common/common'
-import { mouseEnter, mouseOut, resizeEls } from '../../../utils/pageAnimation/projectsHoverAnimations'
+import { mouseEnter, mouseOut, resize } from '../../../utils/pageAnimation/projectsHoverAnimations'
+import {pageTransition} from '../../../utils/pageAnimation/pageTransitionAnim'
 
 function Projects(props) {
-
+  
   useEffect(()=>{
-    resizeEls()
+    resize()
     // window.addEventListener('resize', resizeEls)
   })
+  
+  const runPageTransition = (route) => {
+    pageTransition()
+
+    setTimeout(() => {
+      props.setRedirect(true, `${route}`)
+    }, 1000)
+  }
+
+
 
   let projects = props.projects.map((proj, i)=>{
     return (
@@ -44,10 +57,12 @@ function Projects(props) {
                 </p>
               </div>
               <div className="project-text-alignright">
-                <div className='sub-reveal-container content-center button-wrapper show'>
+                <button type='button' 
+                  className='sub-reveal-container content-center button-wrapper show'
+                  onClick={()=> runPageTransition(proj.projectlinks.internal)}>
                   <span className='sub-reveal'
                     style={{color: proj.textColor}}>View project</span>
-                </div>
+                </button>
               </div>
             </div>
 
@@ -66,4 +81,23 @@ function Projects(props) {
   )
 }
 
-export default Projects
+
+// const mapStateToProps = (state) => {
+//   return {
+//     // menus: state.state.menus,
+//     activeRoute: state.state.activeRoute,
+//     // isOpen: state.state.isOpen,
+//     // isAnimating: state.state.isAnimating,
+//     // isClicked: state.state.isClicked
+//   }
+// }
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    // setMenu: (val) => { dispatch(action.menuIsOpen(val)) },
+    // checkPage: () => {dispatch(action.checkPageLocation())},
+    setRedirect: (istrue, path) => { dispatch(action.setRedirect(istrue, path))}
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Projects);

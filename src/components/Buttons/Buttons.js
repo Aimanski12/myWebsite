@@ -10,6 +10,7 @@ function Buttons(props) {
   
   if(props.type === 'withBox') {
     button = <WithBox 
+              btnType={props.btnType}
               link={props.link}
               text={props.text} 
               withSvg={props.withSvg} 

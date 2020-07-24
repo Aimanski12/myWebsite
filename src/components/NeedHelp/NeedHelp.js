@@ -43,6 +43,7 @@ function NeedHelp() {
                 <Button 
                   text='message me' 
                   withSvg='true'
+                  btnType='box-button'
                   link='contacts'
                   colors='#347A78'
                   type='withBox'/>

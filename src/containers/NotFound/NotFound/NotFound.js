@@ -6,18 +6,22 @@ import './NotFound.css'
 function NotFound(props) {
   let data = props.data
 
+  let hData = data ? data.headers : null
+
   let error404 = data ? (
                   <div className="error-back content-center"
                     style={{background: 
-                    `url('${imageUrl(data.headers.background.giff, 'gif')}') no-repeat center center`, backgroundSize: 'cover'}}>
+                    `url('${imageUrl(hData.background.giff, 'gif')}') no-repeat center center`, backgroundSize: 'cover'}}>
                       <div className="content-center error-message"> 
-                        <h1 className='header-text'>{data.headers.title}</h1>
-                        <p className='desc'>{data.headers.shortDesc}</p>
+                        <h1 className='header-text'>{hData.title}</h1>
+                        <p className='desc'>{hData.shortDesc}</p>
                           <Button 
-                            text={data.headers.button.text}
-                            withSvg={data.headers.button.withSvg}
-                            colors={data.headers.background.color}
-                            type={data.headers.button.type}/>
+                            text={hData.button.text}
+                            link="/"
+                            btnType='bx-button'
+                            withSvg={hData.button.withSvg}
+                            colors={hData.background.color}
+                            type={hData.button.type}/>
                         </div>
                       </div>) : null
 

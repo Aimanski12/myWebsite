@@ -133,7 +133,7 @@ function slideUp (el) {
     targets: el,
     translateY: 0,
     // easing: 'easeOutQuart',
-    easing: 'easeOutElastic(5, 2)',
+    easing: 'easeOutElastic(10, 2)',
     duration: 500
   })
 }

@@ -3,7 +3,6 @@ import * as action from '../../../store/actions/index'
 import {connect} from 'react-redux'
 import {imageUrl} from '../../../utils/common/common'
 import { mouseEnter, mouseOut, resize } from '../../../utils/pageAnimation/projectsHoverAnimations'
-import {pageTransition} from '../../../utils/pageAnimation/pageTransitionAnim'
 
 function Projects(props) {
   
@@ -12,15 +11,6 @@ function Projects(props) {
     // window.addEventListener('resize', resizeEls)
   })
   
-  const runPageTransition = (route) => {
-    pageTransition()
-
-    setTimeout(() => {
-      props.setRedirect(true, `${route}`)
-    }, 1000)
-  }
-
-
 
   let projects = props.projects.map((proj, i)=>{
     return (
@@ -57,12 +47,13 @@ function Projects(props) {
                 </p>
               </div>
               <div className="project-text-alignright">
-                <button type='button' 
-                  className='sub-reveal-container content-center button-wrapper show'
-                  onClick={()=> runPageTransition(proj.projectlinks.internal)}>
-                  <span className='sub-reveal'
-                    style={{color: proj.textColor}}>View project</span>
-                </button>
+                <a href={`${proj.projectlinks.internal}`}>
+                  <button type='button' 
+                    className='sub-reveal-container content-center button-wrapper show' >
+                    <span className='sub-reveal'
+                      style={{color: proj.textColor}}>View project</span>
+                  </button>
+                </a>
               </div>
             </div>
 

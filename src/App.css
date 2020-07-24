@@ -8,7 +8,7 @@
 
 body, html{
   min-height: 100vh;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 a {
@@ -502,7 +502,7 @@ page. this is the wrapper container*/
 
 .reveal {
   display: block;
-  transform: translateY(100%);
+  transform: translateY(0%);
 }
 
 .runner {
@@ -521,7 +521,7 @@ page. this is the wrapper container*/
 
 .sub-reveal {
   display: block;
-  transform: translateY(100%);
+  transform: translateY(0%);
 }
 
 

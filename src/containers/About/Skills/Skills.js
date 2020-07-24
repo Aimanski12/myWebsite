@@ -38,6 +38,7 @@ function Skills(props) {
                     text='View projects' 
                     withSvg={false}
                     link='projects'
+                    btnType='box-button'
                     colors='#347A78'
                     type='withBox'/>
               </span>

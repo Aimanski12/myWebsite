@@ -10,8 +10,8 @@ export function scrollDown () {
   anime({
     targets: [html, body],
     scrollTop: moveTo,
-    duration: 1000,
-    easing: 'easeOutCubic'
+    duration: 2000,
+    easing: 'easeInOutQuad'
   })
 
 }

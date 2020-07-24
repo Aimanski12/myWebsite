@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react'
 import {connect} from 'react-redux'
-import {pageTransition} from '../../../utils/pageAnimation/pageTransitionAnim'
-import * as action from '../../../store/actions/index'
+// import {pageTransition} from '../../../utils/pageAnimation/pageTransitionAnim'
+// import * as action from '../../../store/actions/index'
 import './FooterMenu.css'
 
 function FooterMenu(props) {
@@ -31,10 +31,11 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setRedirect: (istrue, path) => {dispatch(action.setRedirect(istrue, path))}
-  }
-}
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     setRedirect: (istrue, path) => {dispatch(action.setRedirect(istrue, path))}
+//   }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(FooterMenu);
+// export default connect(mapStateToProps, mapDispatchToProps)(FooterMenu);
+export default connect(mapStateToProps)(FooterMenu);

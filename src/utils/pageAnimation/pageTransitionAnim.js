@@ -15,7 +15,10 @@ export function pageTransition () {
     begin: function (anim) {
       // main.style.display = 'none'
       // openTopLayer after the opacity is set
-      openTopLayer()
+      setTimeout(()=>{
+        openTopLayer()
+
+      }, 500)
     },
     complete: function (anim) {
       main.style.display = 'none'

@@ -12,7 +12,7 @@ function Credential(props) {
     return (
       <article className="credential-cont" key={i}>
         <div className="credential-wrapper">
-          <QrCode qrCode={course.qrCode}/>
+          <QrCode certLink={course.certLink} qrCode={course.qrCode}/>
           <Desc 
             name={course.name}
             school={course.school}

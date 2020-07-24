@@ -1,7 +1,7 @@
 import React from 'react'
 import {imageUrl} from '../../utils/common/common'
 import * as action from '../../store/actions/index'
-import {pageTransition} from '../../utils/pageAnimation/pageTransitionAnim'
+// import {pageTransition} from '../../utils/pageAnimation/pageTransitionAnim'
 import {connect} from 'react-redux'
 import Arrow from '../Buttons/Buttons'
 import './SectionBlocks.css'
@@ -36,15 +36,17 @@ function SectionBlocks(props) {
                 style={{color: props.color}}>
                 <span className=''>{data.blockDesc}</span>
                 {props.data.withArrow ? 
-                  <span className='block-arrow'
-                    onClick={()=>{
-                      pageTransition()
-                      setTimeout(() => {
-                        props.setRedirect(true, `/projects`)
-                      }, 1000)
-                    }}>
-                    <Arrow type='arrow' colors={props.color}/>
-                  </span> : null }
+                  <a href="/projects">
+                    <span className='block-arrow'
+                      // onClick={()=>{
+                        //   pageTransition()
+                        //   setTimeout(() => {
+                          //     props.setRedirect(true, `/projects`)
+                          //   }, 1000)
+                          // }}
+                          >
+                      <Arrow type='arrow' colors={props.color}/>
+                    </span></a> : null }
               </p>
               <div className="runner"></div>
             </div>

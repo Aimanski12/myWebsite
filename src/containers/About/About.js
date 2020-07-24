@@ -8,7 +8,7 @@ import SectionBlocks from '../../components/SectionBlocks/SectionBlocks'
 import FollowMyReads from './FollowMyReads/FollowMyReads'
 import Footer from '../../components/Footer/Footer'
 import Skills from './Skills/Skills'
-import {loadSlideElements, slideInElementsOnScroll} from '../../utils/pageAnimation/slideInElementsOnscroll'
+// import {loadSlideElements, slideInElementsOnScroll} from '../../utils/pageAnimation/slideInElementsOnscroll'
 import {resizeProjectWrapper} from '../../utils/pageAnimation/projectsHoverAnimations'
 import './About.css'
 
@@ -32,10 +32,12 @@ function About(props) {
     }
     resize()
 
+    // setTimeout(()=>{
+    //   loadSlideElements()
+    // },350)
 
-    loadSlideElements()
-    window.addEventListener('scroll', slideInElementsOnScroll)
-
+    // window.addEventListener('scroll', slideInElementsOnScroll)
+    
     setTimeout(() => {
       resizeProjectWrapper(props.activeRoute)
     }, 120)

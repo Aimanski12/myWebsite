@@ -5,7 +5,7 @@ import Header from './Header/Header'
 import ProjectBody from './ProjectBody/ProjectBody'
 import Footer from '../../components/Footer/Footer'
 import {closeTopLayer} from '../../utils/common/topLayerAnim'
-import {loadSlideElements, slideInElementsOnScroll} from '../../utils/pageAnimation/slideInElementsOnscroll'
+// import {loadSlideElements, slideInElementsOnScroll} from '../../utils/pageAnimation/slideInElementsOnscroll'
 import {resizeProjectWrapper} from '../../utils/pageAnimation/projectsHoverAnimations'
 import {checkRoute} from '../../utils/storeUtils/common'
 import './IndividualProject.css'
@@ -21,11 +21,13 @@ function IndividualProject(props) {
       closeTopLayer()
       setTimeout(() => {
         props.resetRedirect(false)
-      }, 1000)
+      }, 1600)
     }
 
-    loadSlideElements()
-    window.addEventListener('scroll', slideInElementsOnScroll)
+    // setTimeout(()=>{
+    //   loadSlideElements()
+    // },350)
+    // window.addEventListener('scroll', slideInElementsOnScroll)
 
     setTimeout(() => {
       resizeProjectWrapper(props.activeRoute)

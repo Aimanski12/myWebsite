@@ -8,7 +8,7 @@ import Footer from '../../components/Footer/Footer'
 import ShortProjectView from '../../components/ShortProjectView/ShortProjectView'
 import {resize} from '../../utils/common/common'
 import {connect} from 'react-redux'
-import {loadSlideElements, slideInElementsOnScroll} from '../../utils/pageAnimation/slideInElementsOnscroll'
+// import {loadSlideElements, slideInElementsOnScroll} from '../../utils/pageAnimation/slideInElementsOnscroll'
 import {resizeProjectWrapper} from '../../utils/pageAnimation/projectsHoverAnimations'
 import './Home.css'
 
@@ -31,8 +31,10 @@ function Home(props) {
     }
     resize()
 
-    loadSlideElements()
-    window.addEventListener('scroll', slideInElementsOnScroll)
+    // setTimeout(()=>{
+    //   loadSlideElements()
+    // },350)
+    // window.addEventListener('scroll', slideInElementsOnScroll)
 
     setTimeout(()=>{
       resizeProjectWrapper(props.activeRoute)

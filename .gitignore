@@ -29,6 +29,7 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+# data files and session data 
 /src/utils/data
 /src/utils/sessiondata
 

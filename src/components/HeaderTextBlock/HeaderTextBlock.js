@@ -1,5 +1,5 @@
 import React from 'react'
-import './HeaderTextBlock.css'
+// import './HeaderTextBlock.css'
 
 function HeaderTextBlock(props) {
 
@@ -25,6 +25,17 @@ function HeaderTextBlock(props) {
           {props.data.shortDesc}
         </span>
       </p>
+      <style jsx>{`
+        .sub-reveal-container {
+          margin-top: 10px;
+        }
+
+        .sub-reveal {
+          line-height: 2em;
+          letter-spacing: -0.01em;
+          text-align: justify;
+        }
+      `}</style>
     </div>
   )
 }

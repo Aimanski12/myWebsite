@@ -1,14 +1,15 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import * as action from '../../../store/actions/index'
-import {mouseOut, mouseEnter} from '../../../utils/common/menuHoverEvents'
-import {openMenu, closeMenu} from '../../../utils/common/menuClickEvents'
-import {navHoverElements} from '../../../utils/common/elementSorter'
-import anime from 'animejs'
+// import {connect} from 'react-redux'
+// import * as action from '../../../store/actions/index'
+// import {mouseOut, mouseEnter} from '../../../utils/common/menuHoverEvents'
+// import {openMenu, closeMenu} from '../../../utils/common/menuClickEvents'
+// import {navHoverElements} from '../../../utils/common/elementSorter'
+// import anime from 'animejs'
 import Close from '../../../components/Svgs/Close/Close'
-import './NavbarMenu.css'
+// import './NavbarMenu.css'
 
 function NavbarMenu(props) {
+  
 
   // click event 
   const clicked = async () => {
@@ -111,7 +112,7 @@ function NavbarMenu(props) {
     <div className="navbar-menu">
       <div className="front content-center">
         <span className="content-center front-text"
-          style={{'color': props.colorModes.close.main}}
+          style={{'color': props.colors.close.main}}
           onMouseOver={hoverIn}
           onMouseLeave={hoverOut}
           onClick={clicked} >
@@ -128,20 +129,21 @@ function NavbarMenu(props) {
 }
 
 
-const mapStateToProps = (state) => {
-  return {
-    colorModes: state.state.colorModes,
-    isOpen: state.state.isOpen,
-    isAnimating: state.state.isAnimating,
-    activeRoute: state.state.activeRoute
-  }
-}
+// const mapStateToProps = (state) => {
+//   return {
+//     colorModes: state.state.colorModes,
+//     isOpen: state.state.isOpen,
+//     isAnimating: state.state.isAnimating,
+//     activeRoute: state.state.activeRoute
+//   }
+// }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setAnimating: (val) => { dispatch(action.setAnimating(val)) },
-    setMenu: (val) => { dispatch(action.menuIsOpen(val)) }
-  }
-}
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     setAnimating: (val) => { dispatch(action.setAnimating(val)) },
+//     setMenu: (val) => { dispatch(action.menuIsOpen(val)) }
+//   }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavbarMenu)
+// export default connect(mapStateToProps, mapDispatchToProps)(NavbarMenu)
+export default NavbarMenu

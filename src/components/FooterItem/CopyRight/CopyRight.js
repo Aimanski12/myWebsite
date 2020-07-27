@@ -1,6 +1,6 @@
 import React from 'react'
-import './CopyRight.css'
-import {connect} from 'react-redux'
+// import './CopyRight.css'
+// import {connect} from 'react-redux'
 // import * as action from '../../../store/actions/index'
 // import {navHoverElements} from '../../../utils/common/elementSorter'
 // import {closeMenu} from '../../../utils/common/menuClickEvents'
@@ -95,4 +95,5 @@ const mapStateToProps = (state) => {
 
 // export default connect(mapStateToProps, mapDispatchToProps)(CopyRight);
 
-export default connect(mapStateToProps)(CopyRight);
+// export default connect(mapStateToProps)(CopyRight);
+export default CopyRight;

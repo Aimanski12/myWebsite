@@ -1,13 +1,12 @@
 
 
-.navbar-menu {
+/* .navbar-menu {
   height: 90px;
   width: 90px;
   float: right;
   margin-right: 180px;
   position: relative;
   top: -7.5px;
-  /* background: red; */
 }
 
 .navbar-menu div {
@@ -18,7 +17,6 @@
 
 .front {
   z-index: 780;
-  /* background: orange; */
 }
 
 .middle {
@@ -178,4 +176,4 @@
   .front-text {
     font-size: 0.82em;
   }
-}
+} */

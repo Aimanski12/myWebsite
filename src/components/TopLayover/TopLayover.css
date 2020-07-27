@@ -1,4 +1,4 @@
-.top-layover {
+/* .top-layover {
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -9,7 +9,6 @@
   position: absolute;
   width: 100%;
   height: 100vh;
-
 }
 
 .top-layover-container {
@@ -19,7 +18,6 @@
 .top-layover-logo {
   width: 160px;
   height: 180px;
-  /* background: red; */
 }
 
 .top-layover-logo svg {
@@ -47,13 +45,9 @@
 .top-runner {
   position: relative;
   display: block;
-  /* float: righ; */
-  /* change runner width for animation */
   width: 100%;
   height: 100vh;
-  /* background: #313D43; */
 }
-
 
 @media (max-width: 568px){
   .top-layover-logo {
@@ -73,11 +67,9 @@
     width: 140px;
     height: 158px;
   }
-
   .top-layover-logo svg {
     width: 140px
   }
-
   .top-loading {
     font-size: 0.95em;
   }
@@ -96,4 +88,4 @@
   .top-loading {
     font-size: 0.9em;
   }
-} 
+}  */

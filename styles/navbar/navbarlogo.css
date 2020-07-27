@@ -1,0 +1,83 @@
+ .navbar-logo {
+  height: 100%;
+  width: 75px;
+  float: left;
+  margin-left: 180px;
+}
+
+.navbar-logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1468px) {
+  .navbar-logo {
+    margin-left: 167px;
+  }
+}
+
+@media (max-width: 1368px) {
+  .navbar-logo {
+    margin-left: 152px;
+  }
+}
+
+
+@media (max-width: 1268px) {
+  .navbar-logo {
+    width: 70px;
+    margin-left: 139px;
+  }
+}
+
+@media (max-width: 1168px) {
+  .navbar-logo {
+    margin-left: 126px;
+  }
+}
+
+@media (max-width: 1068px) {
+  .navbar-logo {
+    width: 60px;
+    margin-left: 112px;
+  }
+}
+
+@media (max-width: 968px) {
+  .navbar-logo {
+    margin-left: 98px;
+  }
+}
+
+@media (max-width: 868px) {
+  .navbar-logo {
+    width: 50px;
+    margin-left: 85px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    width: 55px;
+    margin-left: 71px;
+  }
+}
+
+@media (max-width: 668px) {
+  .navbar-logo {
+    width: 40px;
+    margin-left: 58px;
+  }
+}
+
+@media (max-width: 568px) {
+  .navbar-logo {
+    margin-left: 44px;
+  }
+}
+
+@media (max-width: 468px) {
+  .navbar-logo {
+    margin-left: 30px;
+  }
+} 

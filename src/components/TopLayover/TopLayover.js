@@ -1,18 +1,19 @@
 import React, {useEffect} from 'react'
-import * as action from '../../store/actions/index'
 import BrandLogo from '../Svgs/BrandLogo/BrandLogo'
-import {connect} from 'react-redux'
-import {introAnim} from '../../utils/common/topLayerAnim'
-import './TopLayover.css'
+// import {introAnim} from '../../utils/common/topLayerAnim'
+// import * as action from '../../store/actions/index'
+// import {connect} from 'react-redux'
+// import './TopLayover.css'
 
 function TopLayover(props) {
+
   useEffect(()=>{
-    introAnim(props.hasSession)
-    if(!props.hasSession){
-      setTimeout(()=>{
-      props.setSession(true)
-      }, 9500)
-    }
+    // introAnim(props.hasSession)
+    // if(!props.hasSession){
+    //   setTimeout(()=>{
+    //   props.setSession(true)
+    //   }, 9500)
+    // }
   })
   
   return (
@@ -31,23 +32,25 @@ function TopLayover(props) {
         <span className='top-runner' 
           style={{'background':'#CCCAAE'}}></span>
       </div>
+     
     </div> 
   )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    state: state.state,
-    hasSession: state.state.hasSession,
-    colorModes: state.state.colorModes,
-    topOverLayIsRunning: state.state.topOverLayIsRunning
-  }
-}
+// const mapStateToProps = (state) => {
+//   return {
+//     state: state.state,
+//     hasSession: state.state.hasSession,
+//     colorModes: state.state.colorModes,
+//     topOverLayIsRunning: state.state.topOverLayIsRunning
+//   }
+// }
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    setSession: (val) => { dispatch(action.checkBrowserSession(val)) }
-  }
-}
+// const mapDispatchToProps = (dispatch, ownProps) => {
+//   return {
+//     setSession: (val) => { dispatch(action.checkBrowserSession(val)) }
+//   }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TopLayover)
+// export default connect(mapStateToProps, mapDispatchToProps)(TopLayover)
+export default TopLayover

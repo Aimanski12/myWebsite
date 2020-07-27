@@ -1,14 +1,15 @@
 import React from 'react'
 // import * as action from '../../../store/actions/index'
-import {connect} from 'react-redux'
-import {hover} from '../../../utils/common/menuListEvents'
+// import {connect} from 'react-redux'
+// import {hover} from '../../../utils/common/menuListEvents'
 // import {navHoverElements} from '../../../utils/common/elementSorter'
 // import {closeMenu} from '../../../utils/common/menuClickEvents'
 // import {openTopLayer} from '../../../utils/common/topLayerAnim'
 // import anime from 'animejs'
-import './Menu.css'
+// import './Menu.css'
 
 function Menu(props) {
+  let menus = ['home', 'about', 'projects', 'contacts']
 
   // const menuClicked = (uPath) => {
   //   let path = uPath === 'home' ? '' : uPath
@@ -24,7 +25,7 @@ function Menu(props) {
   //   setTimeout(()=>{
   //     openTopLayer()
   //     setTimeout(() => {
-  //       props.setRedirect(true, `/${path}`)
+  //       props.setRedirect(true, `/${path}ls`)
   //     }, 800)
   //   }, 800)
   // }
@@ -62,7 +63,7 @@ function Menu(props) {
   // }
   
   const menuList = () => {
-    return props.menus.map((menu, i )=>{
+    return menus.map((menu, i )=>{
       
       return <li className='menu-list' key={i}>
               <div className='menu-list-container'>
@@ -72,7 +73,7 @@ function Menu(props) {
                     onMouseEnter={(e)=>mouseEnter(e)}
                     onMouseOut={(e)=>mouseOut(e)}
                     onClick={()=>menuClicked(`${menu}`)} >{menu}</span> */}
-                <a href={menu === 'home' ? '/' : menu}>
+                <a href={menu === 'home' ? '/' : `/${menu}`}>
                   <span className='menu-list-text'
                     onMouseEnter={(e)=>hover(e, 'hoverIn')}
                     onMouseOut={(e)=>hover(e, 'hoverOut')}>{menu}</span>
@@ -96,23 +97,24 @@ function Menu(props) {
   )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    menus: state.state.menus,
-    activeRoute: state.state.activeRoute,
-    // colorModes: state.state.colorModes,
-    // isOpen: state.state.isOpen,
-    // isAnimating: state.state.isAnimating,
-    // isClicked: state.state.isClicked
-  }
-}
+// const mapStateToProps = (state) => {
+//   return {
+//     menus: state.state.menus,
+//     activeRoute: state.state.activeRoute,
+//     // colorModes: state.state.colorModes,
+//     // isOpen: state.state.isOpen,
+//     // isAnimating: state.state.isAnimating,
+//     // isClicked: state.state.isClicked
+//   }
+// }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    // setMenu: (val) => { dispatch(action.menuIsOpen(val)) },
-    // checkPage: () => {dispatch(action.checkPageLocation())},
-    // setRedirect: (istrue, path) => { dispatch(action.setRedirect(istrue, path))}
-  }
-}
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     // setMenu: (val) => { dispatch(action.menuIsOpen(val)) },
+//     // checkPage: () => {dispatch(action.checkPageLocation())},
+//     // setRedirect: (istrue, path) => { dispatch(action.setRedirect(istrue, path))}
+//   }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Menu);
+// export default connect(mapStateToProps, mapDispatchToProps)(Menu);
+export default Menu;

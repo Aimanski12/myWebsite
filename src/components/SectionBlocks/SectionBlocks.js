@@ -1,6 +1,6 @@
 import React from 'react'
 import {imageUrl} from '../../utils/common/common'
-import * as action from '../../store/actions/index'
+// import * as action from '../../store/actions/index'
 // import {pageTransition} from '../../utils/pageAnimation/pageTransitionAnim'
 import {connect} from 'react-redux'
 import Arrow from '../Buttons/Buttons'
@@ -66,7 +66,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     // setMenu: (val) => { dispatch(action.menuIsOpen(val)) },
     // checkPage: () => {dispatch(action.checkPageLocation())},
-    setRedirect: (istrue, path) => { dispatch(action.setRedirect(istrue, path)) }
+    // setRedirect: (istrue, path) => { dispatch(action.setRedirect(istrue, path)) }
   }
 }
 

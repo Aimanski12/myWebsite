@@ -2,9 +2,9 @@ import {resizeElements } from './elementSorter'
 
 
 // function that will generate a path for the image
-export function imageUrl (img, ext) {
-  return process.env.PUBLIC_URL + `/images/${img}.${ext}`
-}
+// export function imageUrl (img, ext) {
+//   return process.env.PUBLIC_URL + `/images/${img}.${ext}`
+// }
 
 
 // function to run for resizing or when page loads
@@ -27,4 +27,3 @@ export function resize(){
     el.top_container.style.width = '1600px'
   }
 }
-

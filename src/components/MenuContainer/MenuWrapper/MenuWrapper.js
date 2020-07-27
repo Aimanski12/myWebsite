@@ -1,16 +1,16 @@
 import React from 'react'
-import {imageUrl} from '../../../utils/common/common'
+// import {imageUrl} from '../../../utils/common/common'
 import MenuList from '../../MenuList/TopMenuList/Menu'
 import Copyright from '../../FooterItem/CopyRight/CopyRight'
 import SocialIcons from '../../FooterItem/SocialIcons/SocialIcons'
-import './MenuWrapper.css'
+// import './menuwrapper.css'
 
 function MenuWrapper(props) {
   
   return (
     <div className="menu-wrapper">
       <aside className="menu-s menu-left">
-        <img className='square-img' src={imageUrl('menu-dots', 'png')} alt="sqaure-dots"/>
+        <img className='square-img' src={'/images/menu-dots.png'} alt="sqaure-dots"/>
       </aside>
       <div className="menu-s menu-middle">
         <div className=" content-center nav-container">

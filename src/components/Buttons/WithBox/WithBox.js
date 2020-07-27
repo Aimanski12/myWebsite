@@ -1,9 +1,9 @@
 import React from 'react'
+import Envelop from '../../Svgs/Logos/Logos'
 // import * as action from '../../../store/actions/index'
 // import {pageTransition} from '../../../utils/pageAnimation/pageTransitionAnim'
 // import {connect} from 'react-redux'
-import Envelop from '../../Svgs/Logos/Logos'
-import './WithBox.css'
+// import './WithBox.css'
 
 function WithBox(props) {
   let withlink = props.link

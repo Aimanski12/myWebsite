@@ -2,7 +2,7 @@ import React, {Fragment} from 'react'
 // import * as action from '../../store/actions/index'
 // import {pageTransition} from '../../utils/pageAnimation/pageTransitionAnim'
 // import {connect} from 'react-redux'
-import './Subparagraphs.css'
+// import './Subparagraphs.css'
 
 function Subparagraphs(props) {
 
@@ -65,6 +65,43 @@ function Subparagraphs(props) {
               </span>
             </p> 
           </Fragment> : null }
+
+
+          
+      <style jsx>{`
+        .paragraphs {
+          padding: 40px 0 80px;
+          width: 100%;
+          min-height: 150px;
+        }
+
+        .p-wrapper {
+          display: block;
+        }
+
+        .p-reveal  {
+          letter-spacing: -0.02em;
+        }
+
+        .p-desc {
+          margin-top: 10px;
+          margin-bottom: 50px;
+        }
+
+        .p-desc-content {
+          letter-spacing: -0.01em;
+          line-height: 2em;
+          text-align: justify;
+        }
+
+        .p-links {
+          margin-bottom: 50px;
+        }
+
+        .p-links span {
+          font-weight: 500;
+        }
+      `}</style>
     </article>
   )
 }

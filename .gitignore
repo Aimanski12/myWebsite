@@ -4,25 +4,32 @@
 /node_modules
 /.pnp
 .pnp.js
+
 # testing
 /coverage
 
+# next.js
+/.next/
+/out/
+
 # production
 /build
-/.firebaserc
-firebase.json
-/src/utils/sessionData
-/src/utils/data
-/src/utils/data/navbarColorModes.js
-/src/utils/data/socials.js
 
 # misc
 .DS_Store
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+/src/utils/data
+/src/utils/sessiondata
+
+.gitignore

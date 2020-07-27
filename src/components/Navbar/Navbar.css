@@ -1,11 +1,10 @@
 
-.navbar-container {
+/* .navbar-container {
   width: 1600px;
   height: 75px;
   position: absolute;
   top: 50px;
   z-index: 800;
-  /* background: orangered; */
 }
 
 @media (max-width: 1268px) {
@@ -71,7 +70,7 @@
   .navbar-container {
     top: 25px;
   }
-}
+} */
 
 
 

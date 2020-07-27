@@ -1,4 +1,4 @@
-
+/* 
 .copyright {
   width: 100%;
   height: 50px;
@@ -8,8 +8,6 @@
 .copyright-runner {
   width: 100%;
   height: 100%;
-  /* background: gray; */
-  /* transform: translateY(100%); */
 }
 
 .copyright p {
@@ -21,7 +19,6 @@
 .privacy {
   font-size: 13px;
   color: orange;
-  /* transform: scale(1); */
   transition: all 0.15s linear;
 }
 
@@ -29,7 +26,6 @@
   color: #FFCD72;
   cursor: pointer;
   transition: all 0.15s linear;
-  /* transform: scale(1.01); */
 }
 
 @media (max-width: 1268px) {
@@ -45,7 +41,6 @@
   .copyright p {
     font-size: 12px;
   }
-
   .privacy {
     font-size: 11px;
   }
@@ -55,7 +50,6 @@
   .copyright p {
     font-size: 11px;
   }
-
   .privacy {
     font-size: 11px;
   }
@@ -65,8 +59,7 @@
   .copyright p {
     font-size: 11px;
   }
-
   .privacy {
     font-size: 11px;
   }
-}
+} */

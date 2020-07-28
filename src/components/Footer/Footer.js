@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {PageData} from '../../utils/context/pageContext'
 import FooterMenu from '../MenuList/FooterMenu/FooterMenu'
 import Copyright from '../FooterItem/CopyRight/CopyRight'
-import SocialIcons from '../FooterItem/SocialIcons/SocialIcons'
+// import SocialIcons from '../FooterItem/SocialIcons/SocialIcons'
 // import './Footer.css'
 
 class Footer extends Component {
@@ -29,9 +29,9 @@ class Footer extends Component {
         <Copyright fromTop={false} pColor='#A7A7A7'/>
 
         <div className="footer-socialIcons">
-          <SocialIcons 
+          {/* <SocialIcons 
             container='footer-navicons'
-            colorMode='#116864' />
+            colorMode='#116864' /> */}
         </div>
       </footer>
     )

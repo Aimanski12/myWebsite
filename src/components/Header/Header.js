@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import ScrollBtn from './ScrollBtn/ScrollBtn'
-import SocialIcons from './SocialIcon/SocialIcon'
+// import SocialIcons from './SocialIcon/SocialIcon'
 import HeaderText from '../HeaderTextBlock/HeaderTextBlock'
 import Subparagraphs from '../SubParagraphs/Subparagraphs'
 import Credentials from '../../containers/Credential/Credential'
@@ -42,7 +42,7 @@ class Header extends Component {
 
       
       {/* render social icons */}
-        {data.withSocials ? <SocialIcons /> : null }
+        {/* {data.withSocials ? <SocialIcons /> : null } */}
 
       {/* render scroll button */}
       {data.withScrollButton.isTrue ? 

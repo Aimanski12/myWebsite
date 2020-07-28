@@ -2,7 +2,7 @@ import React from 'react'
 // import {imageUrl} from '../../../utils/common/common'
 import MenuList from '../../MenuList/TopMenuList/Menu'
 import Copyright from '../../FooterItem/CopyRight/CopyRight'
-import SocialIcons from '../../FooterItem/SocialIcons/SocialIcons'
+// import SocialIcons from '../../FooterItem/SocialIcons/SocialIcons'
 // import './menuwrapper.css'
 
 function MenuWrapper() {

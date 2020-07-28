@@ -1,0 +1,10 @@
+.project-text-header {
+  padding-top: 50vh;
+}
+
+@media screen and (max-width: 896px) and (orientation: landscape) {
+
+  .project-text-header {
+    padding-top: 300px;
+  }
+}

@@ -5,7 +5,7 @@ import Copyright from '../../FooterItem/CopyRight/CopyRight'
 import SocialIcons from '../../FooterItem/SocialIcons/SocialIcons'
 // import './menuwrapper.css'
 
-function MenuWrapper(props) {
+function MenuWrapper() {
   
   return (
     <div className="menu-wrapper">

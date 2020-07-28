@@ -1,16 +1,20 @@
 import React, {Fragment} from 'react'
-import {connect} from 'react-redux'
+import Link from 'next/link'
+// import {connect} from 'react-redux'
 // import {pageTransition} from '../../../utils/pageAnimation/pageTransitionAnim'
 // import * as action from '../../../store/actions/index'
-import './FooterMenu.css'
+// import './FooterMenu.css'
 
 function FooterMenu(props) {
-  let menusList = props.menus.map((menu, i)=>{
+  let menus = ['home', 'about', 'projects', 'contacts']
+  let menusList = menus.map((menu, i)=>{
     return (
       <Fragment key={i}>
-      <a href={`/${menu === 'home' ? '' : menu}`}>
-        <li  className='footer-menu'>{menu}</li>
-      </a>
+        <Link href={`/${menu === 'home' ? '' : menu}`}>
+          <a >
+            <li  className='footer-menu'>{menu}</li>
+          </a>
+        </Link>
       {i < 3 ? <span>|</span> : null }
       </Fragment>
     )
@@ -25,11 +29,11 @@ function FooterMenu(props) {
   )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    menus: state.state.menus,
-  }
-}
+// const mapStateToProps = (state) => {
+//   return {
+//     menus: state.state.menus,
+//   }
+// }
 
 // const mapDispatchToProps = (dispatch) => {
 //   return {
@@ -38,4 +42,6 @@ const mapStateToProps = (state) => {
 // }
 
 // export default connect(mapStateToProps, mapDispatchToProps)(FooterMenu);
-export default connect(mapStateToProps)(FooterMenu);
+// export default connect(mapStateToProps)(FooterMenu);
+
+export default FooterMenu;

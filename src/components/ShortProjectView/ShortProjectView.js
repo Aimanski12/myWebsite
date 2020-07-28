@@ -1,25 +1,31 @@
-import React from 'react'
-import {connect} from "react-redux"
+import React, {Component} from 'react'
 import Projects from './projects/Projects'
-import './ShortProjectView.css'
+import {PageData} from '../../utils/context/pageContext'
 
+// import './ShortProjectView.css'
+// import {connect} from "react-redux"
 
-function ShortProjectView(props) {
-  let data = props.pageData
+class ShortProjectView extends Component {
+  static contextType = PageData
 
-  let projects = data ? <Projects projects={data.projectsList} /> : null
-  
-  return (
-    <section className="section-container short-project-container">
-      {projects}
-    </section>      
-  )
-}
-
-const mapStateToProps = (state) => {
-  return {
-    pageData: state.state.pageData
+  render(){
+    let data = this.context.listofprojects
+    
+    let projects = <Projects projects={data} />
+    
+    return (
+      <section className="section-container short-project-container">
+        {projects}
+      </section>      
+    )
   }
 }
 
-export default connect(mapStateToProps)(ShortProjectView)
+// const mapStateToProps = (state) => {
+//   return {
+//     pageData: state.state.pageData
+//   }
+// }
+
+// export default connect(mapStateToProps)(ShortProjectView)
+export default ShortProjectView

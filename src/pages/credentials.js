@@ -1,51 +1,48 @@
+import React, {Component} from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
-import {findData} from '../utils/data/index'
+// import TopLayover from '../components/TopLayover/TopLayover'
+import Navbar from '../components/Navbar/Navbar'
+import Menu from '../components/MenuContainer/MenuContainer'
+import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer'
+import {resize} from '../utils/common/common'
+import {PageDataContext} from '../utils/context/pageContext'
 
-export default function Credentials({pageData}) {
-  console.log(pageData)
 
-  return (
-    <div className="container">
-      <Head>
-        <title>Aiman Adlawan | Credentials Page</title>
-        <link rel="icon" href="/images/brand-icon-logo.ico" />
-      </Head>
 
-      <main>
-        <h1 className="title">Welcome to credential page.</h1>
-        <br/>
-        <Link href='/'>
-          <a>go to home page</a>
-        </Link><br/>
-        <Link href='/about'>
-          <a>go to about page</a>
-        </Link><br/>
-        <Link href='/projects'>
-          <a>go to projects page</a>
-        </Link><br/>
-        <Link href='/contacts'>
-          <a>go to contacts page</a>
-        </Link><br/>
-        <Link href='/credentials'>
-          <a>go to credentials page</a>
-        </Link><br/>
-        <Link href='/privacy'>
-          <a>go to privacy page</a>
-        </Link><br/>
-        <Link href='/projects/apple'>
-          <a>apple page</a>
-        </Link><br/>
-        <Link href='/projects/music-app'>
-          <a>music app page</a>
-        </Link>
+class Home extends Component {
 
-      </main>
-    </div>
-  )
+  componentDidMount(){
+    // resize event to when the browser is resized
+    resize()
+    window.addEventListener('resize', resize)
+  }
+
+  render(){
+
+    return (
+      <div className="container">
+        <Head>
+          <title>Aiman Adlawan | Credentials</title>
+          <link rel="icon" href="/images/brand-icon-logo.ico" />
+        </Head>
+
+        <div className="container">
+          {/* <TopLayover/> */}
+          <div className="main-container">
+            <PageDataContext pagesets={'credentials'}>
+              <Navbar />       
+              <Menu />
+              <main className='main'>
+                <Header/>
+                <Footer />
+              </main>
+            </PageDataContext>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
 
-Credentials.getInitialProps = () => {
-  const pageData = findData('credentials')
-  return { pageData }
-}
+export default Home

@@ -1,61 +1,44 @@
-import React from 'react'
-import {imageUrl} from '../../utils/common/common'
+import React, {Component} from 'react'
+import {PageData} from '../../utils/context/pageContext'
+import Titleblock from './TitleBlock/TitleBlock'
 import Button from '../Buttons/Buttons'
-import './NeedHelp.css'
+// import {imageUrl} from '../../utils/common/common'
+// import './NeedHelp.css'
 
-function NeedHelp() {
-  return (
-    <section className='needhelp-container'>
-      <div className='needhelp-background'
-        style={{background: 
-        `url('${imageUrl('light-dotted-background-whole', 'png')}') repeat center top`}} >
+class NeedHelp extends Component {
+  static contextType = PageData
 
-      <article className='needhelp-text-block text-span'>
-        <div className="needhelp-title-block">
+  render(){
+    let data = this.context.needHelp
 
+    return (
+      <section className='needhelp-container'>
+        <div className='needhelp-background'
+          style={{background: `url('${data.background}') repeat center top`}}>
 
+        <article className='needhelp-text-block text-span'>
+          <div className="needhelp-title-block">
+            <Titleblock data={data}/>
 
-          <div className="needhelp-wrapper">
-            <h2 className="head2">
-              <span className="show-container show">
-                <div className="reveal"
-                style={{color: '#347A78'}}>{'Need help with building'}</div>
-                <div className="runner"></div>
-              </span>
-              <span className="show-container show">
-                <div className="reveal"
-                style={{color: '#347A78'}}>{'your website?'}</div>
-                <div className="runner"></div>
-              </span>
-            </h2>
-
-            <p className="sub-reveal-container desc show">
-              <span className="sub-reveal"
-                style={{color: '#5D8785'}}>
-                {'If you have a project that you want to get started, or you need help on your website, or just want to say hi, let’s get in touch.'}
-              </span>
-            </p>
+            <p className="sub-reveal-container desc show" >
+                <span className="sub-reveal">
+                  <Button 
+                    text={data.messagetext} 
+                    type={data.type}
+                    withSvg={data.withSvg}
+                    btnType={data.btnType}
+                    link={data.link}
+                    colors={data.color}/>
+                </span>
+              </p>
 
           </div>
-          
-          <p className="sub-reveal-container desc show" >
-              <span className="sub-reveal" >
-                <Button 
-                  text='message me' 
-                  withSvg='true'
-                  btnType='box-button'
-                  link='contacts'
-                  colors='#347A78'
-                  type='withBox'/>
-              </span>
-            </p>
+        </article>
 
         </div>
-      </article>
-
-      </div>
-    </section>
-  )
+      </section>
+    )
+  }
 }
 
 export default NeedHelp

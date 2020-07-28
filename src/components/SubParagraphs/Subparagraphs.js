@@ -1,109 +1,47 @@
-import React, {Fragment} from 'react'
+import React, {Component, Fragment} from 'react'
+import ParagraphLinks from './ParagraphLinks/ParagraphLinks'
 // import * as action from '../../store/actions/index'
 // import {pageTransition} from '../../utils/pageAnimation/pageTransitionAnim'
 // import {connect} from 'react-redux'
 // import './Subparagraphs.css'
 
-function Subparagraphs(props) {
 
-  let sections = props.data.subParagraph.content.map((text, i) => {
-    return (
-      <Fragment key={i}>
-      <h3 className="p-wrapper head3">
-          <span className="show-container p-container show"
-            style={{color: props.data.textColors.primary}}>
-            <div className="reveal p-reveal">{text.title}</div>
-            <div className="runner p-runner"></div>
-          </span>
-        </h3>
-        <p className="sub-reveal-container p-desc desc show">
-          <span className="sub-reveal p-desc-content"
-            style={{color: props.data.textColors.secondary, fontWeight: props.data.title[0] ===  'About me.' ? 500 : 600}}> 
-            {text.text}</span>
-        </p>
-      </Fragment>
-    )
-  })
+import {PageData} from '../../utils/context/pageContext'
+class Subparagraphs extends Component {
+  static contextType = PageData
 
-  return (
-    <article className='paragraphs'>
-      {sections}
+  render(){
+    let data = this.context.headers
 
-      {props.data.subParagraph.specialLinks.isTrue ?
-        <Fragment>
 
-          {/* aiman please put this 
-          
-            block of element to a folder in credentials 
-
-            called links or whatever to make this more readble
-          
-          */}
-          <p className="sub-reveal-container p-desc p-links desc show">
+    let sections = data.subParagraph.content.map((text, i) => {
+      return (
+        <Fragment key={i}>
+        <h3 className="p-wrapper head3">
+            <span className="show-container p-container show"
+              style={{color: data.textColors.primary}}>
+              <div className="reveal p-reveal">{text.title}</div>
+              <div className="runner p-runner"></div>
+            </span>
+          </h3>
+          <p className="sub-reveal-container p-desc desc show">
             <span className="sub-reveal p-desc-content"
-              style={{color: props.data.textColors.secondary, fontWeight: 500}}> 
-              I'm excited to 
-                <a href="https://www.linkedin.com/" 
-                  rel='noopener noreferrer'
-                  target='_blank'>
-                    <span className='links'> connect</span></a> with you great people like you.</span>
+              style={{color: data.textColors.secondary, 
+              fontWeight: data.title[0] ===  'About me.' ? 500 : 600}}> 
+              {text.text}</span>
           </p>
+        </Fragment>
+      )
+    })
 
-          <p className="sub-reveal-container p-desc p-links desc show">
-            <span className="sub-reveal p-desc-content"
-              style={{color: props.data.textColors.secondary, fontWeight: 500}}> 
-              Click 
-              <a href="/credentials">
-                <span className='links'
-                  // onClick={()=>{
-                  //   pageTransition()
-                  //   setTimeout(() => {
-                  //     props.setRedirect(true, `/credentials`)
-                  //   }, 1000)
-                  // }}
-                > here</span></a> to see some of my credentials.
-              </span>
-            </p> 
-          </Fragment> : null }
-
-
-          
-      <style jsx>{`
-        .paragraphs {
-          padding: 40px 0 80px;
-          width: 100%;
-          min-height: 150px;
-        }
-
-        .p-wrapper {
-          display: block;
-        }
-
-        .p-reveal  {
-          letter-spacing: -0.02em;
-        }
-
-        .p-desc {
-          margin-top: 10px;
-          margin-bottom: 50px;
-        }
-
-        .p-desc-content {
-          letter-spacing: -0.01em;
-          line-height: 2em;
-          text-align: justify;
-        }
-
-        .p-links {
-          margin-bottom: 50px;
-        }
-
-        .p-links span {
-          font-weight: 500;
-        }
-      `}</style>
-    </article>
-  )
+    return (
+      <article className='paragraphs'>
+        {sections}
+        {data.subParagraph.specialLinks.isTrue ? 
+          <ParagraphLinks color={data.textColors.secondary} /> : null}
+      </article>
+    )
+  }
 }
 
 // const mapDispatchToProps = (dispatch) => {

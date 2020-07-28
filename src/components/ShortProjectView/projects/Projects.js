@@ -1,13 +1,13 @@
 import React, {Fragment, useEffect} from 'react'
-import * as action from '../../../store/actions/index'
-import {connect} from 'react-redux'
-import {imageUrl} from '../../../utils/common/common'
-import { mouseEnter, mouseOut, resize } from '../../../utils/pageAnimation/projectsHoverAnimations'
+// import { mouseEnter, mouseOut, resize } from '../../../utils/pageAnimation/projectsHoverAnimations'
+// import {imageUrl} from '../../../utils/common/common'
+// import * as action from '../../../store/actions/index'
+// import {connect} from 'react-redux'
 
 function Projects(props) {
   
   useEffect(()=>{
-    resize()
+    // resize()
     // window.addEventListener('resize', resizeEls)
   })
   
@@ -15,7 +15,7 @@ function Projects(props) {
   let projects = props.projects.map((proj, i)=>{
     return (
        <div className="short-project-wrapper"
-       style={{background: `url('${imageUrl(proj.theme, 'png')}') no-repeat center center`}} key={i} >
+       style={{background: `url('${proj.theme}') no-repeat center center`}} key={i} >
         <div className="projects-wrapper" 
           onMouseLeave={(e)=>mouseOut(e)}
           onMouseEnter={(e)=>mouseEnter(e, proj.bkgColor)}
@@ -24,7 +24,7 @@ function Projects(props) {
           <div className="project-img-desc">
             <div className="sub-reveal-container project-image show">
               <div className='sub-reveal project-img' 
-              style={{background: `url('${imageUrl(proj.photo.teaser, 'png')}') no-repeat center top`, backgroundSize: 'cover'}}> </div>
+              style={{background: `url('${proj.photo.teaser}') no-repeat center top`, backgroundSize: 'cover'}}> </div>
             </div>
             <div className="img-backer"
                style={{backgroundColor: proj.bkgColor}}></div>
@@ -83,12 +83,13 @@ function Projects(props) {
 //   }
 // }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    // setMenu: (val) => { dispatch(action.menuIsOpen(val)) },
-    // checkPage: () => {dispatch(action.checkPageLocation())},
-    setRedirect: (istrue, path) => { dispatch(action.setRedirect(istrue, path))}
-  }
-}
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     // setMenu: (val) => { dispatch(action.menuIsOpen(val)) },
+//     // checkPage: () => {dispatch(action.checkPageLocation())},
+//     setRedirect: (istrue, path) => { dispatch(action.setRedirect(istrue, path))}
+//   }
+// }
 
-export default connect(null, mapDispatchToProps)(Projects);
+// export default connect(null, mapDispatchToProps)(Projects);
+export default Projects;

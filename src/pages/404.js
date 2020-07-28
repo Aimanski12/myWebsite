@@ -1,45 +1,46 @@
+import React, {Component} from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
+import Navbar from '../components/Navbar/Navbar'
+import Menu from '../components/MenuContainer/MenuContainer'
+import NotFound from '../containers/NotFound/NotFound'
+import Footer from '../components/Footer/Footer'
+import {resize} from '../utils/common/common'
+import {PageDataContext} from '../utils/context/pageContext'
 
-export default function NotFound() {
 
-  return (
-    <div className="container">
-      <Head>
-        <title>Aiman Adlawan | Not Found</title>
-        <link rel="icon" href="/images/brand-icon-logo.ico" />
-      </Head>
 
-      <main>
-        <h1 className="title">This page is not found.</h1>
-        <br/>
-        <Link href='/'>
-          <a>go to home page</a>
-        </Link><br/>
-        <Link href='/about'>
-          <a>go to about page</a>
-        </Link><br/>
-        <Link href='/projects'>
-          <a>go to projects page</a>
-        </Link><br/>
-        <Link href='/contacts'>
-          <a>go to contacts page</a>
-        </Link><br/>
-        <Link href='/credentials'>
-          <a>go to credentials page</a>
-        </Link><br/>
-        <Link href='/privacy'>
-          <a>go to privacy page</a>
-        </Link><br/>
-        <Link href='/projects/apple'>
-          <a>apple page</a>
-        </Link><br/>
-        <Link href='/projects/music-app'>
-          <a>music app page</a>
-        </Link>
+class Home extends Component {
 
-      </main>
-    </div>
-  )
+  componentDidMount(){
+    // resize event to when the browser is resized
+    resize()
+    window.addEventListener('resize', resize)
+  }
+
+  render(){
+
+    return (
+      <div className="container">
+        <Head>
+          <title>Aiman Adlawan | Page not found</title>
+          <link rel="icon" href="/images/brand-icon-logo.ico" />
+        </Head>
+
+        <div className="container">
+          <div className="main-container">
+            <PageDataContext pagesets={'notfound'}>
+              <Navbar />       
+              <Menu />
+              <main className='main'>
+                <NotFound />
+                <Footer />
+              </main>
+            </PageDataContext>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
 
+export default Home

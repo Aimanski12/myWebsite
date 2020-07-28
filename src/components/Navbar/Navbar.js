@@ -3,13 +3,11 @@ import React from 'react'
 import NavbarLogo from './NavbarLogo/NavbarLogo'
 import NavbarMenu from './NavbarMenu/NavbarMenu'
 
-function Navbar(props) {
-  let data = props.data
-  
+function Navbar() {
   return (
     <div className="navbar-container">
-      <NavbarLogo colors={data.colormodes}/>
-      <NavbarMenu colors={data.colormodes} />
+      <NavbarLogo/>
+      <NavbarMenu/>
     </div>
   )
 }

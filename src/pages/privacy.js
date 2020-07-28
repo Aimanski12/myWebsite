@@ -1,50 +1,47 @@
+import React, {Component} from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
-import {findData} from '../utils/data/index'
+// import TopLayover from '../components/TopLayover/TopLayover'
+import Navbar from '../components/Navbar/Navbar'
+import Menu from '../components/MenuContainer/MenuContainer'
+import PrivacyPolicy from '../containers/Privacy/Privacy'
+import Footer from '../components/Footer/Footer'
+import {resize} from '../utils/common/common'
+import {PageDataContext} from '../utils/context/pageContext'
 
-export default function Privacy({pageData}) {
-  console.log(pageData)
-  return (
-    <div className="container">
-      <Head>
-        <title>Aiman Adlawan | Privacy Page</title>
-        <link rel="icon" href="/images/brand-icon-logo.ico" />
-      </Head>
 
-      <main>
-        <h1 className="title">Welcome to Privacy page.</h1>
-        <br/>
-        <Link href='/'>
-          <a>go to home page</a>
-        </Link><br/>
-        <Link href='/about'>
-          <a>go to about page</a>
-        </Link><br/>
-        <Link href='/projects'>
-          <a>go to projects page</a>
-        </Link><br/>
-        <Link href='/contacts'>
-          <a>go to contacts page</a>
-        </Link><br/>
-        <Link href='/credentials'>
-          <a>go to credentials page</a>
-        </Link><br/>
-        <Link href='/privacy'>
-          <a>go to privacy page</a>
-        </Link><br/>
-        <Link href='/projects/apple'>
-          <a>apple page</a>
-        </Link><br/>
-        <Link href='/projects/music-app'>
-          <a>music app page</a>
-        </Link>
 
-      </main>
-    </div>
-  )
+class Home extends Component {
+
+  componentDidMount(){
+    // resize event to when the browser is resized
+    resize()
+    window.addEventListener('resize', resize)
+  }
+
+  render(){
+    return (
+      <div className="container">
+        <Head>
+          <title>Aiman Adlawan | Privacy Policy</title>
+          <link rel="icon" href="/images/brand-icon-logo.ico" />
+        </Head>
+
+        <div className="container">
+          {/* <TopLayover/> */}
+          <div className="main-container">
+            <PageDataContext pagesets={'privacy'}>
+              <Navbar />       
+              <Menu />
+              <main className='main'>
+                <PrivacyPolicy />
+                <Footer />
+              </main>
+            </PageDataContext>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
 
-Privacy.getInitialProps = () => {
-  const pageData = findData('privacy')
-  return { pageData }
-}
+export default Home

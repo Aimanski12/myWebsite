@@ -1,51 +1,53 @@
+import React, {Component} from 'react'
 import Head from 'next/head'
-import {findData} from '../utils/data/index'
-import Link from 'next/link'
+// import TopLayover from '../components/TopLayover/TopLayover'
+import Navbar from '../components/Navbar/Navbar'
+import Menu from '../components/MenuContainer/MenuContainer'
+import Header from '../components/Header/Header'
+import SectionBlocks from '../components/SectionBlocks/SectionBlocks'
+import Skills from '../containers/About/Skills/Skills'
+import MyReads from '../containers/About/MyReads/MyReads'
+import Footer from '../components/Footer/Footer'
+import {resize} from '../utils/common/common'
+import {PageDataContext} from '../utils/context/pageContext'
 
-export default function About({pageData}) {
-  console.log(pageData)
 
-  return (
-    <div className="container">
-      <Head>
-        <title>Aiman Adlawan | About Page</title>
-        <link rel="icon" href="/images/brand-icon-logo.ico" />
-      </Head>
 
-      <main>
-        <h1 className="title">Welcome to about page.</h1>
-        <br/>
-        <Link href='/'>
-          <a>go to home page</a>
-        </Link><br/>
-        <Link href='/about'>
-          <a>go to about page</a>
-        </Link><br/>
-        <Link href='/projects'>
-          <a>go to projects page</a>
-        </Link><br/>
-        <Link href='/contacts'>
-          <a>go to contacts page</a>
-        </Link><br/>
-        <Link href='/credentials'>
-          <a>go to credentials page</a>
-        </Link><br/>
-        <Link href='/privacy'>
-          <a>go to privacy page</a>
-        </Link><br/>
-        <Link href='/projects/apple'>
-          <a>apple page</a>
-        </Link><br/>
-        <Link href='/projects/music-app'>
-          <a>music app page</a>
-        </Link>
-      </main>
-    </div>
-  )
+class About extends Component {
+
+  componentDidMount(){
+    // resize event to when the browser is resized
+    resize()
+    window.addEventListener('resize', resize)
+  }
+
+  render(){
+    return (
+      <div className="container">
+        <Head>
+          <title>Aiman Adlawan | About Me</title>
+          <link rel="icon" href="/images/brand-icon-logo.ico" />
+        </Head>
+
+        <div className="container">
+          {/* <TopLayover/> */}
+          <div className="main-container">
+            <PageDataContext pagesets={'about'}>
+              <Navbar />       
+              <Menu />
+              <main className='main'>
+                <Header/>
+                <SectionBlocks title='skills' />
+                <Skills />
+                <MyReads />
+                <Footer />
+              </main>
+            </PageDataContext>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
 
-
-About.getInitialProps = () => {
-  const pageData = findData('about')
-  return { pageData }
-}
+export default About

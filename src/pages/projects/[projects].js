@@ -1,66 +1,43 @@
 import Head from 'next/head'
 import {useEffect} from 'react'
-import Link from 'next/link'
 import Router, {useRouter} from 'next/router'
-import { findData } from '../../utils/data'
 
-export default function Indi({pageData}) {
+function Projects() {
+
   const router = useRouter()
   const params = router.query.projects
+  if(params === 'apple'){
+    Router.replace('/404')
+  }
+  console.log(router)
 
-  useEffect(() => {
-    if(params === 'apple'){
-      Router.push('/404')
-    }
-    console.log(pageData)
-  })
+  // useEffect(() => {
+  // })
 
   return (
-    <div className="container">
-      <Head>
-        <title>Aiman Adlawan | Music-App</title>
-        <link rel="icon" href="/images/brand-icon-logo.ico" />
-      </Head>
+     <div className="container">
+        <Head>
+          <title>Aiman Adlawan | Projects</title>
+          <link rel="icon" href="/images/brand-icon-logo.ico" />
+        </Head>
 
-      <main>
-        <h1 className="title">{`${params} page`}</h1>
-        <br/>
-        <Link href='/'>
-          <a>go to home page</a>
-        </Link><br/>
-        <Link href='/about'>
-          <a>go to about page</a>
-        </Link><br/>
-        <Link href='/projects'>
-          <a>go to projects page</a>
-        </Link><br/>
-        <Link href='/contacts'>
-          <a>go to contacts page</a>
-        </Link><br/>
-        <Link href='/credentials'>
-          <a>go to credentials page</a>
-        </Link><br/>
-        <Link href='/privacy'>
-          <a>go to privacy page</a>
-        </Link><br/>
-        <Link href='/projects/apple'>
-          <a>apple page</a>
-        </Link><br/>
-        <Link href='/projects/music-app'>
-          <a>music app page</a>
-        </Link>
-      </main>
-    </div>
+        <div className="container">
+          {/* <TopLayover/> */}
+          <div className="main-container">
+            asdfadsf
+            {/* <PageDataContext pagesets={'contacts'}>
+              <Navbar />       
+              <Menu />
+              <main className='main'>
+                <Header/>
+                <Message />
+                <Footer />
+              </main>
+            </PageDataContext> */}
+          </div>
+        </div>
+      </div>
   )
 }
 
-Indi.getInitialProps = (ctx) => {
-  const {query} = ctx
-  const lists = findData('projectlists')
-
-  let pageData =  lists.listofprojects.filter(list => {
-    return list.title === query.projects
-  })
-
-  return {pageData}
-}
+export default Projects

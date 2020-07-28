@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 // import {connect} from 'react-redux'
 // import * as action from '../../../store/actions/index'
 // import {mouseOut, mouseEnter} from '../../../utils/common/menuHoverEvents'
@@ -8,124 +8,134 @@ import React from 'react'
 import Close from '../../../components/Svgs/Close/Close'
 // import './NavbarMenu.css'
 
-function NavbarMenu(props) {
-  
 
-  // click event 
-  const clicked = async () => {
-    if(!props.isAnimating) {
-      setAnimate(true)
-      if(!props.isOpen) {
-        openMenuBtn()
-      } else {
-        closeMenuBtn()
+import {PageData} from '../../../utils/context/pageContext'
+
+class NavbarMenu extends Component {
+
+  static contextType = PageData
+  
+  render () {
+    let data = this.context.headers
+    // console.log(data)
+
+
+    // click event 
+    const clicked = async () => {
+      if(!this.props.isAnimating) {
+        setAnimate(true)
+        if(!this.props.isOpen) {
+          openMenuBtn()
+        } else {
+          closeMenuBtn()
+        }
       }
     }
-  }
 
-  // close menu function
-  const closeMenuBtn = () => {
-    const el = navHoverElements()
-    // call function to close animation
-    closeMenu(true)
+    // close menu function
+    const closeMenuBtn = () => {
+      const el = navHoverElements()
+      // call function to close animation
+      closeMenu(true)
 
-    // set is animating after 1700 milsec to block multiple click events
-    setAnimate(false)
+      // set is animating after 1700 milsec to block multiple click events
+      setAnimate(false)
 
-    const n = document.querySelector('.navbar-container')
-    
-    let tl = anime.timeline({
-      easing: 'easeInQuad',
-      duration: 200,
-    })
-    tl.add({
+      const n = document.querySelector('.navbar-container')
+      
+      let tl = anime.timeline({
+        easing: 'easeInQuad',
+        duration: 200,
+      })
+      tl.add({
+          targets: n,
+          opacity: 0,
+        })
+        .add({
+          duration: 10,
+          complete: function (anim) {
+            this.props.setMenu(!this.props.isOpen)
+          }
+        })
+        .add({
+          targets: n,
+          opacity: 1,
+          complete: function (anim) {
+            el.middle.style.color = this.props.colorModes.close.main          
+          }
+        })
+      }
+
+    // open menu function
+    const openMenuBtn = () => {
+      // call function to open menu animtion
+      openMenu()
+
+      // set is animating after 1700 milsec to block multiple click events
+      setAnimate(false)
+      const n = document.querySelector('.navbar-container')
+      
+      let tl = anime.timeline({
+        easing: 'easeInQuad',
+        duration: 200,
+      })
+      tl.add({
         targets: n,
         opacity: 0,
       })
-      .add({
+      .add ({
         duration: 10,
         complete: function (anim) {
-          props.setMenu(!props.isOpen)
+          this.props.setMenu(!this.props.isOpen)
         }
       })
       .add({
         targets: n,
         opacity: 1,
-        complete: function (anim) {
-          el.middle.style.color = props.colorModes.close.main          
-        }
       })
     }
 
-  // open menu function
-  const openMenuBtn = () => {
-    // call function to open menu animtion
-    openMenu()
+    // function to set isanimating state
+    const setAnimate = (isAnim) => {
+      isAnim ? this.props.setAnimating(isAnim) : 
+      setTimeout(()=>{
+        this.props.setAnimating(false)
+      }, 1700)
+    }
 
-    // set is animating after 1700 milsec to block multiple click events
-    setAnimate(false)
-    const n = document.querySelector('.navbar-container')
-    
-    let tl = anime.timeline({
-      easing: 'easeInQuad',
-      duration: 200,
-    })
-    tl.add({
-      targets: n,
-      opacity: 0,
-    })
-    .add ({
-      duration: 10,
-      complete: function (anim) {
-        props.setMenu(!props.isOpen)
-      }
-    })
-    .add({
-      targets: n,
-      opacity: 1,
-    })
-  }
+    // hover in functions and to set specific assigned colors
+    const hoverIn = () => {
+      this.props.isOpen ? mouseEnter(this.props.colorModes.open, 'open') :
+      mouseEnter(this.props.colorModes.close, 'close')
+    }
 
-  // function to set isanimating state
-  const setAnimate = (isAnim) => {
-    isAnim ? props.setAnimating(isAnim) : 
-    setTimeout(()=>{
-      props.setAnimating(false)
-    }, 1700)
-  }
+    // hover out functions and to set specific assigned colors
+    const hoverOut = () => {
+      this.props.isOpen ? mouseOut(this.props.colorModes.open, 'open') :
+        mouseOut(this.props.colorModes.close, 'close')
+    }
 
-  // hover in functions and to set specific assigned colors
-  const hoverIn = () => {
-    props.isOpen ? mouseEnter(props.colorModes.open, 'open') :
-     mouseEnter(props.colorModes.close, 'close')
-  }
+    // console.log(this.props.isAnimating)
 
-  // hover out functions and to set specific assigned colors
-  const hoverOut = () => {
-    props.isOpen ? mouseOut(props.colorModes.open, 'open') :
-      mouseOut(props.colorModes.close, 'close')
-  }
-
-  // console.log(props.isAnimating)
-
-  return (
-    <div className="navbar-menu">
-      <div className="front content-center">
-        <span className="content-center front-text"
-          style={{'color': props.colors.close.main}}
-          onMouseOver={hoverIn}
-          onMouseLeave={hoverOut}
-          onClick={clicked} >
-            {props.isOpen ? <Close /> : 'Menu'}</span>  
+    return (
+      <div className="navbar-menu">
+        <div className="front content-center">
+          <span className="content-center front-text"
+            style={{'color': data.colormodes.close.foreground}}
+            onMouseOver={hoverIn}
+            onMouseLeave={hoverOut}
+            onClick={clicked} >
+              {this.props.isOpen ? <Close /> : 'Menu'}</span>  
+        </div>
+        <div className="middle content-center">
+          <span className="middle-span"></span>
+        </div>
+        <div className="back content-center">
+          <span className="back-span"></span>
+        </div>
       </div>
-      <div className="middle content-center">
-        <span className="middle-span"></span>
-      </div>
-      <div className="back content-center">
-        <span className="back-span"></span>
-      </div>
-    </div>
-  )
+    )
+  }
 }
 
 

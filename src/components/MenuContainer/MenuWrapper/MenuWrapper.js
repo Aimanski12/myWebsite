@@ -24,9 +24,9 @@ function MenuWrapper() {
         {/* arrangement is for the left or right locations
         container is for the social navicons */}
         <div className='right-icons'>
-          <SocialIcons 
+          {/* <SocialIcons 
             container='social-navicons'
-            colorMode='#313D43' />
+            colorMode='#313D43' /> */}
         </div>
       </aside>
     </div>

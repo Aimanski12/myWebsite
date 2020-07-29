@@ -3,12 +3,6 @@ import Arrow from '../Buttons/Buttons'
 import Link from 'next/link'
 import {PageData} from '../../utils/context/pageContext'
 
-// import './SectionBlocks.css'
-// import {imageUrl} from '../../utils/common/common'
-// import * as action from '../../store/actions/index'
-// import {pageTransition} from '../../utils/pageAnimation/pageTransitionAnim'
-// import {connect} from 'react-redux'
-
 class SectionBlocks extends Component {
   static contextType = PageData
   render(){
@@ -71,14 +65,6 @@ class SectionBlocks extends Component {
   }
 }
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     // setMenu: (val) => { dispatch(action.menuIsOpen(val)) },
-//     // checkPage: () => {dispatch(action.checkPageLocation())},
-//     // setRedirect: (istrue, path) => { dispatch(action.setRedirect(istrue, path)) }
-//   }
-// }
-// export default connect(null, mapDispatchToProps)(SectionBlocks);
 export default SectionBlocks;
 
 

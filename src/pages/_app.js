@@ -56,6 +56,14 @@ import '../../styles/contacts/message.css'
 import '../../styles/projects/projectheader.css'
 import '../../styles/projects/otherprojects.css'
 
+// css for individual project
+import '../../styles/individualproject/header.css'
+import '../../styles/individualproject/projectbody.css'
+import '../../styles/individualproject/about.css'
+import '../../styles/individualproject/categories.css'
+import '../../styles/individualproject/launchlinks.css'
+import '../../styles/individualproject/screens.css'
+import '../../styles/individualproject/tools.css'
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />

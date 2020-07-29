@@ -2,8 +2,6 @@ import React, {Component} from 'react'
 import {PageData} from '../../utils/context/pageContext'
 import Titleblock from './TitleBlock/TitleBlock'
 import Button from '../Buttons/Buttons'
-// import {imageUrl} from '../../utils/common/common'
-// import './NeedHelp.css'
 
 class NeedHelp extends Component {
   static contextType = PageData

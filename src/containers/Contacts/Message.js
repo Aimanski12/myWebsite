@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 import {PageData} from '../../utils/context/pageContext'
 import Form from './Form'
-// import {imageUrl} from '../../../utils/common/common'
-// import './Message.css'
 
 class Message extends Component {
   static contextType = PageData

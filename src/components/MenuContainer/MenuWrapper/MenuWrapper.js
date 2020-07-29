@@ -1,16 +1,14 @@
 import React from 'react'
-// import {imageUrl} from '../../../utils/common/common'
 import MenuList from '../../MenuList/TopMenuList/Menu'
 import Copyright from '../../FooterItem/CopyRight/CopyRight'
-// import SocialIcons from '../../FooterItem/SocialIcons/SocialIcons'
-// import './menuwrapper.css'
+import SocialIcons from '../../FooterItem/SocialIcons/SocialIcons'
 
 function MenuWrapper() {
   
   return (
     <div className="menu-wrapper">
       <aside className="menu-s menu-left">
-        <img className='square-img' src={'/images/menu-dots.png'} alt="sqaure-dots"/>
+        <img className='square-img' src={'/images/menu-dots.png'} alt="square-dots"/>
       </aside>
       <div className="menu-s menu-middle">
         <div className=" content-center nav-container">
@@ -24,9 +22,9 @@ function MenuWrapper() {
         {/* arrangement is for the left or right locations
         container is for the social navicons */}
         <div className='right-icons'>
-          {/* <SocialIcons 
+          <SocialIcons 
             container='social-navicons'
-            colorMode='#313D43' /> */}
+            colorMode='#313D43' />
         </div>
       </aside>
     </div>

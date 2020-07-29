@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {useEffect} from 'react'
 import Head from 'next/head'
 import Navbar from '../components/Navbar/Navbar'
 import Menu from '../components/MenuContainer/MenuContainer'
@@ -7,40 +7,35 @@ import Footer from '../components/Footer/Footer'
 import {resize} from '../utils/common/common'
 import {PageDataContext} from '../utils/context/pageContext'
 
+function NotFoundPage () {
 
-
-class Home extends Component {
-
-  componentDidMount(){
+  useEffect(() =>{
     // resize event to when the browser is resized
     resize()
     window.addEventListener('resize', resize)
-  }
+  })
 
-  render(){
+  return (
+    <div className="container">
+      <Head>
+        <title>Aiman Adlawan | Page not found</title>
+        <link rel="icon" href="/images/brand-icon-logo.ico" />
+      </Head>
 
-    return (
       <div className="container">
-        <Head>
-          <title>Aiman Adlawan | Page not found</title>
-          <link rel="icon" href="/images/brand-icon-logo.ico" />
-        </Head>
-
-        <div className="container">
-          <div className="main-container">
-            <PageDataContext pagesets={'notfound'}>
-              <Navbar />       
-              <Menu />
-              <main className='main'>
-                <NotFound />
-                <Footer />
-              </main>
-            </PageDataContext>
-          </div>
+        <div className="main-container">
+          <PageDataContext pagesets={'notfound'}>
+            <Navbar />       
+            <Menu />
+            <main className='main'>
+              <NotFound />
+              <Footer />
+            </main>
+          </PageDataContext>
         </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
-export default Home
+export default NotFoundPage

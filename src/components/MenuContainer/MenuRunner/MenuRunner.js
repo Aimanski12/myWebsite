@@ -1,6 +1,4 @@
 import React from 'react'
-// import './menurunner.css'
-
 function MenuRunner() {
   return (
     <div className="menu-runner">

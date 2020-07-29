@@ -2,7 +2,6 @@ import React, {Fragment} from 'react'
 
 function ParagraphLinks(props) {
 
-
   return (
     <Fragment>
       <p className="sub-reveal-container p-desc p-links desc show">

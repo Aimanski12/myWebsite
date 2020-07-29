@@ -2,8 +2,6 @@ import React, {Component} from 'react'
 import QrCode from './components/QrCode'
 import Desc from './components/Credential'
 import {PageData} from '../../utils/context/pageContext'
-// import {connect} from 'react-redux'
-// import './Credential.css'
 
 class Credential extends Component {
   static contextType = PageData
@@ -34,11 +32,4 @@ class Credential extends Component {
   }
 }
 
-// const mapStateToProps = (state) => {
-//   return {
-//     pageData: state.state.pageData
-//   }
-// }
-
-// export default connect(mapStateToProps)(Credential)
 export default Credential

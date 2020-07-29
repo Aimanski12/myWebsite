@@ -1,7 +1,6 @@
 import React from 'react'
-import './About.css'
 
-function About() {
+function About(props) {
   return (
     <article className='header-wrapper project-about-wrapper'>
       <h2 className="p-wrapper head2">
@@ -13,7 +12,7 @@ function About() {
       </h2>
       <p className="sub-reveal-container p-desc desc show">
         <span className="sub-reveal p-desc-content" 
-          style={{color: '#2C6664', fontWeight: 500}}>Albert Einstein was a German-born theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics. His work is also known for its influence on the philosophy of science. His work is also known for its influence on the philosophy of science.</span>
+          style={{color: '#2C6664', fontWeight: 500}}>{props.description}</span>
       </p>
     </article>
   )

@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import {PageData} from '../../utils/context/pageContext'
-// import './HeaderTextBlock.css'
 
 class HeaderTextBlock extends Component {
   static contextType = PageData
@@ -23,7 +22,6 @@ class HeaderTextBlock extends Component {
         <h1 className="header-text">
           {headerText}
         </h1>
-
         <p className="sub-reveal-container desc show">
           <span className="sub-reveal"
             style={{color: data.textColors.secondary, fontWeight: data.title[0] ===  'About me.' ? 500 : 600}}>

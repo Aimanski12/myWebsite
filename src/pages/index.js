@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {useEffect} from 'react'
 import Head from 'next/head'
 // import TopLayover from '../components/TopLayover/TopLayover'
 import Navbar from '../components/Navbar/Navbar'
@@ -13,43 +13,41 @@ import {PageDataContext} from '../utils/context/pageContext'
 
 
 
-class Home extends Component {
+function Home () {
 
-  componentDidMount(){
+  useEffect(()=>{
     // resize event to when the browser is resized
     resize()
     window.addEventListener('resize', resize)
-  }
+  })
 
-  render(){
 
-    return (
+  return (
+    <div className="container">
+      <Head>
+        <title>Aiman Adlawan | Official Website</title>
+        <link rel="icon" href="/images/brand-icon-logo.ico" />
+      </Head>
+
       <div className="container">
-        <Head>
-          <title>Aiman Adlawan | Official Website</title>
-          <link rel="icon" href="/images/brand-icon-logo.ico" />
-        </Head>
-
-        <div className="container">
-          {/* <TopLayover/> */}
-          <div className="main-container">
-            <PageDataContext pagesets={'home'}>
-              <Navbar />       
-              <Menu />
-              <main className='main'>
-                <Header/>
-                <SectionBlocks title='project' />
-                <ShortProjectView />
-                <SectionBlocks title='view more' />
-                <Needhelp />
-                <Footer />
-              </main>
-            </PageDataContext>
-          </div>
+        {/* <TopLayover/> */}
+        <div className="main-container">
+          <PageDataContext pagesets={'home'}>
+            <Navbar />       
+            <Menu />
+            <main className='main'>
+              <Header/>
+              <SectionBlocks title='project' />
+              <ShortProjectView />
+              <SectionBlocks title='view more' />
+              <Needhelp />
+              <Footer />
+            </main>
+          </PageDataContext>
         </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default Home

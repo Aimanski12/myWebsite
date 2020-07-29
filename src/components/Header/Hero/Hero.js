@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-// import {imageUrl } from '../../../utils/common/common'
-// import './Hero.css'
 
 import {PageData} from '../../../utils/context/pageContext'
 

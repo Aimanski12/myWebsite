@@ -1,10 +1,7 @@
 import React from 'react'
-import './Tools.css'
 
-function Tools() {
-  let tools = ['HTML5', 'CSS3', 'Figma', 'Adobe PS', 'Music API', 'CrossBrowser', 'Python', 'Github']
-
-  let toolsList = tools.map((tool, i) =>{
+function Tools(props) {
+  let toolsList = props.tools.map((tool, i) =>{
     return (
       <div className="tool-capsule-wrapper show" key={i}>
         <span>{tool}</span>
@@ -18,7 +15,7 @@ function Tools() {
         <h4 className="p-wrapper head4">
           <span className="show-container p-container show"
             style={{color: '#2C6664'}}>
-            <div className="reveal p-reveal">Tools & Technologies</div>
+            <div className="reveal p-reveal">{'Tools & Technologies'}</div>
             <div className="runner p-runner"></div>
           </span>
         </h4>

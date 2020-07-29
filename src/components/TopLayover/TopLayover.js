@@ -1,21 +1,8 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import BrandLogo from '../Svgs/BrandLogo/BrandLogo'
-// import {introAnim} from '../../utils/common/topLayerAnim'
-// import * as action from '../../store/actions/index'
-// import {connect} from 'react-redux'
-// import './TopLayover.css'
 
 function TopLayover(props) {
 
-  useEffect(()=>{
-    // introAnim(props.hasSession)
-    // if(!props.hasSession){
-    //   setTimeout(()=>{
-    //   props.setSession(true)
-    //   }, 9500)
-    // }
-  })
-  
   return (
     <div className="top-layover">
       <div className="top-layover-container content-center">
@@ -37,20 +24,4 @@ function TopLayover(props) {
   )
 }
 
-// const mapStateToProps = (state) => {
-//   return {
-//     state: state.state,
-//     hasSession: state.state.hasSession,
-//     colorModes: state.state.colorModes,
-//     topOverLayIsRunning: state.state.topOverLayIsRunning
-//   }
-// }
-
-// const mapDispatchToProps = (dispatch, ownProps) => {
-//   return {
-//     setSession: (val) => { dispatch(action.checkBrowserSession(val)) }
-//   }
-// }
-
-// export default connect(mapStateToProps, mapDispatchToProps)(TopLayover)
 export default TopLayover

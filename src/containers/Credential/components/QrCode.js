@@ -1,5 +1,4 @@
 import React from 'react'
-// import {imageUrl} from '../../../../utils/common/common'
 
 function QrCode(props) {
 

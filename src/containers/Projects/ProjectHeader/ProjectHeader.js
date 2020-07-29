@@ -26,13 +26,5 @@ class ProjectHeader extends Component {
   }
 }
 
-// const mapStateToProps = (state) => {
-//   return {
-//     colorModes: state.state.colorModes,
-//     pageData: state.state.pageData
-//   }
-// }
-// export default connect(mapStateToProps)(ProjectHeader)
-
 export default ProjectHeader
 

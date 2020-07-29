@@ -1,6 +1,5 @@
 import React from 'react'
-import Arrow from '../../../components/Buttons/Buttons'
-import './LaunchLinks.css'
+import Arrow from '../Buttons/Buttons'
 
 function LaunchLinks() {
   return (

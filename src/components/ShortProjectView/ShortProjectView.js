@@ -2,9 +2,6 @@ import React, {Component} from 'react'
 import Projects from './projects/Projects'
 import {PageData} from '../../utils/context/pageContext'
 
-// import './ShortProjectView.css'
-// import {connect} from "react-redux"
-
 class ShortProjectView extends Component {
   static contextType = PageData
 
@@ -21,11 +18,4 @@ class ShortProjectView extends Component {
   }
 }
 
-// const mapStateToProps = (state) => {
-//   return {
-//     pageData: state.state.pageData
-//   }
-// }
-
-// export default connect(mapStateToProps)(ShortProjectView)
 export default ShortProjectView

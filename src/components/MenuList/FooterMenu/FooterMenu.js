@@ -1,14 +1,33 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useContext} from 'react'
+import {StateContext} from '../../../utils/context/stateContext'
+import {setTransitionState} from '../../../utils/pageanimations/motion/common'
 import Link from 'next/link'
 
-function FooterMenu(props) {
-  let menus = ['home', 'about', 'projects', 'contacts']
+function FooterMenu() {
+  const {state, setState} = useContext(StateContext)
+  const menus = ['home', 'about', 'projects', 'contacts']
+
+  const click = () => {
+    setState({
+      isTransitioning: setTransitionState(state.isTransitioning),
+      exitMode: 'bottomExit',
+      animation: 'bottomAnimation'
+    })
+  }
+
+
+
   let menusList = menus.map((menu, i)=>{
     return (
       <Fragment key={i}>
-        <Link href={`/${menu === 'home' ? '' : menu}`}>
-          <a >
-            <li  className='footer-menu'>{menu}</li>
+        <Link 
+          key={menu === 'home' ? '/' : `/${menu}`}
+          as={menu === 'home' ? '/' : `/${menu}`}
+          href={`/${menu === 'home' ? '' : menu}`}>
+          <a>
+            <li 
+              className='footer-menu'
+              onClick={click}>{menu}</li>
           </a>
         </Link>
       {i < 3 ? <span>|</span> : null }

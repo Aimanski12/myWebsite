@@ -21,6 +21,10 @@
   margin: 0 20px 10px 0;
 }
 
+.book-link {
+  opacity: 0;
+}
+
 .book-link img {
   filter: brightness(90%);
   transition: all 0.15s ease-in;
@@ -86,9 +90,15 @@
     font-size: 0.8em;
     height: 40px;
   }
+  .book-link {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 568px) {
+  .books-container {
+    margin: 50px 0;
+  }
   .book-icons {
     width: 280px;
   }

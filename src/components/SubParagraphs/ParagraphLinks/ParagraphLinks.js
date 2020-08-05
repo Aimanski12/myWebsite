@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react'
+import Link from 'next/link'
 
 function ParagraphLinks(props) {
 
@@ -10,21 +11,18 @@ function ParagraphLinks(props) {
           <a href="https://www.linkedin.com/" 
             rel='noopener noreferrer'
             target='_blank'>
-            <span className='links'> connect</span></a> with you great people like you.</span>
+            <span className='links'> connect</span>
+          </a> with you great people like you.
+        </span>
       </p>
       <p className="sub-reveal-container p-desc p-links desc show">
         <span className="sub-reveal p-desc-content"
-          style={{color: props.color, fontWeight: 500}}> 
-          Click 
-          <a href="/credentials">
-            <span className='links'
-              // onClick={()=>{
-              //   pageTransition()
-              //   setTimeout(() => {
-              //     setRedirect(true, `/credentials`)
-              //   }, 1000)
-              // }}
-            > here</span></a> to see some of my credentials.
+          style={{color: props.color, fontWeight: 500}}> Click 
+          <Link href="/credentials">
+            <a>
+              <span className='links'> here</span>
+            </a> 
+          </Link> to see some of my credentials.
           </span>
         </p> 
     </Fragment>

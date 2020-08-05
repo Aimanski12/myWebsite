@@ -1,34 +1,32 @@
-import React, {Component} from 'react'
+import React from 'react'
 import Button from '../Svgs/Logos/Logos'
 import WithBox from './WithBox/WithBox'
 
-class Buttons extends Component {
+function Buttons (props){
 
-  render(){
-    let button;
-    if(this.props.type === 'withText') {
-      button = <Button type={this.props.type} colors={this.props.colors}/> 
-    }
-    
-    if(this.props.type === 'withBox') {
-      button = 
-        <WithBox 
-          btnType={this.props.btnType}
-          link={this.props.link}
-          text={this.props.text} 
-          withSvg={this.props.withSvg} 
-          colors={this.props.colors} />
-    }
-    
-    if(this.props.type === 'arrow') {
-      button = 
-        <Button colors={this.props.colors} type={this.props.type}/> 
-    }
-
-    return(
-      (button)
-    )
+  let button;
+  if(props.type === 'withText') {
+    button = <Button type={props.type} colors={props.colors}/> 
   }
+  
+  if(props.type === 'withBox') {
+    button = 
+      <WithBox 
+        btnType={props.btnType}
+        link={props.link}
+        text={props.text} 
+        withSvg={props.withSvg} 
+        colors={props.colors} />
+  }
+  
+  if(props.type === 'arrow') {
+    button = 
+      <Button colors={props.colors} type={props.type}/> 
+  }
+
+  return(
+    (button)
+  )
 }
 
 export default Buttons;

@@ -1,42 +1,39 @@
-import React, {Component} from 'react'
+import React, {useContext} from 'react'
 import {PageData} from '../../utils/context/pageContext'
 import Titleblock from './TitleBlock/TitleBlock'
 import Button from '../Buttons/Buttons'
 
-class NeedHelp extends Component {
-  static contextType = PageData
+function NeedHelp () {
+  const {needHelp} = useContext(PageData)
 
-  render(){
-    let data = this.context.needHelp
+  return (
+    <section className='needhelp-container'>
+      <div className='needhelp-background'
+        style={{background: `url('${needHelp.background}') repeat center top`}}>
 
-    return (
-      <section className='needhelp-container'>
-        <div className='needhelp-background'
-          style={{background: `url('${data.background}') repeat center top`}}>
+      <article className='needhelp-text-block text-span'>
+        <div className="needhelp-title-block">
 
-        <article className='needhelp-text-block text-span'>
-          <div className="needhelp-title-block">
-            <Titleblock data={data}/>
+          <Titleblock data={needHelp}/>
 
-            <p className="sub-reveal-container desc show" >
-                <span className="sub-reveal">
-                  <Button 
-                    text={data.messagetext} 
-                    type={data.type}
-                    withSvg={data.withSvg}
-                    btnType={data.btnType}
-                    link={data.link}
-                    colors={data.color}/>
-                </span>
-              </p>
-
-          </div>
-        </article>
+          <p className="sub-reveal-container desc show" >
+              <span className="sub-reveal btn">
+                <Button 
+                  text={needHelp.messagetext} 
+                  type={needHelp.type}
+                  withSvg={needHelp.withSvg}
+                  btnType={needHelp.btnType}
+                  link={needHelp.link}
+                  colors={needHelp.color}/>
+              </span>
+            </p>
 
         </div>
-      </section>
-    )
-  }
+      </article>
+
+      </div>
+    </section>
+  )
 }
 
 export default NeedHelp

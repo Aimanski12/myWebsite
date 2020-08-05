@@ -28,7 +28,7 @@ class Skills extends Component {
             {backend}
             <article className='section-article-wrapper'>
               <div className="sub-reveal-container desc show">
-                <span className="sub-reveal" style={{color: '#ABA98F'}}>
+                <span className="sub-reveal btn" style={{color: '#ABA98F'}}>
                   <Button 
                     text={data.messagetext} 
                     type={data.type}

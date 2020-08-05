@@ -4,7 +4,7 @@ function Tools(props) {
   let toolsList = props.tools.map((tool, i) =>{
     return (
       <div className="tool-capsule-wrapper show" key={i}>
-        <span>{tool}</span>
+        <span className='sub-reveal'>{tool}</span>
       </div>
     )
   })

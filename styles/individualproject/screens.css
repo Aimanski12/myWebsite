@@ -9,6 +9,10 @@
   margin-top: 0;
 }
 
+.screens-wrapper .project-img {
+  opacity: 1;
+}
+
 .screens-wrapper .p-desc {
   margin-bottom: 10px;
 }
@@ -17,7 +21,7 @@
   width: 100%;
   margin-bottom: 80px;
   /* height: 980px; */
-  background: linear-gradient(180deg, rgba(171, 209, 207, 0.49) 0%, rgba(171, 209, 207, 0.25) 31.25%, rgba(255, 255, 255, 0) 100%);
+  /* background: linear-gradient(180deg, rgba(171, 209, 207, 0.49) 0%, rgba(171, 209, 207, 0.25) 31.25%, rgba(255, 255, 255, 0) 100%); */
 }
 
 .project-img img {

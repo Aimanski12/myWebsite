@@ -34,13 +34,19 @@ nav ul {
   z-index: 640;
 }
 
+.list-front:focus {
+  outline: none;
+}
+
 .list-back {
   z-index: 620;
 }
 
 .menu-list-text {
   font-size: 3em;
-  color: #2C6664;
+  /* color: #2C6664; */
+  /* color: #C6C4AF */
+  color: #267572
 }
 
 .menu-list-text:hover {
@@ -57,7 +63,8 @@ nav ul {
   color: #C6C4AF
 }
 .active .menu-list-backer {
-  color: #2C6664;
+  /* color: #2C6664; */
+  color: #267572;
 }
 
 

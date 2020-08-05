@@ -44,6 +44,10 @@
   font-weight: 400;
 }
 
+.skills .btn {
+  width: 170px;
+}
+
 @media (max-width: 1268px) {
   /* .icons-container {
     width: 130%;
@@ -100,7 +104,7 @@
     margin-right: 13px;
   }
   .figure-icons {
-    width: 324px;
+    width: 100%;
     margin-bottom: 70px;
   }
 }

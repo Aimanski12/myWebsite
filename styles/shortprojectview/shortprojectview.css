@@ -51,7 +51,7 @@
 .project-img {
   width: 100%;
   height: 100%;
-  opacity: 1;
+  opacity: 0;
   transform: translateY(0);
 }
 
@@ -203,6 +203,7 @@
     margin-top: 40px;
     box-shadow: none;
   }
+  
 }
 
 @media (max-width: 768px){
@@ -213,7 +214,9 @@
   .short-project-wrapper .projects-wrapper {
     width: 100%;
   }
-
+  .project-img {
+    opacity: 1;
+  }
   .project-img-desc,
   .project-image,
   .img-backer,

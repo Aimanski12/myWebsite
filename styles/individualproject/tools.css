@@ -23,6 +23,8 @@
   height: 30px;
   overflow: hidden;
   float: left;
+  /* transform: translateY(60px); */
+  /* opacity: 0; */
   /* display: inline-block; */
   margin-right: 10px;
 }

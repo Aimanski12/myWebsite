@@ -7,14 +7,14 @@ function QrCode(props) {
 
   return (
     <div className="content-center credential-qr">
-      <span className="show-container show">
+      <span className="sub-reveal-container show">
         <div className="reveal ">
           <a href={props.certLink}>
             <img src={`/images/${props.qrCode}.png`} alt=""/>
           </a>
           <span>scan or click to see certificate</span>
         </div>
-        <div className="runner"></div>
+        {/* <div className="runner"></div> */}
       </span>
     </div>
   )

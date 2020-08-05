@@ -6,14 +6,14 @@ function Skill(props) {
   let skills = props.skills.skills.map((skill, i) =>{
     return (
       <div className="icon-wrapper" key={i}>
-        <span className="show-container show">
-          <div className="reveal">
+        <span className="sub-reveal-container show">
+          <div className="sub-reveal">
             <img className='skill-icon' 
               src={`/images/${skill.img}.png`} 
               alt={`small ${skill.alt} logo`}/>
             <span className='skill-name'>{skill.name}</span>
           </div>
-          <div className="runner"></div>
+          {/* <div className="runner"></div> */}
         </span>
       </div>
     )

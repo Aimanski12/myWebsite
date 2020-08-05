@@ -504,7 +504,8 @@ page. this is the wrapper container*/
 
 .reveal {
   display: block;
-  transform: translateY(0%);
+  transform: translateY(60px);
+  opacity: 0;
 }
 
 .runner {
@@ -523,10 +524,20 @@ page. this is the wrapper container*/
 
 .sub-reveal {
   display: block;
-  transform: translateY(0%);
+  opacity: 0;
+  transform: translateY(60px);
 }
 
-
+@media (max-width: 768px) {
+  .reveal {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .sub-reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 

@@ -1,6 +1,7 @@
 .project-tools {
   width: 100%;
-  height: 110px;
+  height: 150px;
+  /* background: red; */
   /* margin-bottom: 50px; */
   /* background: rgba(90,90,90,0.1); */
 }
@@ -72,6 +73,9 @@
 }
 
 @media(max-width: 668px) {
+  .project-tools {
+    height: 170px;
+  }
   .tool-capsule-wrapper span {
     font-size: .81em;
   }

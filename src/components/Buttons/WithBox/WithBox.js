@@ -1,21 +1,18 @@
 import React, {useContext} from 'react'
 import {StateContext} from '../../../utils/context/stateContext'
-import {setTransitionState} from '../../../utils/pageanimations/motion/common'
 import Envelop from '../../Svgs/Logos/Logos'
 import Link from 'next/link'
 
 function WithBox(props) {
-  const {state, setState} = useContext(StateContext)
+  const {setTransitionState} = useContext(StateContext)
 
   let svg = props.withSvg ? 
     ( <Envelop type='envelop' colors={props.colors} /> ) : null
 
+  // when the button link is clicked
+  // we will update the transition state
   const click = () => {
-    setState({
-      exitMode: 'bottomExit',
-      isTransitioning: setTransitionState(state.isTransitioning),
-      animation: 'bottomAnimation'
-    })
+    setTransitionState('bottom')
   }
 
   return (

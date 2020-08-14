@@ -1,5 +1,6 @@
 import React, {useEffect, useContext} from 'react'
 import Head from 'next/head'
+import Intro from '../../components/Intro/Intro'
 import {PageDataContext} from '../../utils/context/pageContext'
 import {resize} from '../../utils/common/common'
 import TopLayover from '../../components/TopLayover/TopLayover'
@@ -19,12 +20,8 @@ function Projects () {
   useEffect(() => {
     // resize event to when the browser is resized
     resize()
-    // scroll()
-    window.addEventListener('scroll', debounce(scrollAnimation, 50))
-    // return () => {
-    //   window.removeEventListener('scroll', scroll)
-    // }
-
+    // scroll event
+    window.addEventListener('scroll', debounce(scrollAnimation, 30))
   })
 
 
@@ -41,6 +38,7 @@ function Projects () {
       </Head>
 
       <div className="container">
+        <Intro withAnim={true}/>
         <TopLayover/>
         <div className="main-container">
           <PageDataContext projectsets={'music-app'}>

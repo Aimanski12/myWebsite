@@ -1,5 +1,6 @@
 import React, {useEffect, useContext} from 'react'
 import Head from 'next/head'
+import Intro from '../components/Intro/Intro'
 import TopLayover from '../components/TopLayover/TopLayover'
 import Navbar from '../components/Navbar/Navbar'
 import Menu from '../components/MenuContainer/MenuContainer'
@@ -10,6 +11,7 @@ import {resize} from '../utils/common/common'
 import {scrollAnimation, debounce} from '../utils/pageanimations/scrollanimation/scrollanimation'
 import {PageDataContext} from '../utils/context/pageContext'
 import {StateContext} from '../utils/context/stateContext'
+import {InputDataContext} from '../utils/context/inputContext'
 import {variants} from '../utils/pageanimations/motion/mainvariant'
 import {motion} from 'framer-motion'
 
@@ -22,12 +24,7 @@ function Contacts () {
     // resize event to when the browser is resized
     resize()
     // scroll event
-    scrollAnimation()
-    window.addEventListener('scroll', debounce(scrollAnimation, 50))
-    // window.addEventListener('scroll', scroll)
-    // return () => {
-    //   window.removeEventListener('scroll', scroll)
-    // }
+    window.addEventListener('scroll', debounce(scrollAnimation, 30))
   })
   
   return (
@@ -43,6 +40,7 @@ function Contacts () {
       </Head>
 
       <div className="container">
+        <Intro withAnim={true}/>
         <TopLayover/>
         <div className="main-container">
           <PageDataContext pagesets={'contacts'}>
@@ -50,7 +48,9 @@ function Contacts () {
             <Menu />
             <main className='main'>
               <Header/>
-              <Message />
+              <InputDataContext>
+                <Message />
+              </InputDataContext>
               <Footer />
             </main>
           </PageDataContext>

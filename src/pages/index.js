@@ -1,5 +1,6 @@
 import React, {useEffect, useContext} from 'react'
 import Head from 'next/head'
+import Intro from '../components/Intro/Intro'
 import TopLayover from '../components/TopLayover/TopLayover'
 import Navbar from '../components/Navbar/Navbar'
 import Menu from '../components/MenuContainer/MenuContainer'
@@ -22,16 +23,8 @@ function Home () {
     // resize event to when the browser is resized
     resize()
     // scroll event
-    setTimeout(()=>{
-      scrollAnimation()
-    }, 300)
-    window.addEventListener('scroll', debounce(scrollAnimation, 50))
-    // return () => {
-    //   window.removeEventListener('scroll', scroll)
-    // }
+    window.addEventListener('scroll', debounce(scrollAnimation, 30))
   })
-
-  
 
   return (
     <motion.div 
@@ -45,6 +38,7 @@ function Home () {
         <link rel="icon" href="/images/brand-icon-logo.ico" />
       </Head>
       <div className="container">
+        <Intro withAnim={true}/>
         <TopLayover/>
         <div className="main-container">
           <PageDataContext pagesets={'home'}>

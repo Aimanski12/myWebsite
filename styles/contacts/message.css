@@ -11,7 +11,7 @@
 }
 
 .message-wrapper{
-  opacity: 0;
+  /* opacity: 0; */
   width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -28,6 +28,19 @@
 
 .required {
   font-size: 0.9em;
+  font-weight: 500
+}
+
+.go {
+  color: #2C6664;
+}
+
+.alert {
+  color: red
+}
+
+.warning {
+  color: orange
 }
 
 form {
@@ -54,6 +67,7 @@ form {
   min-width: 50px;
   height: 60px;
   text-align: center;
+  border-right: 1px solid rgba(180,180,180, 0.5);
   border-radius: 8px 0 0 8px;
 }
 
@@ -103,6 +117,7 @@ form {
   margin-top: 20px;
 }
 
+
 .notice {
   height: 100%;
   width: calc(100% - 80px);
@@ -111,6 +126,7 @@ form {
   color: #2C6664;
   float: left
 }
+
 
 .notice span {
   font-weight: 500;

@@ -1,0 +1,81 @@
+
+.intro-animation{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 1500;
+  background: #0E4268;
+}
+
+.intro-logo-wrapper {
+  width: 190px;
+  min-height: 190px;
+  /* background: rgba(210,210,210,0.1); */
+}
+
+.intro-logo-wrapper svg, .intro-logo-wrapper span {
+  opacity: 0;
+}
+
+.intro-logo-wrapper span {
+  font-size: 1em;
+  margin-top: 5px;
+  color: #1B87D6
+}
+
+@media(max-width: 668px){
+  .intro-logo-wrapper {
+    width: 170px;
+    min-height: 180px;
+  }
+  .intro-logo-wrapper svg{
+    width: 135px;
+    height: 135px;
+  }
+  .intro-logo-wrapper span {
+    font-size: 0.95em;
+  }
+}
+
+@media(max-width: 568px){
+  .intro-logo-wrapper {
+    width: 150px;
+    min-height: 160px;
+  }
+  .intro-logo-wrapper svg{
+    width: 120px;
+    height: 130px;
+  }
+  .intro-logo-wrapper span {
+    font-size: 0.9em;
+  }
+}
+
+@media(max-width: 468px){
+  .intro-logo-wrapper {
+    width: 140px;
+    min-height: 150px;
+  }
+  .intro-logo-wrapper svg{
+    width: 110px;
+    height: 120px;
+  }
+  .intro-logo-wrapper span {
+    font-size: 0.85em;
+  }
+}
+
+@media(max-width: 368px){
+  .intro-logo-wrapper {
+    width: 130px;
+    min-height: 140px;
+  }
+  .intro-logo-wrapper svg{
+    width: 100px;
+    height: 110px;
+  }
+  .intro-logo-wrapper span {
+    font-size: 0.8em;
+  }
+}
+

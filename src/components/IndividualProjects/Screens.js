@@ -1,8 +1,17 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useContext} from 'react'
+import {StateContext} from '../../utils/context/stateContext'
 import Link from 'next/link'
 import Arrow from '../Buttons/Buttons'
 
 function Screens(props) {
+  const {setTransitionState} = useContext(StateContext)
+
+  // when the button link is clicked
+  // we will update the transition state
+  const click = () => {
+    setTransitionState('bottom')
+  }
+
 
   let screens = props.screens.map((screen, i)=> {
     return (
@@ -49,10 +58,14 @@ function Screens(props) {
         <div className='show-container show'>
           <Link href='/projects'>
             <a className='reveal desc' style={{color: '#2C6664'}}>
-              <span className=''>{'View other projects'}</span>
-              <span className='block-arrow'>
-                <Arrow type='arrow' colors={'#2C6664'}/>
-              </span>
+              <div 
+                className='button-wrpr'
+                onClick={click}>
+                <span className=''>{'View other projects'}</span>
+                <span className='block-arrow'>
+                  <Arrow type='arrow' colors={'#2C6664'}/>
+                </span>
+              </div>
             </a>
           </Link>
           <div className="runner"></div>

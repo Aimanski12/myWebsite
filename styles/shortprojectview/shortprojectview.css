@@ -29,7 +29,7 @@
 
 .img-backer {
   height: 450px;
-  position: relative;
+  position: absolute;
   z-index: 100;
   opacity: 0.8;
 }
@@ -163,9 +163,9 @@
   .button-wrapper {
     margin-top: 50px;
   }
-  .button-wrapper span {
+  /* .button-wrapper span {
     font-size: 1.07em;
-  }
+  } */
 }
 
 @media (max-width: 868px) {
@@ -232,9 +232,9 @@
   .project-text-desc {
     height: 137px;
   }
-  .button-wrapper span {
-    font-size: 1.04em;
-  }
+  /* .button-wrapper span {
+    font-size: 1.4em;
+  } */
 }
 
 @media (max-width: 668px) {
@@ -279,7 +279,7 @@
   }
   .button-wrapper {
     margin-top: 00px;
-    float: left;
+    /* float: left; */
   }
 }
 

@@ -6,6 +6,12 @@
   z-index: 800;
 }
 
+@media (max-width: 1580px) {
+  .navbar-container {
+    width: 100%
+  }
+}
+
 @media (max-width: 1268px) {
   .navbar-container{
     top: 47.5px;

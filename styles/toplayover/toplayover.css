@@ -2,11 +2,11 @@
   width: 100%;
   height: 100vh;
   position: fixed;
-  background: #194881;
+  background: #0E4268;
   z-index: 1000;
 }
 
-.top-layover-container, .top-layover-runner{
+.top-layover-container{
   position: absolute;
   width: 100%;
   height: 100vh;
@@ -24,40 +24,20 @@
 
 .top-layover-logo svg {
   opacity: 1;
-  width: 160px
+  width: 100%
 }
 
-.top-loading {
-  font-family: 'Poppins', Helvetica, Verdana;
-  font-size: 1em;
-  font-weight: 600;
-  letter-spacing: -0.05em;
-  color: #B1B099;
-  height: 40px;
-  opacity: 1;
-  width: 100%;
-  line-height: 40px;
-  text-align: center;
-}
-
-.top-layover-runner {
-  z-index: 900;
-}
-
-.top-runner {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100vh;
+@media (max-width: 668px) {
+  .top-layover-logo {
+    width: 94px;
+    height: 94px;
+  }
 }
 
 @media (max-width: 568px){
   .top-layover-logo {
-    width: 150px;
-    height: 169px;
-  }
-  .top-layover-logo svg {
-    width: 150px
+    width: 86px;
+    height: 86px;
   }
   .top-loading {
     font-size: 0.98em;
@@ -66,11 +46,8 @@
 
 @media (max-width: 468px) {
   .top-layover-logo {
-    width: 140px;
-    height: 158px;
-  }
-  .top-layover-logo svg {
-    width: 140px
+    width: 78px;
+    height: 78px;
   }
   .top-loading {
     font-size: 0.95em;
@@ -79,12 +56,8 @@
 
 @media (max-width: 368px) {
   .top-layover-logo {
-    width: 130px;
-    height: 147px;
-  }
-
-  .top-layover-logo svg {
-    width: 130px
+    width: 70px;
+    height: 70px;
   }
 
   .top-loading {

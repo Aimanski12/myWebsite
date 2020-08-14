@@ -28,6 +28,23 @@
   width: 100%;
 }
 
+.button-wrpr {
+  transition: all 0.2s ease-in;
+}
+
+.button-wrpr:hover {
+  opacity: 0.92;
+  transition: all 0.2s ease-in;
+}
+
+.button-wrpr:hover .block-arrow{
+  transform: translateX(15px);
+  transition: all 0.15s ease-in;
+}
+.button-wrpr .block-arrow {
+  transition: all 0.15s ease-in;
+}
+
 
 @media (max-width: 868px) {
  .project-img {

@@ -1,18 +1,23 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import {StateContext} from '../../../utils/context/stateContext'
 import Link from 'next/link'
 
 function ProjectLink(props) {
+  const {setTransitionState} = useContext(StateContext)
+  
+  // set transition state
+  const click = () => {
+    setTransitionState('bottom')
+  }
+
   return (
     <div className="project-text-alignright">
       <Link href={`${props.internallinks}`}>
         <a>
-          {/* <button type='button' 
-            className='sub-reveal-container content-center button-wrapper show' >
-            <span className='sub-reveal'
-              style={{color: props.textcolor}}>View project</span>
-          </button> */}
-          <button type='button' 
-            className='content-center button-wrapper' >
+          <button 
+            type='button' 
+            className='content-center button-wrapper' 
+            onClick={click} >
             <span className=''
               style={{color: props.textcolor}}>View project</span>
           </button>

@@ -1,5 +1,5 @@
 .paragraphs {
-  padding: 40px 0 80px;
+  padding: 10px 0 120px;
   width: 100%;
   min-height: 150px;
 }
@@ -12,9 +12,13 @@
   letter-spacing: -0.02em;
 }
 
-.p-desc {
-  margin-top: 10px;
-  margin-bottom: 50px;
+.paragraphs h3:nth-child(5), .paragraphs h3:nth-child(7), .paragraphs h3:nth-child(9) {
+  margin-top: 40px;
+}
+
+.paragraphs .p-desc {
+  /* margin-top: 10px; */
+  margin-bottom: 15px;
 }
 
 .p-desc-content {

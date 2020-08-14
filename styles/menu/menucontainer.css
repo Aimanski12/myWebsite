@@ -22,6 +22,12 @@
   z-index: 600;
 }
 
+@media (max-width: 1580px){
+  .menu-container, .menu-wrapper, .menu-runner{
+    width: 100%
+  }
+}
+
 @media screen and (max-width: 896px) and (orientation: landscape) {
 
   .menu-wrapper,

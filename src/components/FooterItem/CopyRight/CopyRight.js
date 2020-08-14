@@ -1,17 +1,16 @@
 import React, {useContext} from 'react'
 import {StateContext} from '../../../utils/context/stateContext'
-import {setTransitionState} from '../../../utils/pageanimations/motion/common'
 import { closeMenu } from '../../../utils/pageanimations/navbarmenu/menuClickEvents'
 import {fadeNavbar} from '../../../utils/pageanimations/navbarmenu/navbartransition'
 import Link from 'next/link'
 
 function CopyRight(props) {
-  const {state, setState } = useContext(StateContext)
+  const {setTransitionState} = useContext(StateContext)
 
-  // set the mode to its coresponding value if the privacy
-  // button clicked is from the bottom
-  let exitMode = props.fromTop ? 'topExit' : 'bottomExit'
-  let animation = props.fromTop ? 'topAnimation' : 'bottomAnimation'
+  // check if the button click is from the top nav
+  // or from the bottom nav to return a string
+  // that will update the state transition
+  let from = props.fromTop ? 'top' : 'bottom'
 
   // if the privacy button clicked is from the top navbar
   // then we will call this function to close the navbar
@@ -22,12 +21,7 @@ function CopyRight(props) {
 
   const click = () => {
     props.fromTop ? closenavbar() : null
-    setState({
-      menuIsOpen: !state.menuIsOpen,
-      exitMode,
-      isTransitioning: setTransitionState(state.isTransitioning),
-      animation
-    })
+    setTransitionState(from)
   }
 
   return (

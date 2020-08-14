@@ -1,5 +1,6 @@
 import React, {useEffect, useContext} from 'react'
 import Head from 'next/head'
+import Intro from '../../components/Intro/Intro'
 import Navbar from '../../components/Navbar/Navbar'
 import Menu from '../../components/MenuContainer/MenuContainer'
 import TopLayover from '../../components/TopLayover/TopLayover'
@@ -24,11 +25,7 @@ function Projects () {
     // resize event to when the browser is resized
     resize()
     // scroll event
-    scrollAnimation()
-    window.addEventListener('scroll', debounce(scrollAnimation, 50))
-    // return () => {
-    //   window.removeEventListener('scroll', scroll)
-    // }
+    window.addEventListener('scroll', debounce(scrollAnimation, 30))
   })
   
   
@@ -45,6 +42,7 @@ function Projects () {
       </Head>
 
       <div className="container">
+        <Intro withAnim={true}/>
         <TopLayover/>
         <div className="main-container">
           <PageDataContext pagesets={'projects'}>

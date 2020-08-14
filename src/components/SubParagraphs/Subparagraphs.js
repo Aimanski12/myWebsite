@@ -8,13 +8,15 @@ function Subparagraphs () {
   let sections = headers.subParagraph.content.map((text, i) => {
     return (
       <Fragment key={i}>
-      <h3 className="p-wrapper head3">
-          <span className="show-container p-container show"
-            style={{color: headers.textColors.primary}}>
-            <div className="reveal p-reveal">{text.title}</div>
-            <div className="runner p-runner"></div>
-          </span>
-        </h3>
+        {text.withTitle ? 
+          <h3 className="p-wrapper head3">
+            <span className="show-container p-container show"
+              style={{color: headers.textColors.primary}}>
+              <div className="reveal p-reveal">{text.title}</div>
+              <div className="runner p-runner"></div>
+            </span>
+          </h3> : null
+        }
         <p className="sub-reveal-container p-desc desc show">
           <span className="sub-reveal p-desc-content"
             style={{color: headers.textColors.secondary, 
@@ -29,7 +31,7 @@ function Subparagraphs () {
     <div className='paragraphs'>
       {sections}
       {headers.subParagraph.specialLinks.isTrue ? 
-        <ParagraphLinks color={headers.textColors.secondary} /> : null}
+        <ParagraphLinks colors={headers.textColors} /> : null}
     </div>
   )
 }

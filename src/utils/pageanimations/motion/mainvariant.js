@@ -11,17 +11,17 @@ export const variants = {
     // },
   },
   topExit: {
-    // opacity: 0,
+    opacity: 1,
     transition: {
-      delay: 1.6,
-      // duration: 0
+      delay: .5,
+      // duration: 5
     },
   },
   bottomExit: {
-    // opacity: 0,
+    opacity: 1,
     transition: {
-      delay: .65,
-      // duration: 0.1
+      // delay: .3
+      duration: .3
     },
   }
 }

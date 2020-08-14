@@ -61,11 +61,11 @@ export function menuClickElements () {
 
 export function topLayoverElements() {
   return {
-    svg: qEl('top-layover-logo svg', 0),
-    text: qEl('top-loading', 0),
-    runner: qEl('top-runner', 0),
-    top: qEl('top-layover', 0),
-    container: qEl('container', 0)
+    intro: qEl('intro-animation', 0),
+    container: qEl('container', 0),
+    main: qEl('main-container', 0),
+    svg: qEl('intro-logo-wrapper svg', 0),
+    text: qEl('intro-logo-wrapper span', 0)
   }
 }
 

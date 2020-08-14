@@ -33,7 +33,7 @@
 .scroll-btn-container:hover {
   cursor: pointer;
   transform: translateY(10px);
-  transition: all 0.45s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .scroll-cover {

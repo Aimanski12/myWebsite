@@ -4,13 +4,13 @@ import {useRouter} from 'next/router'
 import {StateContext} from '../../../utils/context/stateContext'
 import {checkRoute} from '../../../utils/common/common'
 import {mouseEnter, mouseOut} from '../../../utils/pageanimations/navbarmenu/menuListEvents'
-import {setTransitionState} from '../../../utils/pageanimations/motion/common'
+// import {setTransitionState} from '../../../utils/pageanimations/motion/common'
 import { closeMenu } from '../../../utils/pageanimations/navbarmenu/menuClickEvents'
 import {fadeNavbar} from '../../../utils/pageanimations/navbarmenu/navbartransition'
 
 function Menu() {
   let menus = ['home', 'about', 'projects', 'contacts']
-  const { state, setState, setActiveRoute } = useContext(StateContext)
+  const { state, setActiveRoute, setTransitionState } = useContext(StateContext)
   const currentRoute = checkRoute(useRouter().pathname)
 
   // set active route to the current route
@@ -22,12 +22,7 @@ function Menu() {
   const click = () => {
     fadeNavbar()
     closeMenu()
-    setState({
-      menuIsOpen: !state.menuIsOpen,
-      isTransitioning: setTransitionState(state.isTransitioning),
-      exitMode: 'topExit',
-      animation: 'topAnimation'
-    })
+    setTransitionState('top')
   }
 
 

@@ -1,21 +1,16 @@
 import React, {Fragment, useContext} from 'react'
 import {StateContext} from '../../../utils/context/stateContext'
-import {setTransitionState} from '../../../utils/pageanimations/motion/common'
+// import {setTransitionState} from '../../../utils/pageanimations/motion/common'
 import Link from 'next/link'
 
 function FooterMenu() {
-  const {state, setState} = useContext(StateContext)
+  const {setTransitionState} = useContext(StateContext)
   const menus = ['home', 'about', 'projects', 'contacts']
 
+  // update the state for the transition
   const click = () => {
-    setState({
-      isTransitioning: setTransitionState(state.isTransitioning),
-      exitMode: 'bottomExit',
-      animation: 'bottomAnimation'
-    })
+    setTransitionState('bottom')
   }
-
-
 
   let menusList = menus.map((menu, i)=>{
     return (

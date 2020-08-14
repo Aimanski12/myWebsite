@@ -6,6 +6,9 @@ import {StateProvider} from '../utils/context/stateContext'
 import '../../styles/global/styleOne.css'
 import '../../styles/global/styleTwo.css'
 
+// intro css
+import '../../styles/intro/intro.css'
+
 // css for the toplayover
 import '../../styles/toplayover/toplayover.css'
 

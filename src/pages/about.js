@@ -1,5 +1,6 @@
 import React, {useEffect, useContext} from 'react'
 import Head from 'next/head'
+import Intro from '../components/Intro/Intro'
 import TopLayover from '../components/TopLayover/TopLayover'
 import Navbar from '../components/Navbar/Navbar'
 import Menu from '../components/MenuContainer/MenuContainer'
@@ -13,9 +14,9 @@ import {scrollAnimation, debounce} from '../utils/pageanimations/scrollanimation
 import {PageDataContext} from '../utils/context/pageContext'
 import {StateContext} from '../utils/context/stateContext'
 import {variants} from '../utils/pageanimations/motion/mainvariant'
-
-
 import {motion} from 'framer-motion'
+
+
 
 function About () {
   const {state} = useContext(StateContext)
@@ -24,13 +25,7 @@ function About () {
     // resize event to when the browser is resized
     resize()
     // scroll event
-    setTimeout(()=>{
-      scrollAnimation()
-    }, 300)
-    window.addEventListener('scroll', debounce(scrollAnimation, 50))
-    // return () => {
-    //   window.removeEventListener('scroll', scroll)
-    // }
+    window.addEventListener('scroll', debounce(scrollAnimation, 30))
   })
   
   
@@ -46,6 +41,7 @@ function About () {
         <link rel="icon" href="/images/brand-icon-logo.ico" />
       </Head>
       <div className="container">
+        <Intro withAnim={true}/>
         <TopLayover/>
         <div className="main-container">
           <PageDataContext pagesets={'about'}>

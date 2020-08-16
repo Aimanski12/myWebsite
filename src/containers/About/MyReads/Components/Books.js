@@ -5,7 +5,7 @@ function Books(props) {
     return (
       <div className="book-wrapper" key={i}>
         <span className="show-container show">
-          <a href={`https://${book.link}`} 
+          <a href={`https://www.amazon.com/${book.link}`} 
             className='reveal book-link'
             rel='noopener noreferrer'
             target='_blank'>

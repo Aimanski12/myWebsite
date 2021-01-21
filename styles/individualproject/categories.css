@@ -2,18 +2,20 @@
 
 .project-categories {
   width: 100%;
+  display: block;
   min-height: 100px;
 }
 
 .project-category {
   min-width: 33.33%;
-  min-height: 50px;
+  min-height: 40px;
   float: left;
+  /* background: blue; */
 }
 
 .project-categories .p-desc {
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 1em;
 }
 

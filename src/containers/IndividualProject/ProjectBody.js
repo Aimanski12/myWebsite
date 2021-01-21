@@ -18,12 +18,12 @@ class ProjectBody extends Component {
         <div className='project-background'
           style={{background: `url('${data.bodybackground}') repeat center top`}} >
 
-          <div className="projects-wrapper">
+          <div className="projects-wrapper project-wrapper-top">
             <About description={data.desc}/>
             <div className="header-wrapper project-description-wrapper">
               <Category categories={data.categories}/>
               <Tools tools={data.tools}/>          
-              <LaunchLinks />
+              <LaunchLinks links={data.projectlinks.appLinks}/>
             </div>
           </div>
           <Screens screens={data.photo.screens}/>

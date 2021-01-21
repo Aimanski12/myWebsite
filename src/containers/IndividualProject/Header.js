@@ -19,7 +19,7 @@ class Header extends Component {
                 style={{background: `url('${data.photo.landing}') no-repeat center top`, backgroundSize: 'cover'}}></div>
               </div>
               <div className="image-front-overlay">
-                <div className="image-overlay green-overlay"></div>
+                <div className={`image-overlay ${data.fadedBackground}`}></div>
               </div>
             </div>
             <div className="content-center project-header-text-wrapper">

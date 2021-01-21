@@ -1,6 +1,7 @@
 .project-tools {
   width: 100%;
-  height: 150px;
+  min-height: 100px;
+  margin: 10px 0 20px 0;
   /* background: red; */
   /* margin-bottom: 50px; */
   /* background: rgba(90,90,90,0.1); */
@@ -44,7 +45,7 @@
 
 @media(max-width: 1468px) {
   .project-tools {
-    height: 130px;
+    min-height: 110px;
   }
 }
 
@@ -68,13 +69,13 @@
 
 @media(max-width: 768px) {
   .project-tools {
-    height: 150px;
+    min-height: 120px;
   }
 }
 
 @media(max-width: 668px) {
   .project-tools {
-    height: 170px;
+    min-height: 130px;
   }
   .tool-capsule-wrapper span {
     font-size: .81em;
@@ -86,12 +87,74 @@
     font-size: .79em;
   }
   .project-tools {
-    height: 170px;
+    min-height: 140px;
   }
 }
 
 @media(max-width: 368px) {
   .project-tools {
-    height: 180px;
+    /* min-height: 10px; */
   }
 }
+
+
+
+
+
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #f4f4f4;
+}
+
+.fix-div {
+  width: 300px;
+  height: 300px;
+  background: #04C2FF;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  mix-blend-mode: difference;
+  z-index: 100;
+}
+
+.div {
+  width: 100%;
+  height: 100vh;
+}
+
+.one {
+  background: #0E3643;
+}
+
+.two {
+  background: #F4F4F4;
+  color: orange;
+  font-size: 15px;
+}
+
+.two h1 {
+  height: 150px;
+  margin-bottom: 200px;
+  font-size: 18px;
+  width: 94%;
+  margin: 0 auto;
+}
+
+
+.three {
+  background: navy;
+}
+
+.four {
+  background: orange;
+}
+/* 
+<div className="container">
+  <div className="fix-div"></div>
+  <div className="div one"></div>
+  <div className="div two"></div>
+  <div className="div three"></div>
+  <div className="div four"></div>
+*/

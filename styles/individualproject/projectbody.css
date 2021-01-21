@@ -17,7 +17,13 @@
 
 .project-body-wrapper .projects-wrapper {
   padding-top: 150px;
+  min-height: 100px;
 }
+
+/* .project-wrapper-top{
+  background: pink;
+} */
+
 
 @media (max-width: 1168px){
   .project-body-wrapper .projects-wrapper {
@@ -28,6 +34,13 @@
 @media (max-width: 868px) {
   .project-body-wrapper .projects-wrapper {
     padding-top: 100px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .project-wrapper-top {
+    min-height: 800px;
   }
 }
 

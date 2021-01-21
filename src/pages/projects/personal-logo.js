@@ -8,8 +8,8 @@ import Navbar from '../../components/Navbar/Navbar'
 import Menu from '../../components/MenuContainer/MenuContainer'
 import Header from '../../containers/IndividualProject/Header'
 import ProjectBody from '../../containers/IndividualProject/ProjectBody'
-import Footer from '../../components/Footer/Footer'
 import {scrollAnimation, debounce} from '../../utils/pageanimations/scrollanimation/scrollanimation'
+import Footer from '../../components/Footer/Footer'
 import {StateContext} from '../../utils/context/stateContext'
 import {variants} from '../../utils/pageanimations/motion/mainvariant'
 import {motion} from 'framer-motion'
@@ -21,18 +21,19 @@ function Projects () {
     // resize event to when the browser is resized
     resize()
     // scroll event
-    window.addEventListener('scroll', debounce(scrollAnimation, 30))
+    // window.addEventListener('scroll', debounce(scrollAnimation, 30))
   })
 
+
    return (
-    <motion.div 
+     <motion.div 
       variants={variants}
       initial='initial'
       animate='enter'
       exit={state.exitMode}
       className="container">
       <Head>
-        <title>Aiman Adlawan | Reservation-App</title>
+        <title>Aiman Adlawan | Music-App</title>
         <link rel="icon" href="/images/brand-icon-logo.ico" />
       </Head>
 
@@ -40,7 +41,7 @@ function Projects () {
         <Intro withAnim={true}/>
         <TopLayover/>
         <div className="main-container">
-          <PageDataContext projectsets={'reservation-app'}>
+          <PageDataContext projectsets={'personal-logo'}>
             <Navbar />       
             <Menu />
             <main className='main'>

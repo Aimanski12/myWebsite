@@ -513,8 +513,8 @@ page. this is the wrapper container*/
 
 .reveal {
   display: block;
-  transform: translateY(60px);
-  opacity: 0;
+  /* transform: translateY(60px); */
+  opacity: 1;
 }
 
 .runner {
@@ -533,8 +533,8 @@ page. this is the wrapper container*/
 
 .sub-reveal {
   display: block;
-  opacity: 0;
-  transform: translateY(60px);
+  opacity: 1;
+  /* transform: translateY(60px); */
 }
 
 @media (max-width: 768px) {

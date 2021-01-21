@@ -57,10 +57,17 @@
   margin-bottom: 0;
 }
 
-.green-overlay {
-  background: linear-gradient(180deg, rgba(44, 102, 100, 0) 0%, rgba(15, 49, 47, 0.74) 75%, #0F312F 100%);
+.brown-overlay {
+  background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(196, 196, 196, 0.166667) 54.17%, rgba(147, 109, 62, 0.789377) 84.37%, #603D12 100%)
 }
 
+.blue-overlay {
+  background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(37, 44, 69, 0.68) 90.2%, #161E39 100%);
+}
+
+.red-overlay {
+  background: linear-gradient(180deg, rgba(108, 0, 0, 0) 0%, rgba(58, 0, 0, 0.59) 86.46%, #260000 100%);
+}
 
 @media (max-width: 1468px) {
   .main-image, .image-overlay {

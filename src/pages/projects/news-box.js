@@ -8,8 +8,8 @@ import Navbar from '../../components/Navbar/Navbar'
 import Menu from '../../components/MenuContainer/MenuContainer'
 import Header from '../../containers/IndividualProject/Header'
 import ProjectBody from '../../containers/IndividualProject/ProjectBody'
-import {scrollAnimation, debounce} from '../../utils/pageanimations/scrollanimation/scrollanimation'
 import Footer from '../../components/Footer/Footer'
+import {scrollAnimation, debounce} from '../../utils/pageanimations/scrollanimation/scrollanimation'
 import {StateContext} from '../../utils/context/stateContext'
 import {variants} from '../../utils/pageanimations/motion/mainvariant'
 import {motion} from 'framer-motion'
@@ -21,19 +21,18 @@ function Projects () {
     // resize event to when the browser is resized
     resize()
     // scroll event
-    window.addEventListener('scroll', debounce(scrollAnimation, 30))
+    // window.addEventListener('scroll', debounce(scrollAnimation, 30))
   })
 
-
    return (
-     <motion.div 
+    <motion.div 
       variants={variants}
       initial='initial'
       animate='enter'
       exit={state.exitMode}
       className="container">
       <Head>
-        <title>Aiman Adlawan | Music-App</title>
+        <title>Aiman Adlawan | News-Box</title>
         <link rel="icon" href="/images/brand-icon-logo.ico" />
       </Head>
 
@@ -41,7 +40,7 @@ function Projects () {
         <Intro withAnim={true}/>
         <TopLayover/>
         <div className="main-container">
-          <PageDataContext projectsets={'music-app'}>
+          <PageDataContext projectsets={'news-box'}>
             <Navbar />       
             <Menu />
             <main className='main'>
@@ -56,31 +55,4 @@ function Projects () {
   )
 }
 
-
-// export async function getStaticProps(context){
-//   let projectSelected = context.params.projects
-//   return {
-//     props: { project: projectSelected }
-//   }
-// }
-
-// export async function getStaticPaths(){
-//   return {
-//     paths: [
-//       { params: {projects: 'music-app'}},
-//       { params: {projects: 'reservation-app'}},
-//       { params: {projects: 'electric-bill'}},
-//       { params: {projects: 'music-player3'}},
-//       { params: {projects: 'music-player4'}},
-//       { params: {projects: 'music-player5'}},
-//     ],
-//     fallback: false
-//   }
-// }
-
 export default Projects
-
-
-// const scroll = () => {
-//   scrollAnimation('page')
-// }

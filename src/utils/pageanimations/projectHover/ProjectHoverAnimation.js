@@ -22,7 +22,7 @@ export function mouseEnter(e, color) {
     anime({
       targets: [el.title, el.desc],
       opacity: 0,
-      translateY: '30%',
+      translateY: '30px',
       duration: 300,
       easing: 'easeOutSine'
     });
@@ -34,7 +34,6 @@ export function mouseEnter(e, color) {
       easing: 'easeOutSine'
     });
   }
-  
 }
 
 // function to run then mouse leaves the project element
@@ -51,7 +50,7 @@ export function mouseOut(e) {
     });
     anime({
       targets: el.img_backer,
-      opacity: 0.8,
+      opacity: 0.6,
       duration: 300,
       easing: 'easeOutSine'
     });

@@ -21,7 +21,7 @@ function Credentials () {
     // resize event to when the browser is resized
     resize()
     // scroll event
-    window.addEventListener('scroll', debounce(scrollAnimation, 30))
+    // window.addEventListener('scroll', debounce(scrollAnimation, 30))
   })
 
   return (

@@ -15,15 +15,17 @@ import {PageDataContext} from '../utils/context/pageContext'
 import {StateContext} from '../utils/context/stateContext'
 import {variants} from '../utils/pageanimations/motion/mainvariant'
 import {motion} from 'framer-motion'
+import Fade from 'react-reveal/Fade'
+import Slide from 'react-reveal/Slide'
 
 function Home () {
   const {state} = useContext(StateContext)
 
   useEffect(()=>{
     // resize event to when the browser is resized
-    resize()
+    // resize()
     // scroll event
-    window.addEventListener('scroll', debounce(scrollAnimation, 30))
+    // window.addEventListener('scroll', debounce(scrollAnimation, 30))
   })
 
   return (
@@ -38,7 +40,30 @@ function Home () {
         <link rel="icon" href="/images/brand-icon-logo.ico" />
       </Head>
       <div className="container">
-        <Intro withAnim={true}/>
+        <div className="fix-div"></div>
+        <div className="div one"></div>
+
+        <div className="div two">
+          <Slide>
+            <Fade bottom>
+              <h1>Hi! I’m Aiman Adlawan. A passionate front-end  developer based in Bensenville, Illinois.</h1>
+            </Fade>
+          </Slide>
+          <Slide>
+            <Fade bottom>
+              <h1>DAmple</h1>
+            </Fade>
+          </Slide>
+          <Slide>
+            <Fade bottom>
+              <h1>DAmple</h1>
+            </Fade>
+          </Slide>
+        </div>
+        <div className="div three"></div>
+        <div className="div four"></div>
+
+        {/* <Intro withAnim={true}/>
         <TopLayover/>
         <div className="main-container">
           <PageDataContext pagesets={'home'}>
@@ -53,7 +78,7 @@ function Home () {
               <Footer />
             </main>
           </PageDataContext>
-        </div>
+        </div> */}
       </div>
     </motion.div>
   )

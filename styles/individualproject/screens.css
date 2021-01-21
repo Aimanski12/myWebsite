@@ -13,6 +13,10 @@
   opacity: 1;
 }
 
+.screens-wrapper .header-wrapper {
+  width: 100%;
+}
+
 .screens-wrapper .p-desc {
   margin-bottom: 10px;
 }

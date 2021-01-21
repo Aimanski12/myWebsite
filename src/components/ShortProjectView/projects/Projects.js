@@ -20,7 +20,7 @@ function Projects(props) {
        style={{background: `url('${proj.theme}') no-repeat center center`}} key={i} >
         <div className="projects-wrapper"
           onMouseLeave={(e)=>mouseOut(e)}
-          onMouseEnter={(e)=>mouseEnter(e, proj.bkgColor)}>
+          onMouseEnter={(e)=>mouseEnter(e, proj.btnBkColor)}>
 
           <Image 
             phototeaser={proj.photo.teaser}

@@ -4,7 +4,7 @@ export function scrollAnimation() {
   // console.log(page)
   if(window.innerWidth > 768) {
     // slideInElementsOnScroll(wait)
-    slideInAnimation()
+    // slideInAnimation()
   }
 }
 

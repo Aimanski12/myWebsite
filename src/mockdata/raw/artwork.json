@@ -1,0 +1,51 @@
+[
+  {
+    "name": "- a young dominicano -",
+    "desc": "This is a sketch of my dominican friend carlos.",
+    "image": "/artwork/young_dominican_guy.webp",
+    "background": "radial-gradient(50% 50% at 50% 50%, #FFCC71 0%, #FAAC5F 19.27%, #DD0000 100%)",
+    "link": "https://www.instagram.com/p/CJ5GJfsAGK4/"
+  },
+  {
+    "name": "- a pretty young lady -",
+    "desc": "A sketch art of a beautiful young woman.",
+    "image": "/artwork/beautiful_young_lady_sketch.webp",
+    "background": "radial-gradient(50% 50% at 50% 50%, #FDC257 0%, #2E1D00 100%)",
+    "link": "https://www.instagram.com/p/CJtnSyFA1hP/"
+  },
+  {
+    "name": "- son goku -",
+    "desc": "Some sketch artwork of Son Goku",
+    "image": "/artwork/goku_sketch.webp",
+    "background": "radial-gradient(50% 50% at 50% 50%, #000000 0%, #002438 42.71%, #016198 67.19%, #0C8DD8 100%)",
+    "link": "https://www.instagram.com/p/CJq-vIlAxgG/"
+  },
+  {
+    "name": "- chef anthony bourdain -",
+    "desc": "A sketch artwork of my favorite chef.",
+    "image": "/artwork/anothony_bourdain_sketch.webp",
+    "background": "radial-gradient(50% 50% at 50% 50%, #FF8A1E 0%, #844204 100%)",
+    "link": "https://www.instagram.com/p/CJoiQcXggKW/"
+  },
+  {
+    "name": "- smoking old man -",
+    "desc": "A wrinkled face of an old man with cigarette.", 
+    "image": "/artwork/a_smoking_old_man.webp",
+    "background": "radial-gradient(50% 50% at 50% 50%, #4DFF5E 0%, #0F6017 100%)",
+    "link": "https://www.instagram.com/p/CJmyGanAlCP/"
+  },
+  {
+    "name": "- staring at the horizon -",
+    "desc": "A sketch art work of a lady looking from afar",
+    "image": "/artwork/a_lady_staring_at_the_horizon.webp",
+    "background": "radial-gradient(50% 50% at 50% 50%, #FDD05C 0%, #FDC257 42.19%, #FF1E1E 100%)",
+    "link": "https://www.instagram.com/p/CJjhvT2A-9l/"
+  },
+  {
+    "name": "- an asian girl -",
+    "desc": "A sketch artwork of a young asian girl.",
+    "image": "/artwork/young_asian_girl_sketch.webp",
+    "background": "radial-gradient(50% 50% at 50% 50%, #00A3FF 0%, #007EC5 61.46%, #01659D 100%)",
+    "link": "https://www.instagram.com/p/CJfVRWDAe2C/"
+  }
+]

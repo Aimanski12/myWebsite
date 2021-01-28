@@ -1,0 +1,133 @@
+{
+  "profile": {
+    "name": "",
+    "desc": "",
+    "alt": "",
+    "link": "/about/aiman_profile_pic.webp"
+  },
+  "facts_about_me": {
+    "name": "",
+    "desc": "",
+    "alt": "",
+    "link": "/about/aiman_at_the_lighthouse.webp"
+  },
+  "how_i_became": {
+    "name": "",
+    "desc": "",
+    "alt": "",
+    "link": "/about/aiman_studying.webp"
+  },
+  "parallax": [
+    {
+      "name": "",
+      "desc": "",
+      "alt": "",
+      "link": "/about/infront_of_philadelphia_municipal_hall.webp"
+    },
+    {
+      "name": "",
+      "desc": "",
+      "alt": "",
+      "link": "/about/at_hilton_restaurant.webp"
+    },
+    {
+      "name": "",
+      "desc": "",
+      "alt": "",
+      "link": "/about/aiman_with_bike_at_the_park.webp"
+    }
+  ],
+  "travels": [
+    {
+      "name": "",
+      "desc": "",
+      "alt": "",
+      "link": "/about/me_at_dusable_harbor.webp"
+    },
+    {
+      "name": "",
+      "desc": "",
+      "alt": "",
+      "link": "/about/winter_season.webp"
+    },
+    {
+      "name": "",
+      "desc": "",
+      "alt": "",
+      "link": "/about/at_schuykill_river.webp"
+    },
+    {
+      "name": "",
+      "desc": "",
+      "alt": "",
+      "link": "/about/chicago_front.webp"
+    },
+    {
+      "name": "",
+      "desc": "",
+      "alt": "",
+      "link": "/about/battleship_new_jersey.webp"
+    },
+    {
+      "name": "",
+      "desc": "",
+      "alt": "",
+      "link": "/about/wind_point_lighthouse.webp"
+    },
+    {
+      "name": "",
+      "desc": "",
+      "alt": "",
+      "link": "/about/with_roommates.webp"
+    },
+    {
+      "name": "",
+      "desc": "",
+      "alt": "",
+      "link": "/about/infront_of_art_museum.webp"
+    },
+    {
+      "name": "",
+      "desc": "",
+      "alt": "",
+      "link": "/about/with_tracy.webp"
+    },
+    {
+      "name": "",
+      "desc": "",
+      "alt": "",
+      "link": "/about/navy_pier.webp"
+    },
+    {
+      "name": "",
+      "desc": "",
+      "alt": "",
+      "link": "/about/at_united_center.webp"
+    },
+    {
+      "name": "",
+      "desc": "",
+      "alt": "",
+      "link": "/about/train_station.webp"
+    },
+    {
+      "name": "",
+      "desc": "",
+      "alt": "",
+      "link": "/about/hilton_reception.webp"
+    },
+    {
+      "name": "",
+      "desc": "",
+      "alt": "",
+      "link": "/about/trum_taj_mahal.webp"
+    },
+    {
+      "name": "",
+      "desc": "",
+      "alt": "",
+      "link": "/about/lake_michigan.webp"
+    }
+  ]
+
+}

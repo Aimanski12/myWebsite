@@ -6,7 +6,7 @@
 div {
   background: orange;
   width: 100%;
-  min-height: 100vh;
+  min-height: 108vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,13 +16,21 @@ div {
 .wrap {
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
-  width: 500px;
+  width: 800px;
   height: auto;
-  margin-bottom: 120px;
+  margin-bottom: 30px;
 }
+
+h1, p {
+  font-family: cursive;
+  
+}
+
 
 @media (max-width: 376px) {
   img {

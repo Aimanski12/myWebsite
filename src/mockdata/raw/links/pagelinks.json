@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Home",
+    "link": "/"
+  },
+  {
+    "name": "Artwork",
+    "link": "/projects/artwork"
+  },
+  {
+    "name": "Webdev",
+    "link": "/projects/webdev"
+  },
+  {
+    "name": "About",
+    "link": "/about"
+  },
+  {
+    "name": "Contact",
+    "link": "/contact"
+  }
+]
+  

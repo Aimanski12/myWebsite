@@ -1,0 +1,58 @@
+{
+  "hero" : {
+    "name": "News-box mockup",
+    "description": "A mobile mockup with blue-yellow theme.",
+    "alt": "news-box mockup 900x675",
+    "link": "/news_box/news_box_hero.webp"
+  },
+  "banner": {
+    "name": "News-Box mockup",
+    "description": "A mobile mockup with blue-yellow theme.",
+    "alt": "news-box mockup 1200x1200",
+    "link": "/news_box/news_box_project_banner.webp"
+  },
+  "parallax": {
+    "link": "/news_box/news_box_parallax.webp",
+    "alt": "a news-box macbook pro mockup design"
+  },
+  "sketch": [
+    {
+      "name": "News routes",
+      "description": "An initial sketch draft for page routes.",
+      "alt": "news-box routes sketch",
+      "link": "/news_box/news_box_routing_sketch.webp"
+    },
+    {
+      "name": "Component Sketch",
+      "description": "An initial sketch draft for news components.",
+      "alt": "news-box draft sketch",
+      "link": "/news_box/news_box_section_layout.webp"
+    }
+  ],
+  "designs": {
+    "name": "Designs and layouts",
+    "description": "A sample layout draft for news and articles.",
+    "alt": "news-box layouts and designs",
+    "link": "/news_box/news_box_designs_&_layout.webp"
+  },
+  "screens": [
+    {
+      "name": "Home screen",
+      "description": "A desktop screen shot on home page.",
+      "alt": "a screen shot of news-box home page",
+      "link": "/news_box/news_box_tile_screen.webp"
+    },
+    {
+      "name": "Mobile screen",
+      "description": "A mobile screen mockups for multiple pages.",
+      "alt": "a mobile screen mockups for news-box",
+      "link": "/news_box/news_box_mobile_screen.webp"
+    },
+    {
+      "name": "News article",
+      "description": "A desktop screen shot for news contents.",
+      "alt": "news-box desktop screen shot for article page",
+      "link": "/news_box/news_box_article_screen.webp"
+    }
+  ]
+}

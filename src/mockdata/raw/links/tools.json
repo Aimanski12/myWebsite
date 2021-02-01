@@ -1,0 +1,156 @@
+{
+  "creative": {
+    "title": "Creative Tools",
+    "tools": [
+      {
+        "name": "Figma",
+        "alt": "figma small thumbnail",
+        "image": "/images/figma.png"
+      },
+      {
+        "name": "Webflow",
+        "alt": "webflow small thumbnail",
+        "image": "/images/webflow.png"
+      },
+      {
+        "name": "Adobe PS",
+        "alt": "adobe ps small thumbnail",
+        "image": "/images/adobe_ps.png"
+      },
+      {
+        "name": "Adobe Il",
+        "alt": "adobe il small thumbnail",
+        "image": "/images/adobe_il.png"
+      },
+      {
+        "name": "Adobe XD",
+        "alt": "adobe xd small thumbnail",
+        "image": "/images/adobe_xd.png"
+      }
+    ]
+  },
+  "frontend": {
+    "title": "Front-end Tools",
+    "tools": [
+      {
+        "name": "HTML5",
+        "alt": "html5 small thumbnail",
+        "image": "/images/html5.png"
+      },
+      {
+        "name": "CSS3",
+        "alt": "css3 small thumbnail",
+        "image": "/images/css3.png"
+      },
+      {
+        "name": "Bootstrap",
+        "alt": "bootsrap small thumbnail",
+        "image": "/images/bootstrap.png"
+      },
+      {
+        "name": "Javascript",
+        "alt": "javascript small thumbnail",
+        "image": "/images/javascript.png"
+      },
+      {
+        "name": "jQuery",
+        "alt": "jquery small thumbnail",
+        "image": "/images/jquery.png"
+      },
+      {
+        "name": "JSON",
+        "alt": "json small thumbnail",
+        "image": "/images/json.png"
+      },
+      {
+        "name": "NodeJS",
+        "alt": "nodejs small thumbnail",
+        "image": "/images/nodejs.png"
+      },
+      {
+        "name": "Python",
+        "alt": "python small thumbnail",
+        "image": "/images/python.png"
+      },
+      {
+        "name": "ReactJS",
+        "alt": "reactjs small thumbnail",
+        "image": "/images/reactjs.png"
+      },
+      {
+        "name": "Redux",
+        "alt": "redux small thumbnail",
+        "image": "/images/redux.png"
+      },
+      {
+        "name": "Next JS",
+        "alt": "nextjs small thumbnail",
+        "image": "/images/next.png"
+      },
+      {
+        "name": "Vue JS",
+        "alt": "vuejs small thumbnail",
+        "image": "/images/vuejs.png"
+      },{
+        "name": "Django",
+        "alt": "django small thumbnail",
+        "image": "/images/django.png"
+      }
+    ]
+  },
+  "backend": {
+    "title": "Build / Back-end",
+    "tools": [
+      {
+        "name": "NPM",
+        "alt": "npm small thumbnail",
+        "image": "/images/npm.png"
+      },
+      {
+        "name": "Webpack",
+        "alt": "webpack small thumbnail",
+        "image": "/images/webpack.png"
+      },
+      {
+        "name": "Gitbash",
+        "alt": "gitbash small thumbnail",
+        "image": "/images/gitbash.png"
+      },
+      {
+        "name": "Github",
+        "alt": "github small thumbnail",
+        "image": "/images/github.png"
+      },
+      {
+        "name": "Express",
+        "alt": "express small thumbnail",
+        "image": "/images/express.png"
+      },
+      {
+        "name": "MongoDB",
+        "alt": "mongodb small thumbnail",
+        "image": "/images/mongodb.png"
+      },
+      {
+        "name": "GraphQL",
+        "alt": "graphql small thumbnail",
+        "image": "/images/graphql.png"
+      },
+      {
+        "name": "Firebase",
+        "alt": "firebase small thumbnail",
+        "image": "/images/firebase.png"
+      },
+      {
+        "name": "Heroku",
+        "alt": "heroku small thumbnail",
+        "image": "/images/heroku.png"
+      },
+      {
+        "name": "SEO",
+        "alt": "seo small thumbnail",
+        "image": "/images/seo.png"
+      }
+    ]
+  }
+}

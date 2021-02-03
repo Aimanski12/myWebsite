@@ -3,7 +3,7 @@ import footerdata from '../data/footer'
 import {Helpers} from './helpers'
 
 export default {
-  page: 'home',
+  index: 'home',
   header: {
     title: [
       "Web Developer &", "Creative Designer"

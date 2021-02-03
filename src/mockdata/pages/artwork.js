@@ -4,7 +4,7 @@ import footerdata from '../data/footer'
 import {Helpers} from './helpers'
 
 export default {
-  page: 'artwork',
+  index: 'artwork',
   header: {
     title: ["Creative Artwork"],
     caption: "Welcome to my art page. Below are some the projects I have done recenly.",

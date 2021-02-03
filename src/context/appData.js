@@ -8,30 +8,29 @@ import notfound from '../mockdata/pages/notfound'
 import webdev from '../mockdata/pages/webdev'
 import {projects} from '../mockdata/pages/projects'
 
+// create context data
 export const AppData = createContext()
 
 export function AppDataContext (props) {
-  
+  // application data 
   const [pagedata, setdata] = useState({
     theme: true,
     isSet: false,
-    page: ""
   })
 
-  
-  const setpagedata = (data) => {
-    // let data = getpagedata(page)
+  // set the page data according to 
+  const setpagedata = (page) => {
+    let data = getpagedata(page)
     if(!pagedata.isSet){
       setdata({
         ...pagedata,
         isSet: true,
-        ...data
+        data: data
       })
-    } else if (pagedata.page != page){
-      console.log(pagedata.page, page)
+    } else if (pagedata.data.index != data.index){
       setdata({
         ...pagedata,
-        ...data
+        data: data
       })
     } 
   }
@@ -46,6 +45,8 @@ export function AppDataContext (props) {
   )
 }
 
+// check the value and return the 
+// repective data
 const getpagedata = (page) => {
   let data = page === "about" ? about : 
     page === "artwork" ? artwork :

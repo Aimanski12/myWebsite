@@ -67,6 +67,21 @@ export const Helpers = (function(){
     return {prev, next}
   }
 
+  // this function will find if the given query parameter
+  // is a valid query based from the project names
+  const _findname = (name) => {
+    // filter the names
+    const val = projects.filter(p => {
+      return p.index === name
+    })
+    // check if the value is valid
+    if(Object.keys(val).length === 0){
+      return false
+    } else {
+      return name
+    }
+  }
+
   return {
     getartwork(n){
       return _getartwork(n)
@@ -80,6 +95,9 @@ export const Helpers = (function(){
     getnextprev(page) {
       return _getnextprev(page)
     },
+    findname(name) {
+      return _findname(name)
+    }
   }
 
 })()

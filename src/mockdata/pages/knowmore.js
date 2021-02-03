@@ -4,7 +4,7 @@ import footerdata from '../data/footer'
 import {Helpers} from './helpers'
 
 export default {
-  page: 'knowmore',
+  index: 'knowmore',
   header: {
     title: ["Get To Know More"],
     caption: "Dig a little deeper and see what I done.",
@@ -56,3 +56,5 @@ export default {
     ...footerdata
   }
 }
+
+{/* <h6 id="preloader__name" style="font-family: &quot;Circular Std Bold&quot;, Helvetica, Arial, sans-serif; color: rgb(255, 255, 255); letter-spacing: 1rem; transition: all 1s cubic-bezier(0.77, 0, 0.175, 1) 0s; animation: 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 normal none running scale; opacity: 0;">JULIUS GUEVARRA</h6>  */}

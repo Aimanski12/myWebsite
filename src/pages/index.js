@@ -1,54 +1,137 @@
-import React, {useContext} from 'react'
-import Link from 'next/link'
+import React, {useContext, useEffect} from 'react'
 import {AppData} from '../context/appData'
 
-
-
 import Head from 'next/head'
-import Svgs from '../components/Svgs/index'
-import homed from '../mockdata/pages/home'
+import Link from 'next/link'
 
 
-export default function Home({homed}) {
+import {motion, useViewportScroll} from 'framer-motion'
+
+let easing = [0.6, -0.05, 0.01, 0.99];
+
+export default function Home() {
+  const {scrollYProgress} = useViewportScroll()
   const {pagedata, setpagedata} = useContext(AppData)
-  setpagedata(homed)
-  console.log(pagedata)
+  useEffect(() => {
+    setpagedata('home')
+    console.log(pagedata)
+  })
+
+
+  const putback = () => {
+    const slider = document.querySelector('.slider')
+    slider.style.display = 'none'
+  }
   
+  const setscroller = () => {
+    const body = document.querySelector('body')
+    body.style.overflow = 'auto'
+  }
+
+
   return (
-    <div className='smaple'>
+    <div className='parent'>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Aiman Adlawan | Official Website</title>
+        <link rel="icon" type="image/x-icon" href="/images/aiman-small-logo.ico" />
       </Head>
-      <h1>this freaking app is now working</h1>
-      <Svgs svg='coloredinsta' />
-      <span>
-        <Svgs svg='instagram' />
-      </span>
-      <span>
-        <Svgs svg='behance' />
-      </span>
-      <span>
-        <Svgs svg='dribbble' />
-      </span>
-      <span>
-        <Svgs svg='linkedin' />
-      </span>
-      <span>
-        <Svgs svg='twitter' />
-      </span>
-        <Svgs svg='pentel' />
 
-        <Svgs svg='bracket' />
 
-        <Svgs svg='webdesign' />
-      <Link href="/artwork">
-        <a>go to artwork</a>
-      </Link>
+
+      <div className="slider">
+        <motion.div 
+          variants={slide} 
+          initial="initial" 
+          animate="animate" 
+          onAnimationStart={setscroller}
+          onAnimationComplete={putback}
+          className="slider-wrapper">
+          <div className="imgwrapper">
+            <img src="/images/sample_logo.svg" alt=""/>
+          </div>  
+        </motion.div>
+      </div>
+
+      <div
+        // initial={{opacity: 1}}
+        // animate={{opacity:1}}
+        // exit={{overflowX: "hidden",
+        //   x: "100vh",
+        //   transition: {
+        //     duration: .8,
+        //     ease: easing
+        //   }}}
+        className="samp">
+        <motion.div 
+          variants={slidetoexit}
+          initial="initial"
+          animate={{opacity: 1}}
+          exit="exit" 
+          className="maindivs">
+          <div className="one1 container">
+            <h1>Home Page</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora iure doloribus itaque, veniam amet minima recusandae libero mollitia quo reiciendis?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe in optio, dicta quis sint doloremque.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro, praesentium!</p>
+            <Link href='/one'>
+              <a onClick={()=>{
+                const body = document.querySelector('body')
+                body.style.overflow = 'hidden'
+              }}> Go to one</a>
+            </Link>
+          </div>
+          <div className="two container">
+            <Link href='/one'>
+              <a onClick={()=>{
+                const body = document.querySelector('body')
+                body.style.overflow = 'hidden'
+              }}> Go to one</a>
+            </Link>
+          </div>
+          <div className="three container">
+            <h1>Home Page</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora iure doloribus itaque, veniam amet minima recusandae libero mollitia quo reiciendis?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe in optio, dicta quis sint doloremque.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro, praesentium!</p>
+          </div>
+        </motion.div>
+      </div>
+
+      <div className="backer">
+        <div className="backer-wrapper">
+          <div className="backer-imgwrapper">
+            <img src="/images/sample_logo.svg" alt=""/>
+          </div>  
+        </div>
+      </div>
+
     </div>
   )
 }
 
-Home.getInitialProps = () => {
-  return {homed}
+const slidetoexit = {
+  initial: {
+    opacity: 1
+  },
+  exit: {
+    overflowX: "hidden",
+    x: "100%",
+    transition: {
+      duration: .8,
+      ease: easing
+    }
+  }
+}
+
+const slide = {
+  initial: {
+    width: '100vw'
+  },
+  animate: {
+    width: 0,
+    transition: {
+      duration: 1,
+      ease: easing
+    }
+  }
 }

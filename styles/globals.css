@@ -3,16 +3,101 @@
   margin: 0
 }
 
-span {
-  background: #003B4D;
-  display: block;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-bottom: 10px
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-span svg {
+.one {
+  background: yellow;
+}
+
+.two {
+  background: papayawhip;
+}
+
+.three {
+  background: lightskyblue;
+}
+
+
+.slider, .backer {
+  position: fixed;
+  z-index: 500;
+  width: calc(100vw - 17px);
+  height: 100vh;
+  /* background: red; */
+  
+}
+
+.slider-wrapper, .backer-wrapper {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  float: right;
+  overflow: hidden;
+}
+
+.imgwrapper, .backer-imgwrapper {
+  float: right;
+  width: calc(100vw - 17px);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  background: #1890B5;
+}
+.maindivs{
+  width: calc(100vw - 17px);
+  position: absolute;
+  z-index: 400;
+}
+
+.one1 {
+  background: rgb(190,190,190);
+}
+
+.maindivs, .container {
+  min-height: 100vh;
+  width: calc(100vw - 17px);
+}
+
+
+.backer {
+  z-index: 200;
+}
+
+.parent, .maindivs {
+  
+  overflow-y: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* .parent {
+  min-height: 100vh;
+} */
+
+img {
+  width: 180px;
+  height: auto;
+}
+
+p {
+  width: 300px;
+  font-size: 1.2em;
+  margin: 15px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.samp {
+  width: 100%;
+  min-height: auto;
 }

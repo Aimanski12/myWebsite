@@ -1,9 +1,9 @@
 import icons from '../raw/links/footerlinks.json'
 
 export default {
-  page: 'notfound',
+  index: 'notfound',
   title: "404 Error",
-  background: 'tying.giff',
+  background: 'tying.gif',
   caption: "Sorry man! The page you are looking for is not in on file.",
   buttonlink: {
     text: "Back to Home",

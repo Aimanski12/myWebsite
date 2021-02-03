@@ -4,7 +4,7 @@ import {Helpers} from './helpers'
 
 
 export default {
-  page: 'contact',
+  index: 'contact',
   header: {
     title: ["Get In Touch"],
     caption: "Reach out to me or just do a fancy way of saying 'Hi!'",

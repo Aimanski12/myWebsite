@@ -5,7 +5,7 @@ import footerdata from '../data/footer'
 import {Helpers} from './helpers'
 
 export default {
-  page: 'webdev',
+  index: 'webdev',
   header: {
     title: ["Webdev Projects"],
     caption: "Here are some of the websites I have designed and developed.",

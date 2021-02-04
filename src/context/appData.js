@@ -35,10 +35,25 @@ export function AppDataContext (props) {
     } 
   }
 
+  const [menutransitions, setmenutransitions] = useState({
+    isOpen: false,
+    isTransitioning: false,
+    delay: 800
+  })
+
+  const setmenutransition = (val) => {
+    setmenutransitions({
+      ...menutransitions,
+      ...val
+    })
+  }
+
   return (
     <AppData.Provider value={{
       pagedata,
-      setpagedata
+      setpagedata,
+      menutransitions,
+      setmenutransition
     }}>
       {props.children}
     </AppData.Provider>

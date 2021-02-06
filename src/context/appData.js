@@ -12,48 +12,86 @@ import {projects} from '../mockdata/pages/projects'
 export const AppData = createContext()
 
 export function AppDataContext (props) {
-  // application data 
-  const [pagedata, setdata] = useState({
-    theme: true,
-    isSet: false,
+  const [appState, setAppState] = useState({
+    pageData: {
+      theme: false,
+      isSet: false,
+      data: {}
+    },
+    menuTransitions: {
+      isOpen: false,
+      isTransitioning: false,
+      delay: 800,
+    }, 
+    sessionData: {
+      isChecked: false,
+      isVisited: false      
+    }
   })
 
-  // set the page data according to 
-  const setpagedata = (page) => {
-    let data = getpagedata(page)
-    if(!pagedata.isSet){
-      setdata({
-        ...pagedata,
-        isSet: true,
-        data: data
+  
+  // assigns value to every page data 
+  // this is called when every page is opened
+  const _setPageData = (page) => {
+    let data = getPageData(page)
+    if(!appState.pageData.isSet){
+      setState({
+        pageData: { ...appState.pageData, isSet: true, data: data }
       })
-    } else if (pagedata.data.index != data.index){
-      setdata({
-        ...pagedata,
-        data: data
-      })
+    } else if (appState.pageData.data.index != data.index){
+      setdata({ ...appState.pageData, data: data })
     } 
   }
 
-  const [menutransitions, setmenutransitions] = useState({
-    isOpen: false,
-    isTransitioning: false,
-    delay: 800
-  })
-
-  const setmenutransition = (val) => {
-    setmenutransitions({
-      ...menutransitions,
-      ...val
+  // function to trigger page slider animation
+  // in the menu
+  const _setMenuTransitions = (newState) => {
+    setState({
+      menuTransitions: {
+        ...appState.menuTransitions,
+        ...newState
+      }
     })
   }
 
+  // set the session state to a new value
+  const _setSessionState = (newState) => {
+    setState({
+      sessionData: {
+        ...appState.sessionData,
+        ...newState
+      }
+    })
+  }
+
+
+  // assign new set to data to the state.
+  const setState = (newState) => {
+    setAppState({ ...appState, ...newState})
+  }
+
+
+  // combine all function so that we can only call
+  // one set of function
+  const _setState = (function(){
+    return {
+      setPageData(page){
+        return _setPageData(page)
+      },
+      setMenuTransitions(val){
+        return _setMenuTransitions(val)
+      },
+      setSessionState(val) {
+        return _setSessionState(val)
+      }
+    }
+  })()
+
+
   return (
     <AppData.Provider value={{
-      pagedata,
-      setpagedata,
-      menutransitions,
-      setmenutransition
+      AppState: appState,
+      SetAppState: _setState
     }}>
       {props.children}
     </AppData.Provider>
@@ -62,7 +100,7 @@ export function AppDataContext (props) {
 
 // check the value and return the 
 // repective data
-const getpagedata = (page) => {
+const getPageData = (page) => {
   let data = page === "about" ? about : 
     page === "artwork" ? artwork :
     page === "contact" ? contact :

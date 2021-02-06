@@ -1,4 +1,11 @@
+// global css
 import '../../styles/globals.css'
+
+// css fonts
+import '../../styles/fonts/fonts.css'
+
+// preloader element
+import '../../styles/preloader/preloader.css'
 
 
 

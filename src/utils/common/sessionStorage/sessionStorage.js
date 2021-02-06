@@ -1,0 +1,50 @@
+import {SessionHelpers} from './sessionHelpers'
+
+
+export const SessionStorage = (function(){
+
+  // check if the browser has session data
+  const _checkSessionStorage = async () => {
+    const session = sessionStorage.getItem('mywebsite')
+    
+    if(session){
+      // check if the session is present
+      let data = JSON.parse(session)
+      // if there is check if expired
+      if(SessionHelpers.checkIfExp(data._timestamp)) {
+        const _id = await SessionHelpers.saveInitialData()
+        saveSession(_id)
+        // return false to say that the browser has not been visited
+        return false
+      } else {
+        // we will return true to say that the site has
+        // been seen already
+        return true
+      }
+    } else {
+      // save a new session
+      const _id = await SessionHelpers.saveInitialData()
+      saveSession(_id)
+      // return false to say that the browser has not been visited
+      return false
+    }
+  }
+
+  return {
+    checkSessionStorage(){
+      return _checkSessionStorage()
+    }
+  }
+})()
+
+// save session data to the browser
+const saveSession = (_id) => {
+  // create new set of data
+  let data = {
+    _token: _id,
+    _timestamp: SessionHelpers.gettime('now'),
+    _appname: 'aimanski'
+  }
+  // save to session storage
+  sessionStorage.setItem('mywebsite', JSON.stringify(data))
+}

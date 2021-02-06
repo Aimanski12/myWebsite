@@ -1,6 +1,6 @@
 
 
-export const Anim = (function (){
+export const TransitionSliders = (function (){
   const easing = [0.6, -0.05, 0.01, 0.99];
   
   const _showmenu = {
@@ -36,7 +36,7 @@ export const Anim = (function (){
     }
   }
 
-  const slidetoexit = (menuopen) => {
+  const _slidetoexit = (delay) => {
     return {
       initial: {
         opacity: 1
@@ -44,7 +44,7 @@ export const Anim = (function (){
       exit: {
         x: '100%',
         transition: {
-          delay: menuopen === 1600 ? .8 : 0,
+          delay: delay === 1600 ? .8 : 0,
           duration: .8,
           ease: easing
         }
@@ -55,8 +55,9 @@ export const Anim = (function (){
 
   return {
     showMenu:_showmenu, 
-    frontslider(){
-      return _frontslider
+    frontslider: _frontslider,
+    slidetoexit(delay){
+      return _slidetoexit(delay)
     }
   }
 })()

@@ -3,6 +3,16 @@
   margin: 0
 }
 
+.content-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
 
 .container {
   display: flex;
@@ -37,9 +47,10 @@
   overflow: hidden;
 }
 
+
 .imgwrapper, .backer-imgwrapper {
   float: right;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -48,11 +59,22 @@
   z-index: 100;
   background: #1890B5;
 }
+
+.imgwrapper span, .backer-imgwrapper span{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 4px;
+  font: 1.8em;
+  color: #80E1FF
+
+}
+
 .maindivs{
   width: 100%;
   position: absolute;
   z-index: 400;
 }
+
+
 
 .one1 {
   background: rgb(190,190,190);
@@ -62,6 +84,17 @@
   min-height: 100vh;
   width: 100%;
 }
+
+
+.body-wrapper {
+  width: 100%;
+  position: fixed;
+  min-height: 100vh;
+  z-index: 350;
+}
+
+
+
 
 .maindivs a {
   font-family: cursive;
@@ -77,15 +110,20 @@
 }
 
 .parent, .maindivs {
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
+
+body {
+  overscroll-behavior-y: none;
+}
+
 
 body {
   overflow-x: hidden;
 }
 
 img {
-  width: 180px;
+  /* width: 180px; */
   height: auto;
 }
 
@@ -100,7 +138,7 @@ p {
 .samp {
   width: 100%;
   min-height: 100vh;
-  position: absolute;
+  position: fixed;
   z-index: 300;
 }
 
@@ -172,19 +210,9 @@ p {
 
 
 
-/* 
-<div className="btn-wrapper">
-  <button className="btn-nav">Menu</button>
-</div>
 
-<div className="menu-wrapper">
-  <div className="menuwrap">
-    <Link href="/one" scroll={false}>
-      <a>Go to one</a>
-    </Link>
-  </div>
-</div>
-*/
+
+
 
 
 

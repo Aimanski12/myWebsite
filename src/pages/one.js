@@ -1,67 +1,131 @@
-import React, {useContext, useEffect} from 'react'
+import React, {useContext, useEffect, useState, useRef} from 'react'
 import {AppData} from '../context/appData'
 
 import Head from 'next/head'
 import Link from 'next/link'
 
+import Headers from '../containers/Navigation/Navigation'
 
 import {motion, AnimatePresence} from 'framer-motion'
-import {Anim} from '../utils/frameranimations/frameranimation'
+import {Anim} from '../utils/animations'
 
+export default function One() {
 
-export default function Home() {
+  const {AppState, SetAppState} = useContext(AppData)
+  const options = {
+    'damping': 0.05,
+    'alwaysShowTracks': true
 
-  const easing = [0.6, -0.05, 0.01, 0.99];
-
-  const {pagedata, setpagedata, menutransitions, setmenutransition} = useContext(AppData)
+  }
 
   useEffect(() => {
-    setpagedata('home')
+    SetAppState.setPageData('home')
 
-    menutransitions.isTransitioning ? (
+    AppState.menuTransitions.isTransitioning ? (
       setTimeout(()=>{
         window.scrollTo(0, 0)
-        setmenutransition({isTransitioning: false})
-      }, menutransitions.delay)
+        console.log(AppState.menuTransitions.delay)
+        SetAppState.setMenuTransitions({isTransitioning: false})
+      }, AppState.menuTransitions.delay)
     ) : null
-      
   })
 
-  const putback = () => {
-    const slider = document.querySelector('.slider')
-    slider.style.display = 'none'
+
+  const menuopen = (val) => {
+    Anim.Helpers.hidshowbody(val)
+    SetAppState.setMenuTransitions({isOpen: !AppState.menuTransitions.isOpen})
   }
   
-  const setscroller = () => {
-    const body = document.querySelector('body')
-    body.style.overflow = 'auto'
-  }
+  // ////////////////////////////////////////////////////////
 
-  const slidetoexit = {
-    initial: {
-      opacity: 1
-    },
-    exit: {
-      x: '100%',
-      transition: {
-        delay: menutransitions.delay === 1600 ? .8 : 0,
-        duration: .8,
-        ease: easing
+  // STATE
+  const [windowSize, setWindowSize] = useState({
+    width: 320,
+    height: 568
+  })
+
+  useEffect(() => {
+    // let a = useWin
+
+    setWindowSize(getSize())
+
+    function getSize() {
+      return {
+        width: window.innerWidth,
+        height: window.innerHeight
       }
     }
-  }
 
 
-  const samp = () => {
-    const body = document.querySelector('body')
-    if (menutransitions.isOpen) {
-      body.style.overflow = 'auto'
-    } else {
-      body.style.overflow = 'hidden'
+    function handleResize() {
+      setWindowSize(getSize())
     }
-    setmenutransition({isOpen: !menutransitions.isOpen})
-  }
-  
+
+    // event listener when the screen resizes
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+
+  // Ref for parent div and scrolling div
+  const app = useRef();
+  const scrollContainer = useRef();
+
+  // Configs
+  const data = {
+    ease: 0.1,
+    current: 0,
+    previous: 0,
+    rounded: 0
+  };
+
+
+  // Run scrollrender once page is loaded.
+  useEffect(() => {
+    requestAnimationFrame(() => skewScrolling());
+  }, []);
+
+  //set the height of the body.
+  useEffect(() => {
+    // setBodyHeight();
+    document.body.style.height = `${
+      scrollContainer.current.getBoundingClientRect().height}px`;
+  }, [windowSize.height]);
+
+  //   //Set the height of the body to the height of the scrolling div
+  // const setBodyHeight = () => {
+  // };
+
+
+  // Scrolling
+  const skewScrolling = () => {
+    //Set Current to the scroll position amount
+    data.current = window.scrollY;
+    // console.log(window.scrollY)
+    // Set Previous to the scroll previous position
+    data.previous += (data.current - data.previous) * data.ease;
+    // Set rounded to
+    data.rounded = Math.round(data.previous * 100) / 100;
+
+    // Difference between
+    const difference = data.current - data.rounded;
+    const acceleration = difference / windowSize.width;
+    const velocity = +acceleration;
+    const skew = velocity * 5;
+
+    //Assign skew and smooth scrolling to the scroll container
+    if (scrollContainer.current != undefined) {
+      scrollContainer.current.style.transform = `translate3d(0, -${data.rounded}px, 0) skewY(${skew}deg)`;
+    }
+    //loop vai raf
+
+    requestAnimationFrame(() => skewScrolling());
+  };
+
+  // ////////////////////////////////////////////////////////
+
+
+
   return (
     <div className='parent'>
       
@@ -70,15 +134,21 @@ export default function Home() {
         <link rel="icon" type="image/x-icon" href="/images/aiman-small-logo.ico" />
       </Head>
 
+      <Headers/>
+
+
       <div className="btn-wrapper">
         <span className="btn-nav"
-          onClick={samp}>Menu</span>
+          onClick={()=>{
+            AppState.menuTransitions.isOpen ? 
+              menuopen('auto'): menuopen('hidden')}}
+            >Menu</span>
       </div>
 
       <AnimatePresence>
-        { menutransitions.isOpen && (
+        { AppState.menuTransitions.isOpen && (
           <motion.div 
-            variants={Anim.showMenu}
+            variants={Anim.TransitionSliders.showMenu}
             initial='initial'
             animate='animate'
             exit='exit'
@@ -86,15 +156,14 @@ export default function Home() {
             <div className="menuwrap">
               <Link href="/" scroll={false}>
                 <a onClick={()=> {
-                  const body = document.querySelector('body')
-                  body.style.overflow = 'hidden'
-                  setmenutransition({
+                  Anim.Helpers.hidshowbody('hidden')
+                  SetAppState.setMenuTransitions({
                     isOpen: false,
                     isTransitioning: true,
                     delay: 1600
                   })
                 }}
-                >Go to Home</a>
+                >Home</a>
               </Link>
             </div>
           </motion.div> )}
@@ -103,14 +172,14 @@ export default function Home() {
 
       <div className="slider">
         <motion.div 
-          variants={Anim.frontslider()} 
+          variants={Anim.TransitionSliders.frontslider} 
           initial="initial" 
           animate="animate" 
-          onAnimationStart={setscroller}
-          onAnimationComplete={putback}
+          onAnimationStart={()=>Anim.Helpers.hidshowbody('auto')}
+          onAnimationComplete={()=>Anim.Helpers.removeintroslider()}
           className="slider-wrapper">
           <div className="imgwrapper">
-            {/* <img src="/images/sample_logo.svg" alt=""/> */}
+            <span>aiman adlawan</span>
           </div>  
         </motion.div>
       </div>
@@ -118,17 +187,24 @@ export default function Home() {
         className="backer">
         <div className="backer-wrapper">
           <div className="backer-imgwrapper">
-            {/* <img src="/images/sample_logo.svg" alt=""/> */}
+            <span>aiman adlawan</span>
           </div>  
         </div>
       </div>
 
-      <div className="samp">
-        <motion.div 
-          variants={slidetoexit}
-          initial="initial"
-          animate={{opacity: 1}}
-          exit="exit" 
+
+
+    <motion.div 
+      variants={
+        Anim.TransitionSliders.slidetoexit(AppState.menuTransitions.delay)}
+      initial="initial"
+      animate={{opacity: 1}}
+      exit="exit" 
+      className="body-wrapper">
+
+      <div ref={app} className="samp">
+        <div
+          ref={scrollContainer} 
           className="maindivs">
           <div className="one1 container">
             <h1>Home Page</h1>
@@ -137,37 +213,34 @@ export default function Home() {
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro, praesentium!</p>
             <Link href='/' scroll={false}>
               <a onClick={()=>{
-                const body = document.querySelector('body')
-                body.style.overflow = 'hidden'
-                setmenutransition({
+                Anim.Helpers.hidshowbody('hidden')
+                SetAppState.setMenuTransitions({
                   isTransitioning: true,
                   delay: 800
                 })
-              }}> Go to Home</a>
+              }}>Home</a>
             </Link>
           </div>
           <div className="two container">
             <Link href='/' scroll={false}>
               <a onClick={()=>{
-                const body = document.querySelector('body')
-                body.style.overflow = 'hidden'
-                setmenutransition({
+                Anim.Helpers.hidshowbody('hidden')
+                SetAppState.setMenuTransitions({
                   isTransitioning: true,
                   delay: 800
                 })
-              }}> Go to Home</a>
+              }}>Home</a>
             </Link>
           </div>
           <div className="two two2 container">
             <Link href='/' scroll={false}>
               <a onClick={()=>{
-                const body = document.querySelector('body')
-                body.style.overflow = 'hidden'
-                setmenutransition({
+                Anim.Helpers.hidshowbody('hidden')
+                SetAppState.setMenuTransitions({
                   isTransitioning: true,
                   delay: 800
                 })
-              }}> Go to Home</a>
+              }}>Home</a>
             </Link>
           </div>
           <div className="three container">
@@ -176,8 +249,9 @@ export default function Home() {
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe in optio, dicta quis sint doloremque.</p>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro, praesentium!</p>
           </div>
-        </motion.div>
+        </div>
       </div>
+      </motion.div>
     </div>
   )
 }

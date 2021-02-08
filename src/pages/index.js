@@ -4,7 +4,7 @@ import {AppData} from '../context/appData'
 import Head from 'next/head'
 import Link from 'next/link'
 
-import Headers from '../containers/Navigation/Navigation'
+import Navigation from '../containers/Navigation/Navigation'
 
 import {motion, AnimatePresence} from 'framer-motion'
 import {Anim} from '../utils/animations'
@@ -13,26 +13,19 @@ export default function Home() {
 
   const {AppState, SetAppState} = useContext(AppData)
 
-
   useEffect(() => {
     SetAppState.setPageData('home')
-
     AppState.menuTransitions.isTransitioning ? (
       setTimeout(()=>{
         window.scrollTo(0, 0)
-        console.log(AppState.menuTransitions.delay)
         SetAppState.setMenuTransitions({isTransitioning: false})
       }, AppState.menuTransitions.delay)
     ) : null
   })
 
 
-  const menuopen = (val) => {
-    Anim.Helpers.hidshowbody(val)
-    SetAppState.setMenuTransitions({isOpen: !AppState.menuTransitions.isOpen})
-  }
-  
-  // ////////////////////////////////////////////////////////
+
+ // ////////////////////////////////////////////////////////
 
   // STATE
   const [windowSize, setWindowSize] = useState({
@@ -123,62 +116,40 @@ export default function Home() {
 
 
   return (
-    <div className='parent'>
+    <div className='main'>
       
       <Head>
         <title>Aiman Adlawan | Official Website</title>
         <link rel="icon" type="image/x-icon" href="/images/aiman-small-logo.ico" />
       </Head>
 
-      <Headers/>
+
+      <Navigation/>
 
 
-      <div className="btn-wrapper">
-        <span className="btn-nav"
-          onClick={()=>{
-            AppState.menuTransitions.isOpen ? 
-              menuopen('auto'): menuopen('hidden')}}
-            >Menu</span>
-      </div>
-
-      <AnimatePresence>
-        { AppState.menuTransitions.isOpen && (
-          <motion.div 
-            variants={Anim.TransitionSliders.showMenu}
-            initial='initial'
-            animate='animate'
-            exit='exit'
-            className="menu-wrapper">
-            <div className="menuwrap">
-              <Link href="/one" scroll={false}>
-                <a onClick={()=> {
-                  Anim.Helpers.hidshowbody('hidden')
-                  SetAppState.setMenuTransitions({
-                    isOpen: false,
-                    isTransitioning: true,
-                    delay: 1600
-                  })
-                }}
-                >Go to one</a>
-              </Link>
-            </div>
-          </motion.div> )}
-      </AnimatePresence>
-
-
+      
+      { AppState.sessionData.isChecked ? 
+        
       <div className="slider">
         <motion.div 
-          variants={Anim.TransitionSliders.frontslider} 
-          initial="initial" 
-          animate="animate" 
-          onAnimationStart={()=>Anim.Helpers.hidshowbody('auto')}
-          onAnimationComplete={()=>Anim.Helpers.removeintroslider()}
-          className="slider-wrapper">
+          variants={
+            Anim.TransitionSliders.frontslider(
+              AppState.sessionData.isFirstTime, 
+              AppState.sessionData.isDoneAnimating)} 
+            initial="initial" 
+            animate="animate" 
+            onAnimationStart={()=>Anim.Helpers.hidshowbody('auto')}
+            onAnimationComplete={()=>Anim.Helpers.removeintroslider()}
+            className="slider-wrapper">
           <div className="imgwrapper">
             <span>aiman adlawan</span>
           </div>  
         </motion.div>
-      </div>
+      </div> : null
+
+        }
+
+
       <div 
         className="backer">
         <div className="backer-wrapper">
@@ -187,8 +158,6 @@ export default function Home() {
           </div>  
         </div>
       </div>
-
-
 
     <motion.div 
       variants={
@@ -248,6 +217,7 @@ export default function Home() {
         </div>
       </div>
       </motion.div>
+
     </div>
   )
 }

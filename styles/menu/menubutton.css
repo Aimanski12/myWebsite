@@ -1,0 +1,158 @@
+
+.navigation-menu-button {
+  position: fixed;
+  right: 10vw;
+  top: 68px;
+  z-index: 800;
+  width: 80px;
+  height: 30px;
+  /* mix-blend-mode: difference; */
+  /* background: #0E5267; */
+}
+
+.menu-button-container, .button-flex-row {
+  width: 100%;
+  height: 100%;
+}
+
+.button-flex-row {
+  flex-direction: row;
+}
+
+.menu-text-container {
+  cursor: pointer;
+  width: 50px;
+  height: 30px;
+}
+
+.menu-text-container span {
+  position: absolute;
+  font-size: 1.1em;  
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #6FDCFE
+}
+
+.menu-svg-container {
+  width: 30px;
+  height: 30px;
+}
+
+.menu-burger {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #6FDCFE;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
+.menu-burger-stroke .top {
+  stroke-dasharray: 40 172;
+}
+
+.menu-burger-stroke .middle {
+  stroke-dasharray: 40 111;
+}
+
+.menu-burger-stroke .bottom {
+  stroke-dasharray: 40 172;
+}
+
+.menu-burger-stroke.active .top {
+  stroke-dashoffset: -132px;
+}
+
+.menu-burger-stroke.active .middle {
+  stroke-dashoffset: -71px;
+}
+
+.menu-burger-stroke.active .bottom {
+  stroke-dashoffset: -132px;
+}
+
+@media (max-width: 1468px) {
+  .navigation-menu-button {
+    right: 120px;
+  }
+}
+
+@media (max-width: 1268px) {
+  .navigation-menu-button {
+    right: 95px;
+    top: 60px;
+  }
+}
+
+@media (max-width: 1068px) {
+  .navigation-menu-button {
+    right: 85px;
+    top: 46px;
+  }
+  .menu-text-container {
+    width: 44px;
+    height: 26px;
+  }
+  .menu-text-container span {
+    font-size: 1em;
+  }
+  .menu-svg-container {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 868px) {
+  .navigation-menu-button {
+    right: 60px;
+    top: 40px;
+    width: 64px;
+    height: 20px;
+  }
+  .menu-text-container {
+    width: 44px;
+    height: 20px;
+  }
+  .menu-text-container span {
+    font-size: .85em;
+  }
+  .menu-svg-container {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation-menu-button {
+    right: 50px;
+  }
+}
+
+@media (max-width: 668px) {
+  .navigation-menu-button {
+    right: 40px;
+    top: 36px;
+  }
+}
+
+@media (max-width: 568px) {
+  .navigation-menu-button {
+    right: 30px;
+  }
+}
+
+@media (max-width: 468px) {
+  .navigation-menu-button {
+    right: 20px;
+    top: 30px;
+  }
+}

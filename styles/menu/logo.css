@@ -1,0 +1,150 @@
+
+.navigation-logo {
+  position: fixed;
+  left: 10vw;
+  top: 58px;
+  z-index: 800;
+  width: 50px;
+  height: 50px;
+  /* mix-blend-mode: difference; */
+}
+
+.menu-logo-container {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-logo-container a {
+  width: 100%;
+  height: 100%;
+}
+
+.aiman-logo {
+  width: 100%;
+  height: 100%;
+}
+
+.logo-line-1 {
+  stroke-dasharray: 490;
+  stroke-dashoffset: 490;
+  animation: line-1 6s linear forwards infinite;
+}
+
+.logo-line-2 {
+  stroke-dasharray: 460;
+  stroke-dashoffset: 460;
+  animation: line-2 6s linear forwards infinite;
+}
+
+.logo-line-3 {
+  stroke-dasharray: 485;
+  stroke-dashoffset: 485;
+  animation: line-3 6s linear forwards infinite;
+}
+
+@keyframes line-1 {
+  0% {
+    stroke-dashoffset: 0;
+    fill: #004E66
+  }
+  50% {
+    stroke-dashoffset: 490;
+    fill: #6FDCFE
+  }
+  100% {
+    stroke-dashoffset: 980;
+    fill: #004E66
+  }
+}
+
+@keyframes line-2 {
+  0% {
+    stroke-dashoffset: 0;
+    fill: #004E66
+  }
+
+  50% {
+    stroke-dashoffset: 460;
+    fill: #6FDCFE
+  }
+
+  100% {
+    stroke-dashoffset: 920;
+    fill: #004E66
+  }
+}
+
+@keyframes line-3 {
+  0% {
+    stroke-dashoffset: 0;
+    fill: #004E66
+  }
+
+  50% {
+    stroke-dashoffset: 485;
+    fill: #6FDCFE
+  }
+
+  100% {
+    stroke-dashoffset: 970;
+    fill: #004E66
+  }
+}
+
+@media (max-width: 1468px) {
+  .navigation-logo {
+    left: 120px;
+  }
+}
+
+@media (max-width: 1268px) {
+  .navigation-logo {
+    left: 95px;
+    top: 50px;
+  }
+}
+
+@media (max-width: 1068px) {
+  .navigation-logo {
+    left: 85px;
+    top: 36px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 868px) {
+  .navigation-logo {
+    left: 60px;
+    top: 30px;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation-logo {
+    left: 50px;
+  }
+}
+
+
+@media (max-width: 668px) {
+  .navigation-logo {
+    left: 40px;
+    top: 26px;
+  }
+}
+
+@media (max-width: 568px) {
+  .navigation-logo {
+    left: 30px;
+  }
+}
+
+@media (max-width: 468px) {
+  .navigation-logo {
+    left: 22px;
+    top: 20px;
+  }
+}

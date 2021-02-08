@@ -12,20 +12,20 @@ export const SessionStorage = (function(){
       let data = JSON.parse(session)
       // if there is check if expired
       if(SessionHelpers.checkIfExp(data._timestamp)) {
-        const _id = await SessionHelpers.saveInitialData()
-        saveSession(_id)
-        // return false to say that the browser has not been visited
+        // const _id = await SessionHelpers.saveInitialData()
+        // saveSession(_id)
+        // // return true to say that the browser has not been visited
         return false
       } else {
-        // we will return true to say that the site has
+        // we will return false to say that the site has
         // been seen already
-        return true
+        return false
       }
     } else {
-      // save a new session
-      const _id = await SessionHelpers.saveInitialData()
-      saveSession(_id)
-      // return false to say that the browser has not been visited
+      // // save a new session
+      // const _id = await SessionHelpers.saveInitialData()
+      // saveSession(_id)
+      // // return true to say that the browser has not been visited
       return false
     }
   }

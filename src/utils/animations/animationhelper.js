@@ -12,7 +12,7 @@ export const Helpers = (function (){
   }
 
   const _removepreloader = () => {
-    const preloader = document.querySelector('.preloader')
+    const preloader = document.querySelector('.pre-loader')
     preloader.style.display = 'none'
   }
 

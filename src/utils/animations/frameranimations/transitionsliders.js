@@ -23,15 +23,34 @@ export const TransitionSliders = (function (){
     }
   }
   
-  const _frontslider = {
-    initial: {
-      width: '100vw'
-    },
-    animate: {
-      width: 0,
-      transition: {
-        duration: 1,
-        ease: easing
+  const _frontslider = (isFirstTime, isDoneAnimating) => {
+    let timing;
+    if(isFirstTime) {
+      if(isDoneAnimating) {
+        timing = 0
+      } else {
+        timing = 5.75
+      }
+    } else {
+      timing = 0
+    }
+
+    // isVisited argument comes from the sessionData state
+    // if session has storoge or has not expired
+    // will return true to add delay for the transition
+    return {
+      initial: {
+        width: '100vw'
+      },
+      animate: {
+        width: 0,
+        transition: {
+          // add a delay of 5.75ms to wait for the
+          // preloader to finish animating
+          delay: timing,
+          duration: 1,
+          ease: easing
+        }
       }
     }
   }
@@ -55,7 +74,9 @@ export const TransitionSliders = (function (){
 
   return {
     showMenu:_showmenu, 
-    frontslider: _frontslider,
+    frontslider(isFirstTime, isDoneAnimating){
+      return _frontslider(isFirstTime, isDoneAnimating)
+    }, 
     slidetoexit(delay){
       return _slidetoexit(delay)
     }

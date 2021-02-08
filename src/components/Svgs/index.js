@@ -8,6 +8,8 @@ import Twitter from './Svg/Twitter'
 import Pentel from './Svg/Pentel'
 import Webdesign from './Svg/Webdesign'
 import Bracket from './Svg/Bracket'
+import MenuBurger from './Svg/MenuBurger'
+import Logo from './Svg/Logo'
 
 function Svgs(props) {
 
@@ -19,6 +21,8 @@ function Svgs(props) {
     props.svg === 'pentel' ? <Pentel /> :
     props.svg === 'bracket' ? <Bracket /> :
     props.svg === 'webdesign' ? <Webdesign /> :
+    props.svg === 'menuburger' ? <MenuBurger /> :
+    props.svg === 'logo' ? <Logo /> :
     props.svg === 'twitter' ? <Twitter /> : null
 
   return (

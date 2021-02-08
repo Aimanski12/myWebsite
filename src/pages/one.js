@@ -9,32 +9,23 @@ import Headers from '../containers/Navigation/Navigation'
 import {motion, AnimatePresence} from 'framer-motion'
 import {Anim} from '../utils/animations'
 
-export default function One() {
+export default function Home() {
 
   const {AppState, SetAppState} = useContext(AppData)
-  const options = {
-    'damping': 0.05,
-    'alwaysShowTracks': true
 
-  }
 
   useEffect(() => {
     SetAppState.setPageData('home')
 
+
     AppState.menuTransitions.isTransitioning ? (
       setTimeout(()=>{
         window.scrollTo(0, 0)
-        console.log(AppState.menuTransitions.delay)
         SetAppState.setMenuTransitions({isTransitioning: false})
       }, AppState.menuTransitions.delay)
     ) : null
   })
 
-
-  const menuopen = (val) => {
-    Anim.Helpers.hidshowbody(val)
-    SetAppState.setMenuTransitions({isOpen: !AppState.menuTransitions.isOpen})
-  }
   
   // ////////////////////////////////////////////////////////
 
@@ -137,14 +128,6 @@ export default function One() {
       <Headers/>
 
 
-      <div className="btn-wrapper">
-        <span className="btn-nav"
-          onClick={()=>{
-            AppState.menuTransitions.isOpen ? 
-              menuopen('auto'): menuopen('hidden')}}
-            >Menu</span>
-      </div>
-
       <AnimatePresence>
         { AppState.menuTransitions.isOpen && (
           <motion.div 
@@ -169,20 +152,29 @@ export default function One() {
           </motion.div> )}
       </AnimatePresence>
 
-
+      
+      { AppState.sessionData.isChecked ? 
+        
       <div className="slider">
         <motion.div 
-          variants={Anim.TransitionSliders.frontslider} 
-          initial="initial" 
-          animate="animate" 
-          onAnimationStart={()=>Anim.Helpers.hidshowbody('auto')}
-          onAnimationComplete={()=>Anim.Helpers.removeintroslider()}
-          className="slider-wrapper">
+          variants={
+            Anim.TransitionSliders.frontslider(
+              AppState.sessionData.isFirstTime, 
+              AppState.sessionData.isDoneAnimating)} 
+            initial="initial" 
+            animate="animate" 
+            onAnimationStart={()=>Anim.Helpers.hidshowbody('auto')}
+            onAnimationComplete={()=>Anim.Helpers.removeintroslider()}
+            className="slider-wrapper">
           <div className="imgwrapper">
             <span>aiman adlawan</span>
           </div>  
         </motion.div>
-      </div>
+      </div> : null
+
+        }
+
+
       <div 
         className="backer">
         <div className="backer-wrapper">
@@ -191,8 +183,6 @@ export default function One() {
           </div>  
         </div>
       </div>
-
-
 
     <motion.div 
       variants={
@@ -218,7 +208,7 @@ export default function One() {
                   isTransitioning: true,
                   delay: 800
                 })
-              }}>Home</a>
+              }}> Home</a>
             </Link>
           </div>
           <div className="two container">
@@ -229,7 +219,7 @@ export default function One() {
                   isTransitioning: true,
                   delay: 800
                 })
-              }}>Home</a>
+              }}> Home</a>
             </Link>
           </div>
           <div className="two two2 container">
@@ -240,7 +230,7 @@ export default function One() {
                   isTransitioning: true,
                   delay: 800
                 })
-              }}>Home</a>
+              }}> Home</a>
             </Link>
           </div>
           <div className="three container">
@@ -252,6 +242,7 @@ export default function One() {
         </div>
       </div>
       </motion.div>
+
     </div>
   )
 }

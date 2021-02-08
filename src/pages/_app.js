@@ -4,8 +4,15 @@ import '../../styles/globals.css'
 // css fonts
 import '../../styles/fonts/fonts.css'
 
+// cursor 
+import '../../styles/cursor/cursor.css'
+
 // preloader element
 import '../../styles/preloader/preloader.css'
+
+// menu buttons
+import '../../styles/menu/menubutton.css'
+import '../../styles/menu/logo.css'
 
 
 

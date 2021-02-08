@@ -25,10 +25,10 @@ export function AppDataContext (props) {
     }, 
     sessionData: {
       isChecked: false,
-      isVisited: false      
+      isFirstTime: false,
+      isDoneAnimating: false
     }
   })
-
   
   // assigns value to every page data 
   // this is called when every page is opened
@@ -36,10 +36,12 @@ export function AppDataContext (props) {
     let data = getPageData(page)
     if(!appState.pageData.isSet){
       setState({
-        pageData: { ...appState.pageData, isSet: true, data: data }
+        pageData: { ...appState.pageData, isSet: true, data: {...data} }
       })
     } else if (appState.pageData.data.index != data.index){
-      setdata({ ...appState.pageData, data: data })
+      setState({ 
+        pageData: { ...appState.pageData, data: { ...data} }
+      })
     } 
   }
 

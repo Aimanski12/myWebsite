@@ -33,6 +33,10 @@
   color: #6FDCFE
 }
 
+.menu-text-container .close {
+  color: #FFC01D
+}
+
 .menu-svg-container {
   width: 30px;
   height: 30px;
@@ -41,7 +45,7 @@
 .menu-burger {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  transition: transform 400ms;
+  transition: transform 500ms;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -50,7 +54,7 @@
 
 .line {
   fill: none;
-  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  transition: stroke-dasharray 500ms, stroke-dashoffset 400ms;
   stroke: #6FDCFE;
   stroke-width: 5.5;
   stroke-linecap: round;
@@ -70,14 +74,17 @@
 
 .menu-burger-stroke.active .top {
   stroke-dashoffset: -132px;
+  stroke: #FFC01D
 }
 
 .menu-burger-stroke.active .middle {
   stroke-dashoffset: -71px;
+  stroke: #FFC01D
 }
 
 .menu-burger-stroke.active .bottom {
   stroke-dashoffset: -132px;
+  stroke: #FFC01D
 }
 
 @media (max-width: 1468px) {

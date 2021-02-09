@@ -5,6 +5,7 @@ import newsbox from '../data/projects/news-box'
 import radiolive from '../data/projects/radio-live'
 import bookworm from '../data/projects/book-worm'
 import pages from '../raw/links/pagelinks.json'
+import socials from '../raw/links/footerlinks.json'
 
 export const Helpers = (function(){
   // make array of projects
@@ -12,7 +13,7 @@ export const Helpers = (function(){
 
   // this function returns a specific artwork data
   // based on a day of the week. 
-  const _getartwork = (n) => {
+  const _getArtWork = (n) => {
     // get the day of the week
     const day = new Date().getDay()
     // set of images per day
@@ -22,7 +23,7 @@ export const Helpers = (function(){
 
   // this function return an array of data
   // containing the banner details for every projects
-  const _getprojbanner = (n) => {
+  const _getProjBanner = (n) => {
     // return the number of array of banners
     // based from the number provided in n
     return projects.filter((p, i) => {
@@ -34,7 +35,7 @@ export const Helpers = (function(){
 
   // this function return a array of menu which 
   // excludes the current page.
-  const _getquicklinks = (page) => {
+  const _getQuickLinks = (page) => {
     // filter the pages menu and return 
     // the one not the same
     return pages.filter(p => {
@@ -45,7 +46,7 @@ export const Helpers = (function(){
   }
 
   // get next prev data on the project banner
-  const _getnextprev = (page) => {
+  const _getNextPrev = (page) => {
     let prev, next;
     // loop on the array and see
     for (let x = 0; x < projects.length; x++){
@@ -69,7 +70,7 @@ export const Helpers = (function(){
 
   // this function will find if the given query parameter
   // is a valid query based from the project names
-  const _findname = (name) => {
+  const _findName = (name) => {
     // filter the names
     const val = projects.filter(p => {
       return p.index === name
@@ -82,22 +83,33 @@ export const Helpers = (function(){
     }
   }
 
-  return {
-    getartwork(n){
-      return _getartwork(n)
-    },
-    getprojbanner(n){
-      return _getprojbanner(n)
-    },
-    getquicklinks (page){
-      return _getquicklinks(page)
-    },
-    getnextprev(page) {
-      return _getnextprev(page)
-    },
-    findname(name) {
-      return _findname(name)
+  const _getMenu = () => {
+    return {
+      menu: pages,
+      socials
     }
+  }
+
+  return {
+    getArtWork(n){
+      return _getArtWork(n)
+    },
+    getProjBanner(n){
+      return _getProjBanner(n)
+    },
+    getQuickLinks (page){
+      return _getQuickLinks(page)
+    },
+    getNextPrev(page) {
+      return _getNextPrev(page)
+    },
+    findName(name) {
+      return _findName(name)
+    },
+    getMenu() {
+      return _getMenu()
+    }
+    
   }
 
 })()

@@ -15,10 +15,10 @@ export const projects = (page) => {
     page === 'radio-live' ? radiolive : null)
   return {
     ...data,
-    nextprev: Helpers.getnextprev(page),
-    quicklinks: Helpers.getquicklinks(page),
+    nextPrev: Helpers.getNextPrev(page),
+    quickLinks: Helpers.getQuickLinks(page),
     footer: {
-      iscomplete: true,
+      isComplete: true,
       ...footerdata
     }
   }

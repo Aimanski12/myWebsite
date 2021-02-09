@@ -1,5 +1,7 @@
 // global css
 import '../../styles/globals.css'
+import '../../styles/global/social-icon.css'
+import '../../styles/global/copyright.css'
 
 // css fonts
 import '../../styles/fonts/fonts.css'
@@ -13,6 +15,10 @@ import '../../styles/preloader/preloader.css'
 // menu buttons
 import '../../styles/menu/menubutton.css'
 import '../../styles/menu/logo.css'
+import '../../styles/menu/menulist.css'
+import '../../styles/menu/menu-items.css'
+import '../../styles/menu/menu-socials.css'
+import '../../styles/menu/menu-copyright.css'
 
 
 

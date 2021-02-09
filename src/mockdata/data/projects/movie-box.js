@@ -23,7 +23,7 @@ export default {
         svg: "desktop",
       }
     ],
-    buttonlink: {
+    buttonLink: {
       text: "View Details",
       link: "/projects/webdev/movie-box"
     }
@@ -97,7 +97,7 @@ export default {
   links: {
     title: "Project Links",
     caption: "If you want to see this project's source code, UX/UI design, or want to browse the actual website, click on any of the link below.",
-    buttonlink: [
+    buttonLink: [
       {
         text: "Launch App →",
         link: "https://movie-box.vercel.app"
@@ -112,7 +112,7 @@ export default {
       }
     ]
   },
-  nextprev: {
+  nextPrev: {
     title: "Movie-Box",
     link: "/projects/movie-box",
     text: "View Project →",

@@ -1,0 +1,129 @@
+
+.menu-items-wrapper {
+  min-width: 150px;
+  min-height: 30vh;
+}
+
+.menu-item {
+  height: 90px;
+  min-width: 230px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  /* background: rgba(210,210,210,0.1); */
+}
+
+.menu-item a, .menu-item span {
+  text-decoration: none;
+  font-size: 2.7em;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  position: relative;
+  line-height: 1em;
+  --fill-color:#04C2FF;
+  -webkit-text-stroke: 1px var(--fill-color);
+  background: linear-gradient(#FFC01D 0 100%) left / 0 no-repeat;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.menu-item a {
+  display: block;
+  transition: 0.3s ease-in;
+}
+
+.menu-item a:hover {
+  --fill-color: #FFC01D;
+  -webkit-text-stroke: 1px var(--fill-color);
+  background: linear-gradient(var(--fill-color) 0 100%) left / 0 no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 100%;
+}
+
+.menu-item a::after, .menu-item span.active::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #04C2FF;
+}
+
+.menu-item a::after {
+  width: 100%;
+  bottom: -2px;
+  border-radius: 1.5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+}
+
+.menu-item a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.menu-item span.active::after {
+  width: 120%;
+  left: -10%;
+  top: 50%;
+  border-radius: 1.5px;
+  transform: none;
+  transform-origin: none;
+}
+
+
+@media (max-width: 1268px) {
+  .menu-item {
+    height: 80px;
+    min-width: 205px;
+  }
+  .menu-item a, .menu-item span {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 1068px) {
+  .menu-item {
+    height: 70px;
+    min-width: 179px;
+  }
+  .menu-item a, .menu-item span {
+    font-size: 2.1em;
+  }
+}
+
+@media (max-width: 868px) {
+  .menu-item {
+    height: 62px;
+    min-width: 159px;
+    margin-bottom: 7px;
+  }
+  .menu-item a, .menu-item span {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 668px) {
+  .menu-item {
+    margin-bottom: 5px;
+  }
+  .menu-item a, .menu-item span {
+    font-size: 1.7em;
+  }
+  .menu-item a {
+    color: #04C2FF;
+    -webkit-text-stroke: 1px #04C2FF;
+  }
+}
+
+@media (max-width: 568px) {
+  .menu-item {
+    margin-bottom: 2px;
+    height: 56px;
+    min-width: 144px;
+  }
+  .menu-item a, .menu-item span {
+    font-size: 1.6em;
+  }
+}

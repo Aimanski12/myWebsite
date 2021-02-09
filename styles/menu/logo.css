@@ -27,19 +27,19 @@
 .logo-line-1 {
   stroke-dasharray: 490;
   stroke-dashoffset: 490;
-  animation: line-1 6s linear forwards infinite;
+  animation: line-1 3s ease-in forwards infinite;
 }
 
 .logo-line-2 {
   stroke-dasharray: 460;
   stroke-dashoffset: 460;
-  animation: line-2 6s linear forwards infinite;
+  animation: line-2 3s ease-in forwards infinite;
 }
 
 .logo-line-3 {
   stroke-dasharray: 485;
   stroke-dashoffset: 485;
-  animation: line-3 6s linear forwards infinite;
+  animation: line-3 3s ease-in forwards infinite;
 }
 
 @keyframes line-1 {

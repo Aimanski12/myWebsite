@@ -1,5 +1,5 @@
 import icons from '../raw/links/footerlinks.json'
-import footerdata from '../data/footer'
+import footerData from '../data/footer'
 import {Helpers} from './helpers'
 
 export default {
@@ -15,24 +15,27 @@ export default {
       back: "#003B4D"
     }
   },
-  artwork1: Helpers.getartwork(0),
+  artWork1: Helpers.getArtWork(0),
   featured: {
     title: "Featured Web Projects",
     caption: "Here are some the projects I have done recently.",
-    projects: Helpers.getprojbanner(3)
+    projects: Helpers.getProjBanner(3)
   },
-  seemore: {
+  seeMore: {
     title: "Wanna see more?",
     caption: "Let me show you a little bit further.",
-    buttonlink: {
+    buttonLink: {
       text: "View all projects →",
       link: "/projects/webdev"
     }
   },
-  artwork2: Helpers.getartwork(1),
-  quicklinks: Helpers.getquicklinks('home'),
+  artWork2: Helpers.getArtWork(1),
+  quickLinks: Helpers.getQuickLinks('home'),
   footer: {
-    iscomplete: true,
-    ...footerdata
+    isComplete: true,
+    ...footerData
+  },
+  menuItems: {
+    menu: Helpers.getMenu()
   }
 }

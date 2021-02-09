@@ -1,6 +1,6 @@
 import icons from '../raw/links/footerlinks.json'
 import tools from '../raw/links/tools.json'
-import footerdata from '../data/footer'
+import footerData from '../data/footer'
 import {Helpers} from './helpers'
 
 export default {
@@ -20,14 +20,14 @@ export default {
     tools
   },
 
-  seeproj: {
+  seeProj: {
     title: "View Projects",
     caption: "Take a look at the projects I have built.",
     links: [
       {
         svg: "pen",
         title: "Artwork",
-        buttonlink: {
+        buttonLink: {
           text: "Go to Artwork →",
           link: "/projects/artwork"
         }
@@ -35,26 +35,24 @@ export default {
       {
         svg: "browser",
         title: "Webdev",
-        buttonlink: {
+        buttonLink: {
           text: "Go to Webdev →",
           link: "/projects/artwork"
         }
       },
     ]
   },
-  hiremelink: {
+  hireMeLink: {
     title: "Hire Me",
     caption: "If you are interested in hiring me, or just want to reach out and say hi, send me a message and we can talk.",
-    buttonlink: {
+    buttonLink: {
       text: "Message Me →",
       link: "/contacts"
     }
   },
-  quicklinks: Helpers.getquicklinks('knowmore'),
+  quickLinks: Helpers.getQuickLinks('knowmore'),
   footer: {
-    iscomplete: true,
-    ...footerdata
+    isComplete: true,
+    ...footerData
   }
 }
-
-{/* <h6 id="preloader__name" style="font-family: &quot;Circular Std Bold&quot;, Helvetica, Arial, sans-serif; color: rgb(255, 255, 255); letter-spacing: 1rem; transition: all 1s cubic-bezier(0.77, 0, 0.175, 1) 0s; animation: 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 normal none running scale; opacity: 0;">JULIUS GUEVARRA</h6>  */}

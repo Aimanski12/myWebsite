@@ -11,23 +11,23 @@ import Bracket from './Svg/Bracket'
 import MenuBurger from './Svg/MenuBurger'
 import Logo from './Svg/Logo'
 
-function Svgs(props) {
+function Svgs({svg, fill}) {
 
-  let svg = props.svg === 'coloredinsta' ? <InstaColored /> :
-    props.svg === 'instagram' ? <Instagram /> :
-    props.svg === 'behance' ? <Behance/> :
-    props.svg === 'dribbble' ? <Dribbble/> :
-    props.svg === 'linkedin' ? <Linkedin /> :
-    props.svg === 'pentel' ? <Pentel /> :
-    props.svg === 'bracket' ? <Bracket /> :
-    props.svg === 'webdesign' ? <Webdesign /> :
-    props.svg === 'menuburger' ? <MenuBurger /> :
-    props.svg === 'logo' ? <Logo /> :
-    props.svg === 'twitter' ? <Twitter /> : null
+  let icon = svg === 'coloredinsta' ? <InstaColored /> :
+    svg === 'instagram' ? <Instagram fill={fill} /> :
+    svg === 'behance' ? <Behance fill={fill}/> :
+    svg === 'dribbble' ? <Dribbble fill={fill}/> :
+    svg === 'linkedin' ? <Linkedin fill={fill} /> :
+    svg === 'pentel' ? <Pentel /> :
+    svg === 'bracket' ? <Bracket /> :
+    svg === 'webdesign' ? <Webdesign /> :
+    svg === 'menuburger' ? <MenuBurger /> :
+    svg === 'logo' ? <Logo /> :
+    svg === 'twitter' ? <Twitter fill={fill} /> : null
 
   return (
     <>
-      {svg}
+      {icon}
     </>
   )
 }

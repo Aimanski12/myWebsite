@@ -1,6 +1,6 @@
 import icons from '../raw/links/footerlinks.json'
 import art from '../raw/imagestock/artwork.json'
-import footerdata from '../data/footer'
+import footerData from '../data/footer'
 import {Helpers} from './helpers'
 
 export default {
@@ -14,18 +14,18 @@ export default {
       back: "#003B4D"
     }
   },
-  artwork: art,
-  seemore: {
+  artWork: art,
+  seeMore: {
     title: "Webdev Projects?",
     caption: "You can also view my webdev projects.",
-    buttonlink: {
+    buttonLink: {
       text: "View webdev projects →",
       link: "/projects/webdev"
     }
   },
-  quicklinks: Helpers.getquicklinks('artwork'),
+  quickLinks: Helpers.getQuickLinks('artwork'),
   footer: {
-    iscomplete: true,
-    ...footerdata
+    isComplete: true,
+    ...footerData
   }
 }               

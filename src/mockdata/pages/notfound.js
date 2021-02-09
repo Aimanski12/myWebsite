@@ -5,7 +5,7 @@ export default {
   title: "404 Error",
   background: 'tying.gif',
   caption: "Sorry man! The page you are looking for is not in on file.",
-  buttonlink: {
+  buttonLink: {
     text: "Back to Home",
     link: "/"
   },

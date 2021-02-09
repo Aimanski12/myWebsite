@@ -28,7 +28,7 @@ export default function MenuButton({isHovered, isOpen}) {
             variants={Anim.MenuButton.buttonAnim}
             initial='initial'
             animate='animate'
-            exit='exit' >Close</motion.span>)}
+            exit='exit' className='close'>Close</motion.span>)}
       </AnimatePresence>
     </>
   );

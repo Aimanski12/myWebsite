@@ -1,22 +1,27 @@
 [
   {
     "name": "Home",
+    "index": "home",
     "link": "/"
   },
   {
     "name": "Artwork",
+    "index": "artwork",
     "link": "/projects/artwork"
   },
   {
     "name": "Webdev",
+    "index": "webdev",
     "link": "/projects/webdev"
   },
   {
     "name": "About",
+    "index": "about",
     "link": "/about"
   },
   {
     "name": "Contact",
+    "index": "contact",
     "link": "/contact"
   }
 ]

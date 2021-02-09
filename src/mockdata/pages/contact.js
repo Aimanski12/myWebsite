@@ -1,7 +1,6 @@
 import icons from '../raw/links/footerlinks.json'
-import footerdata from '../data/footer'
+import footerData from '../data/footer'
 import {Helpers} from './helpers'
-
 
 export default {
   index: 'contact',
@@ -14,7 +13,7 @@ export default {
       back: "#003B4D"
     }
   },
-  sociallinks: {
+  socialLinks: {
     title: "Social Links",
     caption: "You may also contact me through any of these social media sites.",
     icons:{
@@ -23,9 +22,9 @@ export default {
       back: "#004E66"
     }
   },
-  quicklinks: Helpers.getquicklinks('contact'),
+  quickLinks: Helpers.getQuickLinks('contact'),
   footer: {
-    iscomplete: false,
-    footerdata
+    isComplete: false,
+    footerData
   }
 }

@@ -1,15 +1,15 @@
 import icons from '../raw/links/footerlinks.json'
 
 export default {
-  getintouch: {
+  getInTouch: {
     title: "Let's Work Together",
     caption: "Have a project you'd like to start or need help with?",
-    buttonlink: {
+    buttonLink: {
       text: "Get in Touch",
       link: "/contact"
     } 
   },
-  hitme: {
+  hitMe: {
     title: "Hit Me On:",
     socials: {
       icons,
@@ -17,11 +17,11 @@ export default {
       back: "#004E66"
     }
   },
-  back2top: {
+  back2Top: {
     text: 'Back to top',
     svg: 'upward'
   },
-  copyright: {
+  copyRight: {
     cptext: "© 2020 Aiman Adlawan. All rights reserved.",
     privacy: "Privacy Policy.",
     link: "/privacy-policy"

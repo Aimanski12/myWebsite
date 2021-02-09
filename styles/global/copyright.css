@@ -1,0 +1,36 @@
+
+
+.copyright-wrapper {
+  height: 100%;
+  font-size: 0.9em;
+  justify-content: flex-start;
+}
+
+.copyright {
+  color: #04C2FF;
+  letter-spacing: -0.04em;
+}
+
+.privacy {
+  color: #FFC01D;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+}
+
+@media (max-width: 1268px) {
+  .copyright-wrapper {
+    font-size: 0.84em;
+  }
+}
+
+@media (max-width: 968px) {
+  .copyright-wrapper {
+    font-size: 0.78em;
+  }
+}
+
+@media (max-width: 768px) {
+  .copyright-wrapper {
+    font-size: 0.75em;
+  }
+}

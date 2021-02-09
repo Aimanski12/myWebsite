@@ -19,7 +19,7 @@ export default {
         svg: "code"
       }
     ],
-    buttonlink: {
+    buttonLink: {
       text: "View Details",
       link: "/projects/webdev/radio-live"
     }
@@ -93,7 +93,7 @@ export default {
   links: {
     title: "Project Links",
     caption: "If you want to see this project's source code, UX/UI design, or want to browse the actual website, click on any of the link below.",
-    buttonlink: [
+    buttonLink: [
       {
         text: "Launch App →",
         link: "https://radio-live.vercel.app"
@@ -108,7 +108,7 @@ export default {
       }
     ]
   },
-  nextprev: {
+  nextPrev: {
     title: "Radio-Live",
     link: "/projects/radio-live",
     text: "View Project →",

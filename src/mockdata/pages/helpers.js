@@ -86,7 +86,11 @@ export const Helpers = (function(){
   const _getMenu = () => {
     return {
       menu: pages,
-      socials
+      socialIcons: {
+        socials,
+        front: '#FFC01D',
+        back: '#001116'
+      }
     }
   }
 

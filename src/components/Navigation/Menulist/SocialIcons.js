@@ -1,89 +1,53 @@
-import React from 'react';
-import Svg from '../../Svgs'
+import React, {useContext} from 'react';
+import {AppData} from '../../../context/appData'
+import Icons from '../../GlobalComponents/SocialIcons'
+import {motion} from 'framer-motion'
 
 export default function SocialIcons() {
+  const {AppState} = useContext(AppData)
+  
+  const icons = () => {
+    const icon = AppState.pageData.data.menuItems.socialIcons
+    return icon.socials.map((l, i) => {
+      return <li className="menu-socials" key={i}>
+        <motion.div  variants={slideUp}>
+          <a href={l.link} 
+            target='_blank'
+            rel="noreferrer noopener">
+            <Icons svg={l.svg} front={icon.front} back={icon.back}/>
+          </a>
+        </motion.div>
+      </li> }
+    )
+  }
+
   return (
     <ul className="menu-socials-container">
-      <li className="menu-socials">
-        <a href='/'>
-          <div className="social-icon">
-            <div className="icon-front">
-              <div className="contents">
-                <Svg svg='behance' fill='#FFC01D'/>
-              </div>
-            </div>
-            <div className="icon-back">
-              <div className="contents">
-                <Svg svg='behance' fill='#001116'/>
-              </div>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li className="menu-socials">
-        <a href='/'>
-          <div className="social-icon">
-            <div className="icon-front">
-              <div className="contents">
-                <Svg svg='linkedin' fill='#FFC01D'/>
-              </div>
-            </div>
-            <div className="icon-back">
-              <div className="contents">
-                <Svg svg='linkedin' fill='#001116'/>
-              </div>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li className="menu-socials">
-        <a href='/'>
-          <div className="social-icon">
-            <div className="icon-front">
-              <div className="contents">
-                <Svg svg='dribbble' fill='#FFC01D'/>
-              </div>
-            </div>
-            <div className="icon-back">
-              <div className="contents">
-                <Svg svg='dribbble' fill='#001116'/>
-              </div>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li className="menu-socials">
-        <a href='/'>
-          <div className="social-icon">
-            <div className="icon-front">
-              <div className="contents">
-                <Svg svg='twitter' fill='#FFC01D'/>
-              </div>
-            </div>
-            <div className="icon-back">
-              <div className="contents">
-                <Svg svg='twitter' fill='#001116'/>
-              </div>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li className="menu-socials">
-        <a href='/'>
-          <div className="social-icon">
-            <div className="icon-front">
-              <div className="contents">
-                <Svg svg='instagram' fill='#FFC01D'/>
-              </div>
-            </div>
-            <div className="icon-back">
-              <div className="contents">
-                <Svg svg='instagram' fill='#001116'/>
-              </div>
-            </div>
-          </div>
-        </a>
-      </li>
+      {icons()}
     </ul>
   );
+}
+
+const slideUp = {
+  initial: {
+    y: 46
+  },
+  animate: {
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 65,
+      mass: 0.4,
+      damping: 8,
+      ease:'easeInOut',
+      duration: 0.4
+    }
+  }, 
+  exit: {
+    opacity: 0,
+    transition: {
+      type: 'easeInOut',
+      duration: 0.3
+    }
+  }
 }

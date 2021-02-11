@@ -3,25 +3,25 @@
 export const TransitionSliders = (function (){
   const easing = [0.6, -0.05, 0.01, 0.99];
   
-  const _showmenu = {
-    initial: {
-      width: 0,
-    },
-    animate: {
-      width: '100%',
-      transition: {
-        duration: .8,
-        ease: easing
-      }
-    },
-    exit: {
-      width: '0%',
-      transition: {
-        duration: .8,
-        ease: easing
-      }
-    }
-  }
+  // const _showmenu = {
+  //   initial: {
+  //     width: 0,
+  //   },
+  //   animate: {
+  //     width: '100%',
+  //     transition: {
+  //       duration: .8,
+  //       ease: easing
+  //     }
+  //   },
+  //   exit: {
+  //     width: '0%',
+  //     transition: {
+  //       duration: .8,
+  //       ease: easing
+  //     }
+  //   }
+  // }
   
   const _frontslider = (isFirstTime, isDoneAnimating) => {
     let timing;
@@ -73,7 +73,7 @@ export const TransitionSliders = (function (){
 
 
   return {
-    showMenu:_showmenu, 
+    // showMenu:_showmenu, 
     frontslider(isFirstTime, isDoneAnimating){
       return _frontslider(isFirstTime, isDoneAnimating)
     }, 

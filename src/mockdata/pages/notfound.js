@@ -1,4 +1,5 @@
 import icons from '../raw/links/footerlinks.json'
+import {Helpers} from './helpers'
 
 export default {
   index: 'notfound',
@@ -13,5 +14,6 @@ export default {
     icons,
     front: "#FFC01D",
     back: "#00769C"
-  }
+  },
+  menuItems: Helpers.getMenu()
 }               

@@ -27,6 +27,10 @@ export function AppDataContext (props) {
       isChecked: false,
       isFirstTime: false,
       isDoneAnimating: false
+    },
+    buttonMenu: {
+      isHovered: false,
+      isOpened: false
     }
   })
   
@@ -66,12 +70,36 @@ export function AppDataContext (props) {
     })
   }
 
+  // set the menu button state
+  const _setMenuButtonState = (newState) => {
+    setState({
+      buttonMenu: {
+        ...appState.buttonMenu,
+        ...newState
+      }
+    })
+  }
+
+  // this is to set the button menu state
+  // and the transition open state. to tigger
+  // animation of opening and closing
+  const _setMenuAndButtonState = (buttonState, transitionState) => {
+    setState({
+      buttonMenu: {
+        ...appState.buttonMenu,
+        ...buttonState
+      },
+      menuTransitions: {
+        ...appState.menuTransitions,
+        ...transitionState
+      }
+    })
+  }
 
   // assign new set to data to the state.
   const setState = (newState) => {
     setAppState({ ...appState, ...newState})
   }
-
 
   // combine all function so that we can only call
   // one set of function
@@ -85,6 +113,12 @@ export function AppDataContext (props) {
       },
       setSessionState(val) {
         return _setSessionState(val)
+      },
+      setMenuButtonState(val) {
+        return _setMenuButtonState(val)
+      }, 
+      setMenuAndButtonState(button, transition) {
+        return _setMenuAndButtonState(button, transition)
       }
     }
   })()

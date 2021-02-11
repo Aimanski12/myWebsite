@@ -20,6 +20,7 @@ export const projects = (page) => {
     footer: {
       isComplete: true,
       ...footerdata
-    }
+    },
+    menuItems: Helpers.getMenu()
   }
 }

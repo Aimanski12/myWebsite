@@ -1,6 +1,13 @@
+
+// framer motion animations
 import {Preloader} from './frameranimations/preloader'
 import {MenuButton} from './frameranimations/menubutton'
 import {TransitionSliders} from './frameranimations/transitionsliders'
+
+// gsap animations
+import {ShowMenu} from './gsap/showMenu'
+
+// function helpers
 import {Helpers} from "./animationhelper"
 
 export const Anim = (function () {
@@ -9,6 +16,7 @@ export const Anim = (function () {
     Preloader: Preloader,
     MenuButton: MenuButton,
     Helpers: Helpers,
-    TransitionSliders: TransitionSliders
+    TransitionSliders: TransitionSliders,
+    ShowMenu: ShowMenu
   }
 })()

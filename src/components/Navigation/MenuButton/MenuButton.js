@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useContext} from 'react';
 import {AppData} from '../../../context/appData'
 import {Anim} from '../../../utils/animations'
 import TextMenu from './MenuText'
@@ -7,33 +7,31 @@ import Svg from '../../Svgs'
 export default function MenuButton() {
   const {AppState, SetAppState} = useContext(AppData)
 
-  const [buttonState, setButtonState] =useState({isHovered: false, isOpen: false})
-
   // the hoverin and hover out has to be a 
   // separate function to avoid event bugs
   const hoverIn = () => {
-    setButtonState({ ...buttonState, isHovered: true })
+    SetAppState.setMenuButtonState({isHovered: true})
   }
 
   const hoverOut = () => {
-    setButtonState({ ...buttonState, isHovered: false })
+    SetAppState.setMenuButtonState({isHovered: false})
   }
 
   const open = () => {
-    const svg = document.querySelector('.menu-burger')
-    // toggle active clase in the menu
-    svg.classList.toggle('active')
+    // toggle active class to burger menu
+    Anim.Helpers.toggleBurgerToActive()
+    // update state
     AppState.menuTransitions.isOpen ? update('auto') : update('hidden')
   }
 
-  // update the state to triiger the animation
+  // update the state to trigger the open and close 
+  // animation of the menu
   const update = (val) => {
-    // local state for the menu button
-    setButtonState({ ...buttonState, isOpen: !buttonState.isOpen })
     // set body overflow to hidden
     Anim.Helpers.hidshowbody(val)
     // update global state to open/close menu
-    SetAppState.setMenuTransitions({isOpen: !AppState.menuTransitions.isOpen})
+    SetAppState.setMenuAndButtonState({isOpened: !AppState.buttonMenu.isOpened}, 
+      {isOpen: !AppState.menuTransitions.isOpen})
   }
 
   return (
@@ -44,8 +42,8 @@ export default function MenuButton() {
           onMouseLeave={hoverOut} onMouseEnter={hoverIn}>
           <div className="menu-text-container content-center font-2">
             <TextMenu 
-              isHovered={buttonState.isHovered}
-              isOpen={buttonState.isOpen}/>
+              isHovered={AppState.buttonMenu.isHovered}
+              isOpen={AppState.buttonMenu.isOpened}/>
           </div>
           <div className="menu-svg-container content-center">
             <Svg svg='menuburger' />

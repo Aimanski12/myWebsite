@@ -38,5 +38,6 @@ export default {
   footer: {
     iscomplete: true,
     ...footerData
-  }
+  },
+  menuItems: Helpers.getMenu()
 }

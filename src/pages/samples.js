@@ -128,7 +128,7 @@ export default function Home() {
       <Headers/>
 
 
-      <AnimatePresence>
+      {/* <AnimatePresence>
         { AppState.menuTransitions.isOpen && (
           <motion.div 
             variants={Anim.TransitionSliders.showMenu}
@@ -150,7 +150,7 @@ export default function Home() {
               </Link>
             </div>
           </motion.div> )}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       
       { AppState.sessionData.isChecked ? 

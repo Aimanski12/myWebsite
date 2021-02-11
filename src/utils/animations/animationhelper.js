@@ -16,6 +16,10 @@ export const Helpers = (function (){
     preloader.style.display = 'none'
   }
 
+  const _toggleBurgerToActive = () => {
+    const svg = document.querySelector('.menu-burger')
+    svg.classList.toggle('active')
+  }
 
   return {
     removeintroslider(){
@@ -26,6 +30,9 @@ export const Helpers = (function (){
     },
     removepreloader(){
       return _removepreloader()
+    },
+    toggleBurgerToActive () {
+      return _toggleBurgerToActive()
     }
   }
 })()

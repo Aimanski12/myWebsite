@@ -14,7 +14,7 @@ export default function Home() {
   const {AppState, SetAppState} = useContext(AppData)
 
   useEffect(() => {
-    SetAppState.setPageData('home')
+    SetAppState.setPageData('contact')
     AppState.menuTransitions.isTransitioning ? (
       setTimeout(()=>{
         window.scrollTo(0, 0)

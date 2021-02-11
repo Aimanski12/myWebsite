@@ -35,7 +35,5 @@ export default {
     isComplete: true,
     ...footerData
   },
-  menuItems: {
-    menu: Helpers.getMenu()
-  }
+  menuItems: Helpers.getMenu()
 }

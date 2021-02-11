@@ -23,7 +23,7 @@ export default {
         svg: "pentel"
       }
     ],
-    buttonlink: {
+    buttonLink: {
       text: "View Details",
       link: "/projects/webdev/book-worm"
     }
@@ -98,7 +98,7 @@ export default {
   links: {
     title: "Project Links",
     caption: "If you want to see this project's source code, UX/UI design, or want to browse the actual website, click on any of the link below.",
-    buttonlink: [
+    buttonLink: [
       {
         text: "Launch App →",
         link: "https://book-worm.vercel.app"
@@ -113,7 +113,7 @@ export default {
       }
     ]
   },
-  nextprev: {
+  nextPrev: {
     title: "Book-Worm",
     link: "/projects/book-worm",
     text: "View Project →",

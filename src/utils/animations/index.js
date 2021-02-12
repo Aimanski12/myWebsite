@@ -1,7 +1,7 @@
 
 // framer motion animations
 import {Preloader} from './frameranimations/preloader'
-import {MenuButton} from './frameranimations/menubutton'
+import {MenuButton} from './frameranimations/menuSlider'
 import {TransitionSliders} from './frameranimations/transitionsliders'
 
 // gsap animations

@@ -3,6 +3,7 @@ import Sliders from './Sliders'
 import MenuItems from './MenuItems'
 import SocialIcons from './SocialIcons'
 import CopyRight from './CopyRight'
+import {Anim} from '../../../utils/animations'
 import {AppData} from '../../../context/appData'
 import {motion, AnimatePresence} from 'framer-motion'
 
@@ -13,7 +14,7 @@ export default function MenuList() {
     <AnimatePresence>
        { AppState.menuTransitions.isOpen && (
         <motion.div 
-          variants={showmenu}
+          variants={Anim.MenuButton.showMenu}
           initial='initial'
           animate='animate'
           exit='exit'
@@ -24,29 +25,7 @@ export default function MenuList() {
             <SocialIcons />
             <CopyRight />
           </div>
-        </motion.div> )
-      }
+        </motion.div> ) }
     </AnimatePresence>
   );
-}
-
-// please take note to check and remove the framer snowmenu function
-// incase you are not using that function
-
-const showmenu = {
-  initial:{
-    opacity: 1
-  }, 
-  animate: {
-    opacity: 1,
-    transition: {
-      duration: 0.1,
-      staggerChildren: 0.1
-    }
-  },
-  exit: {
-    transition: {
-      delay: .7,
-    }
-  }
 }

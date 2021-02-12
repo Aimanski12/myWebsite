@@ -15,7 +15,7 @@ export default function MenuItems() {
         return (
           <li className="menu-item content-center" key={i}>
             <motion.div 
-              variants={slideMenuUp}
+              variants={Anim.MenuButton.slideMenuItems}
               className="menu-item-slider">
               <span className='active'>{m.name}</span>
             </motion.div>
@@ -24,7 +24,7 @@ export default function MenuItems() {
         return (
           <li className="menu-item content-center" key={i}>
             <motion.div 
-              variants={slideMenuUp}
+              variants={Anim.MenuButton.slideMenuItems}
               className="menu-item-slider">
               <Link href={m.link} scroll={false}>
                 <a onClick={click}>{m.name}</a>
@@ -52,33 +52,4 @@ export default function MenuItems() {
       {menuItems()}
     </ul>
   );
-}
-
-let easing = [0.6, -0.05, 0.01, 0.99]
-
-const slideMenuUp = {
-  initial: {
-    y: 65,
-    opacity: 0
-  }, 
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: 'spring',
-      stiffness: 90,
-      mass: 0.4,
-      damping: 8,
-      ease: easing,
-      duration: 0.4
-    }
-  }, 
-  exit: {
-    y: 65,
-    opacity: 0,
-    transition: {
-      ease: easing,
-      duration: 0.3
-    }
-  }
 }

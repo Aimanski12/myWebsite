@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import {AppData} from '../../../context/appData'
 import Icons from '../../GlobalComponents/SocialIcons'
+import {Anim} from '../../../utils/animations'
 import {motion} from 'framer-motion'
 
 export default function SocialIcons() {
@@ -10,7 +11,7 @@ export default function SocialIcons() {
     const icon = AppState.pageData.data.menuItems.socialIcons
     return icon.socials.map((l, i) => {
       return <li className="menu-socials" key={i}>
-        <motion.div  variants={slideUp}>
+        <motion.div  variants={Anim.MenuButton.slideIcons}>
           <a href={l.link} 
             target='_blank'
             rel="noreferrer noopener">
@@ -26,28 +27,4 @@ export default function SocialIcons() {
       {icons()}
     </ul>
   );
-}
-
-const slideUp = {
-  initial: {
-    y: 46
-  },
-  animate: {
-    y: 0,
-    transition: {
-      type: 'spring',
-      stiffness: 65,
-      mass: 0.4,
-      damping: 8,
-      ease:'easeInOut',
-      duration: 0.4
-    }
-  }, 
-  exit: {
-    opacity: 0,
-    transition: {
-      type: 'easeInOut',
-      duration: 0.3
-    }
-  }
 }

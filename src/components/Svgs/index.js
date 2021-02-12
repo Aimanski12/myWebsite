@@ -10,6 +10,9 @@ import Webdesign from './Svg/Webdesign'
 import Bracket from './Svg/Bracket'
 import MenuBurger from './Svg/MenuBurger'
 import Logo from './Svg/Logo'
+import Close from './Svg/Close'
+import ChevRight from './Svg/ChevRight'
+import ChevLeft from './Svg/ChevLeft'
 
 function Svgs({svg, fill}) {
 
@@ -23,6 +26,9 @@ function Svgs({svg, fill}) {
     svg === 'webdesign' ? <Webdesign /> :
     svg === 'menuburger' ? <MenuBurger /> :
     svg === 'logo' ? <Logo /> :
+    svg === 'chevleft' ? <ChevLeft/> :
+    svg === 'chevright' ? <ChevRight /> :
+    svg === 'close' ? <Close/> :
     svg === 'twitter' ? <Twitter fill={fill} /> : null
 
   return (

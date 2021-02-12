@@ -146,7 +146,9 @@ export default function Home() {
               </Link>
             </div>
           </motion.div> )}
-      </AnimatePresence> */}
+      </AnimatePresence> */} 
+
+      
 
 
       
@@ -218,6 +220,18 @@ export default function Home() {
                 })
               }}> Go to one</a>
             </Link>
+            <span className="font-1 s1a">Lorem, ip1sum dolor.</span>
+            <span className="font-1 s2a">Lorem, ip1sum dolor.</span>
+            <span className="font-1 s3a">Lorem, ip1sum dolor.</span>
+            <span className="font-1 s4a">Lorem, ip1sum dolor.</span>
+            <span className="font-1 s5a">Lorem, ip1sum dolor.</span>
+            <br/>
+            <span className="font-1 s1b">Lorem, ip1sum dolor.</span>
+            <span className="font-1 s2b">Lorem, ip1sum dolor.</span>
+            <span className="font-1 s3b">Lorem, ip1sum dolor.</span>
+            <span className="font-1 s4b">Lorem, ip1sum dolor.</span>
+            <span className="font-1 s5b">Lorem, ip1sum dolor.</span>
+            <span className="font-1 s6b">Lorem, ip1sum dolor.</span>
           </div>
           <div className="two two2 container">
             <Link href='/about' scroll={false}>
@@ -243,3 +257,4 @@ export default function Home() {
     </div>
   )
 }
+

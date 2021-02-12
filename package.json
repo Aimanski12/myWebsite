@@ -12,6 +12,7 @@
     "framer-motion": "^3.3.0",
     "gsap": "^3.6.0",
     "next": "10.0.6",
+    "popmotion": "^9.1.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "ua-parser-js": "^0.7.23"

@@ -40,7 +40,7 @@ export default function MenuButton() {
         <div className="button-flex-row content-center"
           onClick={open}
           onMouseLeave={hoverOut} onMouseEnter={hoverIn}>
-          <div className="menu-text-container content-center font-2">
+          <div className="font-2 menu-text-container content-center">
             <TextMenu 
               isHovered={AppState.buttonMenu.isHovered}
               isOpen={AppState.buttonMenu.isOpened}/>

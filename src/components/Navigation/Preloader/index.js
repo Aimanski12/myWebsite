@@ -1,7 +1,7 @@
 import React, {useContext, useEffect} from 'react';
 import {motion} from 'framer-motion'
 import {Anim} from '../../../utils/animations'
-import {AppData} from '../../../context/appData'
+import {AppData} from '../../../context'
 import {Helpers} from '../../../utils/common/index'
 import {AnimatePresence} from 'framer-motion'
 
@@ -36,7 +36,7 @@ export default function Preloader() {
               initial='initial'
               animate='animate'
               onAnimationComplete={()=> {
-                Anim.Helpers.removepreloader()
+                // Anim.Helpers.removepreloader()
                 // update the isDoneAnimating state to prevent
                 // reanimating on page transitions
                 SetAppState.setSessionState({ isDoneAnimating: true })

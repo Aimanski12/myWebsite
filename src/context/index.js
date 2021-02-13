@@ -31,6 +31,12 @@ export function AppDataContext (props) {
     buttonMenu: {
       isHovered: false,
       isOpened: false
+    },
+    modal: {
+      isOpen: false,
+      isSingle: true,
+      current: 0,
+      images: {}
     }
   })
   
@@ -96,6 +102,18 @@ export function AppDataContext (props) {
     })
   }
 
+  // set modal state
+  const _setModalState = (newState) => {
+    setState({
+      modal: {
+        ...appState.modal,
+        ...newState
+      }
+    })
+  }
+
+
+
   // assign new set to data to the state.
   const setState = (newState) => {
     setAppState({ ...appState, ...newState})
@@ -119,6 +137,9 @@ export function AppDataContext (props) {
       }, 
       setMenuAndButtonState(button, transition) {
         return _setMenuAndButtonState(button, transition)
+      },
+      setModalState (val){
+        return _setModalState(val)
       }
     }
   })()

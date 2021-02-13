@@ -3,6 +3,7 @@
 import {Preloader} from './frameranimations/preloader'
 import {MenuButton} from './frameranimations/menuSlider'
 import {TransitionSliders} from './frameranimations/transitionsliders'
+import {ModalAnimation} from './frameranimations/modalAnimations'
 
 // gsap animations
 import {ShowMenu} from './gsap/showMenu'
@@ -17,6 +18,7 @@ export const Anim = (function () {
     MenuButton: MenuButton,
     Helpers: Helpers,
     TransitionSliders: TransitionSliders,
-    ShowMenu: ShowMenu
+    ShowMenu: ShowMenu,
+    ModalAnimation: ModalAnimation
   }
 })()

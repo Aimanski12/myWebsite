@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import Link from 'next/link'
 import {motion} from 'framer-motion'
 import {Anim} from '../../../utils/animations'
-import {AppData} from '../../../context/appData'
+import {AppData} from '../../../context'
 
 export default function MenuItems() {
   const {AppState, SetAppState} = useContext(AppData)

@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState, useRef} from 'react'
-import {AppData} from '../context/appData'
+import {AppData} from '../context/'
 
 import Head from 'next/head'
 import Link from 'next/link'
@@ -8,6 +8,8 @@ import Navigation from '../containers/Navigation/Navigation'
 
 import {motion, AnimatePresence} from 'framer-motion'
 import {Anim} from '../utils/animations'
+
+import {img, images} from '../components/Navigation/Modal/Image/sample'
 
 export default function Home() {
 
@@ -112,6 +114,42 @@ export default function Home() {
   };
 
   // ////////////////////////////////////////////////////////
+  
+  const singleImage = () => {
+    return (
+      <div className="solo">
+        <img 
+          onClick={()=>{
+            Anim.Helpers.hidshowbody('hidden')
+            SetAppState.setModalState({
+              isOpen: true,
+              isSingle: true,
+              images: img })
+          }}
+          src={img.link} alt=""/>
+      </div>)
+  }
+
+  const mutipleImage = () => {
+    return (
+      <div className="multiple">
+        {
+          images.map((m, i) => {
+            return <img key={i}
+              onClick={()=>{
+                Anim.Helpers.hidshowbody('hidden')
+                SetAppState.setModalState({
+                  isOpen: true,
+                  isSingle: false,
+                  current: i,
+                  images: images })
+              }}
+              src={m.link} alt=""/>
+          })
+        }
+      </div>
+    )
+  }
 
   return (
     <div className='main'>
@@ -220,18 +258,17 @@ export default function Home() {
                 })
               }}> Go to one</a>
             </Link>
-            <span className="font-1 s1a">Lorem, ip1sum dolor.</span>
-            <span className="font-1 s2a">Lorem, ip1sum dolor.</span>
-            <span className="font-1 s3a">Lorem, ip1sum dolor.</span>
-            <span className="font-1 s4a">Lorem, ip1sum dolor.</span>
-            <span className="font-1 s5a">Lorem, ip1sum dolor.</span>
-            <br/>
-            <span className="font-1 s1b">Lorem, ip1sum dolor.</span>
-            <span className="font-1 s2b">Lorem, ip1sum dolor.</span>
-            <span className="font-1 s3b">Lorem, ip1sum dolor.</span>
-            <span className="font-1 s4b">Lorem, ip1sum dolor.</span>
-            <span className="font-1 s5b">Lorem, ip1sum dolor.</span>
-            <span className="font-1 s6b">Lorem, ip1sum dolor.</span>
+            <button onClick={()=> {
+              Anim.Helpers.hidshowbody('hidden')
+              SetAppState.setModalState({isOpen: true})
+            }}>Open modal</button>
+
+            {singleImage()}
+            {mutipleImage()}
+            
+
+
+            
           </div>
           <div className="two two2 container">
             <Link href='/about' scroll={false}>

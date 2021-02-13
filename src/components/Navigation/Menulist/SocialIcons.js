@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {AppData} from '../../../context/appData'
+import {AppData} from '../../../context'
 import Icons from '../../GlobalComponents/SocialIcons'
 import {Anim} from '../../../utils/animations'
 import {motion} from 'framer-motion'

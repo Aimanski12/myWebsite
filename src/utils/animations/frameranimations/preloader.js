@@ -2,6 +2,7 @@
 
 export const Preloader = (function (){
   
+  // close intro
   const _closeintro = {
     initial: {
       height: '100vh'
@@ -16,6 +17,7 @@ export const Preloader = (function (){
     }
   }
 
+  // animates the logo
   const _animatelogo = {
     initial: {
       y: 15,
@@ -33,6 +35,7 @@ export const Preloader = (function (){
     }
   }
 
+  // removes the preloader
   const _removeloader = {
     initial: {
       opacity: 1
@@ -47,6 +50,7 @@ export const Preloader = (function (){
     }
   }
 
+  // animates the text
   const _textanimate = {
     initial: {
       letterSpacing: '3px',
@@ -66,6 +70,7 @@ export const Preloader = (function (){
     }
   }
 
+  // animates the loader
   const _loader = {
     initial: {
       width: '0px'

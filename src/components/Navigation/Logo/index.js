@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import Link from 'next/link'
 import Svg from '../../Svgs'
-import {AppData} from '../../../context/appData'
+import {AppData} from '../../../context'
 import {Anim} from '../../../utils/animations'
 
 export default function Logo() {

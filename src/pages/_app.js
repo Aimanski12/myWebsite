@@ -22,13 +22,14 @@ import '../../styles/menu/menu-copyright.css'
 
 // modals
 import '../../styles/modal/imagemodal.css'
+import '../../styles/modal/messagemodal.css'
 
 
 
 
 
 
-import {AppDataContext} from '../context/appData'
+import {AppDataContext} from '../context'
 import {AnimatePresence} from 'framer-motion'
 
 function MyApp({ Component, pageProps, router }) {

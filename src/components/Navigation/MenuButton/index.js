@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {AppData} from '../../../context/appData'
+import {AppData} from '../../../context'
 import {Anim} from '../../../utils/animations'
 import TextMenu from './MenuText'
 import Svg from '../../Svgs'

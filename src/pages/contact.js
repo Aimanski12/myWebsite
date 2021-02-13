@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState, useRef} from 'react'
-import {AppData} from '../context/appData'
+import {AppData} from '../context'
 
 import Head from 'next/head'
 import Link from 'next/link'

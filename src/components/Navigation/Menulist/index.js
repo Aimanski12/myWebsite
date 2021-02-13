@@ -4,7 +4,7 @@ import MenuItems from './MenuItems'
 import SocialIcons from './SocialIcons'
 import CopyRight from './CopyRight'
 import {Anim} from '../../../utils/animations'
-import {AppData} from '../../../context/appData'
+import {AppData} from '../../../context'
 import {motion, AnimatePresence} from 'framer-motion'
 
 export default function MenuList() {

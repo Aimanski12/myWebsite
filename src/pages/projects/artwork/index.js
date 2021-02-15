@@ -1,14 +1,14 @@
 import React, {useContext, useEffect} from 'react'
-import {AppData} from '../context'
+import {AppData} from '../../../context'
 import Head from 'next/head'
-import Navigation from '../containers/Navigation/Navigation'
-import Body from '../containers/Body'
+import Navigation from '../../../containers/Navigation/Navigation'
+import Body from '../../../containers/Body'
 
-export default function Contact() {
+export default function ArtWork() {
   const {AppState, SetAppState} = useContext(AppData)
 
   useEffect(() => {
-    SetAppState.setPageData('contact')
+    SetAppState.setPageData('artwork')
     AppState.menuTransitions.isTransitioning ? (
       setTimeout(()=>{
         window.scrollTo(0, 0)
@@ -24,7 +24,7 @@ export default function Contact() {
         <link rel="icon" type="image/x-icon" href="/images/aiman-small-logo.ico" />
       </Head>
       <Navigation />
-      <Body page='contact'/>
+      <Body page='artwork'/>
     </div>
   )
 }

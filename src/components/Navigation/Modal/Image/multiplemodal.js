@@ -37,7 +37,7 @@ export default function Modal () {
   function closeModal(e) {
     if(e.key === 'Escape') {
       Anim.Helpers.hidshowbody('auto')
-      SetAppState.setModalState({ isOpen: false, current: 0, images: {} })
+      SetAppState.setImageModalState({ isOpen: false, current: 0, images: {} })
     }
   }
 
@@ -58,7 +58,7 @@ export default function Modal () {
     <>
       <motion.div key={page}
         custom={direction}
-        variants={Anim.ModalAnimation.modalSliderVariants}
+        variants={Anim.ImageModalAnim.modalSliderVariants}
         initial="enter"
         animate="center"
         exit="exit"
@@ -77,7 +77,7 @@ export default function Modal () {
           }
         }} className="modal-image-wrapper content-center">
         <Figure img={findImage()} />
-        <CloseButton />
+        <CloseButton btn='image'/>
       </motion.div>
       <Swipe />
       <Arrows right={()=>paginate(1)} left={()=>paginate(-1)}/>

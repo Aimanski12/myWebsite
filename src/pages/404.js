@@ -1,33 +1,22 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../context'
-
 import Head from 'next/head'
-import Link from 'next/link'
-
-
+import Navigation from '../containers/Navigation/Navigation'
+import Body from '../containers/Body'
 
 export default function NotFound() {
-  const {pagedata, setpagedata} = useContext(AppData)
-  useEffect(()=>{
-    setpagedata('notfound')
-    console.log(pagedata)
-  })
+  const {SetAppState} = useContext(AppData)
+
+  useEffect(()=> SetAppState.setPageData('notfound'))
   
   return (
-    <div className='container'>
+    <div className='main'>
       <Head>
-        <title>Aiman Adlawan | Error 404</title>
+        <title>Aiman Adlawan | Not Found</title>
         <link rel="icon" type="image/x-icon" href="/images/aiman-small-logo.ico" />
       </Head>
-
-      <div className='container'>
-        <h1>Page is not found</h1>
-        <Link href='/'>
-          <a>Go Home</a>
-        </Link>
-
-      </div>
-
+      <Navigation />
+      <Body page='notfound'/>
     </div>
   )
 }

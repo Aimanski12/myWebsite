@@ -3,13 +3,17 @@
 import {Preloader} from './frameranimations/preloader'
 import {MenuButton} from './frameranimations/menuSlider'
 import {TransitionSliders} from './frameranimations/transitionsliders'
-import {ModalAnimation} from './frameranimations/modalAnimations'
+import {ImageModalAnim} from './frameranimations/imageModalAnimations'
+import {MessageModalAnim} from './frameranimations/messageModalAnimation'
 
 // gsap animations
 import {ShowMenu} from './gsap/showMenu'
 
 // function helpers
 import {Helpers} from "./animationhelper"
+
+// skew animation
+import {Skew} from './skewAnimations/skewAnimations'
 
 export const Anim = (function () {
 
@@ -19,6 +23,8 @@ export const Anim = (function () {
     Helpers: Helpers,
     TransitionSliders: TransitionSliders,
     ShowMenu: ShowMenu,
-    ModalAnimation: ModalAnimation
+    ImageModalAnim: ImageModalAnim,
+    MessageModalAnim: MessageModalAnim,
+    Skew: Skew
   }
 })()

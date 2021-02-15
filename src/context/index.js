@@ -34,9 +34,13 @@ export function AppDataContext (props) {
     },
     modal: {
       isOpen: false,
-      isSingle: true,
+      isSingle: false,
       current: 0,
       images: {}
+    },
+    message: {
+      isOpen: false,
+      sender: ''
     }
   })
   
@@ -103,7 +107,7 @@ export function AppDataContext (props) {
   }
 
   // set modal state
-  const _setModalState = (newState) => {
+  const _setImageModalState = (newState) => {
     setState({
       modal: {
         ...appState.modal,
@@ -112,6 +116,15 @@ export function AppDataContext (props) {
     })
   }
 
+  // set modal state
+  const _setMessageModalState = (newState) => {
+    setState({
+      message: {
+        ...appState.message,
+        ...newState
+      }
+    })
+  }
 
 
   // assign new set to data to the state.
@@ -138,8 +151,11 @@ export function AppDataContext (props) {
       setMenuAndButtonState(button, transition) {
         return _setMenuAndButtonState(button, transition)
       },
-      setModalState (val){
-        return _setModalState(val)
+      setImageModalState (val){
+        return _setImageModalState(val)
+      },
+      setMessageModalState (val){
+        return _setMessageModalState(val)
       }
     }
   })()

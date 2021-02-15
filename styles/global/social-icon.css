@@ -24,12 +24,12 @@
 }
 
 .social-icon .icon-front {
-  background-color: #001B23;
+  /* background-color: #001B23; */
   border: 1px solid #04C2FF;
 }
 
 .social-icon .icon-back {
-  background-color: #FFC01D;
+  /* background-color: #FFC01D; */
   border: 1px solid #04C2FF;
   transform: rotateY(180deg);
 }

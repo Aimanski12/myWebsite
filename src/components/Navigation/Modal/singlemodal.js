@@ -1,8 +1,9 @@
 import React, {useContext, useEffect} from "react";
-import {AppData} from '../../../../context'
-import Figure from './component/Figure'
-import CloseButton from './component/CloseButton'
-import {Anim} from '../../../../utils/animations'
+import {AppData} from '../../../context'
+import Figure from './Image/component/Figure'
+import CloseButton from './Image/component/CloseButton'
+
+import {Anim} from '../../../utils/animations/'
 
 export default function Single () {
   const {AppState, SetAppState} = useContext(AppData)
@@ -10,7 +11,7 @@ export default function Single () {
   function closeModal(e) {
     if(e.key === 'Escape') {
       Anim.Helpers.hidshowbody('auto')
-      SetAppState.setImageModalState({ isOpen: false, current: 0, images: {} })
+      SetAppState.setModalState({ isOpen: false, current: 0, images: {} })
     }
   }
   
@@ -20,10 +21,11 @@ export default function Single () {
     return () => window.removeEventListener('keydown', closeModal)
   }, [])
 
+
   return (
     <div className="modal-image-wrapper content-center">
       <Figure img={AppState.modal.images}/>
-      <CloseButton btn='image'/>
+      <CloseButton />
     </div>
   );
 };

@@ -3,7 +3,7 @@ export const Helpers = (function (){
   
   // function to remove the foreground slider when page loads
   const _removeintroslider = () => {
-    const slider = document.querySelector('.slider')
+    const slider = document.querySelector('.front-slider')
     slider.style.display = 'none'
   }
   

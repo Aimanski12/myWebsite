@@ -4,7 +4,7 @@ import {Helpers} from './helpers'
 export default {
   index: 'notfound',
   title: "404 Error",
-  background: 'tying.gif',
+  background: '/images/typing.gif',
   caption: "Sorry man! The page you are looking for is not in on file.",
   buttonLink: {
     text: "Back to Home",
@@ -13,7 +13,7 @@ export default {
   socials: {
     icons,
     front: "#FFC01D",
-    back: "#00769C"
+    back: "#005E7C"
   },
   menuItems: Helpers.getMenu()
 }               

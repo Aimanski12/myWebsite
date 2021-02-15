@@ -4,16 +4,25 @@ import {Anim} from '../../../../../utils/animations'
 import Svg from '../../../../Svgs'
 import {motion} from 'framer-motion'
 
-export default function CloseButton() {
+export default function CloseButton({btn}) {
   const {SetAppState} = useContext(AppData)
+
+  const click = () => {
+    if(btn === 'image') {
+      SetAppState.setImageModalState({ isOpen: false, current: 0, images: {} })
+    }
+    if(btn === 'message') {
+      SetAppState.setMessageModalState({isOpen: false})
+    }
+  }
 
   return (
     <div className="modal-svg-wrapper">
       <motion.button  
-        whileHover={Anim.ModalAnimation.rotateBtn}
+        whileHover={Anim.ImageModalAnim.rotateBtn}
         onClick={()=> {
+          click()
           Anim.Helpers.hidshowbody('auto')
-          SetAppState.setModalState({ isOpen: false, current: 0, images: {} })
         }}
         className='content-center'>
         <Svg svg='close'/>     

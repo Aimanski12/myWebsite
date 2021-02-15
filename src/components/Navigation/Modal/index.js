@@ -1,18 +1,18 @@
 import React, {useContext} from "react";
-import {AppData} from '../../../../context'
+import {AppData} from '../../../context'
 import { motion, AnimatePresence } from "framer-motion";
-import {Anim} from '../../../../utils/animations'
+import {Anim} from '../../../utils/animations'
 import SingleModal from './singlemodal'
-import MultipleModal from './multiplemodal'
+import MultipleModal from './Image/component/multiplemodal'
 
-export default function ImageModal () {
+export default function Modal () {
   const {AppState} = useContext(AppData)
 
   return (
     <AnimatePresence>
        {AppState.modal.isOpen && (
         <motion.div 
-          variants={Anim.ImageModalAnim.openModal}
+          variants={Anim.ModalAnimation.openModal}
           initial='initial'
           animate='animate'
           exit='exit'

@@ -12,6 +12,9 @@ import '../../styles/global/cursor.css'
 // preloader element
 import '../../styles/preloader/preloader.css'
 
+// sliders
+import '../../styles/global/sliders.css'
+
 // menu buttons
 import '../../styles/menu/menubutton.css'
 import '../../styles/menu/logo.css'
@@ -23,6 +26,9 @@ import '../../styles/menu/menu-copyright.css'
 // modals
 import '../../styles/modal/imagemodal.css'
 import '../../styles/modal/messagemodal.css'
+
+// notfound
+import '../../styles/notfound/notfound.css'
 
 
 

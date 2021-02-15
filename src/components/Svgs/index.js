@@ -13,6 +13,7 @@ import Logo from './Svg/Logo'
 import Close from './Svg/Close'
 import ChevRight from './Svg/ChevRight'
 import ChevLeft from './Svg/ChevLeft'
+import Envelop from './Svg/Envelop'
 
 function Svgs({svg, fill}) {
 
@@ -29,6 +30,7 @@ function Svgs({svg, fill}) {
     svg === 'chevleft' ? <ChevLeft/> :
     svg === 'chevright' ? <ChevRight /> :
     svg === 'close' ? <Close/> :
+    svg === 'envelop' ? <Envelop/> :
     svg === 'twitter' ? <Twitter fill={fill} /> : null
 
   return (

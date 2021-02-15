@@ -1,0 +1,32 @@
+
+
+.front-slider, .back-slider {
+  position: fixed;
+  z-index: 500;
+  width: 100%;
+  height: 100vh;
+}
+
+.back-slider {
+  z-index: 200;
+}
+
+.front-slider-wrapper, .back-slider-wrapper {
+  width: 100%;
+  height: 100vh;
+  float: right;
+  overflow: hidden;
+}
+
+.front-slider-content, .back-slider-content {
+  float: right;
+  width: 100vw;
+  height: 100vh;
+  background: #041D25;
+}
+
+.front-slider-content span, .back-slider-content span {
+  letter-spacing: 0.4em;
+  font-weight: 500;
+  color: #006383
+}

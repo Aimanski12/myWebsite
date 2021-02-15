@@ -6,6 +6,7 @@ import Logo from '../../components/Navigation/Logo'
 import MenuList from '../../components/Navigation/Menulist'
 import ModalImage from '../../components/Navigation/Modal/Image'
 import ModalMessage from '../../components/Navigation/Modal/Message'
+import Sliders from '../../components/Navigation/Sliders'
 
 export default function Headers() {
 
@@ -18,6 +19,7 @@ export default function Headers() {
       <MenuList />
       <ModalImage/>
       <ModalMessage />
+      <Sliders />
     </>
   );
 }

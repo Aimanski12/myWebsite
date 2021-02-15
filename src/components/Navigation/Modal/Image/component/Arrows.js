@@ -7,13 +7,13 @@ export default function Arrows({left, right}) {
   return (
     <>
       <motion.div 
-        whileHover={Anim.ModalAnimation.hoverRight}
+        whileHover={Anim.ImageModalAnim.hoverRight}
         whileTap={{ scale: 0.9 }}
         className="modal-next-btn" onClick={right}>
         <Svg svg='chevright'/>
       </motion.div>
       <motion.div 
-        whileHover={Anim.ModalAnimation.hoverLeft}
+        whileHover={Anim.ImageModalAnim.hoverLeft}
         whileTap={{ scale: 0.9 }}
         className="modal-prev-btn" onClick={left}>
         <Svg svg='chevleft'/>

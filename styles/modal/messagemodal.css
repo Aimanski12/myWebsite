@@ -11,3 +11,97 @@
   background: rgba(0, 78, 102, 0.95);
   position: relative;
 }
+
+.envelop-svg-wrapper, .envelop-svg-wrapper svg {
+  width: 200px;
+  height: 200px
+}
+
+.modal-message-content {
+  margin: 30px 0 15px 0;
+}
+
+.modal-message-content span, .modal-message-content p{
+  color: #57c7ec
+}
+
+.modal-message-content span {
+  margin-bottom: 35px;
+}
+
+.modal-message-content h3 {
+  margin-bottom: 35px;
+  color: #FFC01D;
+  font-weight: 500;
+}
+
+.modal-message-content p {
+  margin: 5px 0
+}
+
+@media (max-width: 1068px) {
+  .envelop-svg-wrapper, .envelop-svg-wrapper svg {
+    width: 180px;
+    height: 180px
+  }
+  .modal-message-content {
+    margin: 20px 0 10px 0;
+  }
+  .modal-message-content span {
+    margin-bottom: 30px;
+  }
+  .modal-message-content h3 {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 868px) {
+  .envelop-svg-wrapper, .envelop-svg-wrapper svg {
+    width: 165px;
+    height: 165px
+  }
+}
+
+@media (max-width: 668px) {
+  .envelop-svg-wrapper, .envelop-svg-wrapper svg {
+    width: 135px;
+    height: 135px
+  }
+}
+
+@media (max-width: 568px) {
+  .envelop-svg-wrapper, .envelop-svg-wrapper svg {
+    width: 120px;
+    height: 120px
+  }
+}
+
+@media (max-width: 468px) {
+  .envelop-svg-wrapper, .envelop-svg-wrapper svg {
+    width: 105px;
+    height: 105px
+  }
+}
+
+/* wave smiley animation */
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%; 
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(32.0deg) }
+   20% { transform: rotate(-23.0deg) }
+   30% { transform: rotate(32.0deg) }
+   40% { transform: rotate(-8.0deg) }
+   50% { transform: rotate(25.0deg) }
+   60% { transform: rotate(-15.0deg) }
+   70% { transform: rotate(20.0deg) }
+   80% { transform: rotate( -15.0deg) }
+   90% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}

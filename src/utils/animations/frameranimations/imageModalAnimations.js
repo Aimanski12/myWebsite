@@ -1,5 +1,5 @@
 
-export const ModalAnimation = (function (){
+export const ImageModalAnim = (function (){
 
   // slide the modal in and out
   const _openModal = {

@@ -22,10 +22,10 @@ export const SessionStorage = (function(){
         return false
       }
     } else {
-      // // save a new session
+      // save a new session
       // const _id = await SessionHelpers.saveInitialData()
       // saveSession(_id)
-      // // return true to say that the browser has not been visited
+      // return true to say that the browser has not been visited
       return false
     }
   }

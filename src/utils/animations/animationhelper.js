@@ -15,10 +15,10 @@ export const Helpers = (function (){
   }
 
   // function to remove the 
-  // const _removepreloader = () => {
-  //   const preloader = document.querySelector('.pre-loader')
-  //   preloader.style.display = 'none'
-  // }
+  const _removepreloader = () => {
+    const preloader = document.querySelector('.pre-loader')
+    preloader.style.display = 'none'
+  }
 
   // function to toggle a class active to the menu button
   // will trigger animation of the svg

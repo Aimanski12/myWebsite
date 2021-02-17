@@ -13,12 +13,12 @@ export const Helpers = (function(){
 
   // this function returns a specific artwork data
   // based on a day of the week. 
-  const _getArtWork = (n) => {
+  const _getArtWork = () => {
     // get the day of the week
     const day = new Date().getDay()
     // set of images per day
     const img = [[0,3],[1,4],[2,5],[3,6],[4,0],[5,1],[6,2]]
-    return artworks[img[day][n]]
+    return [artworks[img[day][0]], artworks[img[day][1]]]
   }
 
   // this function return an array of data

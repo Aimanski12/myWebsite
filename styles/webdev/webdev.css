@@ -1,0 +1,32 @@
+.webdev-wrapper {
+  min-height: 500px;
+  width: 100%;
+  background: #F4F4F4;
+}
+
+.featured-webdev-title {
+  height: 20em;
+  width: 100%;
+}
+
+.featured-webdev-title h2 {
+  font-weight: 600;
+  color: #16728F;
+  text-align: center;
+}
+
+.featured-webdev-title p {
+  font-weight: 400;
+  color: #04C2FF;
+  letter-spacing: 0.14em;
+  text-align: center;
+  margin-top: 10px
+}
+
+@media (max-width: 568px) {
+  .featured-webdev-title h2, .featured-webdev-title p {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%
+  }
+}

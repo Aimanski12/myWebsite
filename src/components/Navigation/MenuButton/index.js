@@ -35,7 +35,7 @@ export default function MenuButton() {
   }
 
   return (
-    <div className="navigation-menu-button">
+    <div className="navigation-menu-button align-right">
       <div className="menu-button-container">
         <div className="button-flex-row content-center"
           onClick={open}

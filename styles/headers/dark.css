@@ -1,0 +1,173 @@
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: #0E5267;
+}
+
+.header-text {
+  position: absolute;
+  top: 58vh;
+}
+
+.header-text h1 {
+  display: inline-block;
+  box-sizing: content-box;
+  position: relative;
+}
+
+.text-wrapper {
+  position: relative;
+}
+
+.text-block-runner {
+  color: #FFC01D;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.text-block-runner span {
+  opacity: 0;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+  display: block;
+  animation: appear-title 0.9s forwards;
+  animation-delay: .55s;
+  transition-timing-function: cubic-bezier(0.6, -0.05, 0.01, 0.99);
+}
+
+.text-block-runner:after {
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background: #00f0b5;
+  animation: rev-block 1.2s cubic-bezier(0.6, -0.05, 0.01, 0.99) forwards;
+  animation-delay: .15s;
+}
+
+.caption-wrapper {
+  margin-top: 8px;
+  width: 570px;
+  overflow: hidden;
+}
+
+.caption-wrapper p {
+  padding: 0;
+  letter-spacing: -0.04em;
+  text-align: left;
+  color: #6FDCFE;
+  font-weight: 400;
+
+  opacity: 0;
+  animation: appear-caption 0.9s forwards;
+  animation-delay: .65s;
+  transition-timing-function: cubic-bezier(0.6, -0.05, 0.01, 0.99);
+}
+
+@keyframes rev-block {
+  0% {
+    left: 0;
+    width: 0%;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+
+@keyframes appear-title {
+  0% {
+    transform: translateY(50px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes appear-caption {
+  0% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 1268px) {
+  .caption-wrapper {
+    width: 540px;
+  }
+}
+
+@media (max-width: 1168px) {
+  .caption-wrapper {
+    width: 510px;
+  }
+}
+
+@media (max-width: 1068px) {
+  .header-text {
+    top: 55vh;
+  }
+  .caption-wrapper {
+    width: 490px;
+  }
+}
+
+@media (max-width: 968px) {
+  .caption-wrapper {
+    width: 470px;
+  }
+}
+
+@media (max-width: 868px) {
+  .caption-wrapper {
+    width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .caption-wrapper {
+    width: 430px;
+  }
+}
+
+@media (max-width: 668px) {
+  .header-text {
+    top: 53vh;
+  }
+  .caption-wrapper {
+    width: 410px;
+  }
+}
+
+@media (max-width: 568px) {
+  .header .align-left {
+    left: 0;
+    width: 90%;
+    margin: 0 5%
+  }
+  .caption-wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 468px) {
+  .header .align-left {
+    width: 95%;
+    margin: 0 2.5%;
+  }
+}

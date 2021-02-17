@@ -7,7 +7,7 @@ function index({page}) {
   const {SetAppState} = useContext(AppData)
 
   return (
-    <div>
+    <>
       <div className="one1 sample-container">
         <h1>{page}</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora iure doloribus itaque, veniam amet minima recusandae libero mollitia quo reiciendis?</p>
@@ -143,7 +143,7 @@ function index({page}) {
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe in optio, dicta quis sint doloremque.</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro, praesentium!</p>
       </div>
-    </div>
+    </>
   )
 }
 

@@ -14,6 +14,7 @@ import Close from './Svg/Close'
 import ChevRight from './Svg/ChevRight'
 import ChevLeft from './Svg/ChevLeft'
 import Envelop from './Svg/Envelop'
+import ArrowDown from './Svg/ArrowDown'
 
 function Svgs({svg, fill}) {
 
@@ -23,13 +24,14 @@ function Svgs({svg, fill}) {
     svg === 'dribbble' ? <Dribbble fill={fill}/> :
     svg === 'linkedin' ? <Linkedin fill={fill} /> :
     svg === 'pentel' ? <Pentel /> :
-    svg === 'bracket' ? <Bracket /> :
-    svg === 'webdesign' ? <Webdesign /> :
+    svg === 'code' ? <Bracket /> :
+    svg === 'desktop' ? <Webdesign /> :
     svg === 'menuburger' ? <MenuBurger /> :
     svg === 'logo' ? <Logo /> :
     svg === 'chevleft' ? <ChevLeft/> :
     svg === 'chevright' ? <ChevRight /> :
     svg === 'close' ? <Close/> :
+    svg === 'arrowdown' ? <ArrowDown/> :
     svg === 'envelop' ? <Envelop/> :
     svg === 'twitter' ? <Twitter fill={fill} /> : null
 

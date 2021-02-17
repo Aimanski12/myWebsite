@@ -11,7 +11,7 @@ import Sliders from '../../components/Navigation/Sliders'
 export default function Headers() {
 
   return (
-    <>
+    <header>
       {/* <Cursor /> */}
       <Preloader/>
       <Logo />
@@ -20,6 +20,6 @@ export default function Headers() {
       <ModalImage/>
       <ModalMessage />
       <Sliders />
-    </>
+    </header>
   );
 }

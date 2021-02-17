@@ -1,0 +1,19 @@
+
+.featured-project {
+  width: 100%;
+  background: rgba(210,210,210,0.2);
+  min-height: 200px;
+}
+
+.featured-project .header-wrapper {
+  min-height: 200px;
+  flex-direction: row;
+} 
+
+/* 
+<div className="featured-project-wrapper">
+  <div className="header-wrapper content-center">
+
+  </div>
+</div>
+*/

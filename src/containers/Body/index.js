@@ -58,7 +58,7 @@ export default function Body({page}) {
     const difference = data.current - data.rounded;
     const acceleration = difference / windowSize.width;
     const velocity = +acceleration;
-    const skew = velocity * 12;
+    const skew = velocity * 5;
 
     //Assign skew and smooth scrolling to the scroll container
     if (scrollContainer.current != undefined) {

@@ -15,7 +15,7 @@ export default {
       back: "#003B4D"
     }
   },
-  artWork1: Helpers.getArtWork(0),
+  artWork: Helpers.getArtWork(),
   featured: {
     title: "Featured Web Projects",
     caption: "Here are some the projects I have done recently.",
@@ -29,7 +29,6 @@ export default {
       link: "/projects/webdev"
     }
   },
-  artWork2: Helpers.getArtWork(1),
   quickLinks: Helpers.getQuickLinks('home'),
   footer: {
     isComplete: true,

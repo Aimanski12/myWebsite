@@ -30,7 +30,7 @@ export default function Logo() {
   }
 
   return (
-    <div className="navigation-logo">
+    <div className="navigation-logo align-left">
       <div className="navigation-logo-container">
         <Link href='/' scroll={false}>
           <a onClick={()=>{

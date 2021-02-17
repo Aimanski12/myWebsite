@@ -3,6 +3,26 @@
 export const MenuButton = (function () {
   let easing = [0.6, -0.05, 0.01, 0.99]
 
+  // button animation for hovering in and out 
+  // on the menu button
+  const buttonAnim = {
+    initial: {
+      opacity: 0
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 0.15,
+      }
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: 0.4,
+      }
+    }
+  }
+
   // framer animation for the copyright
   const showCopyRight = {
     initial: {
@@ -123,6 +143,7 @@ export const MenuButton = (function () {
     showMenu,
     slideMenuItems,
     slideIcons,
+    buttonAnim,
     animateSliders,
     showCopyRight
   }

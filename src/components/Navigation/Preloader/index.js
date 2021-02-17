@@ -36,10 +36,13 @@ export default function Preloader() {
               initial='initial'
               animate='animate'
               onAnimationComplete={()=> {
-                // Anim.Helpers.removepreloader()
+                Anim.Helpers.removepreloader()
                 // update the isDoneAnimating state to prevent
                 // reanimating on page transitions
-                SetAppState.setSessionState({ isDoneAnimating: true })
+                SetAppState.setSessionState({ 
+                  isDoneAnimating: true,
+                  isFirstTime: false
+                })
               }}
               className="pre-loader-wrapper">
               <div className="pre-loader-overflow content-center">

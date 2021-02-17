@@ -1,7 +1,6 @@
 
 .navigation-menu-button {
   position: fixed;
-  right: 10vw;
   top: 68px;
   z-index: 800;
   width: 80px;
@@ -87,22 +86,16 @@
   stroke: #FFC01D
 }
 
-@media (max-width: 1468px) {
-  .navigation-menu-button {
-    right: 120px;
-  }
-}
+
 
 @media (max-width: 1268px) {
   .navigation-menu-button {
-    right: 95px;
     top: 60px;
   }
 }
 
 @media (max-width: 1068px) {
   .navigation-menu-button {
-    right: 85px;
     top: 46px;
   }
   .menu-text-container {
@@ -120,7 +113,6 @@
 
 @media (max-width: 868px) {
   .navigation-menu-button {
-    right: 60px;
     top: 40px;
     width: 64px;
     height: 20px;
@@ -138,28 +130,14 @@
   }
 }
 
-@media (max-width: 768px) {
-  .navigation-menu-button {
-    right: 50px;
-  }
-}
-
 @media (max-width: 668px) {
   .navigation-menu-button {
-    right: 40px;
     top: 36px;
-  }
-}
-
-@media (max-width: 568px) {
-  .navigation-menu-button {
-    right: 30px;
   }
 }
 
 @media (max-width: 468px) {
   .navigation-menu-button {
-    right: 20px;
     top: 30px;
   }
 }

@@ -2,6 +2,7 @@
 import '../../styles/globals.css'
 import '../../styles/global/social-icon.css'
 import '../../styles/global/copyright.css'
+import '../../styles/global/margins.css'
 
 // css fonts
 import '../../styles/global/fonts.css'
@@ -30,6 +31,16 @@ import '../../styles/modal/messagemodal.css'
 // notfound
 import '../../styles/notfound/notfound.css'
 
+import '../../styles/headers/dark.css'
+import '../../styles/headers/headerSocials.css'
+import '../../styles/headers/scrollDown.css'
+
+// artwork 
+import '../../styles/artwork/featured.css'
+
+// webdev projects
+import '../../styles/webdev/webdev.css'
+import '../../styles/webdev/projects.css'
 
 
 

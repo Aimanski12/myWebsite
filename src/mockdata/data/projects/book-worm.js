@@ -24,7 +24,7 @@ export default {
       }
     ],
     buttonLink: {
-      text: "View Details",
+      text: "View Details →",
       link: "/projects/webdev/book-worm"
     }
   },

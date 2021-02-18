@@ -20,7 +20,8 @@ export default {
     caption: "You can also view my webdev projects.",
     buttonLink: {
       text: "View webdev projects →",
-      link: "/projects/webdev"
+      link: "/projects/webdev",
+      type: "internal"
     }
   },
   quickLinks: Helpers.getQuickLinks('artwork'),

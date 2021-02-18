@@ -20,7 +20,8 @@ export default {
     caption: "You may also view my UI/UI designs I posted on Behance.",
     buttonLink: {
       text: "Go to Behance →",
-      link: "https://www.behance.net/aimanadlawan"
+      link: "https://www.behance.net/aimanadlawan",
+      type: "external"
     }
   },
   gitProj: github,
@@ -29,7 +30,8 @@ export default {
     caption: "You can also see my artwork on the link below.",
     buttonLink: {
       text: "View Artwork →",
-      link: "/projects/artwork"
+      link: "/projects/artwork",
+      type: "internal"
     }
   },
   quickLinks: Helpers.getQuickLinks('webdev'),

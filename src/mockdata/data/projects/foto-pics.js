@@ -20,8 +20,9 @@ export default {
       }
     ],
     buttonLink: {
-      text: "View Details",
-      link: "/projects/webdev/foto-pics"
+      text: "View Details →",
+      link: "/projects/webdev/foto-pics",
+      type: "internal"
     }
   },
   overview: {
@@ -97,15 +98,18 @@ export default {
     buttonLink: [
       {
         text: "Launch App →",
-        link: "https://foto-pics.vercel.app"
+        link: "https://foto-pics.vercel.app",
+        type: "external"
       },
       {
         text: "Source Code →",
-        link: "https://github.com/Aimanski12/foto-pics"
+        link: "https://github.com/Aimanski12/foto-pics",
+        type: "external"
       },
       {
         text: "View on Behance →",
-        link: "https://www.behance.net/gallery/106587429/Foto-Pics"
+        link: "https://www.behance.net/gallery/106587429/Foto-Pics",  
+        type: "external"
       }
     ]
   },

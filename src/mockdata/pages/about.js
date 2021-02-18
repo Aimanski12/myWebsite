@@ -31,7 +31,8 @@ export default {
     caption: "Dig a little deeper and see what I have done and what I can do.",
     buttonlink: {
       text: "View resume →",
-      link: "/resume"
+      link: "/resume",
+      type: "internal"
     }
   },
   quickLinks: Helpers.getQuickLinks('about'),

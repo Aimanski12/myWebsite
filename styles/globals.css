@@ -46,6 +46,7 @@ a {
   min-height: 100vh;
   position: fixed;
   z-index: 300;
+  background: #F4F4F4;
 }
 
 .scroll-container {

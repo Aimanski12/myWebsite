@@ -15,6 +15,8 @@
     "popmotion": "^9.1.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "ua-parser-js": "^0.7.23"
+    "react-reveal": "^1.2.2",
+    "ua-parser-js": "^0.7.23",
+    "vanilla-tilt": "^1.7.0"
   }
 }

@@ -21,7 +21,7 @@ export default {
   },
 
   seeProj: {
-    title: "View Projects",
+    title: "See My Projects",
     caption: "Take a look at the projects I have built.",
     links: [
       {
@@ -29,7 +29,8 @@ export default {
         title: "Artwork",
         buttonLink: {
           text: "Go to Artwork →",
-          link: "/projects/artwork"
+          link: "/projects/artwork",
+          type: "internal"
         }
       },
       {
@@ -37,7 +38,8 @@ export default {
         title: "Webdev",
         buttonLink: {
           text: "Go to Webdev →",
-          link: "/projects/artwork"
+          link: "/projects/artwork",
+          type: "internal"
         }
       },
     ]
@@ -47,7 +49,8 @@ export default {
     caption: "If you are interested in hiring me, or just want to reach out and say hi, send me a message and we can talk.",
     buttonLink: {
       text: "Message Me →",
-      link: "/contacts"
+      link: "/contacts",
+      type: "internal"
     }
   },
   quickLinks: Helpers.getQuickLinks('knowmore'),

@@ -24,8 +24,9 @@ export default {
       }
     ],
     buttonLink: {
-      text: "View Details",
-      link: "/projects/webdev/news-box"
+      text: "View Details →",
+      link: "/projects/webdev/news-box",
+      type: "internal"
     }
   },
   overview: {
@@ -100,15 +101,18 @@ export default {
     buttonLink: [
       {
         text: "Launch App →",
-        link: "https://news-box.vercel.app"
+        link: "https://news-box.vercel.app",
+        type: "external"
       },
       {
         text: "Source Code →",
-        link: "https://github.com/Aimanski12/news-room"
+        link: "https://github.com/Aimanski12/news-room",
+        type: "external"
       },
       {
         text: "View on Behance →",
-        link: "https://www.behance.net/gallery/107484257/News-Box"
+        link: "https://www.behance.net/gallery/107484257/News-Box",
+        type: "external"
       }
     ]
   },

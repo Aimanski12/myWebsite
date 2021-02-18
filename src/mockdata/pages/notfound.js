@@ -8,7 +8,8 @@ export default {
   caption: "Sorry man! The page you are looking for is not in on file.",
   buttonLink: {
     text: "Back to Home",
-    link: "/"
+    link: "/",
+    type: "internal"
   },
   socials: {
     icons,

@@ -12,13 +12,13 @@ export const MenuButton = (function () {
     animate: {
       opacity: 1,
       transition: {
-        duration: 0.15,
+        duration: 0.5
       }
     },
     exit: {
       opacity: 0,
       transition: {
-        duration: 0.4,
+        duration: 0.35,
       }
     }
   }

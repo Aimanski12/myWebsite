@@ -25,7 +25,9 @@ export default {
     ],
     buttonLink: {
       text: "View Details →",
-      link: "/projects/webdev/book-worm"
+      link: "/projects/webdev/book-worm",
+      type: "internal"
+
     }
   },
   overview: {
@@ -101,15 +103,18 @@ export default {
     buttonLink: [
       {
         text: "Launch App →",
-        link: "https://book-worm.vercel.app"
+        link: "https://book-worm.vercel.app",
+        type: "external"
       },
       {
         text: "Source Code →",
-        link: "https://github.com/Aimanski12/book-worm"
+        link: "https://github.com/Aimanski12/book-worm",
+        type: "external"
       },
       {
         text: "View on Behance →",
-        link: "https://www.behance.net/gallery/109806633/Book-Worm-Wensite"
+        link: "https://www.behance.net/gallery/109806633/Book-Worm-Wensite",
+        type: "external"
       }
     ]
   },

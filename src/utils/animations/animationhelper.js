@@ -1,3 +1,4 @@
+import tilt from 'vanilla-tilt'
 
 export const Helpers = (function (){
   
@@ -35,6 +36,14 @@ export const Helpers = (function (){
     image.style.backgroundPosition = x + '% ' + y + '%';
   }
 
+  // this function will tilt the image when hovered
+  const _tiltImage = (el, deg) => {
+    // if(window.innerWidth > 868) {
+      tilt.init(document.querySelectorAll(el), 
+        { max: deg, speed: 800, scale: 1.02 });
+    // }
+  }
+
 
   // dont forget to remove the preloader function
   return {
@@ -52,7 +61,11 @@ export const Helpers = (function (){
     },
     zoomFigureImage (e) {
       return _zoomFigureImage(e)
+    }, 
+    tiltImage(el, deg){
+      return _tiltImage(el, deg)
     }
+
   }
 })()
 

@@ -20,8 +20,9 @@ export default {
       }
     ],
     buttonLink: {
-      text: "View Details",
-      link: "/projects/webdev/radio-live"
+      text: "View Details →",
+      link: "/projects/webdev/radio-live",
+      type: "internal"
     }
   },
   overview: {
@@ -96,15 +97,18 @@ export default {
     buttonLink: [
       {
         text: "Launch App →",
-        link: "https://radio-live.vercel.app"
+        link: "https://radio-live.vercel.app",
+        type: "internal"
       },
       {
         text: "Source Code →",
-        link: "https://github.com/Aimanski12/radio-live"
+        link: "https://github.com/Aimanski12/radio-live",
+        type: "internal"
       },
       {
         text: "View on Behance →",
-        link: "https://www.behance.net/gallery/105665555/Radio-Live"
+        link: "https://www.behance.net/gallery/105665555/Radio-Live",
+        type: "internal"
       }
     ]
   },

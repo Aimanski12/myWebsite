@@ -106,6 +106,15 @@ export function AppDataContext (props) {
     })
   }
 
+  const _transitionToNextPage = (newState) => {
+    setState({
+      menuTransitions: {
+        ...appState.menuTransitions,
+        ...newState
+      }
+    })
+  }
+
   // set modal state
   const _setImageModalState = (newState) => {
     setState({
@@ -156,6 +165,9 @@ export function AppDataContext (props) {
       },
       setMessageModalState (val){
         return _setMessageModalState(val)
+      },
+      transitionToNextPage(val) {
+        return _transitionToNextPage(val)
       }
     }
   })()

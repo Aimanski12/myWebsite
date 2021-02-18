@@ -2,31 +2,41 @@
   min-height: 500px;
   width: 100%;
   background: #F4F4F4;
+  padding-top: 14em;
 }
 
-.featured-webdev-title {
-  height: 20em;
-  width: 100%;
-}
-
-.featured-webdev-title h2 {
+.webdev-title {
   font-weight: 600;
   color: #16728F;
-  text-align: center;
 }
 
-.featured-webdev-title p {
+.webdev-caption {
   font-weight: 400;
   color: #04C2FF;
   letter-spacing: 0.14em;
-  text-align: center;
-  margin-top: 10px
+  line-height: 2em;
+  margin-bottom: 2.5em;
 }
 
 @media (max-width: 568px) {
-  .featured-webdev-title h2, .featured-webdev-title p {
+  .webdev-wrapper {
+    padding-top: 12em;
+  }
+  .webdev-title {
     width: 95%;
-    margin-left: 2.5%;
-    margin-right: 2.5%
+    text-align: center;
+  }
+  .webdev-caption {
+    margin-bottom: 1.5em;
+    margin-top: 8px;
+    width: 95%;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 468px) {
+  .webdev-wrapper {
+    padding-top: 10em;
   }
 }

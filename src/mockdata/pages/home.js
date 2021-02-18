@@ -25,8 +25,9 @@ export default {
     title: "Wanna see more?",
     caption: "Let me show you a little bit further.",
     buttonLink: {
-      text: "View all projects →",
-      link: "/projects/webdev"
+      text: "View All Projects →",
+      link: "/projects/webdev",
+      type: "internal"
     }
   },
   quickLinks: Helpers.getQuickLinks('home'),

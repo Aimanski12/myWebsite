@@ -24,8 +24,9 @@ export default {
       }
     ],
     buttonLink: {
-      text: "View Details",
-      link: "/projects/webdev/movie-box"
+      text: "View Details →",
+      link: "/projects/webdev/movie-box",
+      type: "internal"
     }
   },
   overview: {
@@ -100,15 +101,18 @@ export default {
     buttonLink: [
       {
         text: "Launch App →",
-        link: "https://movie-box.vercel.app"
+        link: "https://movie-box.vercel.app",
+        type: "external"
       },
       {
         text: "Source Code →",
-        link: "https://github.com/Aimanski12/movie-box"
+        link: "https://github.com/Aimanski12/movie-box",
+        type: "external"
       },
       {
         text: "View on Behance →",
-        link: "https://www.behance.net/gallery/104066973/Movie-Box"
+        link: "https://www.behance.net/gallery/104066973/Movie-Box",
+        type: "external"
       }
     ]
   },

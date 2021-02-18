@@ -6,7 +6,8 @@ export default {
     caption: "Have a project you'd like to start or need help with?",
     buttonLink: {
       text: "Get in Touch",
-      link: "/contact"
+      link: "/contact",
+      type: "internal"
     } 
   },
   hitMe: {

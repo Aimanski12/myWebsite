@@ -3,6 +3,7 @@ import '../../styles/globals.css'
 import '../../styles/global/social-icon.css'
 import '../../styles/global/copyright.css'
 import '../../styles/global/margins.css'
+import '../../styles/global/buttonLink.css'
 
 // css fonts
 import '../../styles/global/fonts.css'
@@ -41,6 +42,9 @@ import '../../styles/artwork/featured.css'
 // webdev projects
 import '../../styles/webdev/webdev.css'
 import '../../styles/webdev/projects.css'
+
+// weblinks
+import '../../styles/weblinks/weblinks.css'
 
 
 

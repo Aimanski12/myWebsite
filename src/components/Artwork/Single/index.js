@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import {Anim} from '../../../utils/animations'
 import Svg from '../../Svgs'
 
 export default function ArtWorkSingle({art}) {
+  useEffect(()=>{
+    Anim.Helpers.tiltImage(".featured-artwork figure", 35)
+  })
 
   return (
     <section className="featured-artwork content-center"

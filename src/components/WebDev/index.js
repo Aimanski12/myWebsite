@@ -1,6 +1,5 @@
 import React, {useContext} from 'react';
 import {AppData} from '../../context'
-import Title from './Title'
 import Projects from './Projects'
 
 export default function WebDev() {
@@ -8,10 +7,11 @@ export default function WebDev() {
   const data = AppState.pageData.data.featured
 
   return (
-    <section className="webdev-wrapper">
+    <section className="webdev-wrapper content-center">
       { data != undefined ? 
         <>
-          <Title data={data} />
+          <h2 className="webdev-title font-1 s3a">{data.title}</h2>
+          <p className='webdev-caption font-2 s4b'>{data.caption}</p>
           <Projects projects={data.projects}/>
         </> : null}
     </section>

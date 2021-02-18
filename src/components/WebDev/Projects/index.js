@@ -1,58 +1,36 @@
 import React from 'react';
-import Link from 'next/link'
-import Svg from '../../Svgs'
+import Image from './components/Image'
+import Features from './components/Features'
+import ButtonLink from '../../GlobalComponents/ButtonLink'
 
 export default function Projects({projects}) {
-  const data = projects[0].banner
-  console.log(data)
+
+  const data = projects.map((p, i) => {
+    const data = p.banner
+    return (
+      <article 
+        className={`featured-project header-wrapper content-center ${i%2 === 1 ? 'row-reverse' : ''}`} key={i}>
+
+          <Image data={data}/>
+          <div className="featured-project-content">
+            <div className="project-content-wrapper content-center">
+              <h2 className='font-1 s2a'>{data.title}</h2>
+              <p className='font-1 s6a'>{data.description}</p>
+
+              <Features feature={data.features} />
+
+              <div className='featured-btn-wrapper'>
+                <ButtonLink data={data.buttonLink}/>
+              </div>
+
+            </div>
+          </div>
+      </article>
+    )
+  })
 
   return (
-    <article className="featured-project content-center">
-
-        <figure>
-          <img src={data.image.link} alt={data.image.alt}/>
-        </figure>
-
-        <div className="featured-project-content">
-
-          <h2>{data.title}</h2>
-          <p>{data.description}</p>
-
-          
-          <div className="project-com">
-            <ul>
-              <li className='content-center'>
-                <Svg svg={data.features[0].svg}/>{data.features[0].text}
-              </li>
-              <li className='content-center'>
-                <Svg svg={data.features[1].svg}/>{data.features[1].text}
-              </li>
-              <li className='content-center'>
-                <Svg svg={data.features[2].svg}/>{data.features[2].text}
-              </li>
-            </ul>
-          </div>
-
-
-
-          <div className="featured-project-btn">
-
-            <div className="project-com-btn">
-              <Link href={data.buttonLink.link}>
-                <a>{data.buttonLink.text}</a>
-              </Link>
-            </div>
-
-          </div>
-
-
-
-        </div>
-
-    </article>
+    <>{data}</>
   );
 }
-{/* <source 
-  data-srcset="/me-1-lg.7c409393.webp 850w,/me-1-md.ed6ccaba.webp 600w,/me-1-sm.c463fd93.webp 350w" 
-  sizes="25vw" type="image/webp" 
-  srcset="/me-1-lg.7c409393.webp 850w,/me-1-md.ed6ccaba.webp 600w,/me-1-sm.c463fd93.webp 350w" /> */}
+

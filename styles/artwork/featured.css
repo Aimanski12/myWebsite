@@ -7,7 +7,7 @@
 }
 
 .featured-artwork img {
-  width: 600px;
+  width: 540px;
   height: auto;
   transition: all 0.2s ease-in;
 }
@@ -60,7 +60,7 @@
 
 @media (max-width: 1468px) {
   .featured-artwork img {
-    width: 560px;
+    width: 520px;
   }
   .art-link-caption {
     bottom: 40px;
@@ -68,12 +68,12 @@
 }
 @media (max-width: 1268px) {
   .featured-artwork img {
-    width: 520px;
+    width: 480px;
   }
 }
 @media (max-width: 1068px) {
   .featured-artwork img {
-    width: 500px;
+    width: 460px;
   }
 }
 

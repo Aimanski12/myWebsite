@@ -4,14 +4,12 @@ import {motion} from 'framer-motion'
 import {Anim} from '../../../utils/animations'
 import {AppData} from '../../../context'
 
-export default function MenuItems({data}) {
-  const {AppState, SetAppState} = useContext(AppData)
-  console.log(data)
+export default function MenuItems({data, current}) {
+  const {SetAppState} = useContext(AppData)
+
   const menuItems = () =>{
-    const menu = AppState.pageData.data.menuItems.menu
-    const active = AppState.pageData.data.index
-    return menu.map((m, i) =>{
-      if(m.index === active) {
+    return data.map((m, i) =>{
+      if(m.index === current) {
         return (
           <li className="menu-item content-center" key={i}>
             <motion.div 

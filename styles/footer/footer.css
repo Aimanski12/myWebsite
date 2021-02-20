@@ -54,7 +54,6 @@
   width: 30%;
   padding-left: 20%;
   height: 400px;
-  /* background: rgba(210,210,210,0.1); */
 }
 
 .hit-me h3 {
@@ -138,7 +137,7 @@
 }
 
 @media (max-width: 768px) {
-  footer .header-wrapper {
+  .footer-wrapper .header-wrapper {
     flex-direction: column;
   }
   .lets-work {

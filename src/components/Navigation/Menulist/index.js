@@ -21,8 +21,8 @@ export default function MenuList({data}) {
           className="menu-list-container content-center">
           <Sliders />
           <div className="menu-container content-center">
-            <MenuItems data={data.menu}/>
-            <Socials data={data.socialIcons}/>
+            <MenuItems data={data.menuItems.menu} current={data.index}/>
+            <Socials data={data.menuItems.socialIcons}/>
             <CopyRight />
           </div>
         </motion.div> ) }

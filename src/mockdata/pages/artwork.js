@@ -20,7 +20,7 @@ export default {
     title: "Webdev Projects?",
     caption: "You can also view my webdev projects.",
     buttonLink: {
-      text: "View webdev projects →",
+      text: "Webdev Projects →",
       link: "/projects/webdev",
       type: "internal"
     }

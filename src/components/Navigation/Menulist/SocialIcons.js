@@ -1,21 +1,18 @@
-import React, {useContext} from 'react';
-import {AppData} from '../../../context'
+import React from 'react';
 import Icons from '../../GlobalComponents/SocialIcons'
 import {Anim} from '../../../utils/animations'
 import {motion} from 'framer-motion'
 
-export default function SocialIcons() {
-  const {AppState} = useContext(AppData)
-  
+export default function SocialIcons({data}) {
+
   const icons = () => {
-    const icon = AppState.pageData.data.menuItems.socialIcons
-    return icon.socials.map((l, i) => {
+    return data.socials.map((l, i) => {
       return <li className="menu-socials" key={i}>
         <motion.div  variants={Anim.MenuButton.slideIcons}>
           <a href={l.link} 
             target='_blank'
             rel="noreferrer noopener">
-            <Icons svg={l.svg} front={icon.front} back={icon.back}/>
+            <Icons svg={l.svg} front={data.front} back={data.back}/>
           </a>
         </motion.div>
       </li> }

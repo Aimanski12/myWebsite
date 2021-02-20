@@ -16,7 +16,7 @@ export default function Footer({data}) {
     <footer>
       { data.isComplete ? (
         <div className='footer-wrapper'>
-          <div className="header-wrapper">
+          <div className="header-wrapper content-center">
             <LetsWork data={data.getInTouch} />
             <HitMe data={data.hitMe} />
           </div>

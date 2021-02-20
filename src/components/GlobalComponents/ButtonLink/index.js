@@ -9,7 +9,7 @@ export default function ButtonLink({data}) {
   // if link is internal when we will set anchor tag
   // that has a click event to trigger animation
   const button = data.type === 'internal' ? 
-  ( <Link href={data.link}>
+  ( <Link href={data.link} scroll={false}>
       <a className='button-link font-1 s7a'
         onClick={()=>SetAppState.setToTransition()}>
         <span>{data.text}</span>

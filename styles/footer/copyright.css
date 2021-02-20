@@ -1,0 +1,25 @@
+
+.footer-copyright {
+  height: 6.3em;
+  background: #0E5267;
+}
+
+.footer-copyright .copyright-wrapper{
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+
+.footer-copyright .privacy {
+  margin-top: 5px;
+}
+/* 
+<div className="footer-copyright">
+  <div className="copyright-wrapper content-center">
+    <span className='copyright'>© Aiman Adlawan 2019. All Right Reserved.</span>
+    <Link href='/privacy' scroll={false}>
+      <a className='privacy'>Privacy Policy</a>
+    </Link>
+  </div>
+</div>
+*/

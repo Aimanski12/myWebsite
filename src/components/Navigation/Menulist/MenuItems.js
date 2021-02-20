@@ -4,9 +4,9 @@ import {motion} from 'framer-motion'
 import {Anim} from '../../../utils/animations'
 import {AppData} from '../../../context'
 
-export default function MenuItems() {
+export default function MenuItems({data}) {
   const {AppState, SetAppState} = useContext(AppData)
-  
+  console.log(data)
   const menuItems = () =>{
     const menu = AppState.pageData.data.menuItems.menu
     const active = AppState.pageData.data.index
@@ -27,23 +27,13 @@ export default function MenuItems() {
               variants={Anim.MenuButton.slideMenuItems}
               className="menu-item-slider">
               <Link href={m.link} scroll={false}>
-                <a onClick={click}>{m.name}</a>
+                <a onClick={()=>{
+                  SetAppState.setToCloseAndTransition()
+                }}>{m.name}</a>
               </Link>
             </motion.div>
           </li> )
       }
-    })
-  }
-
-  const click = () => {
-    Anim.Helpers.hidshowbody('hidden')
-    Anim.Helpers.toggleBurgerToActive()
-    SetAppState.setMenuAndButtonState({
-      isOpened: !AppState.buttonMenu.isOpened
-    }, {
-      isOpen: false,
-      isTransitioning: true,
-      delay: 1600
     })
   }
   

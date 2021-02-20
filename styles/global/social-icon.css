@@ -7,7 +7,10 @@
    perspective: 1000px;
 }
 
-.social-icon .icon-front, .social-icon .icon-back {
+.social-icon .icon-front,
+.social-icon .icon-back,
+.hit-me li a .social-icon .icon-front 
+.hit-me li a .social-icon .icon-back {
   position: absolute;
   top: 0;
   left: 0;
@@ -34,11 +37,11 @@
   transform: rotateY(180deg);
 }
 
-.social-icon:hover .icon-front {
+.social-icon:hover .icon-front, .hit-me li a:hover .icon-front {
   transform: rotateY(-180deg);
 }
 
-.social-icon:hover .icon-back {
+.social-icon:hover .icon-back, .hit-me li a:hover .icon-back {
   transform: rotateY(0deg);
 }
 
@@ -52,7 +55,6 @@
   width: 46px;
   height: 46px;
 }
-
 
 @media (max-width: 1268px) {
   .social-icon, .social-icon .contents svg {  

@@ -2,7 +2,8 @@
 .weblinks-container {
   width: 100%;
   min-height: 3em;
-  padding: 8em 0 18em 0;
+  padding: 5em 0 6em 0;
+  /* background: rgba(210,210,210,0.3); */
 }
 
 .weblinks-container h2 {
@@ -36,13 +37,13 @@
 
 @media (max-width: 968px) {
   .weblinks-container {
-    padding: 10em 0 18em 0;
+    padding: 5em 0 5em 0;
   }
 }
 
 @media (max-width: 668px) {
   .weblinks-container {
-    padding: 9em 0 17em 0;
+    padding: 4em 0 4em 0;
   }
 }
 
@@ -57,6 +58,7 @@
   }
   .weblink-tranform {
     width: 100%;
+    padding: 0;
     display: flex;
   }
 }

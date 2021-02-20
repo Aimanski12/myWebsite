@@ -14,7 +14,7 @@ import Close from './Svg/Close'
 import ChevRight from './Svg/ChevRight'
 import ChevLeft from './Svg/ChevLeft'
 import Envelop from './Svg/Envelop'
-import ArrowDown from './Svg/ArrowDown'
+import Chain from './Svg/Chain'
 
 function Svgs({svg, fill}) {
 
@@ -31,8 +31,8 @@ function Svgs({svg, fill}) {
     svg === 'chevleft' ? <ChevLeft/> :
     svg === 'chevright' ? <ChevRight /> :
     svg === 'close' ? <Close/> :
-    svg === 'arrowdown' ? <ArrowDown/> :
     svg === 'envelop' ? <Envelop/> :
+    svg === 'chain' ? <Chain/> :
     svg === 'twitter' ? <Twitter fill={fill} /> : null
 
   return (

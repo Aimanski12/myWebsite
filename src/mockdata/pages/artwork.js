@@ -1,11 +1,12 @@
 import icons from '../raw/links/footerlinks.json'
 import art from '../raw/imagestock/artwork.json'
 import footerData from '../data/footer'
-import {Helpers} from './helpers'
+import {DataHelper} from './domhelpers'
 
 export default {
   index: 'artwork',
   header: {
+    type: 'dark',
     title: ["Creative Artwork"],
     caption: "Welcome to my art page. Below are some the projects I have done recenly.",
     socials: {
@@ -24,10 +25,10 @@ export default {
       type: "internal"
     }
   },
-  quickLinks: Helpers.getQuickLinks('artwork'),
+  quickLinks: DataHelper.getQuickLinks('artwork'),
   footer: {
     isComplete: true,
     ...footerData
   },
-  menuItems: Helpers.getMenu()
+  menuItems: DataHelper.getMenu()
 }               

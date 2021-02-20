@@ -8,15 +8,16 @@ import ModalImage from '../../components/Navigation/Modal/Image'
 import ModalMessage from '../../components/Navigation/Modal/Message'
 import Sliders from '../../components/Navigation/Sliders'
 
-export default function Headers() {
+export default function Headers({data}) {
 
   return (
     <header>
       {/* <Cursor /> */}
+
       <Preloader/>
       <Logo />
       <MenuButton />
-      <MenuList />
+      <MenuList data={data}/>
       <ModalImage/>
       <ModalMessage />
       <Sliders />

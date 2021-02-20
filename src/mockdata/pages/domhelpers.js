@@ -7,7 +7,7 @@ import bookworm from '../data/projects/book-worm'
 import pages from '../raw/links/pagelinks.json'
 import socials from '../raw/links/footerlinks.json'
 
-export const Helpers = (function(){
+export const DataHelper = (function(){
   // make array of projects
   const projects = [bookworm, moviebox, radiolive, newsbox, fotopics]
 

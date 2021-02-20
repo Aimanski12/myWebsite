@@ -1,11 +1,16 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../context'
+import {Anim} from '../utils/animations'
+import {motion} from 'framer-motion'
 import Head from 'next/head'
 import Navigation from '../containers/Navigation/Navigation'
-import Body from '../containers/Body'
+// import Headers from '../components/Headers/Dark'
+
+import page from '../mockdata/pages/home'
 
 export default function Home() {
   const {AppState, SetAppState} = useContext(AppData)
+  console.log(page)
 
   useEffect(() => {
     SetAppState.setPageData('home')
@@ -24,7 +29,18 @@ export default function Home() {
         <link rel="icon" type="image/x-icon" href="/images/aiman-small-logo.ico" />
       </Head>
       <Navigation />
-      <Body page='home'/>
+      <motion.div 
+        variants={Anim.TransitionSliders.slidetoexit(
+          AppState.menuTransitions.delay)}
+        initial="initial" 
+        animate={{opacity: 1}} 
+        exit="exit" 
+        className="body-wrapper">
+        <div className="scroll-body">
+          asdf
+        </div>
+      </motion.div>
+      
     </div>
   )
 }

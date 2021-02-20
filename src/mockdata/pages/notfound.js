@@ -1,5 +1,5 @@
 import icons from '../raw/links/footerlinks.json'
-import {Helpers} from './helpers'
+import {DataHelper} from './domhelpers'
 
 export default {
   index: 'notfound',
@@ -16,5 +16,5 @@ export default {
     front: "#FFC01D",
     back: "#005E7C"
   },
-  menuItems: Helpers.getMenu()
+  menuItems: DataHelper.getMenu()
 }               

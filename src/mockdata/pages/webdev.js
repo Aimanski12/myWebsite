@@ -1,11 +1,12 @@
 import icons from '../raw/links/footerlinks.json'
 import github from '../raw/links/github.json'
 import footerData from '../data/footer'
-import {Helpers} from './helpers'
+import {DataHelper} from './domhelpers'
 
 export default {
   index: 'webdev',
   header: {
+    type: 'dark',
     title: ["Webdev Projects"],
     caption: "Here are some of the websites I have designed and developed.",
     socials: {
@@ -14,7 +15,7 @@ export default {
       back: "#003B4D"
     }
   },
-  projects: Helpers.getProjBanner(5),
+  projects: DataHelper.getProjBanner(5),
   uxui: {
     title: "UI/UI Designs",
     caption: "You may also view my UI/UI designs I posted on Behance.",
@@ -34,10 +35,10 @@ export default {
       type: "internal"
     }
   },
-  quickLinks: Helpers.getQuickLinks('webdev'),
+  quickLinks: DataHelper.getQuickLinks('webdev'),
   footer: {
     isComplete: true,
     ...footerData
   },
-  menuItems: Helpers.getMenu()
+  menuItems: DataHelper.getMenu()
 }

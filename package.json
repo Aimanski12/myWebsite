@@ -11,6 +11,7 @@
     "axios": "^0.21.1",
     "framer-motion": "^3.3.0",
     "gsap": "^3.6.0",
+    "jquery": "^3.5.1",
     "next": "10.0.6",
     "popmotion": "^9.1.0",
     "react": "17.0.1",

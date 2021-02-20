@@ -4,7 +4,7 @@ import moviebox from '../data/projects/movie-box'
 import newsbox from '../data/projects/news-box'
 import radiolive from '../data/projects/radio-live'
 import footerdata from '../data/footer'
-import {Helpers} from './helpers'
+import {DataHelper} from './domhelpers'
 
 // this function returns the data for every project page 
 export const projects = (page) => {
@@ -15,12 +15,12 @@ export const projects = (page) => {
     page === 'radio-live' ? radiolive : null)
   return {
     ...data,
-    nextPrev: Helpers.getNextPrev(page),
-    quickLinks: Helpers.getQuickLinks(page),
+    nextPrev: DataHelper.getNextPrev(page),
+    quickLinks: DataHelper.getQuickLinks(page),
     footer: {
       isComplete: true,
       ...footerdata
     },
-    menuItems: Helpers.getMenu()
+    menuItems: DataHelper.getMenu()
   }
 }

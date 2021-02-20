@@ -1,10 +1,11 @@
 import images from '../raw/imagestock/about.json'
 import footerData from '../data/footer'
-import {Helpers} from './helpers'
+import {DataHelper} from './domhelpers'
 
 export default {
   index: 'about',
   header: {
+    type: 'about',
     name: 'Aiman E. Adlawan',
     intro: "I am a freelance web developer and creative designer based in Bensenville Illinois. I have a strong passion for technology and design. I specialize in front-end development, UX/UI design, photo enhancements, and graphic design. I love to make simple things that make a big difference.",
     greeting: "HELLO, MY NAME’S",
@@ -35,10 +36,10 @@ export default {
       type: "internal"
     }
   },
-  quickLinks: Helpers.getQuickLinks('about'),
+  quickLinks: DataHelper.getQuickLinks('about'),
   footer: {
     iscomplete: true,
     ...footerData
   },
-  menuItems: Helpers.getMenu()
+  menuItems: DataHelper.getMenu()
 }

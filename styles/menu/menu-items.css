@@ -98,7 +98,8 @@
   .menu-item {
     height: 62px;
     min-width: 159px;
-    margin-bottom: 7px;
+    /* margin-bottom: 7px; */
+    /* background: red; */
   }
   .menu-item a, .menu-item span {
     font-size: 1.8em;
@@ -107,7 +108,7 @@
 
 @media (max-width: 668px) {
   .menu-item {
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
   }
   .menu-item a, .menu-item span {
     font-size: 1.7em;
@@ -120,7 +121,7 @@
 
 @media (max-width: 568px) {
   .menu-item {
-    margin-bottom: 2px;
+    /* margin-bottom: 2px; */
     height: 56px;
     min-width: 144px;
   }

@@ -1,10 +1,11 @@
 import icons from '../raw/links/footerlinks.json'
 import footerData from '../data/footer'
-import {Helpers} from './helpers'
+import {DataHelper} from './domhelpers'
 
 export default {
   index: 'contact',
   header: {
+    type: 'dark',
     title: ["Get In Touch"],
     caption: "Reach out to me for inquiries or just do a fancy way of saying 'Hi!'",
     socials: {
@@ -22,10 +23,10 @@ export default {
       back: "#004E66"
     }
   },
-  quickLinks: Helpers.getQuickLinks('contact'),
+  quickLinks: DataHelper.getQuickLinks('contact'),
   footer: {
     isComplete: false,
-    footerData
+    ...footerData
   },
-  menuItems: Helpers.getMenu()
+  menuItems: DataHelper.getMenu()
 }

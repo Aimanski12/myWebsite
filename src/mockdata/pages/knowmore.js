@@ -1,11 +1,12 @@
 import icons from '../raw/links/footerlinks.json'
 import tools from '../raw/links/tools.json'
 import footerData from '../data/footer'
-import {Helpers} from './helpers'
+import {DataHelper} from './domhelpers'
 
 export default {
   index: 'knowmore',
   header: {
+    type: 'dark',
     title: ["Get To Know More"],
     caption: "Dig a little deeper and see what I done.",
     socials: {
@@ -53,10 +54,10 @@ export default {
       type: "internal"
     }
   },
-  quickLinks: Helpers.getQuickLinks('knowmore'),
+  quickLinks: DataHelper.getQuickLinks('knowmore'),
   footer: {
     isComplete: true,
     ...footerData
   },
-  menuItems: Helpers.getMenu()
+  menuItems: DataHelper.getMenu()
 }

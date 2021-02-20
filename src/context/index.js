@@ -1,12 +1,13 @@
 import React, {useState, createContext} from 'react'
-import about from '../mockdata/pages/about'
-import artwork from '../mockdata/pages/artwork'
-import contact from '../mockdata/pages/contact'
-import home from '../mockdata/pages/home'
-import knowmore from '../mockdata/pages/knowmore'
-import notfound from '../mockdata/pages/notfound'
-import webdev from '../mockdata/pages/webdev'
-import {projects} from '../mockdata/pages/projects'
+// import about from '../mockdata/Pages/about'
+// import artwork from '../mockdata/Pages/artwork'
+// import contact from '../mockdata/Pages/contact'
+// import home from '../mockdata/Pages/home'
+// import knowmore from '../mockdata/Pages/knowmore'
+// import notfound from '../mockdata/Pages/notfound'
+// import webdev from '../mockdata/Pages/webdev'
+// import {projects} from '../mockdata/Pages/projects'
+import {Anim} from '../utils/animations'
 
 // create context data
 export const AppData = createContext()
@@ -106,14 +107,14 @@ export function AppDataContext (props) {
     })
   }
 
-  const _transitionToNextPage = (newState) => {
-    setState({
-      menuTransitions: {
-        ...appState.menuTransitions,
-        ...newState
-      }
-    })
-  }
+  // const _transitionToNextPage = (newState) => {
+  //   setState({
+  //     menuTransitions: {
+  //       ...appState.menuTransitions,
+  //       ...newState
+  //     }
+  //   })
+  // }
 
   // set modal state
   const _setImageModalState = (newState) => {
@@ -134,6 +135,37 @@ export function AppDataContext (props) {
       }
     })
   }
+
+
+  const _setToTransition = () => {
+    Anim.Helpers.hidshowbody('hidden')
+    setState({
+      menuTransitions: {
+        ...appState.menuTransitions,
+        // isOpen: false,
+        isTransitioning: true,
+        delay: 800
+      }
+    })
+  }
+
+  const _setToCloseAndTransition = () => {
+    Anim.Helpers.hidshowbody('hidden')
+    Anim.Helpers.toggleBurgerToActive()
+    setState({
+      buttonMenu: {
+        ...appState.buttonMenu,
+        isOpened: !appState.buttonMenu.isOpened
+      }, 
+      menuTransitions: {
+        ...appState.menuTransitions,
+        isOpen: false,
+        isTransitioning: true,
+        delay: 1600
+      }
+    })
+  }
+
 
 
   // assign new set to data to the state.
@@ -157,18 +189,30 @@ export function AppDataContext (props) {
       setMenuButtonState(val) {
         return _setMenuButtonState(val)
       }, 
-      setMenuAndButtonState(button, transition) {
-        return _setMenuAndButtonState(button, transition)
-      },
       setImageModalState (val){
         return _setImageModalState(val)
       },
       setMessageModalState (val){
         return _setMessageModalState(val)
       },
-      transitionToNextPage(val) {
-        return _transitionToNextPage(val)
+      // transitionToNextPage(val) {
+      //   return _transitionToNextPage(val)
+      // },
+
+      
+      setMenuAndButtonState(button, transition) {
+        return _setMenuAndButtonState(button, transition)
+      },
+
+      
+      setToTransition() {
+        return _setToTransition()
+      },
+      setToCloseAndTransition() {
+        return _setToCloseAndTransition()
       }
+
+
     }
   })()
 
@@ -185,14 +229,15 @@ export function AppDataContext (props) {
 
 // check the value and return the 
 // repective data
-const getPageData = (page) => {
-  let data = page === "about" ? about : 
-    page === "artwork" ? artwork :
-    page === "contact" ? contact :
-    page === "home" ? home :
-    page === "knowmore" ? knowmore :
-    page === "notfound" ? notfound :
-    page === "webdev" ? webdev :
-    projects(page)
-  return data
+export const getPageData = (page) => {
+  // let data = page === "about" ? about : 
+  //   page === "artwork" ? artwork :
+  //   page === "contact" ? contact :
+  //   page === "home" ? home :
+  //   page === "knowmore" ? knowmore :
+  //   page === "notfound" ? notfound :
+  //   page === "webdev" ? webdev :
+  //   projects(page)
+  // return data
+  return 'asdf'
 }

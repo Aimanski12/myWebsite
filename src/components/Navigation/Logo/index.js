@@ -9,7 +9,7 @@ export default function Logo() {
 
   // update menuIsClosed, timing, transitioning and is open
   const updateAll = () => {
-    Anim.Helpers.hidshowbody('hidden')
+    // Anim.Helpers.hidshowbody('hidden')
     Anim.Helpers.toggleBurgerToActive()
     SetAppState.setMenuAndButtonState({
       isOpened: !AppState.buttonMenu.isOpened

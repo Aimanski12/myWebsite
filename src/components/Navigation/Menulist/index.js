@@ -1,13 +1,13 @@
 import React, {useContext} from 'react';
 import Sliders from './Sliders'
 import MenuItems from './MenuItems'
-import SocialIcons from './SocialIcons'
+import Socials from './SocialIcons'
 import CopyRight from './CopyRight'
 import {Anim} from '../../../utils/animations'
 import {AppData} from '../../../context'
 import {motion, AnimatePresence} from 'framer-motion'
 
-export default function MenuList() {
+export default function MenuList({data}) {
   const {AppState} = useContext(AppData)
 
   return (
@@ -21,8 +21,8 @@ export default function MenuList() {
           className="menu-list-container content-center">
           <Sliders />
           <div className="menu-container content-center">
-            <MenuItems />
-            <SocialIcons />
+            <MenuItems data={data.menu}/>
+            <Socials data={data.socialIcons}/>
             <CopyRight />
           </div>
         </motion.div> ) }

@@ -1,10 +1,11 @@
 import icons from '../raw/links/footerlinks.json'
 import footerData from '../data/footer'
-import {Helpers} from './helpers'
+import {DataHelper} from './domhelpers'
 
 export default {
   index: 'home',
   header: {
+    type: 'dark',
     title: [
       "Web Developer &", "Creative Designer"
     ],
@@ -15,11 +16,11 @@ export default {
       back: "#003B4D"
     }
   },
-  artWork: Helpers.getArtWork(),
+  artWork: DataHelper.getArtWork(),
   featured: {
     title: "Featured Web Projects",
     caption: "Here are some the projects I have done recently.",
-    projects: Helpers.getProjBanner(3)
+    projects: DataHelper.getProjBanner(3)
   },
   seeMore: {
     title: "Wanna see more?",
@@ -30,10 +31,10 @@ export default {
       type: "internal"
     }
   },
-  quickLinks: Helpers.getQuickLinks('home'),
+  quickLinks: DataHelper.getQuickLinks('home'),
   footer: {
     isComplete: true,
     ...footerData
   },
-  menuItems: Helpers.getMenu()
+  menuItems: DataHelper.getMenu()
 }

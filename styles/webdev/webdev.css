@@ -2,12 +2,13 @@
   min-height: 500px;
   width: 100%;
   background: #F4F4F4;
-  padding-top: 14em;
+  padding-top: 6em;
 }
 
 .webdev-title {
   font-weight: 600;
   color: #16728F;
+  margin-top: 4em;
 }
 
 .webdev-caption {
@@ -18,13 +19,26 @@
   margin-bottom: 2.5em;
 }
 
+@media (max-width: 968px) {
+  .webdev-title {
+    margin-top: 3em;
+  }
+}
+
+@media (max-width: 768px) {
+  .webdev-title {
+    margin-top: 2.5em;
+  }
+}
+
 @media (max-width: 568px) {
   .webdev-wrapper {
-    padding-top: 12em;
+    padding-top: 5em;
   }
   .webdev-title {
     width: 95%;
     text-align: center;
+    margin-top: 2em;
   }
   .webdev-caption {
     margin-bottom: 1.5em;
@@ -37,6 +51,9 @@
 
 @media (max-width: 468px) {
   .webdev-wrapper {
-    padding-top: 10em;
+    /* padding-top: 5em; */
+  }
+  .webdev-title {
+    /* margin-top: 7em; */
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Svg from '../../../Svgs'
+import Svg from '../../../../Svgs'
 
 export default function Features({feature}) {
 

@@ -1,0 +1,123 @@
+
+.message-form {
+  width: 100%;
+  min-height: 10em;
+  padding: 8em 0 7em 0;
+}
+
+.message-form h2 {
+  font-weight: 600;
+  color: #126985
+}
+
+.message-form form {
+  margin-top: 3em;
+}
+
+.input-wrapper {
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.input-wrapper label {
+  color: #126985;
+  font-weight: 600;
+  padding: 0 0 5px 8px;
+}
+
+.input-wrapper input::placeholder, .input-wrapper textarea::placeholder {
+  color: #BFBFBF
+}
+
+.input-wrapper input, .input-wrapper textarea{
+  width: 420px;
+  height: 50px;
+  padding: 0 16px;
+  border: 2px solid #DEDEDE;
+  border-radius: 8px;
+  color: #04C2FF
+} 
+
+.input-wrapper input:focus, .input-wrapper textarea:focus {
+  outline-color: #FFC01D;
+}
+
+.input-wrapper textarea {
+  padding-top: 10px;
+  resize: none;
+  height: auto;
+}
+
+.mes-alert {
+  height: 25px;
+}
+
+.mes-alert span {
+  display: block;
+  color: #126985;
+  font-weight: 600;
+}
+
+.message-form button {
+  margin-top: 15px;
+  float: right;
+  font-weight: 600;
+  color: #FFC01D;
+  border: none;
+  background: #126985;
+  width: 150px;
+  height: 50px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.message-form button:focus {
+  outline:none
+}
+
+
+@media (max-width: 968px) {
+  .message-form {
+    padding: 7em 0 7em 0;
+  }
+  .input-wrapper input{
+    height: 45px;
+    width: 390px;
+  } 
+  .input-wrapper textarea {
+    width: 390px;
+  }
+}
+
+@media (max-width: 496px) {
+  .input-wrapper, .mes-alert {
+    width: 90%;
+    margin: 0 5%;
+    margin-bottom: 20px;
+  }
+  .input-wrapper input, .input-wrapper textarea{
+    width: calc(100% - 36px);
+  } 
+  .message-form button {
+    width: 90%;
+    margin: 15px 5% 0 5%;
+  }
+}
+
+@media (max-width: 396px) {
+  .input-wrapper {
+    width: 94%;
+    margin: 0 3% 20px 3%;
+  }
+  .input-wrapper input, .input-wrapper textarea{
+    width: calc(100% - 36px);
+  } 
+  .mes-alert {
+    width: 94%;
+    margin: 0 3%;
+  }
+  .message-form button {
+    width: 94%;
+    margin: 15px 3% 0 3%;
+  }
+}

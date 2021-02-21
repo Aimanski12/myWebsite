@@ -1,16 +1,10 @@
-import React, {useEffect} from 'react';
-import {Anim} from '../../../utils/animations'
+import React from 'react';
 import LetsWork from './components/LetsWork'
 import HitMe from './components/HitMe'
 import BackToTop from './components/BackToTop'
 import CopyRight from '../../GlobalComponents/Copyright'
 
 export default function Footer({data}) {
-
-  useEffect(() => {
-    // backtotop scroll
-    Anim.Helpers.scrollAnimation()
-  })
 
   return (
     <footer>

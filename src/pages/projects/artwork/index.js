@@ -13,7 +13,6 @@ import page from '../../../mockdata/pages/artwork'
 
 export default function Home() {
   const {AppState, SetAppState} = useContext(AppData)
-  console.log(page)
   useEffect(() => {
     AppState.menuTransitions.isTransitioning ? (
       setTimeout(()=>{

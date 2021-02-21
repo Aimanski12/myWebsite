@@ -5,6 +5,7 @@ import {motion} from 'framer-motion'
 import Head from 'next/head'
 import Navigation from '../containers/Navigation/Navigation'
 import Headers from '../components/Headers/Dark'
+import Message from '../components/Message'
 import QuickLink from '../components/Footer/QuickLinks'
 import Footer from '../components/Footer/Footer'
 import page from '../mockdata/pages/contact'
@@ -38,6 +39,7 @@ export default function Contact() {
         className="body-wrapper">
         <div className="scroll-body">
           <Headers data={page.header}/>
+          <Message data={page.labels}/>
           <QuickLink data={page.quickLinks}/>
           <Footer data={page.footer}/>
         </div>

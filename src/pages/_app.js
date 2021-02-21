@@ -43,6 +43,7 @@ import '../../styles/artwork/multiple.css'
 // webdev projects
 import '../../styles/webdev/webdev.css'
 import '../../styles/webdev/projects.css'
+import '../../styles/webdev/github.css'
 
 // weblinks
 import '../../styles/weblinks/weblinks.css'
@@ -50,6 +51,9 @@ import '../../styles/footer/quicklink.css'
 import '../../styles/footer/footer.css'
 import '../../styles/footer/arrowup.css'
 import '../../styles/footer/copyright.css'
+
+// message 
+import '../../styles/message/message.css'
 
 
 

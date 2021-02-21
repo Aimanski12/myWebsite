@@ -7,7 +7,7 @@
 }
 
 .featured-project:last-child {
-  padding-bottom: 4em;
+  padding-bottom: 6em;
 }
 
 .row-reverse {
@@ -106,6 +106,9 @@
   .featured-project {
     padding: 6em 0 6em 0;
   }
+  .featured-project:last-child {
+    padding-bottom: 5em;
+  }
   .project-image-wrapper {
     width: 90%;
     margin: 0 5% 0 5%;
@@ -130,6 +133,9 @@
 @media (max-width: 1168px){
   .featured-project {
     padding: 5em 0 5em 0;
+  }
+  .featured-project:last-child {
+    padding-bottom: 4em;
   }
   .project-image-wrapper {
     width: 94%;
@@ -157,6 +163,9 @@
   .featured-project {
     padding: 5.5em 0 5.5em 0;
   }
+  .featured-project:last-child {
+    padding-bottom: 4.5em;
+  }
   .project-content-wrapper {
     width: 94%;
     margin: 0% 3% 0% 3%;
@@ -175,6 +184,9 @@
   .featured-project {
     flex-direction: column;
     padding: 6em 0 6.5em 0;
+  }
+  .featured-project:last-child {
+    padding-bottom: 5.5em;
   }
   .row-reverse {
     flex-direction: column;
@@ -215,6 +227,9 @@
   .featured-project {
     padding: 4.5em 0 5.5em 0;
   }
+  .featured-project:last-child {
+    padding-bottom: 4.5em;
+  }
   .featured-project figure {
     width: 88%;
   }
@@ -230,6 +245,9 @@
 @media (max-width: 668px){
   .featured-project {
     padding: 4.5em 0 5em 0;
+  }
+  .featured-project:last-child {
+    padding-bottom: 5em;
   }
   .featured-project figure {
     width: 92%;

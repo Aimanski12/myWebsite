@@ -25,7 +25,18 @@ export default {
       type: "external"
     }
   },
-  gitProj: github,
+  gitProj: {
+    title: 'Github Projects',
+    caption: {
+      caption1: 'The lists below are  some projects I have recently accomplished. You can also find all of them on my',
+      url: {
+        title: 'Github repository',
+        link: 'https://github.com/Aimanski12'
+      },
+      caption2: 'page.'
+    },
+    proj: github
+  },
   artWorkLink: {
     title: "Creative Artwork",
     caption: "You can also see my artwork on the link below.",

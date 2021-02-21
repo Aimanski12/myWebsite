@@ -6,7 +6,7 @@ import Head from 'next/head'
 import Navigation from '../containers/Navigation/Navigation'
 import Headers from '../components/Headers/Dark'
 import ArtWork from '../components/Artwork/Single'
-import WebDev from '../components/WebDev'
+import WebDev from '../components/Projects/WebDev'
 import WebLinks from '../components/WebLinks'
 import QuickLink from '../components/Footer/QuickLinks'
 import Footer from '../components/Footer/Footer'
@@ -37,11 +37,12 @@ export default function Home() {
         initial="initial" 
         animate={{opacity: 1}} 
         exit="exit" 
+        id='body-wrapper'
         className="body-wrapper">
         <div className="scroll-body">
           <Headers data={page.header}/>
           <ArtWork data={page.artWork[0]}/>
-          <WebDev data={page.featured}/>
+          <WebDev data={page.featured} title={true}/>
           <WebLinks data={page.seeMore}/>
           <ArtWork data={page.artWork[1]}/>
           <QuickLink data={page.quickLinks}/>

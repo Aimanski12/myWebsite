@@ -1,6 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import {Anim} from '../../../../utils/animations'
 
 export default function BackToTop({data}) {
+
+  useEffect(() => {
+    // backtotop scroll
+    Anim.Helpers.scrollAnimation()
+  })
   return (
     <div className="back-to-top content-center">
       <div className="scroll-up"> 

@@ -1,6 +1,6 @@
 import React, {useEffect, useContext} from 'react';
-import {Anim} from '../../../../utils/animations'
-import {AppData} from '../../../../context'
+import {Anim} from '../../../../../utils/animations'
+import {AppData} from '../../../../../context'
 
 export default function Image({data}) {
   const {SetAppState} = useContext(AppData)

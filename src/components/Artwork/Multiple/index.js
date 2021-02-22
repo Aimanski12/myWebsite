@@ -5,7 +5,7 @@ import Svg from '../../Svgs'
 export default function ArtworkAll({data}) {
 
   useEffect(()=>{
-    Anim.Helpers.tiltImage(".art-img-wrapper", 35)
+    Anim.Helpers.tiltImage(".art-img img", 35)
   })
   
   const images = data.map((img, l) => {
@@ -22,9 +22,10 @@ export default function ArtworkAll({data}) {
         </a>
       </div>
       <div className="art-img content-center"
-        style={{background: `${img.background} fixed center` }}>
-        <div className="art-img-wrapper" 
-          style={{backgroundImage: `url(${img.image})` }}></div>
+        style={{background: `${img.background}center` }}>
+          <img src={img.image} alt={img.alt}/>
+        {/* <div className="art-img-wrapper" 
+          style={{backgroundImage: `url(${img.image})` }}></div> */}
       </div>
     </div>
     )

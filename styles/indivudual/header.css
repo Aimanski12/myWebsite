@@ -1,0 +1,130 @@
+
+.project-header {
+  min-height: 100px;
+  width: 100%;
+  padding: 15em 0 5em 0;
+
+  /* background: rgba(210,210,210,0.3); */
+}
+
+.project-header h1 {
+  color: #126895;
+  font-weight: 600;
+}
+
+.project-header p {
+  color: #04C2FF;
+  font-weight: 400;
+}
+
+.header-text-wrapper {
+  position: relative;
+}
+
+.header-block-runner {
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.header-block-runner p, .header-block-runner span  {
+  opacity: 0;
+  letter-spacing: -0.04em;
+  display: block;
+  animation: appear-title 0.9s forwards;
+  animation-delay: .65s;
+  transition-timing-function: cubic-bezier(0.6, -0.05, 0.01, 0.99);
+}
+
+.header-block-runner:after {
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background: #D145E8;
+  animation: rev-block .8s cubic-bezier(0.6, -0.05, 0.01, 0.99) forwards;
+  animation-delay: .25s;
+}
+
+.header-img-wrapper {
+  margin-top: 3em;
+  width: 650px;
+  cursor: zoom-in;
+}
+
+.header-img-wrapper div{
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+}
+
+.header-img-wrapper div:hover {
+  filter: drop-shadow(8px 8px 8px rgba(146, 146, 146, 0.5));
+  transition: all 0.2s ease-in;
+}
+
+.header-img-wrapper img {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  letter-spacing: -0.04em;
+  text-align: left;
+  color: #6FDCFE;
+  font-weight: 400;
+  border-radius: 6px;
+
+  opacity: 0;
+  animation: appear-caption 0.9s forwards;
+  animation-delay: .8s;
+  transition-timing-function: cubic-bezier(0.6, -0.05, 0.01, 0.99);
+}
+
+
+@media (max-width: 1268px) {
+  .header-img-wrapper {
+    width: 620px;
+  }
+}
+
+@media (max-width: 1068px) {
+  .project-header {
+    padding: 15em 0 4em 0;
+  }
+  .header-img-wrapper {
+    width: 580px;
+  }
+}
+
+@media (max-width: 868px) {
+  .project-header {
+    padding: 14em 0 4em 0;
+  }
+  .header-img-wrapper {
+    width: 540px;
+  }
+}
+
+@media (max-width: 668px) {
+  .header-img-wrapper {
+    width: 90%;
+  }
+}
+
+@media (max-width: 568px) {
+  .project-header {
+    padding: 13em 0 4em 0;
+  }
+  .header-img-wrapper {
+    width: 94%;
+  }
+}
+
+@media (max-width: 468px) {
+  .project-header {
+    padding: 12em 0 4em 0;
+  }
+  .header-img-wrapper {
+    width: 96%;
+    margin-top: 2.5em;
+  }
+}

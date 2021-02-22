@@ -54,8 +54,11 @@ import '../../styles/footer/copyright.css'
 
 // message 
 import '../../styles/message/message.css'
+import '../../styles/message/socials.css'
 
-
+// individual projects
+import '../../styles/indivudual/header.css'
+import '../../styles/indivudual/overview.css'
 
 
 

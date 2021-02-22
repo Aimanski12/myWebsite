@@ -5,7 +5,8 @@ import {motion} from 'framer-motion'
 import Head from 'next/head'
 import Navigation from '../containers/Navigation/Navigation'
 import Headers from '../components/Headers/Dark'
-import Message from '../components/Message'
+import Message from '../components/Contact/Message'
+import Socials from '../components/Contact/Socials'
 import QuickLink from '../components/Footer/QuickLinks'
 import Footer from '../components/Footer/Footer'
 import page from '../mockdata/pages/contact'
@@ -16,7 +17,7 @@ export default function Contact() {
   useEffect(() => {
     AppState.menuTransitions.isTransitioning ? (
       setTimeout(()=>{
-        window.scrollTo(0, 0)
+        window.scrollTo({top:0, left: 0, behavior: 'auto'})
         SetAppState.setMenuTransitions({isTransitioning: false})
       }, AppState.menuTransitions.delay)
     ) : null
@@ -40,6 +41,7 @@ export default function Contact() {
         <div className="scroll-body">
           <Headers data={page.header}/>
           <Message data={page.labels}/>
+          <Socials data={page.socialLinks}/>
           <QuickLink data={page.quickLinks}/>
           <Footer data={page.footer}/>
         </div>

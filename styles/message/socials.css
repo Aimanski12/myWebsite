@@ -1,0 +1,72 @@
+.contact-socials {
+  width: 100%;
+  min-height: 3em;
+  padding: 6em 0 6em 0;
+}
+
+.contact-socials h2 {
+  color: #126985;
+  font-weight: 600;
+  text-align: center;
+}
+
+.contact-socials p {
+  line-height: 2em;
+  margin-bottom: 80px;
+  color: #04C2FF;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-align: center;
+  width: 90%;
+  margin: 0 5% 80px 5%;
+}
+
+.contact-icons {
+  flex-direction: row;
+}
+
+.contact-icons a {
+  width: 46px;
+  height: 46px;
+  margin-right: 25px;
+}
+
+.contact-icons a:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 1268px) {
+  .contact-socials p {
+    margin: 0 5% 70px 5%;
+  }
+  .contact-icons a {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 1068px) {
+  .contact-icons a {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-socials p {
+    width: 95%;
+    margin: 0 2.5% 70px 2.5%;
+  }
+  .contact-icons a {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (max-width: 568px) {
+  .contact-icons a {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+  }
+}

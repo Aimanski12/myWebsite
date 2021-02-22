@@ -7,7 +7,7 @@ import footerdata from '../data/footer'
 import {DataHelper} from './domhelpers'
 
 // this function returns the data for every project page 
-export const projects = (page) => {
+export default function projects (page) {
   const data =  (page === 'book-worm' ? bookworm : 
     page === 'foto-pics' ? fotopics : 
     page === 'movie-box' ? moviebox :

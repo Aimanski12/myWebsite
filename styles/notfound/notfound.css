@@ -12,13 +12,13 @@
   background: rgba(22,114,143,0.3);
 }
 
-.notfound-backer h2 {
+.notfound-backer h1 {
   margin-bottom: 10px;
   color: #FFC01D;
   font-weight: 600;
 }
 
-.notfound-backer span {
+.notfound-backer p {
   text-align: center;
   color: #FFFFFF;
   width: 320px;
@@ -33,29 +33,12 @@
   border-radius: 30px;
   color: #FFFFFF;
   background: #16728F;
+  transition: all 0.15s ease-in;
 }
 
-.notfound-socials {
-  flex-direction: row;
-  position: absolute;
-  bottom: 10vh;
-  list-style: none;
-}
-
-.notfound-socials-wrapper {
-  margin: 0 10px;
-}
-
-.notfound-socials-wrapper a {
-  padding: 0;
-}
-
-.notfound-socials-wrapper,
-.notfound-socials-wrapper a,
-.notfound-socials-wrapper .social-icon, 
-.notfound-socials-wrapper .contents svg {
-  width: 35px;
-  height: 35px;
+.notfound-backer a:hover {
+ transition: all 0.15s ease-in;
+ box-shadow: 0px 0px 6px rgb(151, 230, 255)
 }
 
 @media screen and (max-width: 896px) and (orientation: landscape) {
@@ -65,25 +48,14 @@
 }
 
 @media(max-width: 868px) {
-  .notfound-backer span {
+  .notfound-backer p {
     margin-bottom: 55px;
     width: 290px;
   }
 }
 
 @media(max-width: 568px) {
-  .notfound-backer span {
+  .notfound-backer p {
     width: 270px;
   }
-  .notfound-socials-wrapper {
-    margin: 0 5px;
-  }
-  .notfound-socials-wrapper,
-  .notfound-socials-wrapper a,
-  .notfound-socials-wrapper .social-icon,
-  .notfound-socials-wrapper .contents svg {
-    width: 28px;
-    height: 28px;
-  }
-
 }

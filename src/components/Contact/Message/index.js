@@ -1,6 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+import {AppData} from '../../../context'
 
 export default function Message({data}) {
+  const {SetAppState} = useContext(AppData)
 
   const [value, setValue] = useState({
     name: "",
@@ -21,12 +23,11 @@ export default function Message({data}) {
   }
 
   const inputs = data.map((input, i) => {
-    // console.log(input)
     if(input.el === 'input') 
       return (
         <div className='input-wrapper content-center' key={i}>
           <label className='font-1 s7a' 
-            for={input.name}>{input.label}</label>
+            htmlFor={input.name}>{input.label}</label>
           <input 
             className='font-2 s4b'
             type={input.type} 
@@ -39,7 +40,7 @@ export default function Message({data}) {
       return (
         <div className='input-wrapper content-center' key={i}>
           <label className='font-1 s7a' 
-            for={input.name}>{input.label}</label>
+            htmlFor={input.name}>{input.label}</label>
           <textarea 
             className='font-2 s4b'
             rows='7'
@@ -60,9 +61,11 @@ export default function Message({data}) {
       <form onSubmit={()=>console.log('submitted')}>
         {inputs}
         <div className="mes-alert">
-          <span className='font-1 s9a'>* required</span>
+          <span className='font-1 s9a'
+          onClick={()=> {
+            SetAppState.setMessageModalState({isOpen: true})
+          }}>* required</span>
         </div>
-
 
         <button 
           className='font-1 s7a'

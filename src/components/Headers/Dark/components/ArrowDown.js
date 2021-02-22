@@ -5,7 +5,9 @@ export default function ArrowDown() {
   useEffect(() => {
     setTimeout(()=>{
       const arrow = document.querySelector('.scroll-down')
-      arrow.classList.remove('hide-arrow')
+      if(arrow){
+        arrow.classList.remove('hide-arrow')
+      }
     }, 2200)
   })
   return (

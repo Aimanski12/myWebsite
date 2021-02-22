@@ -13,6 +13,8 @@ export const Helpers = (function (){
   // then animation is clicked
   const _hidshowbody = (val) => {
     const body = $('body')[0]
+    const a = $('.body-wrapper')[0]
+    a.style.overflow = val
     body.style.overflow = val
   }
 

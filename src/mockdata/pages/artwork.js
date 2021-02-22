@@ -8,7 +8,7 @@ export default {
   header: {
     type: 'dark',
     title: ["Creative Artwork"],
-    caption: "Welcome to my art page. Below are some the projects I have done recenly.",
+    caption: "Welcome to my art page. Below are some the projects I have done recently.",
     socials: {
       icons,
       front: "#FFC01D",

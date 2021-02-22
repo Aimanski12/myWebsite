@@ -59,6 +59,13 @@ export const ImageModalAnim = (function (){
     }
   }
 
+  const _expandBtn = {
+    scale: 1.15,
+    transition: {
+      duration: .15
+    }
+  }
+
   // moves the arros left 
   const _hoverLeft = {
     scale: 1.3,
@@ -78,6 +85,7 @@ export const ImageModalAnim = (function (){
     modalSliderVariants: _modalSliderVariants,
     rotateBtn: _rotateBtn,
     hoverLeft: _hoverLeft,
-    hoverRight: _hoverRight
+    hoverRight: _hoverRight,
+    expandBtn: _expandBtn
   }
 })()

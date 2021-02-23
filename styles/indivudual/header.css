@@ -3,8 +3,7 @@
   min-height: 100px;
   width: 100%;
   padding: 15em 0 5em 0;
-
-  /* background: rgba(210,210,210,0.3); */
+  overflow: hidden;
 }
 
 .project-header h1 {

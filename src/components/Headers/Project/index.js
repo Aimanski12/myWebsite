@@ -6,7 +6,7 @@ export default function Headers({data}) {
   const {SetAppState} = useContext(AppData)
 
   useEffect(() => {
-    Anim.Helpers.tiltImage(".header-img-wrapper div", 8)
+    Anim.Helpers.tiltImage(".header-img-wrapper div", 20)
   })
 
   return (

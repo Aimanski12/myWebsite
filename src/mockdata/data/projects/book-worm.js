@@ -52,7 +52,7 @@ export default {
     }
   ],
   technologies: [
-    "HTML", "CSS3", "Javascript", "NextJS", "RestAPI",  "Webpack", "Adobe Photoshop", "Adobe Illustrator", "Figma" 
+    "HTML5", "CSS3", "Javascript", "NextJS", "Rest API",  "Webpack", "Adobe Photoshop", "Adobe Illustrator", "Figma" 
   ],
   parallax: {
     image: bwimage.parallax,
@@ -61,7 +61,7 @@ export default {
   api: {
     title: "API's Used",
     before: "",
-    after: "Google Books API provides a provide an awesome documentation. It has interesting end points to play around with. It also has thousands of books in its database and has a detailed information for each book which is good for this project. So I decided to use it.",
+    after: " provides an awesome documentation. It has interesting end points to play around with. It also has thousands of books in its database and has a detailed information for each book which is good for this project. So I decided to use it.",
     name: "Google Books API",
     link: "https://developers.google.com/books"
   },

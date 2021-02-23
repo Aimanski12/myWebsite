@@ -1,0 +1,134 @@
+
+.project-parallax {
+  width: 100%;
+  height: 85vh;
+  margin: 1.5em 0 5em 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.parallax-wrapper {
+  width: 100%;
+  height: inherit;
+}
+
+.parallax-img {
+  width: 100%;
+  height: inherit;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 820px 1119px;
+
+  -o-background-size: 820px 1119px;
+  -moz-background-size: 820px 1119px;
+  -webkit-background-size: 820px 1119px;
+}
+
+@media (max-width: 1468px) {
+  .parallax-img {
+    background-size: 790px 1078px;
+    -o-background-size: 790px 1078px;
+    -moz-background-size: 790px 1078px;
+    -webkit-background-size: 790px 1078px;
+  }
+}
+
+@media (max-width: 1368px) {
+  .parallax-img {
+    background-size: 760px 1037px;
+    -o-background-size: 760px 1037px;
+    -moz-background-size: 760px 1037px;
+    -webkit-background-size: 760px 1037px;
+  }
+}
+
+@media (max-width: 1268px) {
+  .parallax-img {
+    background-size: 730px 996px;
+    -o-background-size: 730px 996px;
+    -moz-background-size: 730px 996px;
+    -webkit-background-size: 730px 996px;
+  }
+}
+
+@media (max-width: 1168px) {
+  .parallax-img {
+    background-size: 700px 955px;
+    -o-background-size: 700px 955px;
+    -moz-background-size: 700px 955px;
+    -webkit-background-size: 700px 955px;
+  }
+}
+
+@media (max-width: 1068px) {
+  .parallax-img {
+    background-attachment: scroll;
+    background-size: 670px 914px;
+    -o-background-size: 670px 914px;
+    -moz-background-size: 670px 914px;
+    -webkit-background-size: 670px 914px;
+  }
+}
+
+@media (max-width: 968px) {
+  .parallax-img {
+    background-size: 640px 873px;
+    -o-background-size: 640px 873px;
+    -moz-background-size: 640px 873px;
+    -webkit-background-size: 640px 873px;
+  }
+}
+
+@media (max-width: 868px) {
+  .project-parallax {
+    margin: 2.5em 0 4.5em 0;
+  }
+
+  .parallax-img {
+    background-size: 610px 832px;
+    -o-background-size: 610px 832px;
+    -moz-background-size: 610px 832px;
+    -webkit-background-size: 610px 832px;
+  }
+}
+
+@media (max-width: 768px) {
+  .parallax-img {
+    background-size: 580px 791px;
+    -o-background-size: 580px 791px;
+    -moz-background-size: 580px 791px;
+    -webkit-background-size: 580px 791px;
+  }
+}
+
+@media (max-width: 668px) {
+  .project-parallax {
+    margin: 1.5em 0 4em 0;
+  }
+  .parallax-img {
+    background-size: 530px 723px;
+    -o-background-size: 530px 723px;
+    -moz-background-size: 530px 723px;
+    -webkit-background-size: 530px 723px;
+  }
+}
+
+@media (max-width: 568px) {
+  .parallax-img {
+    background-size: 94% auto;
+    -o-background-size: 94% auto;
+    -moz-background-size: 94% auto;
+    -webkit-background-size: 94% auto;
+  }
+}
+
+@media (max-width: 468px) {
+  .parallax-img {
+    background-size: 100% auto;
+    -o-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+  }
+}

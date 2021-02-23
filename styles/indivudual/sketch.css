@@ -1,0 +1,61 @@
+.sketch {
+  overflow: hidden;
+}
+
+.sketch h3 {
+  margin-bottom: .5em;
+}
+
+.sketch-wrapper {
+  width: 90%;
+  margin: 0 5%;
+}
+
+.sketch-images img {
+  width: 49%;
+  margin: 1em .5% 0 .5%;
+  border-radius: 6px;
+  display: inline;
+  cursor: zoom-in;
+}
+
+.design-images img {
+  width: 98%;
+  margin: 1em 2% 0 2%;
+  cursor: zoom-in;
+}
+
+.sketch-wrapper ul {
+  width: 90%;
+  margin: 0 5%;
+  padding: 0;
+  list-style: none;
+}
+
+.sketch-wrapper ul li {
+  margin: 1em 0;
+  color: #677B85;
+  line-height: 2em;
+}
+
+.sketch-wrapper ul li::before {
+  content: "\2022";
+  color: #FFC01D;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+@media (max-width: 868px) {
+  .sketch h3 {
+    margin-bottom: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .sketch-wrapper {
+    width: 100%;
+    margin: 0;
+  }
+}

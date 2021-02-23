@@ -1,0 +1,29 @@
+
+.screens {
+  /* overflow: hidden; */
+}
+
+.screens h3 {
+  margin-bottom: 0.5em;
+}
+
+.screens img {
+  width: 100%;
+  height: auto;
+  margin: 1em 0 2em 0;
+  border-radius: 6px;
+  cursor: zoom-in;
+  transition: all 0.2s ease-in;
+}
+
+.screens img:hover {
+  filter: drop-shadow(8px 8px 8px gray);
+  transition: all 0.2s ease-in;
+}
+
+
+@media (max-width: 868px) {
+  .screens h3 {
+    margin-bottom: 1em;
+  }
+}

@@ -51,7 +51,7 @@ export default {
     }
   ],
   technologies: [
-    "NextJS", "Javascript", "RestAPI", "HTML", "CSS3", "Webpack", "Adobe Photoshop", "Figma"
+    "NextJS", "Javascript", "Rest API", "HTML5", "CSS3", "Webpack", "Adobe Photoshop", "Figma"
   ],
   parallax: {
     image: mbimage.parallax,

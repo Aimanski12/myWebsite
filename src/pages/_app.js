@@ -59,6 +59,9 @@ import '../../styles/message/socials.css'
 // individual projects
 import '../../styles/indivudual/header.css'
 import '../../styles/indivudual/overview.css'
+import '../../styles/indivudual/parallax.css'
+import '../../styles/indivudual/sketch.css'
+import '../../styles/indivudual/screens.css'
 
 
 

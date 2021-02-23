@@ -5,7 +5,7 @@ export default {
   index: 'notfound',
   title: "404 Error",
   background: '/images/typing.gif',
-  caption: "Sorry man! The page you are looking for is not in on file.",
+  caption: "Sorry man! The page you are looking for is not on our file.",
   buttonLink: {
     text: "Back to Home",
     link: "/",

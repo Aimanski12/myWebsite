@@ -9,8 +9,9 @@ export default function Designs({data}) {
       <h3 className='font-2 s2b'>{data.title}</h3>
       <div className="sketch-wrapper">
         <div className="design-images">
-          <img onClick={()=> {
+          <img 
             className='proj-img'
+            onClick={()=> {
             SetAppState.setImageModalState({
               isOpen: true, isSingle: true, images: data.images }) }}
             src={data.images.link} alt={data.images.alt} />

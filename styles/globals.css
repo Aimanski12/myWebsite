@@ -50,10 +50,16 @@ a {
   /* position: fixed; */
   min-height: 100vh;
   z-index: 350;
+
 }
 
 
-
+/* .samps{
+  perspective: 10px;
+  height: 100%;
+  overflow-y: scroll;
+  
+} */
 
 
 .scroll-body {
@@ -124,10 +130,6 @@ body {
   overflow-x: hidden;
 }
 
-img {
-  /* width: 180px; */
-  height: auto;
-}
 
 /* p {
   width: 300px;

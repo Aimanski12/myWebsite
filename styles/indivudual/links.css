@@ -1,0 +1,49 @@
+
+
+.project-links {
+  width: 100%;
+  height: 2em;
+  margin-top: 80px;
+}
+
+.project-links-wrapper {
+  width: 100%;
+}
+
+.project-btn {
+  width: 33.33%;
+  min-height: 2em;
+  float: left;
+}
+
+@media(max-width: 868px) {
+  .project-btn {
+    width: 35%;
+    margin: 0 10% 4em 5%;
+  }
+  .project-btn:first-child {
+    width: 47%;
+    margin: 0 0% 4em 3%;
+  }
+  .project-btn:nth-child(2) {
+    width: 30%;
+    margin: 0 3% 4em 17%;
+  }
+  .project-btn:last-child {
+    width: 36%;
+    margin: 0 32% 0 32%;
+  }
+}
+
+@media(max-width: 768px) {
+  .project-btn:first-child, .project-btn:nth-child(2), .project-btn:last-child {
+    width: 90%;
+    margin: 0 5%;
+    margin-bottom: 5em;
+    display: flex;
+    flex-direction: row;
+  }
+  .project-btn:last-child {
+    margin-bottom: 0;
+  }
+}

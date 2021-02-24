@@ -44,7 +44,9 @@ export default function Home() {
           <Headers data={page.header}/>
           <Webdev data={page} title={false}/>
           <Github data={page.gitProj}/>
+          <hr/>
           <WebLinks data={page.uxui}/>
+          <hr/>
           <WebLinks data={page.artWorkLink}/>
           <QuickLink data={page.quickLinks}/>
           <Footer data={page.footer}/>

@@ -17,7 +17,7 @@ export default {
   },
   artWork: art,
   seeMore: {
-    title: "Webdev Projects?",
+    title: "Webdev Projects",
     caption: "You can also view my webdev projects.",
     buttonLink: {
       text: "Webdev Projects →",

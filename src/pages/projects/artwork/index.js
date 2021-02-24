@@ -36,7 +36,7 @@ export default function Home() {
         animate={{opacity: 1}} 
         exit="exit" 
         id='body-wrapper'
-        className="body-wrapper">
+        className="body-wrapper samps">
         <div className="scroll-body">
           <Headers data={page.header}/>
           <ArtWork data={page.artWork}/>

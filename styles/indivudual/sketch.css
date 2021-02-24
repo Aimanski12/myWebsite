@@ -38,6 +38,10 @@
   line-height: 2em;
 }
 
+.sketch-wrapper ul li:last-child {
+  margin-bottom: 0;
+}
+
 .sketch-wrapper ul li::before {
   content: "\2022";
   color: #FFC01D;

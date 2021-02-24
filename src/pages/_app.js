@@ -1,5 +1,10 @@
 // global css
 import '../../styles/globals.css'
+
+
+import '../../styles/global/global.css'
+
+
 import '../../styles/global/social-icon.css'
 import '../../styles/global/copyright.css'
 import '../../styles/global/margins.css'
@@ -62,6 +67,7 @@ import '../../styles/indivudual/overview.css'
 import '../../styles/indivudual/parallax.css'
 import '../../styles/indivudual/sketch.css'
 import '../../styles/indivudual/screens.css'
+import '../../styles/indivudual/links.css'
 
 
 

@@ -33,8 +33,8 @@ export default {
   overview: {
     title: "Project Overview",
     text: [
-      "Reading is one of the things I do to nourish my curiousity and finding the right book to read somehow can be challenging. As I search for books relavant to my interest, I always browse to some of the famous online bookstores. So having this experience made me realize to build a not build a website that show various books from different categories and genres.",
-      "So, I took this challenge and started designing building a book website. I called it book-worm, a name not really significant to any animal or movie character but just a name I though would be perfect for this project."
+      "Reading is one of the things I do to nourish my curiousity and finding the right book to read somehow can be challenging. As I search for books relavant to my interest, I always browse to some of the famous online bookstores. So having this experience made me realize to build a website that can show various books from different categories and genres.",
+      "So, I took this challenge and build a book website. I called it book-worm, a name not really significant to any creature or movie character but just a name I thought would be perfect for this project."
     ]
   },
   platforms: [

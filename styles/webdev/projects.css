@@ -7,7 +7,7 @@
 }
 
 .featured-project:last-child {
-  padding-bottom: 6em;
+  padding-bottom: 9em;
 }
 
 .row-reverse {
@@ -107,7 +107,7 @@
     padding: 6em 0 6em 0;
   }
   .featured-project:last-child {
-    padding-bottom: 5em;
+    padding-bottom: 8em;
   }
   .project-image-wrapper {
     width: 90%;
@@ -135,7 +135,7 @@
     padding: 5em 0 5em 0;
   }
   .featured-project:last-child {
-    padding-bottom: 4em;
+    padding-bottom: 7em;
   }
   .project-image-wrapper {
     width: 94%;
@@ -164,7 +164,7 @@
     padding: 5.5em 0 5.5em 0;
   }
   .featured-project:last-child {
-    padding-bottom: 4.5em;
+    padding-bottom: 7.5em;
   }
   .project-content-wrapper {
     width: 94%;
@@ -228,7 +228,7 @@
     padding: 4.5em 0 5.5em 0;
   }
   .featured-project:last-child {
-    padding-bottom: 4.5em;
+    padding-bottom: 7.5em;
   }
   .featured-project figure {
     width: 88%;
@@ -247,7 +247,7 @@
     padding: 4.5em 0 5em 0;
   }
   .featured-project:last-child {
-    padding-bottom: 5em;
+    padding-bottom: 8em;
   }
   .featured-project figure {
     width: 92%;

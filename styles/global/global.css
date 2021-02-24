@@ -1,0 +1,37 @@
+
+
+hr {
+  width: 280px;
+  margin: 2em auto;
+  border-top: 2px solid #E0E0E0;
+}
+
+@media (max-width: 968px) {
+  hr {
+    width: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  hr {
+    width: 200px;
+  }
+}
+
+@media (max-width: 568px) {
+  hr {
+    width: 160px;
+  }
+}
+
+@media (max-width: 468px) {
+  hr {
+    width: 120px;
+  }
+}
+
+@media (max-width: 368px) {
+  hr {
+    width: 90px;
+  }
+}

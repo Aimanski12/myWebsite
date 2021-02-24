@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {Fragment, useEffect} from 'react';
+import {Anim} from '../../../utils/animations'
 import Svg from '../../Svgs'
 
 export default function ArtworkAll({data}) {
 
+  useEffect(() => {
+    Anim.Helpers.tiltImage('.art-img-wrapper img', 35)
+  })
+
+  console.log(data)
   const images = data.map((img, l) => {
     return (
-    <div key={l}>
+    <Fragment key={l}>
       <div className='art-desc content-center'>
         <h2 className='font-1 s3a'>{img.name}</h2>
         <p className='font-2 s3b'>{img.desc}</p>
@@ -16,12 +22,13 @@ export default function ArtworkAll({data}) {
           <Svg svg='coloredinsta'/>
         </a>
       </div>
-      <div className="art-img content-center"
-        style={{backgroundImage: img.background}}>
-        <div className="art-img-wrapper" 
-          style={{backgroundImage: `url(${img.image})` }}></div>
+
+      <div className="art-img">
+        <div className="art-img-wrapper content-center" style={{background: img.background}}>
+          <img src={img.image} alt={img.alt}/>
+        </div>
       </div>
-    </div>
+    </Fragment>
     )
   })
 
@@ -31,3 +38,4 @@ export default function ArtworkAll({data}) {
     </section>
   );
 }
+

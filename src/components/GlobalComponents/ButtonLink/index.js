@@ -15,7 +15,8 @@ export default function ButtonLink({data}) {
         <span>{data.text}</span>
       </a>
     </Link> ) :
-  ( <a target='_blank'
+  ( <a href={data.link}
+      target='_blank'
       rel="noreferrer noopener"
       className='button-link font-1 s7a'>
       <span>{data.text}</span>

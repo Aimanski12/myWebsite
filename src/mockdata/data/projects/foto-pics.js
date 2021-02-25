@@ -115,8 +115,11 @@ export default {
   },
   nextPrev: {
     title: "Foto-Pics",
-    link: "/projects/foto-pics",
-    text: "View Project →",
+    btnlink: {
+      text: "View Project →",
+      link: "/projects/webdev/foto-pics",
+      type: "internal"
+    },
     image: fpimage.banner
   }
 }

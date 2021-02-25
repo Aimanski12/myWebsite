@@ -120,8 +120,11 @@ export default {
   },
   nextPrev: {
     title: "Book-Worm",
-    link: "/projects/book-worm",
-    text: "View Project →",
+    btnlink: {
+      text: "View Project →",
+      link: "/projects/webdev/book-worm",
+      type: "internal"
+    },
     image: bwimage.banner
   }
 }

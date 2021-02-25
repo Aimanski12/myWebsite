@@ -3,7 +3,8 @@
     "name": "Profile picture",
     "description": "An image of me wearing a sweater.",
     "alt": "aiman profile picture",
-    "link": "/about/aiman_profile_pic.webp"
+    "link1": "/about/aiman_profile_pic.webp",
+    "link": "/about/aiman_profile_picture.webp"
   },
   "facts_about_me": {
     "name": "At the lighthouse",

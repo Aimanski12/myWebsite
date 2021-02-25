@@ -118,8 +118,11 @@ export default {
   },
   nextPrev: {
     title: "Movie-Box",
-    link: "/projects/movie-box",
-    text: "View Project →",
+    btnlink: {
+      text: "View Project →",
+      link: "/projects/webdev/movie-box",
+      type: "internal"
+    },
     image: mbimage.banner
   }
 }

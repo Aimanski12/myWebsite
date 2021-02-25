@@ -118,8 +118,11 @@ export default {
   },
   nextPrev: {
     title: "News-Box",
-    link: "/projects/news-box",
-    text: "View Project →",
+    btnlink: {
+      text: "View Project →",
+      link: "/projects/webdev/news-box",
+      type: "internal"
+    },
     image: nbimage.banner
   }
 }

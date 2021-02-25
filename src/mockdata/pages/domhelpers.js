@@ -56,12 +56,18 @@ export const DataHelper = (function(){
         if(x-1 < 0) {
           prev = null
         } else {
-          prev = projects[x-1].banner
+          prev = {
+            subj: 'Previous Project',
+            ...projects[x-1].nextPrev,
+          }
         }
         if(x+1 > 4) {
           next = null
         } else {
-          next = projects[x+1].banner
+          next = {
+            subj: 'Next Project', 
+            ...projects[x+1].nextPrev
+          }
         }
       }
     }

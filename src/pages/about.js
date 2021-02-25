@@ -1,24 +1,25 @@
 import React, {useContext, useEffect} from 'react'
-import {AppData} from '../../../context'
-import {Anim} from '../../../utils/animations'
+import {AppData} from '../context'
+import {Anim} from '../utils/animations'
 import {motion} from 'framer-motion'
 import Head from 'next/head'
-import Navigation from '../../../containers/Navigation/Navigation'
-import Header from '../../../components/Headers/Project'
-import Overview from '../../../components/Individuals'
-
-import QuickLink from '../../../components/Footer/QuickLinks'
-import Footer from '../../../components/Footer/Footer'
-import projects from '../../../mockdata/pages/projects'
+import Navigation from '../containers/Navigation/Navigation'
+import Header from '../components/Headers/About'
+import ProfileDetails from '../components/About'
+import WebLinks from '../components/WebLinks'
+import QuickLink from '../components/Footer/QuickLinks'
+import Footer from '../components/Footer/Footer'
+import page from '../mockdata/pages/about'
 
 export default function Home() {
   const {AppState, SetAppState} = useContext(AppData)
-  const page = projects('movie-box')
 
+  console.log(page.whatICanDo)
   useEffect(() => {
+    Anim.Helpers.tiltImage(".proj-img", 35)
     AppState.menuTransitions.isTransitioning ? (
       setTimeout(()=>{
-        window.scrollTo(0, 0)
+        window.scrollTo({top:0, left: 0, behavior: 'auto'})
         SetAppState.setMenuTransitions({isTransitioning: false})
       }, AppState.menuTransitions.delay)
     ) : null
@@ -40,8 +41,9 @@ export default function Home() {
         id='body-wrapper'
         className="body-wrapper">
         <div className="scroll-body">
-          <Header data={page}/>
-          <Overview data={page}/>
+          <Header data={page.header}/>
+          <ProfileDetails data={page}/>
+          <WebLinks data={page.whatICanDo}/>
           <QuickLink data={page.quickLinks}/>
           <Footer data={page.footer}/>
         </div>

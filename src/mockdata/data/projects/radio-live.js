@@ -98,24 +98,27 @@ export default {
       {
         text: "Launch App →",
         link: "https://radio-live.vercel.app",
-        type: "internal"
+        type: "external"
       },
       {
         text: "Source Code →",
         link: "https://github.com/Aimanski12/radio-live",
-        type: "internal"
+        type: "external"
       },
       {
         text: "View on Behance →",
         link: "https://www.behance.net/gallery/105665555/Radio-Live",
-        type: "internal"
+        type: "external"
       }
     ]
   },
   nextPrev: {
     title: "Radio-Live",
-    link: "/projects/radio-live",
-    text: "View Project →",
+    btnlink: {
+      text: "View Project →",
+      link: "/projects/webdev/radio-live",
+      type: "internal"
+    },
     image: rlimage.banner
   }
 }

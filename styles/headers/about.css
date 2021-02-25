@@ -1,0 +1,152 @@
+.about-header {
+  width: 100%;
+  overflow: hidden;
+  padding: 22em 0 6em 0;  
+  min-height: 10em;
+}
+
+.about-header-wrapper {
+  min-height: 10em;
+}
+
+.about-text-header {
+  position: relative;
+}
+
+.about-text-runner {
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.about-text-runner img, .about-text-runner span  {
+  opacity: 0;
+  letter-spacing: -0.04em;
+  display: block;
+  animation: appear-title 0.9s forwards;
+  animation-delay: .65s;
+  transition-timing-function: cubic-bezier(0.6, -0.05, 0.01, 0.99);
+}
+
+.about-text-runner:after {
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background: #D145E8;
+  animation: rev-block .8s cubic-bezier(0.6, -0.05, 0.01, 0.99) forwards;
+  animation-delay: .25s;
+}
+
+.about-text-runner img {
+  width: 230px;
+}
+
+.about-text-runner img:hover {
+  cursor: zoom-in;
+}
+
+.about-text-runner span {
+  color: #74A0AD;
+  letter-spacing: 0.04em;
+}
+
+.about-header .about-text-header:first-child {
+  margin-bottom: 1.5em;
+}
+
+.about-text-intro {
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.about-text-intro h1, .about-text-intro p {
+  padding: 0;
+  letter-spacing: -0.04em;
+
+  opacity: 0;
+  animation: appear-caption 0.9s forwards;
+  animation-delay: .65s;
+  transition-timing-function: cubic-bezier(0.6, -0.05, 0.01, 0.99);
+}
+
+.about-text-intro h1 {
+  color: #004E66;
+  font-weight: 600;
+}
+
+.about-text-intro p {
+  color: #04C2FF;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  line-height: 2.5em;
+  text-align: center;
+  width: 700px;
+}
+
+.about-header .about-text-intro{
+  margin: 1em 0 0 0;
+}
+
+
+@media (max-width: 1068px) {
+  .about-header {
+    padding: 20em 0 6.5em 0;  
+  }
+  .about-text-intro p {
+    width: 640px;
+  }
+}
+
+@media (max-width: 868px) {
+  .about-header {
+    padding: 15em 0 6.5em 0;  
+  }
+  .about-text-intro p {
+    width: 590px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-header {
+    padding: 13em 0 6.5em 0;  
+  }
+  .about-text-intro p {
+    width: 540px;
+  }
+}
+
+@media (max-width: 668px) {
+  .about-header {
+    padding: 12em 0 6.5em 0;  
+  }
+  .about-text-intro p {
+    width: 490px;
+  }
+}
+
+@media (max-width: 568px) {
+  .about-header {
+    padding: 14em 0 6.5em 0;  
+  }
+  .about-text-intro p {
+    width: 440px;
+  }
+}
+
+@media (max-width: 468px) {
+  .about-text-intro p {
+    width: 88%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 368px) {
+  .about-header {
+    padding: 12em 0 5em 0;  
+  }
+  .about-text-intro p {
+    width: 92%;
+  }
+}

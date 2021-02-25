@@ -37,9 +37,12 @@ import '../../styles/modal/messagemodal.css'
 // notfound
 import '../../styles/notfound/notfound.css'
 
+// headers
 import '../../styles/headers/dark.css'
 import '../../styles/headers/headerSocials.css'
 import '../../styles/headers/scrollDown.css'
+import '../../styles/headers/about.css'
+import '../../styles/headers/projects.css'
 
 // artwork 
 import '../../styles/artwork/featured.css'
@@ -62,12 +65,17 @@ import '../../styles/message/message.css'
 import '../../styles/message/socials.css'
 
 // individual projects
-import '../../styles/indivudual/header.css'
 import '../../styles/indivudual/overview.css'
 import '../../styles/indivudual/parallax.css'
 import '../../styles/indivudual/sketch.css'
 import '../../styles/indivudual/screens.css'
 import '../../styles/indivudual/links.css'
+import '../../styles/indivudual/nextprev.css'
+
+// about
+import '../../styles/about/parallax.css'
+import '../../styles/about/facts.css'
+import '../../styles/about/travels.css'
 
 
 

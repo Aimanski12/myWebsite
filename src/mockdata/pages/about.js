@@ -19,8 +19,9 @@ export default {
   },
   parallax2: images.parallax[1],
   howIBecame: {
-    title: "How I became a web developer",
-    caption: "I worked in the hospitality industry for 7 about years. I racked my position up from an agent to magerial position until at one point I decided to take a shift of my career path. It all started with curiousity. I was so entralled about the development of technolgy everyday and decided to take some extra mile on learning and understanding how they work. I enrolled Web Development Course in University of London through coursera and the rest was history."
+    title: "Becaming a web developer",
+    caption: "I worked in the hospitality industry for 7 about years. I racked my position up from an agent to magerial position until at one point I decided to take a shift of my career path. It all started with curiousity. I was so entralled about the development of technolgy everyday and decided to take some extra mile on learning and understanding how they work. I enrolled Web Development Course in University of London through coursera and the rest was history.",
+    image: images.how_i_became
   },
   parallax3: images.parallax[2],
   travels: {
@@ -30,7 +31,7 @@ export default {
   whatICanDo: {
     title: "What I can do?",
     caption: "Dig a little deeper and see what I have done and what I can do.",
-    buttonlink: {
+    buttonLink: {
       text: "View resume →",
       link: "/resume",
       type: "internal"
@@ -38,7 +39,7 @@ export default {
   },
   quickLinks: DataHelper.getQuickLinks('about'),
   footer: {
-    iscomplete: true,
+    isComplete: true,
     ...footerData
   },
   menuItems: DataHelper.getMenu()

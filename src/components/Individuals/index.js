@@ -9,6 +9,7 @@ import Sketch from './Components/Sketch'
 import Designs from './Components/Designs'
 import Screens from './Components/Screens'
 import Links from './Components/Links'
+import NextPrev from './Components/NexPrev'
 
 export default function Details({data}) {
 
@@ -32,9 +33,7 @@ export default function Details({data}) {
         <Links data={data.links} />
       </article>
       <hr/>
-      <section className='project-next'>
-
-      </section>
+      <NextPrev data={data.nextPrev}/>
     </>
   );
 }

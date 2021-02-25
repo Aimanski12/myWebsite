@@ -1,0 +1,138 @@
+
+.profile-facts {
+  width: 100%;
+  min-height: 1em;
+  padding: 13em 0;
+}
+
+.profile-facts-wrapper {
+  flex-direction: row;
+}
+
+.profile-facts-wrapper img{
+  width: 400px;
+
+}
+
+.profile-facts-desc {
+  width: 500px;
+  margin-left: 50px;
+}
+
+.profile-facts-desc h2 {
+  font-weight: 600;
+  color: #126985;
+  margin-bottom: .5em;
+}
+
+.profile-facts-desc p {
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 2.4em;
+  color: #04C2FF
+}
+
+.rev {
+  flex-direction: row-reverse;
+}
+
+.rev .profile-facts-desc {
+  margin: 0 50px 0 0
+}
+
+
+@media (max-width: 1268px) {
+  .profile-facts {
+    padding: 14em 0;
+  }
+  .profile-facts-wrapper img{
+    width: 360px;
+  }
+}
+
+@media (max-width: 1068px) {
+  .profile-facts {
+    padding: 14em 0;
+  }
+  .profile-facts-wrapper img{
+    width: 360px;
+  }
+  .profile-facts-desc {
+    width: 450px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 968px) {
+  .profile-facts {
+    padding: 12em 0 13em 0;
+  }
+  .profile-facts-wrapper, .rev {
+    flex-direction: column;
+  }
+  .profile-facts-wrapper img{
+    width: 360px;
+  }
+  .profile-facts-desc {
+    width: 650px;
+    margin: 2em 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-facts-desc h2{
+    text-align: center;
+  }
+  .profile-facts-desc p{
+    text-align: justify;
+  }
+  .rev .profile-facts-desc {
+    margin: 2em 0 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-facts-wrapper img{
+    width: 360px;
+  }
+  .profile-facts-desc {
+    width: 550px;
+  }
+  .profile-facts {
+    padding: 11em 0 11em 0;
+  }
+}
+
+@media (max-width: 668px) {
+  .profile-facts-wrapper img{
+    width: 320px;
+  }
+  .profile-facts-desc {
+    width: 450px;
+  }
+}
+
+@media (max-width: 568px) {
+  .profile-facts {
+    padding: 9em 0 9em 0;
+  }
+  .profile-facts-wrapper img {
+    width: 320px;
+  }
+  .profile-facts-desc {
+    width: 85%;
+  }
+}
+
+@media (max-width: 468px) {
+  .profile-facts {
+    padding: 7em 0 7em 0;
+  }
+  .profile-facts-wrapper img {
+    width: 280px;
+  }
+  .profile-facts-desc {
+    width: 90%;
+  }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import {motion} from 'framer-motion'
 import ButtonLink from '../../../components/GlobalComponents/ButtonLink'
 
 export default function NextPrev({data}) {
@@ -7,8 +8,11 @@ export default function NextPrev({data}) {
     return (
       <div className="proj-next-wrapper">
         <div className="proj-next-img">
-          <img src={d.image.link} 
-            alt={d.image.alt}/>
+          <motion.img 
+            whileHover={{
+              scale: 1.3, opacity: 0.7, transition: { duration: .25 }
+            }}
+            src={d.image.link} alt={d.image.alt}/>
         </div>
         <div className="proj-next-link">
           <span className='font-2 s3b'>{d.subj}</span>

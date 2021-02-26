@@ -5,27 +5,32 @@
       {
         "name": "Figma",
         "alt": "figma small thumbnail",
-        "image": "/images/figma.png"
+        "image": "/images/figma.png",
+        "anim": "clock"
       },
       {
         "name": "Webflow",
         "alt": "webflow small thumbnail",
-        "image": "/images/webflow.png"
+        "image": "/images/webflow.png",
+        "anim": "fall"
       },
       {
         "name": "Adobe PS",
         "alt": "adobe ps small thumbnail",
-        "image": "/images/adobe_ps.png"
-      },
-      {
-        "name": "Adobe Il",
-        "alt": "adobe il small thumbnail",
-        "image": "/images/adobe_il.png"
+        "image": "/images/adobe_ps.png",
+        "anim": "down"
       },
       {
         "name": "Adobe XD",
         "alt": "adobe xd small thumbnail",
-        "image": "/images/adobe_xd.png"
+        "image": "/images/adobe_xd.png",
+        "anim": "dive"
+      },
+      {
+        "name": "Adobe Il",
+        "alt": "adobe il small thumbnail",
+        "image": "/images/adobe_il.png",
+        "anim": "zoom"
       }
     ]
   },
@@ -35,66 +40,79 @@
       {
         "name": "HTML5",
         "alt": "html5 small thumbnail",
-        "image": "/images/html5.png"
+        "image": "/images/html5.png",
+        "anim": "down"
       },
       {
         "name": "CSS3",
         "alt": "css3 small thumbnail",
-        "image": "/images/css3.png"
+        "image": "/images/css3.png",
+        "anim": "dive"
       },
       {
         "name": "Bootstrap",
         "alt": "bootsrap small thumbnail",
-        "image": "/images/bootstrap.png"
+        "image": "/images/bootstrap.png",
+        "anim": "zoom"
       },
       {
         "name": "Javascript",
         "alt": "javascript small thumbnail",
-        "image": "/images/javascript.png"
+        "image": "/images/javascript.png",
+        "anim": "clock"
       },
       {
         "name": "jQuery",
         "alt": "jquery small thumbnail",
-        "image": "/images/jquery.png"
+        "image": "/images/jquery.png",
+        "anim": "fall"
       },
       {
         "name": "JSON",
         "alt": "json small thumbnail",
-        "image": "/images/json.png"
+        "image": "/images/json.png",
+        "anim": "dive"
       },
       {
         "name": "NodeJS",
         "alt": "nodejs small thumbnail",
-        "image": "/images/nodejs.png"
+        "image": "/images/nodejs.png",
+        "anim": "clock"
       },
       {
         "name": "Python",
         "alt": "python small thumbnail",
-        "image": "/images/python.png"
+        "image": "/images/python.png",
+        "anim": "fall"
       },
       {
         "name": "ReactJS",
         "alt": "reactjs small thumbnail",
-        "image": "/images/reactjs.png"
+        "image": "/images/reactjs.png",
+        "anim": "down"
       },
       {
         "name": "Redux",
         "alt": "redux small thumbnail",
-        "image": "/images/redux.png"
+        "image": "/images/redux.png",
+        "anim": "dive"
       },
       {
         "name": "Next JS",
         "alt": "nextjs small thumbnail",
-        "image": "/images/next.png"
+        "image": "/images/next.png",
+        "anim": "fall"
       },
       {
         "name": "Vue JS",
         "alt": "vuejs small thumbnail",
-        "image": "/images/vuejs.png"
+        "image": "/images/vuejs.png",
+        "anim": "dive"
       },{
         "name": "Django",
         "alt": "django small thumbnail",
-        "image": "/images/django.png"
+        "image": "/images/django.png",
+        "anim": "dive"
       }
     ]
   },
@@ -104,52 +122,62 @@
       {
         "name": "NPM",
         "alt": "npm small thumbnail",
-        "image": "/images/npm.png"
+        "image": "/images/npm.png",
+        "anim": "zoom"
       },
       {
         "name": "Webpack",
         "alt": "webpack small thumbnail",
-        "image": "/images/webpack.png"
+        "image": "/images/webpack.png",
+        "anim": "clock"
       },
       {
         "name": "Gitbash",
         "alt": "gitbash small thumbnail",
-        "image": "/images/gitbash.png"
+        "image": "/images/gitbash.png",
+        "anim": "fall"
       },
       {
         "name": "Github",
         "alt": "github small thumbnail",
-        "image": "/images/github.png"
+        "image": "/images/github.png",
+        "anim": "dive"
       },
       {
         "name": "Express",
         "alt": "express small thumbnail",
-        "image": "/images/express.png"
+        "image": "/images/express.png",
+        "anim": "dive"
       },
       {
         "name": "MongoDB",
         "alt": "mongodb small thumbnail",
-        "image": "/images/mongodb.png"
+        "image": "/images/mongodb.png",
+        "anim": "clock"
       },
       {
         "name": "GraphQL",
         "alt": "graphql small thumbnail",
-        "image": "/images/graphql.png"
+        "image": "/images/graphql.png",
+        "anim": "down"
       },
       {
         "name": "Firebase",
         "alt": "firebase small thumbnail",
-        "image": "/images/firebase.png"
+        "image": "/images/firebase.png",
+        "anim": "dive"
       },
       {
         "name": "Heroku",
         "alt": "heroku small thumbnail",
-        "image": "/images/heroku.png"
+        "image": "/images/heroku.png",
+        "anim": "dive"
       },
       {
         "name": "SEO",
         "alt": "seo small thumbnail",
-        "image": "/images/seo.png"
+        "image": "/images/seo.png",
+        "anim": "clock"
       }
     ]
   }

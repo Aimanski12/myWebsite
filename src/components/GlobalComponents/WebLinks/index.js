@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonLink from '../GlobalComponents/ButtonLink'
+import ButtonLink from '../ButtonLink'
 
 export default function WebLinks({data}) {
   

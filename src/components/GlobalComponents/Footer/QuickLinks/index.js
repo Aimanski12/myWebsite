@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
-import {AppData} from '../../../context'
+import {AppData} from '../../../../context'
 import Link from 'next/link'
-import Svg from '../../Svgs'
+import Svg from '../../../Svgs'
 
 export default function QuickLinks({data}) {
   const {SetAppState} = useContext(AppData)

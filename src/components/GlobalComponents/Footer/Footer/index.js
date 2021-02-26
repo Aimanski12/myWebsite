@@ -2,7 +2,7 @@ import React from 'react';
 import LetsWork from './components/LetsWork'
 import HitMe from './components/HitMe'
 import BackToTop from './components/BackToTop'
-import CopyRight from '../../GlobalComponents/Copyright'
+import CopyRight from '../../Copyright'
 
 export default function Footer({data}) {
 

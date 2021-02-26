@@ -1,5 +1,5 @@
 import React from 'react';
-import Icons from '../../../GlobalComponents/SocialIcons'
+import Icons from '../../../SocialIcons'
 
 export default function HitMe({data}) {
   return (

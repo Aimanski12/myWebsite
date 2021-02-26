@@ -8,7 +8,6 @@ export default function ArtworkAll({data}) {
     Anim.Helpers.tiltImage('.art-img-wrapper img', 35)
   })
 
-  console.log(data)
   const images = data.map((img, l) => {
     return (
     <Fragment key={l}>

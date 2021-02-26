@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {AppData} from '../../../../context'
+import {AppData} from '../../../../../context'
 import Link from 'next/link'
 
 export default function LetWork({data}) {

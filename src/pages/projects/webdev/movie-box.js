@@ -3,12 +3,11 @@ import {AppData} from '../../../context'
 import {Anim} from '../../../utils/animations'
 import {motion} from 'framer-motion'
 import Head from 'next/head'
-import Navigation from '../../../containers/Navigation/Navigation'
+import Navigation from '../../../components/Navigation'
 import Header from '../../../components/Headers/Project'
-import Overview from '../../../components/Individuals'
-
-import QuickLink from '../../../components/Footer/QuickLinks'
-import Footer from '../../../components/Footer/Footer'
+import ProjectDetails from '../../../components/Individuals'
+import QuickLink from '../../../components/GlobalComponents/Footer/QuickLinks'
+import Footer from '../../../components/GlobalComponents/Footer/Footer'
 import projects from '../../../mockdata/pages/projects'
 
 export default function Home() {
@@ -41,7 +40,7 @@ export default function Home() {
         className="body-wrapper">
         <div className="scroll-body">
           <Header data={page}/>
-          <Overview data={page}/>
+          <ProjectDetails data={page}/>
           <QuickLink data={page.quickLinks}/>
           <Footer data={page.footer}/>
         </div>

@@ -1,0 +1,176 @@
+
+.tech-main {
+  width: 100%;
+  min-height: 2em;
+  padding: 13em 0 6em 0;
+}
+
+.tech-main-wrapper {
+  width: 950px;
+  margin: 0 auto;
+}
+
+.tech-main-header {
+  margin-bottom: 3em;
+}
+
+.tech-main-header h2 {
+  color: #004E66;
+  font-weight: 600;
+  text-align: center;
+}
+
+.tech-main-header span {
+  color: #04C2FF;
+  font-weight: 400;
+  line-height: 2em;
+  text-align: center;
+  display: block;
+  letter-spacing: 0.04em;
+}
+
+.tools-main {
+  width: 100%;
+  padding: 2.5em 0 1em 0;
+}
+
+.tools-spread {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.tool-name span{
+  display: block;
+  margin-top: 1em;
+  color: #757F82;
+  font-weight: 500;
+}
+
+.tools-spread ul {
+  list-style: none;
+  width: 740px;
+}
+
+.tools-spread ul li{
+  float: left;
+  display: inline;
+  width: 123px;
+  margin-bottom: 2.5em;
+}
+
+.tool-icon img {
+  width: 100px;
+}
+
+.tool-icon img:hover {
+  cursor: url('/images/emoji.svg'), auto;
+}
+
+.tool-icon span {
+  color: #757F82;
+  margin-top: 0em;
+  display: block;
+}
+@media (max-width: 1268px) {
+
+  .tech-main-wrapper {
+    width: 850px;
+  }
+  .tools-spread ul {
+    width: 690px;
+  }
+  .tools-spread ul li {
+    width: 115px;
+  }
+}
+
+@media (max-width: 1068px) {
+  .tech-main-wrapper {
+    width: 750px;
+  }
+  .tools-main {
+    padding: 3em 0 1.5em 0;
+  }
+  .tools-spread {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .tool-name span {
+    margin: 0 0 1.5em 0;
+  }
+  .tools-spread ul {
+    width: 100%;
+  }
+  .tools-spread ul li {
+    width: 16.666%;
+  }
+}
+
+@media (max-width: 968px) {
+  .tech-main-wrapper {
+    width: 650px;
+  }
+  .tools-main {
+    padding: 2.5em 0 1.5em 0;
+  }
+  .tools-spread ul li {
+    margin-bottom: 1.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-main {
+    padding: 11em 0 6em 0;
+  }
+  .tech-main-wrapper {
+    width: 550px;
+  }
+  .tool-icon img {
+    width: 80%;
+  }
+  .tool-icon span {
+    margin-top: .5em;
+  }
+}
+
+@media (max-width: 668px) {
+  .tech-main {
+    padding: 10em 0 6em 0;
+  }
+  .tech-main-wrapper {
+    width: 85%;
+  }
+  .tools-spread ul li {
+    width: 20%;
+  }
+}
+
+@media (max-width: 568px) {
+  .tech-main {
+    padding: 10em 0 6em 0;
+  }
+  .tech-main-wrapper {
+    width: 90%;
+  }
+  .tools-spread ul li {
+    width: 20%;
+  }
+}
+
+@media (max-width: 468px) {
+  .tech-main {
+    padding: 9em 0 6em 0;
+  }
+  .tech-main-wrapper {
+    width: 90%;
+  }
+  .tools-spread ul li {
+    width: 25%;
+  }
+  .tool-icon img {
+    width: 80%;
+  }
+}
+

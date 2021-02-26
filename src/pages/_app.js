@@ -77,6 +77,8 @@ import '../../styles/about/parallax.css'
 import '../../styles/about/facts.css'
 import '../../styles/about/travels.css'
 
+// knowmore
+import '../../styles/knowmore/technology.css'
 
 
 import {AppDataContext} from '../context'

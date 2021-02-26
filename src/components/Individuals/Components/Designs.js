@@ -18,7 +18,7 @@ export default function Designs({data}) {
         </div>
         <ul>
           { data.details.map((s, i) => {
-            return ( <li className='font-2 s4b' key={i}>{s}</li> ) })
+            return ( <li className='font-2 s4b' key={i}>{s}</li> ) }) 
           }
         </ul>
       </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export default function GithubProj({data}) {
 
   const list = data.proj.map((p, i) => {

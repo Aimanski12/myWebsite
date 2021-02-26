@@ -62,7 +62,8 @@ export const ImageModalAnim = (function (){
   const _expandBtn = {
     scale: 1.15,
     transition: {
-      duration: .15
+      duration: .05,
+      ease: 'easeInOut'
     }
   }
 

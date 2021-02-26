@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {Anim} from '../../../../utils/animations'
+import {Anim} from '../../../../../utils/animations'
 
 export default function BackToTop({data}) {
 

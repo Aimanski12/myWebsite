@@ -33,7 +33,7 @@ export default {
     caption: "Dig a little deeper and see what I have done and what I can do.",
     buttonLink: {
       text: "View resume →",
-      link: "/resume",
+      link: "/about/know-more",
       type: "internal"
     }
   },

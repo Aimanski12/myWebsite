@@ -4,7 +4,7 @@ import {Anim} from '../utils/animations'
 import Link from 'next/link'
 import {motion} from 'framer-motion'
 import Head from 'next/head'
-import Navigation from '../containers/Navigation/Navigation'
+import Navigation from '../components/Navigation'
 
 import page from '../mockdata/pages/notfound'
 

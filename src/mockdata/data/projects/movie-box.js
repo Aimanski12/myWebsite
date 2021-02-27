@@ -101,7 +101,7 @@ export default {
     buttonLink: [
       {
         text: "Launch App →",
-        link: "https://movie-box.vercel.app",
+        link: "https://movie-box-site.vercel.app",
         type: "external"
       },
       {

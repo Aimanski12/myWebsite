@@ -29,6 +29,8 @@
   width: 46px;
   height: 46px;
   margin-right: 25px;
+
+  /* background: red; */
 }
 
 .contact-icons a:last-child {
@@ -39,14 +41,14 @@
   .contact-socials p {
     margin: 0 5% 70px 5%;
   }
-  .contact-icons a {
+  .contact-icons a {  
     width: 42px;
     height: 42px;
   }
 }
 
 @media (max-width: 1068px) {
-  .contact-icons a {
+  .contact-icons a{  
     width: 38px;
     height: 38px;
   }
@@ -57,16 +59,19 @@
     width: 95%;
     margin: 0 2.5% 70px 2.5%;
   }
-  .contact-icons a {
+  .contact-icons a{  
     width: 34px;
     height: 34px;
   }
 }
 
 @media (max-width: 568px) {
-  .contact-icons a {
+  .contact-icons a{  
     width: 30px;
     height: 30px;
+  }
+  .contact-icons a {  
     margin-right: 20px;
   }
+
 }

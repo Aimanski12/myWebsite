@@ -9,9 +9,12 @@
   color: #126985;
   font-weight: 600;
   text-align: center;
+  margin-bottom: .5em;
 }
 
 .weblinks-container p {
+  width: 720px;
+  margin: 0 auto;
   line-height: 2em;
   margin-bottom: 80px;
   color: #04C2FF;
@@ -33,15 +36,34 @@
   transform: translateY(-50%) translateX(-50%);
 }
 
+@media (max-width: 1268px) {
+  .weblinks-container p {
+    width: 640px;
+  }
+}
+
+
 @media (max-width: 968px) {
   .weblinks-container {
     padding: 5em 0 7em 0;
+  }
+  .weblinks-container p {
+    width: 590px;
+  }
+}
+
+@media (max-width: 768px) {
+  .weblinks-container p {
+    width: 540px;
   }
 }
 
 @media (max-width: 668px) {
   .weblinks-container {
     padding: 4em 0 6em 0;
+  }
+  .weblinks-container p {
+    width: 80%;
   }
 }
 

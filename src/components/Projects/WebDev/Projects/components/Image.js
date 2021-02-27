@@ -1,6 +1,7 @@
 import React, {useEffect, useContext} from 'react';
 import {Anim} from '../../../../../utils/animations'
 import {AppData} from '../../../../../context'
+import Fade from 'react-reveal/Fade'
 
 export default function Image({data}) {
   const {SetAppState} = useContext(AppData)
@@ -9,16 +10,18 @@ export default function Image({data}) {
   })
 
   return (
-    <figure>
-      <div className="project-image-wrapper">
-        <img 
-          onClick={()=> SetAppState.setImageModalState({
-            isOpen: true,
-            isSingle: true,
-            images: data.image
-          })}
-          src={data.image.link} alt={data.image.alt}/>
-      </div>
-    </figure>
+    <Fade bottom>
+      <figure>
+        <div className="project-image-wrapper">
+          <img 
+            onClick={()=> SetAppState.setImageModalState({
+              isOpen: true,
+              isSingle: true,
+              images: data.image
+            })}
+            src={data.image.link} alt={data.image.alt}/>
+        </div>
+      </figure>
+    </Fade>
   );
 }

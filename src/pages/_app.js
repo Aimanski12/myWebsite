@@ -1,10 +1,5 @@
 // global css
-import '../../styles/globals.css'
-
-
 import '../../styles/global/global.css'
-
-
 import '../../styles/global/social-icon.css'
 import '../../styles/global/copyright.css'
 import '../../styles/global/margins.css'
@@ -79,6 +74,8 @@ import '../../styles/about/travels.css'
 
 // knowmore
 import '../../styles/knowmore/technology.css'
+import '../../styles/knowmore/education.css'
+import '../../styles/knowmore/projects.css'
 
 
 import {AppDataContext} from '../context'

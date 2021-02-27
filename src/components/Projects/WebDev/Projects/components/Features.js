@@ -1,13 +1,16 @@
 import React from 'react';
 import Svg from '../../../../Svgs'
+import Fade from 'react-reveal/Fade'
 
 export default function Features({feature}) {
 
   const features = feature.map((f, i) => {
     return (
-      <li className='content-center' key={i}>
-        <Svg svg={f.svg}/>{f.text}
-      </li>
+      <Fade bottom key={i}>
+        <li className='content-center'>
+          <Svg svg={f.svg}/>{f.text}
+        </li>
+      </Fade>
     )
   })
 

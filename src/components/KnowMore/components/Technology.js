@@ -1,5 +1,6 @@
 import React from 'react';
 import {motion} from 'framer-motion'
+import Fade from 'react-reveal'
 
 export default function Technology({data}) {
 
@@ -7,20 +8,24 @@ export default function Technology({data}) {
     <div className="tools-main">
       <div className="tools-spread content-center">
         <div className="tool-name">
-          <span className='font-2 s3b'>{data.title}</span>
+          <Fade bottom>
+            <span className='font-2 s3b'>{data.title}</span>
+          </Fade>
         </div>
         <ul>
           {data.tools.map((tool, i) => {
             return(
-              <li key={i}>
-                <div className="tool-icon content-center">
-                  <motion.img 
-                    whileHover={tool.anim}
-                    variants={animImg}
-                    src={tool.image} alt={tool.alt}/>
-                  <span className='font-1 s5b'>{tool.name}</span>
-                </div>
-              </li> )
+              <Fade bottom>
+                <li key={i}>
+                  <div className="tool-icon content-center">
+                    <motion.img 
+                      whileHover={tool.anim}
+                      variants={animImg}
+                      src={tool.image} alt={tool.alt}/>
+                    <span className='font-1 s5b'>{tool.name}</span>
+                  </div>
+                </li> 
+              </Fade> )
             })
           }
         </ul>

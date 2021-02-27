@@ -1,24 +1,32 @@
 import React, {useContext} from 'react';
 import {AppData} from '../../../context'
+import Fade from 'react-reveal/Fade'
 
 export default function Designs({data}) {
   const {SetAppState} = useContext(AppData)
 
   return (
     <div className="project-detail-wrapper sketch">
-      <h3 className='font-2 s2b'>{data.title}</h3>
+      <Fade bottom>
+        <h3 className='font-2 s2b'>{data.title}</h3>
+      </Fade>
       <div className="sketch-wrapper">
-        <div className="design-images">
-          <img 
-            className='proj-img'
-            onClick={()=> {
-            SetAppState.setImageModalState({
-              isOpen: true, isSingle: true, images: data.images }) }}
-            src={data.images.link} alt={data.images.alt} />
-        </div>
+        <Fade bottom>
+          <div className="design-images">
+            <img className='proj-img'
+              onClick={()=> {
+              SetAppState.setImageModalState({
+                isOpen: true, isSingle: true, images: data.images }) }}
+              src={data.images.link} alt={data.images.alt} />
+          </div>
+        </Fade>
         <ul>
           { data.details.map((s, i) => {
-            return ( <li className='font-2 s4b' key={i}>{s}</li> ) }) 
+            return ( 
+              <Fade bottom key={i}>
+                <li className='font-2 s4b'>{s}</li> 
+              </Fade>)
+            }) 
           }
         </ul>
       </div>

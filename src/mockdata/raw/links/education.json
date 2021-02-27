@@ -1,0 +1,42 @@
+[
+  {
+    "school": "University of London",
+    "course": "Web Application Development",
+    "year": "July 2019",
+    "image": {
+      "link": "/images/web_application_development.webp",
+      "alt": "web application development cetificate",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/X2SAXFKDG6B6"
+    }
+  },
+  {
+    "school": "The Hong Kong University of Science and Technology",
+    "course": "Server-side Development with NodeJS, Express, and MongoDB",
+    "year": "September 2018",
+    "image": {
+      "link": "/images/server_side_development_with_nodejs.webp",
+      "alt": "server side development with nodejs certificate",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/XV8FLU36M238"
+    }
+  },
+  {
+    "school": "University of London",
+    "course": "Responsive Web Design",
+    "year": "May 2019",
+    "image": {
+      "link": "/images/responsive_webdesign.webp",
+      "alt": "responsive web design certificate",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/H8QJYUNS7WDK"
+    }
+  },
+  {
+    "school": "University of London",
+    "course": "Responsive Website Basics",
+    "year": "July 2018",
+    "image": {
+      "link": "/images/responsive_website_basics.webp",
+      "alt": "responsive website basics certificate",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/JJJ362PLQKJ6"
+    }
+  }
+]

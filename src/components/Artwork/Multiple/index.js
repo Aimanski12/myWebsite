@@ -1,6 +1,7 @@
 import React, {Fragment, useEffect} from 'react';
 import {Anim} from '../../../utils/animations'
 import Svg from '../../Svgs'
+import Fade from 'react-reveal/Fade'
 
 export default function ArtworkAll({data}) {
 
@@ -12,14 +13,16 @@ export default function ArtworkAll({data}) {
     return (
     <Fragment key={l}>
       <div className='art-desc content-center'>
-        <h2 className='font-1 s3a'>{img.name}</h2>
-        <p className='font-2 s3b'>{img.desc}</p>
-        <a href={img.link} 
-          target='_blank' rel="noreferrer noopener"
-          className='content-center'>
-          <span className='font-1 s7a'>View artwork on:</span>
-          <Svg svg='coloredinsta'/>
-        </a>
+        <Fade bottom>
+          <h2 className='font-1 s3a'>{img.name}</h2>
+          <p className='font-2 s3b'>{img.desc}</p>
+          <a href={img.link} 
+            target='_blank' rel="noreferrer noopener"
+            className='content-center'>
+            <span className='font-1 s7a'>View artwork on:</span>
+            <Svg svg='coloredinsta'/>
+          </a>
+        </Fade>
       </div>
 
       <div className="art-img">

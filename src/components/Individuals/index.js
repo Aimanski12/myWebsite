@@ -12,6 +12,7 @@ import Links from './Components/Links'
 import NextPrev from './Components/NexPrev'
 
 export default function Details({data}) {
+
   useEffect(() => {
     Anim.Helpers.tiltImage('.proj-img', 8)
   })

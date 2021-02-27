@@ -57,28 +57,28 @@
 }
 
 @media (max-width: 1268px) {
-  .social-icon, .social-icon .contents svg {  
+  .social-icon, .social-icon .contents, .social-icon .contents svg {  
     width: 42px;
     height: 42px;
   }
 }
 
 @media (max-width: 1068px) {
-  .social-icon, .social-icon .contents svg {
+  .social-icon, .social-icon .contents, .social-icon .contents svg {
     width: 38px;
     height: 38px;
   }
 }
 
 @media (max-width: 768px) {
-  .social-icon, .social-icon .contents svg {
+  .social-icon, .social-icon .contents, .social-icon .contents svg {
     width: 34px;
     height: 34px;
   }
 }
 
 @media (max-width: 568px) {
-  .social-icon, .social-icon .contents svg {
+  .social-icon, .social-icon .contents, .social-icon .contents svg {
     width: 30px;
     height: 30px;
   }

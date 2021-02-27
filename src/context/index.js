@@ -1,12 +1,4 @@
 import React, {useState, createContext} from 'react'
-// import about from '../mockdata/Pages/about'
-// import artwork from '../mockdata/Pages/artwork'
-// import contact from '../mockdata/Pages/contact'
-// import home from '../mockdata/Pages/home'
-// import knowmore from '../mockdata/Pages/knowmore'
-// import notfound from '../mockdata/Pages/notfound'
-// import webdev from '../mockdata/Pages/webdev'
-// import {projects} from '../mockdata/Pages/projects'
 import {Anim} from '../utils/animations'
 
 // create context data
@@ -45,20 +37,6 @@ export function AppDataContext (props) {
     }
   })
   
-  // assigns value to every page data 
-  // this is called when every page is opened
-  const _setPageData = (page) => {
-    let data = getPageData(page)
-    if(!appState.pageData.isSet){
-      setState({
-        pageData: { ...appState.pageData, isSet: true, data: {...data} }
-      })
-    } else if (appState.pageData.data.index != data.index){
-      setState({ 
-        pageData: { ...appState.pageData, data: { ...data} }
-      })
-    } 
-  }
 
   // function to trigger page slider animation
   // in the menu
@@ -107,15 +85,6 @@ export function AppDataContext (props) {
     })
   }
 
-  // const _transitionToNextPage = (newState) => {
-  //   setState({
-  //     menuTransitions: {
-  //       ...appState.menuTransitions,
-  //       ...newState
-  //     }
-  //   })
-  // }
-
   // set modal state
   const _setImageModalState = (newState) => {
     setState({
@@ -136,7 +105,8 @@ export function AppDataContext (props) {
     })
   }
 
-
+  // this function is to update any state 
+  // related to transitioning
   const _setToTransition = () => {
     Anim.Helpers.hidshowbody('hidden')
     setState({
@@ -149,6 +119,9 @@ export function AppDataContext (props) {
     })
   }
 
+  // this function is for updating any state
+  // that is related to transiting whenever the menu is opened
+  // and transition happens
   const _setToCloseAndTransition = () => {
     Anim.Helpers.hidshowbody('hidden')
     Anim.Helpers.toggleBurgerToActive()
@@ -195,16 +168,11 @@ export function AppDataContext (props) {
       setMessageModalState (val){
         return _setMessageModalState(val)
       },
-      // transitionToNextPage(val) {
-      //   return _transitionToNextPage(val)
-      // },
-
       
       setMenuAndButtonState(button, transition) {
         return _setMenuAndButtonState(button, transition)
       },
 
-      
       setToTransition() {
         return _setToTransition()
       },
@@ -225,19 +193,4 @@ export function AppDataContext (props) {
       {props.children}
     </AppData.Provider>
   )
-}
-
-// check the value and return the 
-// repective data
-export const getPageData = (page) => {
-  // let data = page === "about" ? about : 
-  //   page === "artwork" ? artwork :
-  //   page === "contact" ? contact :
-  //   page === "home" ? home :
-  //   page === "knowmore" ? knowmore :
-  //   page === "notfound" ? notfound :
-  //   page === "webdev" ? webdev :
-  //   projects(page)
-  // return data
-  return 'asdf'
 }

@@ -1,3 +1,53 @@
+* {
+  padding: 0;
+  margin: 0
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background: #0E5267;
+}
+
+.content-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.body-wrapper {
+  width: 100%;
+  position: absolute;
+  min-height: 100vh;
+  z-index: 350;
+}
+
+.scroll-body {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  z-index: 300;
+  background: #F4F4F4;
+}
+
+.scroll-container {
+  width: 100%;
+  position: absolute;
+  z-index: 400;
+  min-height: 100vh;
+  background: #F4F4F4;
+}
+
+
 
 
 hr {

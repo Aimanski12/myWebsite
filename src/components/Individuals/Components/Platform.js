@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade'
 
 export default function Platform({data}) {
   return (
@@ -6,10 +7,12 @@ export default function Platform({data}) {
       <div className="platform-wrapper">
         { data.map((p, i)=>{
           return (
-            <div key={i}>
-              <h3 className="font-2 s2b">{p.name}</h3>
-              <span className='font-2 s4b'>{p.desc}</span>
-            </div>
+            <Fade bottom key={i}>
+              <div>
+                <h3 className="font-2 s2b">{p.name}</h3>
+                <span className='font-2 s4b'>{p.desc}</span>
+              </div>
+            </Fade>
           )}
         )}
       </div>

@@ -1,11 +1,13 @@
 import icons from '../raw/links/footerlinks.json'
 import tools from '../raw/links/tools.json'
 import education from '../raw/links/education.json'
+import mdata from '../raw/links/metadata.json'
 import footerData from '../data/footer'
 import {DataHelper} from './domhelpers'
 
 export default {
   index: 'knowmore',
+  metadata: mdata.knowmore,
   header: {
     type: 'dark',
     title: ["Get To Know More"],

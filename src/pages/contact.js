@@ -2,7 +2,7 @@ import React, {useContext, useEffect} from 'react'
 import {AppData} from '../context'
 import {Anim} from '../utils/animations'
 import {motion} from 'framer-motion'
-import Head from 'next/head'
+import Head from '../components/Head/index'
 import Navigation from '../components/Navigation'
 import Headers from '../components/Headers/Dark'
 import Message from '../components/Contact/Message'
@@ -25,10 +25,7 @@ export default function Contact() {
 
   return (
     <div className='main'>
-      <Head>
-        <title>Aiman Adlawan | Official Website</title>
-        <link rel="icon" type="image/x-icon" href="/images/aiman-small-logo.ico" />
-      </Head>
+      <Head data={page.metadata} />
       <Navigation data={page}/>
       <motion.div 
         variants={Anim.TransitionSliders.slidetoexit(

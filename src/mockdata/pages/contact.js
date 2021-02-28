@@ -1,9 +1,11 @@
 import icons from '../raw/links/footerlinks.json'
 import footerData from '../data/footer'
+import mdata from '../raw/links/metadata.json'
 import {DataHelper} from './domhelpers'
 
 export default {
   index: 'contact',
+  metadata: mdata.contact,
   header: {
     type: 'dark',
     title: ["Get In Touch"],

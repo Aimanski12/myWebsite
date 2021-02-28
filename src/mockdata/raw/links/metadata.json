@@ -1,0 +1,62 @@
+{
+  "about": {
+    "title": "Aiman Adlawan | About Page",
+    "desc": "Take a closer look and know my passions and hobbies so you can understand who I am.",
+    "url": "/about"
+  },
+  "artwork": {
+    "title": "Aiman Adlawan | Artwork Page",
+    "desc": "Vector Graphics is an art that I always love to pursue and these are some the the works I have made.",
+    "url": "/projects/artwork"
+  },
+  "contact": {
+    "title": "Aiman Adlawan | Contact Me",
+    "desc": "Contact me today if you're interested in hiring a web developer to work on your project.",
+    "url": "/contact"
+  },
+  "home": {
+    "title": "Aiman Adlawan | Web Developer and Creative Designer",
+    "desc": "Hi! My name is Aiman Adlawan and I am a web developer and creative deisgner based in Bensenville, Illinios.",
+    "url": "/"
+  },
+  "knowmore": {
+    "title": "Aiman Adlawan | Know More About Aiman",
+    "desc": "Find out more of my technical skills and abilities and see how you think I can fit in your community.",
+    "url": "about/know-more"
+  },
+  "notFound": {
+    "title": "404",
+    "desc": "",
+    "url": "/404"
+  },
+  "webdev": {
+    "title": "Aiman Adlawan | Web Development Projects",
+    "desc": "Here you will find some of the recent website projects I have recently accomplished and other javascript projects I have posted on my github page.",
+    "url": "/projects/webdev"
+  },
+  "book-worm": {
+    "title": "Aiman Adlawan | Book-Worm Project",
+    "desc": "Book-Worm is a website project developed by Aiman Adlawan that allows users to search book items",
+    "url": "/projects/webdev/book-worm"
+  },
+  "news-box": {
+    "title": "Aiman Adlawan | News-Box Project",
+    "desc": "News-Box is a website project developed by Aiman Adlawan that allows users to browse fresh news contents for free. ",
+    "url": "/projects/webdev/news-box"
+  },
+  "movie-box": {
+    "title": "Aiman Adlawan | Movie-Box Project",
+    "desc": "Movie-Box is a website project developed by Aiman Adlawan that allows users to browse movies and tv-shows.",
+    "url": "/projects/webdev/movie-box"
+  },
+  "foto-pics": {
+    "title": "Aiman Adlawan | Foto-Pics",
+    "desc": "Foto-pics is a website project developed by Aiman Adlawan that allows users to search photos and videos.",
+    "url": "/projects/webdev/foto-pics"
+  },
+  "radio-live": {
+    "title": "Aiman Adlawan | Radio-Live",
+    "desc": "Radio-Live is an online FM Radio that allows users to listen to any FM Station from all over the world.",
+    "url": "/projects/webdev/radio-live"
+  }
+}

@@ -2,7 +2,6 @@ import React, {useContext, useEffect} from 'react'
 import {AppData} from '../context'
 import {Anim} from '../utils/animations'
 import {motion} from 'framer-motion'
-import Head from 'next/head'
 import Navigation from '../components/Navigation'
 import Headers from '../components/Headers/Dark'
 import ArtWork from '../components/Artwork/Single'
@@ -10,6 +9,7 @@ import WebDev from '../components/Projects/WebDev'
 import WebLinks from '../components/GlobalComponents/WebLinks'
 import QuickLink from '../components/GlobalComponents/Footer/QuickLinks'
 import Footer from '../components/GlobalComponents/Footer/Footer'
+import Head from '../components/Head'
 import page from '../mockdata/pages/home'
 
 export default function Home() {
@@ -26,10 +26,7 @@ export default function Home() {
 
   return (
     <div className='main'>
-      <Head>
-        <title>Aiman Adlawan | Official Website</title>
-        <link rel="icon" type="image/x-icon" href="/images/aiman-small-logo.ico" />
-      </Head>
+      <Head data={page.metadata}/>
       <Navigation data={page}/>
       <motion.div 
         variants={Anim.TransitionSliders.slidetoexit(

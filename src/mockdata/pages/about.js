@@ -1,9 +1,11 @@
 import images from '../raw/imagestock/about.json'
 import footerData from '../data/footer'
+import mdata from '../raw/links/metadata.json'
 import {DataHelper} from './domhelpers'
 
 export default {
   index: 'about',
+  metadata: mdata.about,
   header: {
     type: 'about',
     name: 'Aiman E. Adlawan',

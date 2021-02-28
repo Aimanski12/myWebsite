@@ -66,10 +66,10 @@
 }
 
 @media (max-width: 568px) {
-  .contact-icons a{  
+  /* .contact-icons a{  
     width: 30px;
     height: 30px;
-  }
+  } */
   .contact-icons a {  
     margin-right: 20px;
   }

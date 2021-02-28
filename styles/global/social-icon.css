@@ -78,8 +78,8 @@
 }
 
 @media (max-width: 568px) {
-  .social-icon, .social-icon .contents, .social-icon .contents svg {
+  /* .social-icon, .social-icon .contents, .social-icon .contents svg {
     width: 30px;
     height: 30px;
-  }
+  } */
 }

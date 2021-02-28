@@ -3,9 +3,8 @@ import {AppData} from '../context'
 import {Anim} from '../utils/animations'
 import Link from 'next/link'
 import {motion} from 'framer-motion'
-import Head from 'next/head'
+import Head from '../components/Head/'
 import Navigation from '../components/Navigation'
-
 import page from '../mockdata/pages/notfound'
 
 export default function NotFound() {
@@ -23,10 +22,7 @@ export default function NotFound() {
 
   return (
     <div className='main'>
-      <Head>
-        <title>Aiman Adlawan | Official Website</title>
-        <link rel="icon" type="image/x-icon" href="/images/aiman-small-logo.ico" />
-      </Head>
+      <Head data={page.metadata}/>
       <Navigation data={page}/>
       <motion.div 
         variants={Anim.TransitionSliders.slidetoexit(

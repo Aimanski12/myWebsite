@@ -34,27 +34,27 @@
     "desc": "Here you will find some of the recent website projects I have recently accomplished and other javascript projects I have posted on my github page.",
     "url": "/projects/webdev"
   },
-  "book-worm": {
+  "bookworm": {
     "title": "Aiman Adlawan | Book-Worm Project",
     "desc": "Book-Worm is a website project developed by Aiman Adlawan that allows users to search book items",
     "url": "/projects/webdev/book-worm"
   },
-  "news-box": {
+  "newsbox": {
     "title": "Aiman Adlawan | News-Box Project",
     "desc": "News-Box is a website project developed by Aiman Adlawan that allows users to browse fresh news contents for free. ",
     "url": "/projects/webdev/news-box"
   },
-  "movie-box": {
+  "moviebox": {
     "title": "Aiman Adlawan | Movie-Box Project",
     "desc": "Movie-Box is a website project developed by Aiman Adlawan that allows users to browse movies and tv-shows.",
     "url": "/projects/webdev/movie-box"
   },
-  "foto-pics": {
+  "fotopics": {
     "title": "Aiman Adlawan | Foto-Pics",
     "desc": "Foto-pics is a website project developed by Aiman Adlawan that allows users to search photos and videos.",
     "url": "/projects/webdev/foto-pics"
   },
-  "radio-live": {
+  "radiolive": {
     "title": "Aiman Adlawan | Radio-Live",
     "desc": "Radio-Live is an online FM Radio that allows users to listen to any FM Station from all over the world.",
     "url": "/projects/webdev/radio-live"

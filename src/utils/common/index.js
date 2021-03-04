@@ -1,9 +1,11 @@
 
 import {SessionStorage} from './sessionStorage/sessionStorage'
+import {Form} from './formvalidation'
 
 export const Helpers = (function(){
 
   return {
-    SessionStorage: SessionStorage
+    SessionStorage: SessionStorage,
+    Form: Form
   }
 })()

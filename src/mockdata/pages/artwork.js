@@ -1,10 +1,12 @@
 import icons from '../raw/links/footerlinks.json'
 import art from '../raw/imagestock/artwork.json'
+import mdata from '../raw/links/metadata.json'
 import footerData from '../data/footer'
 import {DataHelper} from './domhelpers'
 
 export default {
   index: 'artwork',
+  metadata: mdata.artwork,
   header: {
     type: 'dark',
     title: ["Creative Artwork"],

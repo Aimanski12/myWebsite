@@ -1,7 +1,9 @@
 import bwimage from '../../raw/imagestock/book-worm.json'
+import mdata from '../../raw/links/metadata.json'
 
 export default {
   index: "book-worm",
+  metadata: mdata.bookworm,
   title: "Book-Worm",
   hero: bwimage.hero,
   caption: "a website for book lovers.",

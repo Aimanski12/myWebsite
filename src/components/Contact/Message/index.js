@@ -1,5 +1,8 @@
 import React, {useState, useContext} from 'react';
+import Input from './Input'
+import {Helpers} from '../../../utils/common/index'
 import {AppData} from '../../../context'
+import {SaveToFirebase} from '../../../utils/common/formvalidation/saveToFirebase'
 
 export default function Message({data}) {
   const {SetAppState} = useContext(AppData)
@@ -11,60 +14,51 @@ export default function Message({data}) {
     message: ""
   })
 
-  const getValue = (input) => {
-    return value[input]
-  }
-
+  // update the value of input everytime
+  // input changes
   const updateValue = (e, input) => {
+    // check if for typing to change input value
+    Helpers.Form._isTyping()
     setValue({
       ...value,
       [input]: e.target.value
     })
   }
 
-  const inputs = data.map((input, i) => {
-    if(input.el === 'input') 
-      return (
-        <div className='input-wrapper content-center' key={i}>
-          <label className='font-1 s7a' 
-            htmlFor={input.name}>{input.label}</label>
-          <input 
-            className='font-2 s4b'
-            type={input.type} 
-            placeholder={input.placeHolder}
-            onChange={(e)=>updateValue(e, input.name)}
-            value={getValue(input.name)}/>
-        </div>
-      )
-    if(input.el === 'textarea')
-      return (
-        <div className='input-wrapper content-center' key={i}>
-          <label className='font-1 s7a' 
-            htmlFor={input.name}>{input.label}</label>
-          <textarea 
-            className='font-2 s4b'
-            rows='7'
-            cols='50'
-            spellCheck="true"
-            value={getValue(input.name)}
-            onChange={(e)=>updateValue(e, input.name)}
-            placeholder={input.placeHolder}/>
-        </div>  
-      )
-  })
-
+  const submitMessage = async (e) => {
+    e.preventDefault()
+    Helpers.Form.alertMsg('Sending...', 'green')
+    const isValid = await Helpers.Form.validateForm()
+    
+    if(isValid) {
+      const status = await SaveToFirebase.saveMessageData(value)
+      if(status === 200 ) {
+        setTimeout(() => {
+          SetAppState.setMessageModalState({isOpen: true, sender: value.name})
+          setValue({
+            name: '',
+            email: '',
+            subject: "Just say'n Hi!",
+            message: ''
+          })
+          Helpers.Form.alertMsg('* required', '#126985')
+        }, 3000)
+      } else {
+        Helpers.Form.alertMsg('Connection error...', '#FF1919')
+      }
+    }
+  }
   
   return (
     <section className='message-form content-center'>
       <h2 className="font-1 s3a">Your Message Here</h2>
 
-      <form onSubmit={()=>console.log('submitted')}>
-        {inputs}
+      <form onSubmit={(e)=> submitMessage(e)}>
+        <Input data={data}
+          inputValues={value}
+          change={(e, val)=> updateValue(e, val)}/>
         <div className="mes-alert">
-          <span className='font-1 s9a'
-          onClick={()=> {
-            SetAppState.setMessageModalState({isOpen: true})
-          }}>* required</span>
+          <span className='font-1 s9a'>* required</span>
         </div>
 
         <button 

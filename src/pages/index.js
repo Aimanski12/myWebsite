@@ -12,6 +12,7 @@ import Footer from '../components/GlobalComponents/Footer/Footer'
 import Head from '../components/Head'
 import page from '../mockdata/pages/home'
 
+
 export default function Home() {
   const {AppState, SetAppState} = useContext(AppData)
 

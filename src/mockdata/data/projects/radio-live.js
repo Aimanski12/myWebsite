@@ -1,7 +1,9 @@
 import rlimage from '../../raw/imagestock/radio-live.json'
+import mdata from '../../raw/links/metadata.json'
 
 export default {
   index: "radio-live",
+  metadata: mdata.radiolive,
   title: "Radio-Live",
   hero: rlimage.hero,
   caption: "a global fm radio website.",

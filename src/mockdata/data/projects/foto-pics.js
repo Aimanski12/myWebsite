@@ -1,7 +1,9 @@
 import fpimage from '../../raw/imagestock/foto-pics.json'
+import mdata from '../../raw/links/metadata.json'
 
 export default {
   index: "foto-pics",
+  metadata: mdata.fotopics,
   title: "Foto-Pics",
   hero: fpimage.hero,
   caption: "a photo and video stock website.",

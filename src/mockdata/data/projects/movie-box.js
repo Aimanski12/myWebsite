@@ -1,7 +1,9 @@
 import mbimage from '../../raw/imagestock/movie-box.json'
+import mdata from '../../raw/links/metadata.json'
 
 export default {
   index: "movie-box",
+  metadata: mdata.moviebox,
   title: "Movie-Box",
   hero: mbimage.hero,
   caption: "a movie library website.",

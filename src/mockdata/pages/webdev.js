@@ -1,10 +1,12 @@
 import icons from '../raw/links/footerlinks.json'
 import github from '../raw/links/github.json'
+import mdata from '../raw/links/metadata.json'
 import footerData from '../data/footer'
 import {DataHelper} from './domhelpers'
 
 export default {
   index: 'webdev',
+  metadata: mdata.webdev,
   header: {
     type: 'dark',
     title: ["Webdev Projects"],

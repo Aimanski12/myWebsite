@@ -1,7 +1,9 @@
 import nbimage from '../../raw/imagestock/news-box.json'
+import mdata from '../../raw/links/metadata.json'
 
 export default {
   index: "news-box",
+  metadata: mdata.newsbox,
   title: "News-Box",
   hero: nbimage.hero,
   caption: "a website for free and fresh news.",

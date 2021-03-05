@@ -1,22 +1,32 @@
 {
-  "name": "new",
+  "name": "aiman-adlawan-portfolio-website",
+  "description": "this is the portfolio website of aiman adlawan.",
   "version": "0.1.0",
+  "main": "index.js",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"next dev\" \"npm run server\"",
     "build": "next build",
-    "start": "next start"
+    "start": "concurrently \"next start\" \"npm run server\"",
+    "server": "node server/index.js"
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "framer-motion": "^3.3.0",
     "gsap": "^3.6.0",
     "jquery": "^3.5.1",
     "next": "10.0.6",
+    "nodemailer": "^6.5.0",
     "popmotion": "^9.1.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-reveal": "^1.2.2",
+    "restful-react": "^15.2.0",
     "ua-parser-js": "^0.7.23",
     "vanilla-tilt": "^1.7.0"
   }

@@ -101,13 +101,13 @@ export default {
   },
   links: {
     title: "Project Links",
-    caption: "If you want to see this project's source code, UX/UI design, or want to browse the actual website, click on any of the link below.",
+    caption: "The links below will direct you to launch the app or view project's source codes and design.",
+    qrcode: {
+      image: '/book_worm/book_worm_qrcode.webp',
+      alt: 'book worm qrcode',
+      link: "https://book-worm.vercel.app",
+    },
     buttonLink: [
-      {
-        text: "Launch App →",
-        link: "https://book-worm.vercel.app",
-        type: "external"
-      },
       {
         text: "Source Code →",
         link: "https://github.com/Aimanski12/book-worm",

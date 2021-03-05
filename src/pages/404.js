@@ -9,7 +9,6 @@ import page from '../mockdata/pages/notfound'
 
 export default function NotFound() {
   const {AppState, SetAppState} = useContext(AppData)
-  console.log(page)
 
   useEffect(() => {
     AppState.menuTransitions.isTransitioning ? (

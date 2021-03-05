@@ -1,5 +1,4 @@
 import $ from 'jquery'
-import {SaveToFirebase} from './saveToFirebase'
 
 export const Form = (function(){
 
@@ -44,6 +43,10 @@ export const Form = (function(){
     mesAlert.style.color = color
     mesAlert.innerHTML = text
   }
+
+  const _sendEmail = (data) => {
+  
+  }
   
   return {
     validateForm(){
@@ -54,7 +57,11 @@ export const Form = (function(){
     },
     alertMsg(text, color){
       return _alertMsg(text, color)
+    },
+    sendEmail(data){
+      return _sendEmail(data)
     }
+
   }
 })()
 

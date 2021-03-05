@@ -99,13 +99,13 @@ export default {
   },
   links: {
     title: "Project Links",
-    caption: "If you want to see this project's source code, UX/UI design, or want to browse the actual website, click on any of the link below.",
+    caption: "The links below will direct you to launch the app or view project's source codes and design.",
+    qrcode: {
+      image: '/news_box/news_box_qrcode.webp',
+      alt: 'news box qrcode',
+      link: "https://news-box.vercel.app",
+    },
     buttonLink: [
-      {
-        text: "Launch App →",
-        link: "https://news-box.vercel.app",
-        type: "external"
-      },
       {
         text: "Source Code →",
         link: "https://github.com/Aimanski12/news-room",

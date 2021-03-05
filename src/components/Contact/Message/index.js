@@ -2,10 +2,16 @@ import React, {useState, useContext} from 'react';
 import Input from './Input'
 import {Helpers} from '../../../utils/common/index'
 import {AppData} from '../../../context'
-import {SaveToFirebase} from '../../../utils/common/formvalidation/saveToFirebase'
+
+
+import {useMutate} from 'restful-react'
 
 export default function Message({data}) {
   const {SetAppState} = useContext(AppData)
+  const {mutate: sendEmail, loading, error} = useMutate({
+    verb: 'POST',
+    path: 'sendemail'
+  })
 
   const [value, setValue] = useState({
     name: "",
@@ -30,23 +36,28 @@ export default function Message({data}) {
     Helpers.Form.alertMsg('Sending...', 'green')
     const isValid = await Helpers.Form.validateForm()
     
-    if(isValid) {
-      const status = await SaveToFirebase.saveMessageData(value)
-      if(status === 200 ) {
-        setTimeout(() => {
-          SetAppState.setMessageModalState({isOpen: true, sender: value.name})
-          setValue({
-            name: '',
-            email: '',
-            subject: "Just say'n Hi!",
-            message: ''
-          })
-          Helpers.Form.alertMsg('* required', '#126985')
-        }, 3000)
-      } else {
-        Helpers.Form.alertMsg('Connection error...', '#FF1919')
-      }
-    }
+    // Helpers.Form.sendEmail(value)
+
+    sendEmail({name: 'Luis Fernando', email: 'luis.fernando12T@yahoo.com'})
+
+    // if(isValid) {
+    //   const status = await SaveToFirebase.saveMessageData(value)
+    //   if(status === 200 ) {
+    //     setTimeout(() => {
+    //       SetAppState.setMessageModalState({isOpen: true, sender: value.name})
+    //       setValue({
+    //         name: '',
+    //         email: '',
+    //         subject: "Just say'n Hi!",
+    //         message: ''
+    //       })
+    //       Helpers.Form.alertMsg('* required', '#126985')
+    //     }, 3000)
+
+    //   } else {
+    //     Helpers.Form.alertMsg('Connection error...', '#FF1919')
+    //   }
+    // }
   }
   
   return (

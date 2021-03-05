@@ -15,8 +15,8 @@ export default function Technology({data}) {
         <ul>
           {data.tools.map((tool, i) => {
             return(
-              <Fade bottom>
-                <li key={i}>
+              <Fade bottom key={i}>
+                <li>
                   <div className="tool-icon content-center">
                     <motion.img 
                       whileHover={tool.anim}

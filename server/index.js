@@ -1,5 +1,3 @@
-
-
 require('dotenv').config();
 const express = require('express');
 const app = express();
@@ -7,8 +5,16 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 
+const whitelist = ['http://localhost:3000', 'http://localhost:3001']
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  // origin: ['http://localhost:3000', 'http://localhost:3000'],
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  },
   optionsSuccessStatus: 200
 }
 
@@ -16,15 +22,17 @@ app.use(bodyParser.json());
 app.use(cors(corsOptions));
 
 
-app.post('/api/sendemail', async (req, res) => {
+app.post('/api/sendemail', cors(corsOptions), async (req, res) => {
+  console.log(req.body)
   const {email, name, message} = req.body;
   try {
     sendEmail(email, name, message)
+    // console.log('status')
   } catch(e) {
+    // console.log('error')
     res.status(422).send(e.message);
   }
 })
-
 
 function sendEmail(email, name, message) {
   const transporter = nodemailer.createTransport({
@@ -33,8 +41,8 @@ function sendEmail(email, name, message) {
     secure: false,
     requireTLS: true,
     auth: {
-      user: '',
-      pass: ''
+      user: 'adlawanaiman@gmail.com',
+      pass: 'MyOfficial38account'
     }
   });
 
@@ -65,7 +73,6 @@ function sendEmail(email, name, message) {
         <p>From: ${email}, ${name}</p>
         <p>Date: May 1, 2021, Friday<p>
         <p>${message}</p>`
-
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
@@ -75,12 +82,7 @@ function sendEmail(email, name, message) {
       console.log('Email sent: ' + info.response);
     }
   });
-
 }
-
-
-
-
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`> Connected to ${PORT}`));

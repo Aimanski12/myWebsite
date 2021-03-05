@@ -34,11 +34,16 @@ export default function Message({data}) {
   const submitMessage = async (e) => {
     e.preventDefault()
     Helpers.Form.alertMsg('Sending...', 'green')
-    const isValid = await Helpers.Form.validateForm()
+    // const isValid = await Helpers.Form.validateForm()
     
     // Helpers.Form.sendEmail(value)
 
-    sendEmail({name: 'Luis Fernando', email: 'luis.fernando12T@yahoo.com'})
+    sendEmail({
+      email: value.email,
+      name: value.name, 
+      message: value.message
+    })
+    console.log(loading, error)
 
     // if(isValid) {
     //   const status = await SaveToFirebase.saveMessageData(value)

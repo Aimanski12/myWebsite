@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "concurrently \"next dev\" \"npm run server\"",
     "build": "next build",
-    "start": "concurrently \"next start\" \"npm run server\"",
+    "start": "concurrently \"next start -p $PORT\" \"npm run server\"",
     "server": "node server/index.js"
   },
   "dependencies": {

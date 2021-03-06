@@ -3,6 +3,7 @@
   "description": "this is the portfolio website of aiman adlawan.",
   "version": "0.1.0",
   "main": "index.js",
+  "proxy": "http://localhost:3000",
   "private": true,
   "scripts": {
     "dev": "concurrently \"next dev\" \"npm run server\"",

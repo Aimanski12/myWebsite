@@ -49,7 +49,7 @@ export default {
     }
   ],
   technologies: [
-    "NextJS", "Javascript", "Rest API", "HTML5", "CSS3", "Webpack", "Adobe Photoshop", "Adobe Illustrator", "Figma"
+    "NextJS", "Javascript", "Rest API", "HTML5", "CSS3", "Webpack", "Adobe Photoshop", "Adobe Illustrator", "Figma", "Vercel"
   ],
   parallax: {
     image: fpimage.parallax,

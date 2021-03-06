@@ -7,7 +7,6 @@ const nodemailer = require('nodemailer');
 
 const whitelist = ['http://localhost:3000', 'http://localhost:3001']
 const corsOptions = {
-  // origin: ['http://localhost:3000', 'http://localhost:3000'],
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
       callback(null, true)
@@ -22,16 +21,10 @@ app.use(bodyParser.json());
 app.use(cors(corsOptions));
 
 
-app.post('/api/sendemail', cors(corsOptions), async (req, res) => {
-  console.log(req.body)
+app.post('/api/sendemail', (req, res) => {
   const {email, name, message} = req.body;
-  try {
-    sendEmail(email, name, message)
-    // console.log('status')
-  } catch(e) {
-    // console.log('error')
-    res.status(422).send(e.message);
-  }
+  sendEmail(email, name, message)
+  res.status(200).send('email sent')
 })
 
 function sendEmail(email, name, message) {

@@ -54,7 +54,7 @@ export default {
     }
   ],
   technologies: [
-    "HTML5", "CSS3", "Javascript", "NextJS", "Rest API",  "Webpack", "Adobe Photoshop", "Adobe Illustrator", "Figma" 
+    "HTML5", "CSS3", "Javascript", "NextJS", "Rest API",  "Webpack", "Adobe Photoshop", "Adobe Illustrator", "Figma", "Vercel", "Firebase" 
   ],
   parallax: {
     image: bwimage.parallax,

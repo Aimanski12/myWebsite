@@ -49,7 +49,7 @@ export default {
     }
   ],
   technologies: [
-    "NextJS", "Javascript", "Rest API", "HTML5", "CSS3", "Webpack", "Adobe Photoshop", "Figma"
+    "NextJS", "Javascript", "Rest API", "HTML5", "CSS3", "Webpack", "Adobe Photoshop", "Figma", "Vercel"
   ],
   parallax: {
     image: rlimage.parallax,

@@ -10,8 +10,7 @@ export default function Message({data}) {
   const {SetAppState} = useContext(AppData)
   const {mutate: sendEmail, loading, error} = useMutate({
     verb: 'POST',
-    path: 'sendemail',
-    base: 'http://localhost:3001/api'
+    path: 'sendemail'
   })
 
   const [value, setValue] = useState({
@@ -35,15 +34,37 @@ export default function Message({data}) {
   const submitMessage = async (e) => {
     e.preventDefault()
     Helpers.Form.alertMsg('Sending...', 'green')
+    // const isValid = await Helpers.Form.validateForm()
+    
+    // Helpers.Form.sendEmail(value)
 
-    const result = await sendEmail({
+    sendEmail({
       email: value.email,
       name: value.name, 
       message: value.message
     })
-    console.log('resulta',result)
+    console.log(loading, error)
 
-  
+    // POST http://localhost:3001/api/route net::ERR_CONNECTION_REFUSED
+
+    // if(isValid) {
+    //   const status = await SaveToFirebase.saveMessageData(value)
+    //   if(status === 200 ) {
+    //     setTimeout(() => {
+    //       SetAppState.setMessageModalState({isOpen: true, sender: value.name})
+    //       setValue({
+    //         name: '',
+    //         email: '',
+    //         subject: "Just say'n Hi!",
+    //         message: ''
+    //       })
+    //       Helpers.Form.alertMsg('* required', '#126985')
+    //     }, 3000)
+
+    //   } else {
+    //     Helpers.Form.alertMsg('Connection error...', '#FF1919')
+    //   }
+    // }
   }
   
   return (

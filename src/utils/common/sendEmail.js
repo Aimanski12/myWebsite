@@ -7,11 +7,11 @@ export default function sendEmail  (name, email, subject, mes) {
 
     Email.send({
       Host: "smtp.gmail.com",
-      Username: "adlawanaiman@gmail.com",
-      Password: "MyOfficial38account",
+      Username: "myemail",
+      Password: "passwrd",
       To: `${email}`,
-      Cc: 'aiman.adlawan@yahoo.com',
-      From: "adlawanaiman@gmail.com",
+      Cc: 'anotheremail',
+      From: "email",
       Subject: `Thank you ${name} for your inquiry.`,
       Body: `
         <html style="font-size: 16px; font-family: Lucida Console">

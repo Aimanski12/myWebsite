@@ -1,32 +1,10 @@
 import {UAParser} from 'ua-parser-js'
 import axios from 'axios'
 
-// firebase url
-const furl = 'https://aimanadlawansite.firebaseio.com/visitor'
-
-export const SessionHelpers = (function(){
-  
-  const _addToSave = (_id, folder, data) => {
-    const t = _gettime('url')
-    const url = `/${t.y}/${t.m}/${t.dy}_${t.de}/${_id}/${folder}`
-    saveDataToFirebase(url, data)
-  }
-
-  const _saveInitialData = async () => {
-    const t = _gettime('url')
-    const user = getUser()
-    const userLoc = await getIP()
-    const time = _gettime('timeOfVisit')
-    const url = `/${t.y}/${t.m}/${t.dy}_${t.de}`
-    return await saveDataToFirebase(url, {
-      user: user,
-      location: userLoc,
-      time
-    })
-  }
+export const CheckFunction = (function(){
 
   // function to get time
-  const _gettime = (url) => {
+  const _getTime = (url) => {
     const date = new Date()
     let d = date.getDate()
     let month = date.getMonth()
@@ -44,12 +22,14 @@ export const SessionHelpers = (function(){
       let m = date.getMinutes()
       let s = date.getSeconds()
       let hr = date.getHours()
-      let hour = (hr - 12) < 1 ? hr : hr%12
+      let hour = hr%12 === 0 ? 12 : hr%12
       let mid = hr%12 < 1 ? 'am' : 'pm'
-      return `${hour}:${m}:${n(s)} ${mid}`
+      return `${hour}:${m}:${n(s)}${mid}`
     } else if (url === 'now') {
       // get time for the time of visit
       return date.getTime()
+    } else if (url === 'date') {
+      return `${mn[month]} ${d}, ${date.getFullYear()}, ${dt[date.getDay()]}`
     }
   }
   
@@ -64,48 +44,15 @@ export const SessionHelpers = (function(){
     }
   }
 
-  return {
-    checkIfExp(time){
-      return _checkIfExp(time)
-    },
-    gettime(time) {
-      return _gettime(time)
-    },
-    saveInitialData(){
-      return _saveInitialData()
-    }
-  }
-})()
-
-
-  // filter number if data is single digit
-  const n = (d) => {
-    return d < 10 ? `0${d}` : d
-  }
-
-  // set the month to the exact number index of the array
-  const mn = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-
-  // set the day to the exact number index of the array
-  const dt = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-
-
-  const saveDataToFirebase = async (link, data) => {
-    const url = `${furl}${link}.json`
-    const _id = await axios.post(url, data)
-    return _id.data.name
-  }
-
   // function to get user data
-  const getUser = () => {
+  const _getUser = () => {
     let parser = new UAParser()
     return parser.getResult()
   }
 
   // get user device data
-  const getIP = async () => {
+  const _getIP = async () => {
     let userIp
-
     await axios.get('https://ipapi.co/json/')
       .then(res => {
         if (res.status === 200) {
@@ -135,3 +82,32 @@ export const SessionHelpers = (function(){
       })
     return await userIp
   }
+
+  return {
+    checkIfExp(time){
+      return _checkIfExp(time)
+    },
+    getTime(time) {
+      return _getTime(time)
+    },
+    getIP() {
+      return _getIP()
+    },
+    getUser() {
+      return _getUser()
+    }
+  }
+})()
+
+  // filter number if data is single digit
+  const n = (d) => {
+    return d < 10 ? `0${d}` : d
+  }
+
+  // set the month to the exact number index of the array
+  const mn = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+  // set the day to the exact number index of the array
+  const dt = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+
+  

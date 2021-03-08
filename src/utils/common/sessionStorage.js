@@ -1,4 +1,5 @@
-import {SessionHelpers} from './sessionHelpers'
+import {CheckFunction} from './checker'
+import {SaveToFirebase} from './saveToFirebase'
 
 
 export const SessionStorage = (function(){
@@ -11,8 +12,8 @@ export const SessionStorage = (function(){
       // check if the session is present
       let data = JSON.parse(session)
       // if there is check if expired
-      if(SessionHelpers.checkIfExp(data._timestamp)) {
-        // const _id = await SessionHelpers.saveInitialData()
+      if(CheckFunction.checkIfExp(data._timestamp)) {
+        // const _id = await SaveToFirebase.saveDataToFirebase('visitor', false)
         // saveSession(_id)
         // // return true to say that the browser has not been visited
         return false
@@ -23,7 +24,7 @@ export const SessionStorage = (function(){
       }
     } else {
       // save a new session
-      // const _id = await SessionHelpers.saveInitialData()
+      // const _id = await SaveToFirebase.saveDataToFirebase('visitor', false)
       // saveSession(_id)
       // return true to say that the browser has not been visited
       return false

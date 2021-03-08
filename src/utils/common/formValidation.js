@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import {SaveToFirebase} from './saveToFirebase'
 
 export const Form = (function(){
 
@@ -44,8 +45,11 @@ export const Form = (function(){
     mesAlert.innerHTML = text
   }
 
-  const _sendEmail = (data) => {
-  
+  const _saveMessageToFirebase = async (data) => {
+    // save data to firbase including the data
+    const response = await SaveToFirebase.saveDataToFirebase('messages', data)
+    // return the status code of the response
+    return response
   }
   
   return {
@@ -58,13 +62,11 @@ export const Form = (function(){
     alertMsg(text, color){
       return _alertMsg(text, color)
     },
-    sendEmail(data){
-      return _sendEmail(data)
+    saveMessageToFirebase (data) {
+      return _saveMessageToFirebase(data)
     }
-
   }
 })()
-
 
 // check if the string is not empty
 // returns true id empty

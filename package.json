@@ -3,26 +3,18 @@
   "description": "this is the portfolio website of aiman adlawan.",
   "version": "0.1.0",
   "main": "index.js",
-  "proxy": "http://localhost:3001",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"next dev\" \"npm run server\"",
+    "dev": "next dev",
     "build": "next build",
-    "start": "concurrently \"next start -p $PORT\" \"npm run server\"",
-    "server": "node server/index.js"
+    "start": "next start"
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "body-parser": "^1.19.0",
-    "concurrently": "^6.0.0",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
     "framer-motion": "^3.3.0",
     "gsap": "^3.6.0",
     "jquery": "^3.5.1",
     "next": "10.0.6",
-    "nodemailer": "^6.5.0",
     "popmotion": "^9.1.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",

@@ -42,7 +42,7 @@ export default {
       el: 'textarea',
       type: "textarea",
       label: 'How can I help?*',
-      name: "message",
+      name: "mes",
       placeHolder: "Enter your message.",
     }
   ],

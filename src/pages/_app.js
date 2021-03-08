@@ -80,17 +80,14 @@ import '../../styles/knowmore/projects.css'
 
 import {AppDataContext} from '../context'
 import {AnimatePresence} from 'framer-motion'
-import {RestfulProvider} from 'restful-react'
 
 function MyApp({ Component, pageProps, router }) {
   return(
-    <RestfulProvider base="http://localhost:3001/api">
-      <AppDataContext>
-        <AnimatePresence exitBeforeEnter exit={{transition: {delay: 15}}}>
-          <Component {...pageProps} key={router.route}/>
-        </AnimatePresence>
-      </AppDataContext>
-    </RestfulProvider>
+    <AppDataContext>
+      <AnimatePresence exitBeforeEnter exit={{transition: {delay: 15}}}>
+        <Component {...pageProps} key={router.route}/>
+      </AnimatePresence>
+    </AppDataContext>
   ) 
 }
 

@@ -4,6 +4,7 @@ import Head from 'next/head'
 export default function HeadTag({ data }) {
   const siteName = 'Aimanadlawan.com'
   const baseUrl = 'https://webs-rho.vercel.app'
+  console.log(`${baseUrl}${data.url}`)
 
   return (
     <Head>
@@ -32,7 +33,8 @@ export default function HeadTag({ data }) {
       <meta name="twitter:title" content={data.title} />
       <meta name="twitter:image" content={`${baseUrl}/images/thumbnail_v1.jpg`} />
       <meta name="twitter:url" content={`${baseUrl}${data.url}`} />
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:creator" content='@Aimanski12' />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:description" content={data.desc}/>
 
       <meta name="description" content={data.desc} />

@@ -9,7 +9,7 @@ export default function sendEmail  (name, email, subject, mes) {
       Host: "smtp.gmail.com",
       Username: "adlawanaiman@gmail.com",
       Password: "MyOfficial38account",
-      To: 'hera.leo@yahoo.com',
+      To: `${email}`,
       Cc: 'aiman.adlawan@yahoo.com',
       From: "adlawanaiman@gmail.com",
       Subject: `Thank you ${name} for your inquiry.`,

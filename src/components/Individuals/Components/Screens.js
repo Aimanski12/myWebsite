@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import {AppData} from '../../../context'
+
 import Fade from 'react-reveal'
 
 export default function Designs({data}) {
@@ -14,11 +15,19 @@ export default function Designs({data}) {
           return (
             <Fade bottom key={i}>
               <div>
-                <img className='proj-img'
+                <img 
+                  alt={img.alt} 
+                  className='proj-img'
+                  key={i}
                   onClick={()=> {
                     SetAppState.setImageModalState({
-                    isOpen: true, isSingle: false, current: i, images: data.images })
-                  }} src={img.link} alt={img.alt} key={i}/>
+                      current: i, 
+                      images: data.images,
+                      isOpen: true, 
+                      isSingle: false, 
+                    })
+                  }} 
+                  src={img.link} />
               </div>
             </Fade>
             )

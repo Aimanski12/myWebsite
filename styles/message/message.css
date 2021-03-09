@@ -1,13 +1,13 @@
 
 .message-form {
-  width: 100%;
   min-height: 10em;
   padding: 8em 0 7em 0;
+  width: 100%;
 }
 
 .message-form h2 {
+  color: #126985;
   font-weight: 600;
-  color: #126985
 }
 
 .message-form form {
@@ -30,12 +30,12 @@
 }
 
 .input-wrapper input, .input-wrapper textarea{
-  width: 420px;
-  height: 50px;
-  padding: 0 16px;
   border: 2px solid #DEDEDE;
   border-radius: 8px;
-  color: #04C2FF
+  color: #04C2FF;
+  height: 50px;
+  padding: 0 16px;
+  width: 420px;
 } 
 
 .input-wrapper input:focus, .input-wrapper textarea:focus {
@@ -43,9 +43,9 @@
 }
 
 .input-wrapper textarea {
+  height: auto;
   padding-top: 10px;
   resize: none;
-  height: auto;
 }
 
 .mes-alert {
@@ -53,22 +53,22 @@
 }
 
 .mes-alert span {
-  display: block;
   color: #126985;
+  display: block;
   font-weight: 600;
 }
 
 .message-form button {
-  margin-top: 15px;
+  background: #126985;
+  border: none;
+  border-radius: 8px;
+  color: #FFC01D;
+  cursor: pointer;
   float: right;
   font-weight: 600;
-  color: #FFC01D;
-  border: none;
-  background: #126985;
-  width: 150px;
   height: 50px;
-  border-radius: 8px;
-  cursor: pointer;
+  margin-top: 15px;
+  width: 150px;
 }
 
 .message-form button:focus {
@@ -91,33 +91,33 @@
 
 @media (max-width: 496px) {
   .input-wrapper, .mes-alert {
-    width: 90%;
     margin: 0 5%;
     margin-bottom: 20px;
+    width: 90%;
   }
   .input-wrapper input, .input-wrapper textarea{
     width: calc(100% - 36px);
   } 
   .message-form button {
-    width: 90%;
     margin: 15px 5% 0 5%;
+    width: 90%;
   }
 }
 
 @media (max-width: 396px) {
   .input-wrapper {
-    width: 94%;
     margin: 0 3% 20px 3%;
+    width: 94%;
   }
   .input-wrapper input, .input-wrapper textarea{
     width: calc(100% - 36px);
   } 
   .mes-alert {
-    width: 94%;
     margin: 0 3%;
+    width: 94%;
   }
   .message-form button {
-    width: 94%;
     margin: 15px 3% 0 3%;
+    width: 94%;
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import {motion} from 'framer-motion'
+
 import {Anim} from '../../../utils/animations'
 
 export default function Sliders() {
@@ -9,8 +10,9 @@ export default function Sliders() {
     return el.map((e, i) => {
       return (
         <motion.span key={i}
+          className='sliders'
           variants={Anim.MenuButton.animateSliders} 
-          className='sliders'></motion.span> )}
+          ></motion.span> )}
       )
     }
 

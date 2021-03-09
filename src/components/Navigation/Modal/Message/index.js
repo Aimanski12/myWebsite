@@ -14,30 +14,29 @@ export default function MessageModal () {
     <AnimatePresence>
       {AppState.message.isOpen && (
       <motion.div 
-        variants={Anim.MessageModalAnim.openMessage}
-        initial='initial'
         animate='animate'
+        className="message-modal-container"
         exit='exit'
-        className="message-modal-container">
+        initial='initial'
+        variants={Anim.MessageModalAnim.openMessage} >
+        
         <div className="message-modal-background content-center">
-
           <Envelop />
-
           <div className="modal-message-content content-center">
             <motion.span 
-              variants={Anim.MessageModalAnim.staggerMessage}
-              className='font-2 s2b thank-you'>Thank you!</motion.span>
+              className='font-2 s2b thank-you'
+              variants={Anim.MessageModalAnim.staggerMessage}>Thank you!</motion.span>
             <motion.h3 
-              variants={Anim.MessageModalAnim.staggerMessage}
-              className='font-1 s3a'>
+              className='font-1 s3a'
+              variants={Anim.MessageModalAnim.staggerMessage}>
                 {AppState.message.sender}
               </motion.h3>
             <motion.p 
-              variants={Anim.MessageModalAnim.staggerMessage}
-              className='font-2 s4b'>Your message has been sent.</motion.p>
+              className='font-2 s4b'
+              variants={Anim.MessageModalAnim.staggerMessage}>Your message has been sent.</motion.p>
             <motion.p 
-              variants={Anim.MessageModalAnim.staggerMessage}
-              className='font-2 s4b'>I'll get back to you soon.&nbsp;
+              className='font-2 s4b'
+              variants={Anim.MessageModalAnim.staggerMessage}>I'll get back to you soon.&nbsp;
               <span className='wave'> &#128521;</span>
             </motion.p>
           </div>

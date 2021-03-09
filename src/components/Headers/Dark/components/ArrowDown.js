@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react';
+import $ from 'jquery'
 
 export default function ArrowDown() {
 
@@ -8,16 +9,18 @@ export default function ArrowDown() {
       if(arrow){
         arrow.classList.remove('hide-arrow')
       }
-    }, 2200)
+    }, 2000)
   })
+
   return (
     <div className="scroll-down hide-arrow"
       onClick={()=> {
-        window.scrollTo({top: window.innerHeight, behavior: 'smooth'})
+        const body = $('.body-wrapper')[0]
+        body.scrollTo({top: window.innerHeight, behavior: 'smooth'})
       }}> 
       <div className="scroll-down-container">
-        <span className='arrow-down first-arrow'></span>
-        <span className='arrow-down second-arrow'></span>
+        <span className='a-down f-arrow'></span>
+        <span className='a-down s-arrow'></span>
       </div>
     </div>
   );

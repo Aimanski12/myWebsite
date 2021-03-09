@@ -1,15 +1,18 @@
 import React, {useContext, useEffect} from 'react'
+import {motion} from 'framer-motion'
+
 import {AppData} from '../../context'
 import {Anim} from '../../utils/animations'
-import {motion} from 'framer-motion'
-import Head from '../../components/Head'
-import Navigation from '../../components/Navigation'
-import Header from '../../components/Headers/About'
-import ProfileDetails from '../../components/About'
-import WebLinks from '../../components/GlobalComponents/WebLinks'
-import QuickLink from '../../components/GlobalComponents/Footer/QuickLinks'
-import Footer from '../../components/GlobalComponents/Footer/Footer'
+
 import page from '../../mockdata/pages/about'
+
+import Footer from '../../components/GlobalComponents/Footer/Footer'
+import Head from '../../components/Head'
+import Header from '../../components/Headers/About'
+import Navigation from '../../components/Navigation'
+import ProfileDetails from '../../components/About'
+import QuickLink from '../../components/GlobalComponents/Footer/QuickLinks'
+import WebLinks from '../../components/GlobalComponents/WebLinks'
 
 export default function Home() {
   const {AppState, SetAppState} = useContext(AppData)

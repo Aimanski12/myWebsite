@@ -1,16 +1,19 @@
 import React, {useContext, useEffect} from 'react'
-import {AppData} from '../../../context'
-import {Anim} from '../../../utils/animations'
 import {motion} from 'framer-motion'
+
+import {Anim} from '../../../utils/animations'
+import {AppData} from '../../../context'
+
+import page from '../../../mockdata/pages/webdev'
+
+import Footer from '../../../components/GlobalComponents/Footer/Footer'
+import Github from '../../../components/Projects/Github'
 import Head from '../../../components/Head'
-import Navigation from '../../../components/Navigation'
 import Headers from '../../../components/Headers/Dark'
+import Navigation from '../../../components/Navigation'
+import QuickLink from '../../../components/GlobalComponents/Footer/QuickLinks'
 import Webdev from '../../../components/Projects/WebDev'
 import WebLinks from '../../../components/GlobalComponents/WebLinks'
-import Github from '../../../components/Projects/Github'
-import QuickLink from '../../../components/GlobalComponents/Footer/QuickLinks'
-import Footer from '../../../components/GlobalComponents/Footer/Footer'
-import page from '../../../mockdata/pages/webdev'
 
 export default function Home() {
   const {AppState, SetAppState} = useContext(AppData)
@@ -29,13 +32,13 @@ export default function Home() {
       <Head data={page.metadata}/>
       <Navigation data={page}/>
       <motion.div 
-        variants={Anim.TransitionSliders.slidetoexit(
-          AppState.menuTransitions.delay)}
-        initial="initial" 
         animate={{opacity: 1}} 
+        className="body-wrapper"
         exit="exit" 
         id='body-wrapper'
-        className="body-wrapper">
+        initial="initial" 
+        variants={Anim.TransitionSliders.slidetoexit(
+          AppState.menuTransitions.delay)} >
         <div className="scroll-body">
           <Headers data={page.header}/>
           <Webdev data={page} title={false}/>

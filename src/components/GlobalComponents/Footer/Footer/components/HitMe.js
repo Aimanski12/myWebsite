@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Icons from '../../../SocialIcons'
 
 export default function HitMe({data}) {
@@ -9,11 +10,15 @@ export default function HitMe({data}) {
         { data.socials.icons.map((icon, i) =>{
             return (
               <li key={i}>
-                <a href={icon.link} target='_blank' rel="noreferrer noopener">
+                <a 
+                  href={icon.link} 
+                  rel="noreferrer noopener"
+                  target='_blank' >
                   <span className='svg-wrapper'>
-                    <Icons svg={icon.svg} 
+                    <Icons 
+                      back={data.socials.back}
                       front={data.socials.front} 
-                      back={data.socials.back}/>
+                      svg={icon.svg} />
                     </span>
                     <span className='s7a'>{icon.name}</span>
                 </a>

@@ -1,6 +1,7 @@
 import React from 'react';
-import {Anim} from '../../../utils/animations'
 import {motion, AnimatePresence} from 'framer-motion'
+
+import {Anim} from '../../../utils/animations'
 
 export default function MenuButton({isHovered, isOpen}) {
 

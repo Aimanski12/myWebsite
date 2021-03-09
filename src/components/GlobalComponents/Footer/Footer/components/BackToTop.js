@@ -1,12 +1,8 @@
 import React, {useEffect} from 'react';
-import {Anim} from '../../../../../utils/animations'
+import $ from 'jquery'
 
 export default function BackToTop({data}) {
-
-  useEffect(() => {
-    // backtotop scroll
-    Anim.Helpers.scrollAnimation()
-  })
+  
   return (
     <div className="back-to-top content-center">
       <div className="scroll-up"> 
@@ -15,9 +11,12 @@ export default function BackToTop({data}) {
           <span className='arrow-up second-arrow'></span>
         </div>
       </div>
-      <a href='#body-wrapper' className='font-1 s10a'>
-        {data.text}
-      </a>
+      <button 
+        onClick={() => {
+          const body = $('.body-wrapper')[0]
+          body.scrollTo({ top: 0, behavior: 'smooth' })
+        }} 
+        className='font-1 s10a'> {data.text} </button>
     </div>
   );
 }

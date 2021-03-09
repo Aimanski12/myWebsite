@@ -1,0 +1,32 @@
+# Aiman Adlawan Robots Txt
+
+User-agent: AdsBot-Google
+Disallow: /projects/webdev/book-worm
+Disallow: /projects/webdev/radio-live
+Disallow: /projects/webdev/movie-box
+Disallow: /projects/webdev/news-box
+Disallow: /projects/webdev/foto-pics
+
+
+User-agent: AdsBot-Google-Mobile
+Disallow: /projects/webdev/book-worm
+Disallow: /projects/webdev/radio-live
+Disallow: /projects/webdev/movie-box
+Disallow: /projects/webdev/news-box
+Disallow: /projects/webdev/foto-pics
+
+
+User-agent: AdsBot-Google-Mobile-Apps
+Disallow: /projects/webdev/book-worm
+Disallow: /projects/webdev/radio-live
+Disallow: /projects/webdev/movie-box
+Disallow: /projects/webdev/news-box
+Disallow: /projects/webdev/foto-pics
+
+
+User-agent: *
+Disallow: /projects/webdev/book-worm
+Disallow: /projects/webdev/radio-live
+Disallow: /projects/webdev/movie-box
+Disallow: /projects/webdev/news-box
+Disallow: /projects/webdev/foto-pics

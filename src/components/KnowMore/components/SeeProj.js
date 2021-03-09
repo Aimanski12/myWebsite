@@ -1,6 +1,7 @@
 import React from 'react';
-import ButtonLink from '../../GlobalComponents/ButtonLink'
 import Fade from 'react-reveal/Fade'
+
+import ButtonLink from '../../GlobalComponents/ButtonLink'
 
 export default function SeeProj({data}) {
 
@@ -17,10 +18,14 @@ export default function SeeProj({data}) {
           <div className="see-proj-work content-center">
             { data.links.map((link, i) => {
               return (
-                <div className="proj-work-wrapper content-center" key={i}>
+                <div 
+                  className="proj-work-wrapper content-center" 
+                  key={i}>
                   <Fade bottom>
                     <div>
-                      <img src={link.image.link} alt={link.image.alt}/>
+                      <img 
+                        alt={link.image.alt}
+                        src={link.image.link} />
                     </div>
                     <span className='font-2 s4b prj-title'>{link.title}</span>
                     <div className="proj-work-btn-wrapper">

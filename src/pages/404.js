@@ -1,8 +1,10 @@
 import React, {useContext, useEffect} from 'react'
+import {motion} from 'framer-motion'
+import Link from 'next/link'
+
 import {AppData} from '../context'
 import {Anim} from '../utils/animations'
-import Link from 'next/link'
-import {motion} from 'framer-motion'
+
 import Head from '../components/Head/'
 import Navigation from '../components/Navigation'
 import page from '../mockdata/pages/notfound'
@@ -24,35 +26,36 @@ export default function NotFound() {
       <Head data={page.metadata}/>
       <Navigation data={page}/>
       <motion.div 
-        variants={Anim.TransitionSliders.slidetoexit(
-          AppState.menuTransitions.delay)}
-        initial="initial" 
         animate={{opacity: 1}} 
+        className="body-wrapper"
         exit="exit" 
         id='body-wrapper'
-        className="body-wrapper">
-        <div className="scroll-body">
+        initial="initial" 
+        variants={Anim.TransitionSliders.slidetoexit(
+          AppState.menuTransitions.delay)} >
 
+        <div className="scroll-body">
           <div className="notfound-wrapper"
-            style={{background: `url(${page.background})`,
-            backgroundPosition: 'center', backgroundSize: 'cover'}}>
+            style={{
+              background: `url(${page.background})`,
+              backgroundPosition: 'center', 
+              backgroundSize: 'cover'
+            }}>
             <div className="notfound-backer content-center">
               <h1 className='font-1 s1a'>{page.title}</h1>
               <p className='font-2 s4b'>{page.caption}</p>
               <Link href={page.buttonLink.link} scroll={false}>
                 <motion.a 
-                  whileHover={Anim.ImageModalAnim.expandBtn}
                   className='font-1 s7a'
-                  onClick={()=>SetAppState.setToTransition()}>
+                  onClick={()=>SetAppState.setToTransition()}
+                  whileHover={Anim.ImageModalAnim.expandBtn} >
                   <span>{page.buttonLink.text}</span>
                 </motion.a>
               </Link>
             </div>
           </div>
-
         </div>
       </motion.div>
-      
     </div>
   )
 }

@@ -1,7 +1,6 @@
 import {CheckFunction} from './checker'
 import {SaveToFirebase} from './saveToFirebase'
 
-
 export const SessionStorage = (function(){
 
   // check if the browser has session data

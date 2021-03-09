@@ -1,6 +1,7 @@
 import React from 'react'
-import Icon from '../../../GlobalComponents/SocialIcons'
 import {motion} from 'framer-motion'
+
+import Icon from '../../../GlobalComponents/SocialIcons'
 
 export default function Socials({data}) {
   return (
@@ -48,13 +49,13 @@ export default function Socials({data}) {
     animate: {
       y: 0,
       transition: {
-        delay: .85,
-        type: 'spring',
-        stiffness: 65,
-        mass: 0.4,
         damping: 8,
+        delay: .85,
+        duration: 0.4,
         ease:'easeInOut',
-        duration: 0.4
+        mass: 0.4,
+        stiffness: 65,
+        type: 'spring',
       }
     }
   }

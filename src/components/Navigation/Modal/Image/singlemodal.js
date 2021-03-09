@@ -1,8 +1,10 @@
 import React, {useContext, useEffect} from "react";
-import {AppData} from '../../../../context'
-import Figure from './component/Figure'
-import CloseButton from './component/CloseButton'
+
 import {Anim} from '../../../../utils/animations'
+import {AppData} from '../../../../context'
+
+import CloseButton from './component/CloseButton'
+import Figure from './component/Figure'
 
 export default function Single () {
   const {AppState, SetAppState} = useContext(AppData)
@@ -10,7 +12,11 @@ export default function Single () {
   function closeModal(e) {
     if(e.key === 'Escape') {
       Anim.Helpers.hidshowbody('auto')
-      SetAppState.setImageModalState({ isOpen: false, current: 0, images: {} })
+      SetAppState.setImageModalState({ 
+        current: 0, 
+        images: {}, 
+        isOpen: false, 
+      })
     }
   }
   

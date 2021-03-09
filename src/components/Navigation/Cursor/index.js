@@ -12,17 +12,17 @@ export default function Cursor() {
     // add animation
     document.addEventListener('mousemove', (e)=>{
       gsap.to(cursor, {
+        duration: .1,
         left: e.clientX-10, 
-        top: e.clientY-10, 
         opacity: 1,
-        duration: .1
+        top: e.clientY-10, 
       })
     })
     // add click effects
     document.addEventListener('click', () => {
       cursor.classList.add("cursor-expand");
       setTimeout(() => {
-          cursor.classList.remove("cursor-expand");
+        cursor.classList.remove("cursor-expand");
       }, 500)
     })
   })

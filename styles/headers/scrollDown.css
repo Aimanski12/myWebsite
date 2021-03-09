@@ -1,66 +1,66 @@
 
 .scroll-down {
-  position: absolute;
-  left: 50%;
   bottom: 7vh;
+  left: 50%;
   opacity: 1;
+  position: absolute;
   transition: all 0.5s ease-in;
   transform: translateX(-50%);
 }
 
 .scroll-down-container {
   cursor: pointer;
-  width: 20px;
   height: 20px;
+  width: 20px;
 }
 
-.arrow-down {
-  position: absolute;
-  bottom: 0;
-  margin-left: 0px;
-  width: 20px;
-  height: 20px;
-  background-size: contain;
-  top: 0px;
+.a-down {
   background-image: url('/images/arrowdown.svg');
+  background-size: contain;
+  bottom: 0;
+  height: 20px;
+  position: absolute;
+  margin-left: 0px;
+  top: 0px;
+  width: 20px;
 }
 
-.second-arrow {
+.s-arrow {
   margin-top: 10px
 }
 
-@keyframes bounceAlpha {
+@keyframes slideDown {
   0% {opacity: 1; transform: translateY(0px) scale(1);}
   25%{opacity: 0; transform:translateY(10px) scale(0.9);}
   26%{opacity: 0; transform:translateY(-10px) scale(0.9);}
   55% {opacity: 1; transform: translateY(0px) scale(1);}
 }
 
-.bounceAlpha {
-  animation-name: bounceAlpha;
+.slideDown {
   animation-duration: 2.4s;
+  animation-iteration-count:infinite;
+  animation-name: slideDown;
+  animation-timing-function:linear;
+}
+
+.a-down.f-arrow.slideDown {
+  animation-delay:0.2s;
+  animation-duration: 2.4s;
+  animation-name: slideDown;
   animation-iteration-count:infinite;
   animation-timing-function:linear;
 }
 
-.arrow-down.first-arrow.bounceAlpha {
-  animation-name: bounceAlpha;
-  animation-duration: 2.4s;
-  animation-delay:0.2s;
-  animation-iteration-count:infinite;
-  animation-timing-function:linear;
-}
-
-.scroll-down-container .arrow-down{
-  animation-name: bounceAlpha;
+.scroll-down-container .a-down{
   animation-duration: 2.4s;
   animation-iteration-count:infinite;
+  animation-name: slideDown;
   animation-timing-function:linear;
 }
-.scroll-down-container .arrow-down.first-arrow{
-  animation-name: bounceAlpha;
-  animation-duration: 2.4s;
+.scroll-down-container .a-down.f-arrow{
   animation-delay:0.2s;
+  animation-duration: 2.4s;
+  animation-name: slideDown;
   animation-iteration-count:infinite;
   animation-timing-function:linear;
 }
@@ -70,22 +70,22 @@
 }
 
 @media (max-width: 1268px) {
-  .scroll-down-container, .arrow-down {
-    width: 16px;
+  .scroll-down-container, .a-down {
     height: 16px;
+    width: 16px;
   }
-  .scroll-down-container .second-arrow {
+  .scroll-down-container .s-arrow {
     margin-top: 8px
   } 
 }
 
 
 @media (max-width: 968px) {
-  .scroll-down-container, .arrow-down {
-    width: 12px;
+  .scroll-down-container, .a-down {
     height: 12px;
+    width: 12px;
   }
-  .scroll-down-container .second-arrow {
+  .scroll-down-container .s-arrow {
     margin-top: 6px
   } 
 }

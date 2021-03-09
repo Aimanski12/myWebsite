@@ -1,6 +1,7 @@
 import React from 'react';
-import {motion} from 'framer-motion'
 import Fade from 'react-reveal'
+
+import {motion} from 'framer-motion'
 
 export default function Technology({data}) {
 
@@ -19,9 +20,10 @@ export default function Technology({data}) {
                 <li>
                   <div className="tool-icon content-center">
                     <motion.img 
-                      whileHover={tool.anim}
+                      alt={tool.alt}
+                      src={tool.image} 
                       variants={animImg}
-                      src={tool.image} alt={tool.alt}/>
+                      whileHover={tool.anim} />
                     <span className='font-1 s5b'>{tool.name}</span>
                   </div>
                 </li> 
@@ -31,20 +33,17 @@ export default function Technology({data}) {
         </ul>
       </div>
     </div>
-
   );
 }
-
-
 
 
 const animImg = {
   clock: {
     rotate: [0, -65, 65, 0],
     transition: {
-        repeat: Infinity,
-        duration: 1.7,
-        ease: 'easeIn',
+      duration: 1.7,
+      ease: 'easeIn',
+      repeat: Infinity,
     }
   },
   fall: {
@@ -57,13 +56,13 @@ const animImg = {
     }
   },
   down: {
-    y: [0, 120,0],
-    x: [0, -20, 0],
     rotate: -640,
     transition: {
       duration: 3,
       ease: 'easeIn',
-    }
+    },
+    x: [0, -20, 0],
+    y: [0, 120,0],
   },
   dive: {
     y: [0, -40, 150, 0],
@@ -71,19 +70,19 @@ const animImg = {
     rotate: [0, -360, -360],
     opacity: [1,1,1,0,0],
     transition: {
-      repeat: Infinity,
       duration: 1.5,
-      ease: [0.6, -0.05, 0.01, 0.99]
+      ease: [0.6, -0.05, 0.01, 0.99],
+      repeat: Infinity,
     }
   },
   zoom: {
-    rotate: [0, 180, 180, 360, 360],
-    scale: [1, 1.5, 1.5, 1, 1],
     transition: {
-      repeat: Infinity,
       duration: 2.5,
       ease: 'easeIn',
-    }
+      repeat: Infinity,
+    },
+    rotate: [0, 180, 180, 360, 360],
+    scale: [1, 1.5, 1.5, 1, 1],
   }
 
 }

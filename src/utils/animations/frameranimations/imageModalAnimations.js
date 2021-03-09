@@ -4,23 +4,23 @@ export const ImageModalAnim = (function (){
   // slide the modal in and out
   const _openModal = {
     initial: {
+      opacity: 0,
       y: -120,
-      opacity: 0
     },
     animate: {
-      y: 0,
       opacity: 1,
       transition: {
         ease: 'easeInOut'
-      }
+      },
+      y: 0,
     }, 
     exit: {
-      y: -120,
       opacity: 0,
       transition: {
         duration: .4,
         ease: 'easeInOut'
-      }
+      },
+      y: -120,
     }
   }
 
@@ -28,23 +28,23 @@ export const ImageModalAnim = (function (){
   const _modalSliderVariants = {
     enter: (direction) => {
       return {
+        opacity: 0,
         x: direction > 0 ? 500 : -500,
-        opacity: 0
       };
     },
     center: {
-      zIndex: 1,
+      opacity: 1,
       x: 0,
-      opacity: 1
+      zIndex: 1,
     },
     exit: (direction) => {
       return {
-        zIndex: 0,
-        x: direction < 0 ? 500 : -500,
         opacity: 0,
         transition: {
           duration: .1
-        }
+        },
+        x: direction < 0 ? 500 : -500,
+        zIndex: 0,
       };
     }
   };
@@ -70,23 +70,23 @@ export const ImageModalAnim = (function (){
   // moves the arros left 
   const _hoverLeft = {
     scale: 1.3,
+    transition: {duration: .2},
     x: -8,
-    transition: {duration: .2}
   }
 
   // moves the arrow right
   const _hoverRight = {
     scale: 1.3,
+    transition: {duration: .2},
     x: 8,
-    transition: {duration: .2}
   }
 
   return {
-    openModal: _openModal,
-    modalSliderVariants: _modalSliderVariants,
-    rotateBtn: _rotateBtn,
+    expandBtn: _expandBtn,
     hoverLeft: _hoverLeft,
     hoverRight: _hoverRight,
-    expandBtn: _expandBtn
+    modalSliderVariants: _modalSliderVariants,
+    openModal: _openModal,
+    rotateBtn: _rotateBtn,
   }
 })()

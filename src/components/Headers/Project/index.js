@@ -1,4 +1,5 @@
 import React, {useEffect, useContext} from 'react';
+
 import {AppData} from '../../../context'
 import {Anim} from '../../../utils/animations'
 
@@ -29,9 +30,9 @@ export default function Headers({data}) {
         <div>
           <img onClick={()=> {
             SetAppState.setImageModalState({
+              images: data.hero,
               isOpen: true,
-              isSingle: true,
-              images: data.hero })
+              isSingle: true, })
             }} 
             src={data.hero.link} alt={data.hero.alt}/>
         </div>

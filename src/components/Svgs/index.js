@@ -1,20 +1,22 @@
 import React from 'react'
+
 import Behance from './Svg/Behance'
+import Bracket from './Svg/Bracket'
+import Chain from './Svg/Chain'
+import ChevLeft from './Svg/ChevLeft'
+import ChevRight from './Svg/ChevRight'
+import Close from './Svg/Close'
 import Dribbble from './Svg/Dribbble'
+import Envelop from './Svg/Envelop'
 import InstaColored from './Svg/InstaColored'
 import Instagram from './Svg/Instagram'
 import Linkedin from './Svg/Linkedin'
-import Twitter from './Svg/Twitter'
-import Pentel from './Svg/Pentel'
-import Webdesign from './Svg/Webdesign'
-import Bracket from './Svg/Bracket'
-import MenuBurger from './Svg/MenuBurger'
 import Logo from './Svg/Logo'
-import Close from './Svg/Close'
-import ChevRight from './Svg/ChevRight'
-import ChevLeft from './Svg/ChevLeft'
-import Envelop from './Svg/Envelop'
-import Chain from './Svg/Chain'
+import MenuBurger from './Svg/MenuBurger'
+import Pentel from './Svg/Pentel'
+import Twitter from './Svg/Twitter'
+import Webdesign from './Svg/Webdesign'
+
 
 function Svgs({svg, fill}) {
 

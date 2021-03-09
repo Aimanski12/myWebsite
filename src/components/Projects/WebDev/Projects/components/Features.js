@@ -1,6 +1,7 @@
 import React from 'react';
-import Svg from '../../../../Svgs'
 import Fade from 'react-reveal/Fade'
+
+import Svg from '../../../../Svgs'
 
 export default function Features({feature}) {
 

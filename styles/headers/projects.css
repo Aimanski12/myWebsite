@@ -1,9 +1,9 @@
 
 .project-header {
   min-height: 100px;
-  width: 100%;
-  padding: 15em 0 5em 0;
   overflow: hidden;
+  padding: 15em 0 5em 0;
+  width: 100%;
 }
 
 .project-header h1 {
@@ -21,35 +21,37 @@
 }
 
 .header-block-runner {
-  overflow: hidden;
   margin-bottom: 5px;
+  overflow: hidden;
 }
 
 .header-block-runner p, .header-block-runner span  {
-  opacity: 0;
-  letter-spacing: -0.04em;
   display: block;
+  letter-spacing: -0.04em;
+  opacity: 0;
+  
   animation: appear-title 0.9s forwards;
   animation-delay: .65s;
   transition-timing-function: cubic-bezier(0.6, -0.05, 0.01, 0.99);
 }
 
 .header-block-runner:after {
+  background: #D145E8;
   content: '';
-  top: 0;
+  height: 100%;
   left: 0;
   position: absolute;
+  top: 0;
   width: 0%;
-  height: 100%;
-  background: #D145E8;
+
   animation: rev-block .8s cubic-bezier(0.6, -0.05, 0.01, 0.99) forwards;
   animation-delay: .25s;
 }
 
 .header-img-wrapper {
   margin-top: 3em;
-  width: 650px;
   cursor: zoom-in;
+  width: 650px;
 }
 
 .header-img-wrapper div{
@@ -63,16 +65,16 @@
 }
 
 .header-img-wrapper img {
-  width: 100%;
-  height: auto;
-  padding: 0;
-  letter-spacing: -0.04em;
-  text-align: left;
+  border-radius: 6px;
   color: #6FDCFE;
   font-weight: 400;
-  border-radius: 6px;
-
+  height: auto;
+  letter-spacing: -0.04em;
   opacity: 0;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+
   animation: appear-caption 0.9s forwards;
   animation-delay: .8s;
   transition-timing-function: cubic-bezier(0.6, -0.05, 0.01, 0.99);
@@ -123,7 +125,7 @@
     padding: 12em 0 4em 0;
   }
   .header-img-wrapper {
-    width: 96%;
     margin-top: 2.5em;
+    width: 96%;
   }
 }

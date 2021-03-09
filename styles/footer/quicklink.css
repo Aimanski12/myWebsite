@@ -5,8 +5,8 @@
 }
 
 .quicklinks .header-wrapper {
-  margin: 0 auto;
   list-style: none;
+  margin: 0 auto;
 }
 
 .quicklinks .header-wrapper:first-child {
@@ -15,13 +15,13 @@
 }
 
 .quicklinks .header-wrapper:first-child svg {
-  width: 14px;
   height: 14px;
+  width: 14px;
 }
 
 .quicklinks .header-wrapper:first-child span{
-  margin-left: 15px;
   color: #04C1FF;
+  margin-left: 15px;
   text-transform: uppercase;
 }
 
@@ -31,9 +31,9 @@
 }
 
 .quicklinks .header-wrapper:nth-child(2) li {
+  float: left;
   min-width: 50px;
   padding: 0 25px 0 0;
-  float: left;
 }
 
 .quicklinks .header-wrapper:nth-child(2) li:last-child {
@@ -50,21 +50,21 @@
 }
 
 .quicklinks .header-wrapper:nth-child(2) li a::after {
+  background: #04C2FF;
   content: '';
   position: absolute;
-  width: 100%;
   height: 2px;
-  background: #04C2FF;
+  width: 100%;
 }
 
 .quicklinks .header-wrapper:nth-child(2) li a::after {
-  width: 100%;
   bottom: 3px;
   border-radius: 1px;
   left: 0;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.4s;
+  width: 100%;
 }
 
 .quicklinks .header-wrapper:nth-child(2) li a:hover::after {
@@ -74,8 +74,8 @@
 
 @media (max-width: 668px) {
   .quicklinks .header-wrapper:nth-child(2) li {
-    padding: 0 20px 0 0;
     line-height: 2em;
+    padding: 0 20px 0 0;
   }
 }
 
@@ -84,7 +84,7 @@
     padding: 5em 0 8em;
   }
   .quicklinks .header-wrapper:nth-child(2) li {
-    padding: 0 20px 0 0;
     margin-bottom: 10px;
+    padding: 0 20px 0 0;
   }
 }

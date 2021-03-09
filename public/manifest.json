@@ -1,0 +1,20 @@
+{
+  "name": "Aiman Adlawan Portfolio Website",
+  "short_name": "Aimanski's Portfolio",
+  "icons": [
+    {
+      "src": "/images/app-icon-150x150.png",
+      "type": "image/png",
+      "sizes": "150x150"
+    }
+  ],
+  "start_url": "/",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0E5267",
+  "theme_color": "#ffffff",
+  "description": "This is my portfolio projects featuring my artoworks and web development projects.",
+  "dir": "ltr",
+  "lang": "en-US"
+}

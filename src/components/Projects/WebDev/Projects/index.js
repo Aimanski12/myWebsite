@@ -1,8 +1,9 @@
 import React, {Fragment} from 'react';
-import Image from './components/Image'
-import Features from './components/Features'
-import ButtonLink from '../../../GlobalComponents/ButtonLink'
 import Fade from 'react-reveal/Fade'
+
+import ButtonLink from '../../../GlobalComponents/ButtonLink'
+import Features from './components/Features'
+import Image from './components/Image'
 
 export default function WebDev({projects}) {
 

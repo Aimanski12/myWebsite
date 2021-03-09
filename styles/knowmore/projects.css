@@ -1,15 +1,15 @@
 
 
 .see-proj {
-  width: 100%;
   min-height: 2em;
   padding: 8em 0 8em 0;
+  width: 100%;
 }
 
 .see-proj-wrapper {
-  width: 550px;
   margin: 0 auto;
   min-height: 2em;
+  width: 550px;
 }
 
 .see-proj-header h2{
@@ -35,9 +35,9 @@
 }
 
 .proj-work-wrapper img{
-  width: 170px;
   height: auto;
   margin-bottom: .7em;
+  width: 170px;
 }
 
 .prj-title {

@@ -1,9 +1,9 @@
 import React, {useContext, useEffect} from 'react';
-import {motion} from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
+
 import {Anim} from '../../../utils/animations'
 import {AppData} from '../../../context'
 import {Helpers} from '../../../utils/common/index'
-import {AnimatePresence} from 'framer-motion'
 
 export default function Preloader() {
   const {AppState, SetAppState} = useContext(AppData)
@@ -32,9 +32,9 @@ export default function Preloader() {
         !AppState.sessionData.isDoneAnimating ? (
           <div className="pre-loader">
             <motion.div 
-              variants={Anim.Preloader.closeintro}
-              initial='initial'
               animate='animate'
+              className="pre-loader-wrapper"
+              initial='initial'
               onAnimationComplete={()=> {
                 Anim.Helpers.removepreloader()
                 // update the isDoneAnimating state to prevent
@@ -44,29 +44,29 @@ export default function Preloader() {
                   isFirstTime: false
                 })
               }}
-              className="pre-loader-wrapper">
+              variants={Anim.Preloader.closeintro} >
               <div className="pre-loader-overflow content-center">
                 <motion.img 
-                  variants={Anim.Preloader.animatelogo}
                   animate='animate'
                   initial='initial'
-                  src="/images/logo.svg" alt=""/>
+                  src="/images/logo.svg" alt=""
+                  variants={Anim.Preloader.animatelogo} />
                 <motion.div 
-                  variants={Anim.Preloader.textanimate}
-                  initial='initial'
                   animate='animate'
-                  className="logo-text">aiman adlawan</motion.div>
+                  className="logo-text"
+                  initial='initial'
+                  variants={Anim.Preloader.textanimate} >aiman adlawan</motion.div>
                 <motion.div 
-                  variants={Anim.Preloader.removeloader}
-                  initial='initial'
                   animate='animate'
-                  className='loader-span'>
+                  className='loader-span'
+                  initial='initial'
+                  variants={Anim.Preloader.removeloader} >
                   <span className="loader loader-top"></span>
                   <motion.span 
-                    variants={Anim.Preloader.loader}
-                    initial="initial"
                     animate="animate"
-                    className="loader loader-bottom"></motion.span>
+                    className="loader loader-bottom"
+                    initial="initial"
+                    variants={Anim.Preloader.loader} ></motion.span>
                 </motion.div>
               </div>
             </motion.div>

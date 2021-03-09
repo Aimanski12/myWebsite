@@ -1,8 +1,10 @@
 import React, {useContext} from 'react';
-import Link from 'next/link'
 import {motion} from 'framer-motion'
+
 import {Anim} from '../../../utils/animations'
 import {AppData} from '../../../context'
+
+import Link from 'next/link'
 
 export default function MenuItems({data, current}) {
   const {SetAppState} = useContext(AppData)
@@ -13,8 +15,8 @@ export default function MenuItems({data, current}) {
         return (
           <li className="menu-item content-center" key={i}>
             <motion.div 
-              variants={Anim.MenuButton.slideMenuItems}
-              className="menu-item-slider">
+              className="menu-item-slider"
+              variants={Anim.MenuButton.slideMenuItems} >
               <span className='active'>{m.name}</span>
             </motion.div>
           </li> )
@@ -22,12 +24,13 @@ export default function MenuItems({data, current}) {
         return (
           <li className="menu-item content-center" key={i}>
             <motion.div 
-              variants={Anim.MenuButton.slideMenuItems}
-              className="menu-item-slider">
+              className="menu-item-slider"
+              variants={Anim.MenuButton.slideMenuItems} >
               <Link href={m.link} scroll={false}>
-                <a onClick={()=>{
-                  SetAppState.setToCloseAndTransition()
-                }}>{m.name}</a>
+                <a 
+                  onClick={()=>{
+                    SetAppState.setToCloseAndTransition()
+                  }}>{m.name}</a>
               </Link>
             </motion.div>
           </li> )

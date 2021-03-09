@@ -8,7 +8,10 @@ export default function OverView({data}) {
       <Fade bottom>
         <h3 className='font-2 s2b'>{data.title}</h3>
         {data.text.map((t, i) => {
-          return ( <p className='font-2 s4b' key={i}>{t}</p> )
+          return ( 
+            <p 
+              className='font-2 s4b' 
+              key={i}>{t}</p> )
         })}
       </Fade>
     </div>

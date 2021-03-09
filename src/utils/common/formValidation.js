@@ -3,6 +3,29 @@ import {SaveToFirebase} from './saveToFirebase'
 
 export const Form = (function(){
 
+  // alert message
+  const _alertMsg = (text, color) => {
+    const mesAlert = $('.mes-alert span')[0]
+    mesAlert.style.color = color
+    mesAlert.innerHTML = text
+  }
+
+  
+  // changes the alert back to original
+  const _isTyping = () => {
+    const mesAlert = $('.mes-alert span')[0]
+    if(mesAlert.innerHTML != '* required') {
+      _alertMsg('* required', '#126985')
+    }
+  }
+  
+  const _saveMessageToFirebase = async (data) => {
+    // save data to firbase including the data
+    const response = await SaveToFirebase.saveDataToFirebase('messages', data)
+    // return the status code of the response
+    return response
+  }
+
   // validates form and see if everything input value is valid!
   const _validateForm = async () => {
     const name = $("input[name='name']")[0]
@@ -29,44 +52,30 @@ export const Form = (function(){
       return true
     }
   }
-
-  // changes the alert back to original
-  const _isTyping = () => {
-    const mesAlert = $('.mes-alert span')[0]
-    if(mesAlert.innerHTML != '* required') {
-      _alertMsg('* required', '#126985')
-    }
-  }
-
-  // alert message
-  const _alertMsg = (text, color) => {
-    const mesAlert = $('.mes-alert span')[0]
-    mesAlert.style.color = color
-    mesAlert.innerHTML = text
-  }
-
-  const _saveMessageToFirebase = async (data) => {
-    // save data to firbase including the data
-    const response = await SaveToFirebase.saveDataToFirebase('messages', data)
-    // return the status code of the response
-    return response
-  }
   
   return {
-    validateForm(){
-      return _validateForm()
-    }, 
-    _isTyping() {
-      return _isTyping()
-    },
     alertMsg(text, color){
       return _alertMsg(text, color)
     },
+    _isTyping() {
+      return _isTyping()
+    },
     saveMessageToFirebase (data) {
       return _saveMessageToFirebase(data)
-    }
+    },
+    validateForm(){
+      return _validateForm()
+    }, 
   }
 })()
+
+
+// check if email is valid
+const checkEmail = (email) => {
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
+
 
 // check if the string is not empty
 // returns true id empty
@@ -74,9 +83,4 @@ const checkString = (str) => {
   return(!str || /^\s*$/.test(str));
 }
 
-// check if email is valid
-const checkEmail = (email) => {
-  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email).toLowerCase());
-}
 

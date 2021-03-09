@@ -1,8 +1,10 @@
 import React, {useContext} from 'react';
+import {motion} from 'framer-motion'
+
 import {AppData} from '../../../../../context'
 import {Anim} from '../../../../../utils/animations'
+
 import Svg from '../../../../Svgs'
-import {motion} from 'framer-motion'
 
 export default function CloseButton({btn}) {
   const {SetAppState} = useContext(AppData)
@@ -19,12 +21,12 @@ export default function CloseButton({btn}) {
   return (
     <div className="modal-svg-wrapper">
       <motion.button  
-        whileHover={Anim.ImageModalAnim.rotateBtn}
+        className='content-center'
         onClick={()=> {
           click()
           Anim.Helpers.hidshowbody('auto')
         }}
-        className='content-center'>
+        whileHover={Anim.ImageModalAnim.rotateBtn} >
         <Svg svg='close'/>     
       </motion.button>
     </div> 

@@ -1,16 +1,17 @@
 import React, {useState, useContext, useEffect} from 'react';
+
 import Input from './Input'
-import {Helpers} from '../../../utils/common/index'
-import {AppData} from '../../../context'
 import sendEmail from '../../../utils/common/sendEmail'
+import {AppData} from '../../../context'
+import {Helpers} from '../../../utils/common/index'
 
 export default function Message({data}) {
   const {SetAppState} = useContext(AppData)
   const [value, setValue] = useState({
-    name: "",
     email: "",
+    mes: "",
+    name: "",
     subject: "Just say'n Hi!",
-    mes: ""
   })
 
   useEffect(() => {
@@ -67,9 +68,10 @@ export default function Message({data}) {
     <section className='message-form content-center'>
       <h2 className="font-1 s3a">Your Message Here</h2>
       <form onSubmit={(e)=> submitMessage(e)}>
-        <Input data={data}
-          inputValues={value}
-          change={(e, val)=> updateValue(e, val)}/>
+        <Input
+          change={(e, val)=> updateValue(e, val)}
+          data={data}
+          inputValues={value} />
         <div className="mes-alert">
           <span className='font-1 s9a'>* required</span>
         </div>

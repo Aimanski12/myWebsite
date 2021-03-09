@@ -1,7 +1,8 @@
 import React from 'react';
-import Icons from '../../GlobalComponents/SocialIcons'
-import {Anim} from '../../../utils/animations'
 import {motion} from 'framer-motion'
+
+import {Anim} from '../../../utils/animations'
+import Icons from '../../GlobalComponents/SocialIcons'
 
 export default function SocialIcons({data}) {
 
@@ -9,10 +10,14 @@ export default function SocialIcons({data}) {
     return data.socials.map((l, i) => {
       return <li className="menu-socials" key={i}>
         <motion.div  variants={Anim.MenuButton.slideIcons}>
-          <a href={l.link} 
-            target='_blank'
-            rel="noreferrer noopener">
-            <Icons svg={l.svg} front={data.front} back={data.back}/>
+          <a 
+            href={l.link} 
+            rel="noreferrer noopener"
+            target='_blank'>
+            <Icons 
+              back={data.back}
+              front={data.front} 
+              svg={l.svg} />
           </a>
         </motion.div>
       </li> }

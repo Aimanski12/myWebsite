@@ -31,8 +31,8 @@ export const MenuButton = (function () {
     animate: {
       opacity: 1,
       transition: {
+        duration: 0.5,
         ease: easing,
-        duration: 0.5
       }
     },
     exit: {
@@ -54,21 +54,21 @@ export const MenuButton = (function () {
       y: 0,
       opacity: 1,
       transition: {
-        type: 'spring',
-        stiffness: 90,
-        mass: 0.4,
         damping: 8,
+        duration: 0.4,
         ease: easing,
-        duration: 0.4
+        mass: 0.4,
+        stiffness: 90,
+        type: 'spring',
       }
     },
     exit: {
-      y: 65,
       opacity: 0,
       transition: {
         ease: easing,
         duration: 0.3
-      }
+      },
+      y: 65,
     }
   }
 
@@ -80,16 +80,16 @@ export const MenuButton = (function () {
     animate: {
       width: '100%',
       transition: {
+        duration: 1,
         ease: easing,
-        duration: 1
       }
     },
     exit: {
       width: 0,
       transition: {
         delay: 0.3,
+        duration: 0.3,
         ease: 'easeInOut',
-        duration: 0.3
       }
     }
   }
@@ -100,21 +100,21 @@ export const MenuButton = (function () {
       y: 46
     },
     animate: {
-      y: 0,
       transition: {
-        type: 'spring',
-        stiffness: 65,
-        mass: 0.4,
         damping: 8,
+        duration: 0.4,
         ease:'easeInOut',
-        duration: 0.4
-      }
+        mass: 0.4,
+        stiffness: 65,
+        type: 'spring',
+      },
+      y: 0,
     }, 
     exit: {
       opacity: 0,
       transition: {
+        duration: 0.3,
         type: 'easeInOut',
-        duration: 0.3
       }
     }
   }

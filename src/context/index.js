@@ -7,29 +7,29 @@ export const AppData = createContext()
 export function AppDataContext (props) {
   const [appState, setAppState] = useState({
     pageData: {
+      data: {},
       theme: false,
       isSet: false,
-      data: {}
     },
     menuTransitions: {
+      delay: 800,
       isOpen: false,
       isTransitioning: false,
-      delay: 800,
     }, 
     sessionData: {
       isChecked: false,
+      isDoneAnimating: false,
       isFirstTime: false,
-      isDoneAnimating: false
     },
     buttonMenu: {
       isHovered: false,
       isOpened: false
     },
     modal: {
+      current: 0,
+      images: {},
       isOpen: false,
       isSingle: false,
-      current: 0,
-      images: {}
     },
     message: {
       isOpen: false,
@@ -132,9 +132,9 @@ export function AppDataContext (props) {
       }, 
       menuTransitions: {
         ...appState.menuTransitions,
+        delay: 1600,
         isOpen: false,
         isTransitioning: true,
-        delay: 1600
       }
     })
   }

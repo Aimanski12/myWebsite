@@ -1,26 +1,26 @@
 
 .weblinks-container {
-  width: 100%;
   min-height: 3em;
   padding: 5em 0 8em 0;
+  width: 100%;
 }
 
 .weblinks-container h2 {
   color: #126985;
   font-weight: 600;
-  text-align: center;
   margin-bottom: .5em;
+  text-align: center;
 }
 
 .weblinks-container p {
-  width: 720px;
-  margin: 0 auto;
-  line-height: 2em;
-  margin-bottom: 80px;
   color: #04C2FF;
   font-weight: 400;
   letter-spacing: 0.04em;
+  line-height: 2em;
+  margin: 0 auto;
+  margin-bottom: 80px;
   text-align: center;
+  width: 720px;
 }
 
 .weblink-btn-wrapper {
@@ -31,8 +31,8 @@
 .weblink-tranform {
   padding: 0 5px;
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
   transform: translateY(-50%) translateX(-50%);
 }
 
@@ -41,7 +41,6 @@
     width: 640px;
   }
 }
-
 
 @media (max-width: 968px) {
   .weblinks-container {
@@ -69,16 +68,16 @@
 
 @media (max-width: 468px) {
   .weblinks-container h2, .weblinks-container p {
-    width: 95%;
     margin-left: 2.5%;
     margin-right: 2.5%;
+    width: 95%;
   }
   .weblink-btn-wrapper {
     width: 100%;
   }
   .weblink-tranform {
-    width: 100%;
-    padding: 0;
     display: flex;
+    padding: 0;
+    width: 100%;
   }
 }

@@ -1,13 +1,14 @@
-import React, {useContext, useEffect} from "react";
-import {AppData} from '../../../../context'
-import { useState } from "react";
+import React, {useContext, useEffect, useState} from "react";
 import { motion} from "framer-motion";
 import { wrap } from "popmotion";
-import {Anim} from '../../../../utils/animations'
-import Figure from './component/Figure'
-import CloseButton from './component/CloseButton'
-import Swipe from './component/Swipe'
+
+import { Anim } from '../../../../utils/animations'
+import { AppData } from '../../../../context'
+
 import Arrows from './component/Arrows'
+import CloseButton from './component/CloseButton'
+import Figure from './component/Figure'
+import Swipe from './component/Swipe'
 
 const swipeConfidenceThreshold = 10000;
 
@@ -57,17 +58,14 @@ export default function Modal () {
   return (
     <>
       <motion.div key={page}
-        custom={direction}
-        variants={Anim.ImageModalAnim.modalSliderVariants}
-        initial="enter"
         animate="center"
-        exit="exit"
-        transition={{
-          x: { type: "spring", stiffness: 300, damping: 30 },
-          opacity: { duration: 0.2 } }}
+        className="modal-image-wrapper content-center"
+        custom={direction}
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={1}
+        exit="exit"
+        initial="enter"
         onDragEnd={(e, { offset, velocity }) => {
           const swipe = swipePower(offset.x, velocity.x);
           if (swipe < -swipeConfidenceThreshold) {
@@ -75,12 +73,23 @@ export default function Modal () {
           } else if (swipe > swipeConfidenceThreshold) {
             paginate(-1);
           }
-        }} className="modal-image-wrapper content-center">
+        }} 
+        transition={{
+          opacity: { duration: 0.2 },
+          x: { 
+            damping: 30,
+            stiffness: 300, 
+            type: "spring", 
+          },
+        }}
+        variants={Anim.ImageModalAnim.modalSliderVariants} >
         <Figure img={findImage()} />
         <CloseButton btn='image'/>
       </motion.div>
       <Swipe />
-      <Arrows right={()=>paginate(1)} left={()=>paginate(-1)}/>
+      <Arrows 
+        left={()=>paginate(-1)}
+        right={()=>paginate(1)} />
     </>
   );
 };

@@ -1,6 +1,8 @@
 import React, {useContext} from 'react';
+
 import {AppData} from '../../../context'
 import {Anim} from '../../../utils/animations'
+
 import TextMenu from './MenuText'
 import Svg from '../../Svgs'
 
@@ -37,7 +39,8 @@ export default function MenuButton() {
   return (
     <div className="navigation-menu-button align-right">
       <div className="menu-button-container">
-        <div className="button-flex-row content-center"
+        <div 
+          className="button-flex-row content-center"
           onClick={open}
           onMouseLeave={hoverOut} onMouseEnter={hoverIn}>
           <div className="font-2 menu-text-container content-center">

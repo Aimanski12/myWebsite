@@ -1,18 +1,18 @@
 
 .project-details {
-  width: 100%;
   overflow: hidden;
+  width: 100%;
 }
 
 .project-detail-wrapper {
+  padding: 1em 0 4em 0;
   width: 800px;
-  padding: 1em 0 4em 0
 }
 
 .project-detail-wrapper h3{
   color: #126895;
-  line-height: 2em;
   font-weight: 500;
+  line-height: 2em;
 }
 
 .project-detail-wrapper p, .project-detail-wrapper span{
@@ -37,15 +37,15 @@
 }
 
 .platform-wrapper div {
-  min-width: 1em;
-  min-height: 2em;
   float: left;
   margin-right: 6em;
+  min-height: 2em;
+  min-width: 1em;
 }
 
 .platform-wrapper span {
-  margin-top: 10px;
   display: block;
+  margin-top: 10px;
 }
 
 .platform-wrapper div:last-child {
@@ -53,15 +53,15 @@
 }
 
 .tech-used-wrapper {
-  min-height: 1em;
   margin-top: 15px;
+  min-height: 1em;
 }
 
 .tech-used-wrapper div {
-  min-width: 1em;
-  min-height: 2em;
   float: left;
   margin: 10px 15px 15px 0;
+  min-height: 2em;
+  min-width: 1em;
 }
 
 .tech-used-wrapper div:last-child {
@@ -78,13 +78,13 @@
 
 
 .project-api a {
+  color: #0BC3FF;
   transition: all 0.2s ease-in;
-  color: #0BC3FF
 }
 
 .project-api a:hover {
-  transition: all 0.2s ease-in;
   color: #FFC01D;
+  transition: all 0.2s ease-in;
 }
 
 @media (max-width: 1368px) {
@@ -107,8 +107,8 @@
 
 @media (max-width: 868px) {
   .project-detail-wrapper {
+    padding: 2em 0 3em 0;
     width: 620px;
-    padding: 2em 0 3em 0
   }
   .project-overview h3, .project-api h3{
     margin-bottom: 1em;
@@ -129,8 +129,8 @@
 
 @media (max-width: 668px) {
   .project-detail-wrapper {
+    padding: 1em 0 3em 0;
     width: 90%;
-    padding: 1em 0 3em 0
   }
   .platform-wrapper div {
     margin-right: 4em;

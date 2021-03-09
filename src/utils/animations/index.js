@@ -1,13 +1,10 @@
 
 // framer motion animations
-import {Preloader} from './frameranimations/preloader'
-import {MenuButton} from './frameranimations/menuSlider'
-import {TransitionSliders} from './frameranimations/transitionsliders'
 import {ImageModalAnim} from './frameranimations/imageModalAnimations'
+import {MenuButton} from './frameranimations/menuSlider'
 import {MessageModalAnim} from './frameranimations/messageModalAnimation'
-
-// gsap animations
-import {ShowMenu} from './gsap/showMenu'
+import {Preloader} from './frameranimations/preloader'
+import {TransitionSliders} from './frameranimations/transitionsliders'
 
 // function helpers
 import {Helpers} from "./animationhelper"
@@ -18,13 +15,12 @@ import {Skew} from './skewAnimations/skewAnimations'
 export const Anim = (function () {
 
   return {
-    Preloader: Preloader,
-    MenuButton: MenuButton,
     Helpers: Helpers,
-    TransitionSliders: TransitionSliders,
-    ShowMenu: ShowMenu,
     ImageModalAnim: ImageModalAnim,
+    MenuButton: MenuButton,
     MessageModalAnim: MessageModalAnim,
-    Skew: Skew
+    Preloader: Preloader,
+    Skew: Skew,
+    TransitionSliders: TransitionSliders,
   }
 })()

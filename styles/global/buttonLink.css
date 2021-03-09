@@ -1,7 +1,7 @@
 .button-link {
-  position: relative;
-  padding: 0 16px;
   height: 30px;
+  padding: 0 16px;
+  position: relative;
   transition: all .5s cubic-bezier(.77, 0, .175, 1);
 }
 
@@ -11,37 +11,37 @@
 }
 
 .button-link span {
+  color: #0A88AF;
   position: relative;
-  color: #0A88AF
 }
 
 .button-link::before {
-  content: '';
-  top: 0;
-  left: 0;
-  bottom: 0;
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  transform: scaleX(1);
-  transform-origin: left;
-  margin: auto;
   background: #B3EBFC;
   border-radius: 25px;
+  bottom: 0;
+  content: '';
+  height: 50px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  transform: scaleX(1);
+  transform-origin: left;
   transition: all .5s cubic-bezier(.77, 0, .175, 1);
+  width: 50px;
 }
 
 
 .button-link:hover::before {
   transition: all .5s cubic-bezier(.77, 0, .175, 1);
-  width: 100%;
   transform-origin: left;
+  width: 100%;
 }
 
 @media (max-width: 868px) {
   .button-link {
-    padding: 0 30px;
     margin: 0 auto;
+    padding: 0 30px;
     transition: none;
   }
   .button-link::before {

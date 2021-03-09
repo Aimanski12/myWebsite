@@ -1,7 +1,8 @@
 import React, {Fragment, useEffect} from 'react';
+import Fade from 'react-reveal/Fade'
+
 import {Anim} from '../../../utils/animations'
 import Svg from '../../Svgs'
-import Fade from 'react-reveal/Fade'
 
 export default function ArtworkAll({data}) {
 
@@ -16,9 +17,10 @@ export default function ArtworkAll({data}) {
         <Fade bottom>
           <h2 className='font-1 s3a'>{img.name}</h2>
           <p className='font-2 s3b'>{img.desc}</p>
-          <a href={img.link} 
-            target='_blank' rel="noreferrer noopener"
-            className='content-center'>
+          <a className='content-center'
+            href={img.link} 
+            rel="noreferrer noopener"
+            target='_blank' >
             <span className='font-1 s7a'>View artwork on:</span>
             <Svg svg='coloredinsta'/>
           </a>
@@ -26,7 +28,9 @@ export default function ArtworkAll({data}) {
       </div>
 
       <div className="art-img">
-        <div className="art-img-wrapper content-center" style={{background: img.background}}>
+        <div 
+          className="art-img-wrapper content-center" 
+          style={{background: img.background}}>
           <img src={img.image} alt={img.alt}/>
         </div>
       </div>

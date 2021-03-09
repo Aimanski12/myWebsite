@@ -1,8 +1,8 @@
 
 .edu-main {
-  width: 100%;
   min-height: 2em;
   padding: 6em 0 2em 0;
+  width: 100%;
 }
 
 .edu-wrapper {
@@ -17,8 +17,8 @@
 }
 
 .edu-header span {
-  display: block;
   color: #04C2FF;
+  display: block;
   font-weight: 300;
   line-height: 2em;
 }
@@ -35,16 +35,16 @@
 }
 
 .course-img div {
-  width: 160px;
   height: 160px;
   overflow: hidden;
+  width: 160px;
 }
 
 .course-img span {
+  color: rgb(170,170,170);
   display: block;
-  text-align: center;
   font-weight: 300;
-  color: rgb(170,170,170)
+  text-align: center;
 }
 
 .course-desc {
@@ -52,14 +52,14 @@
 }
 
 .course-desc h4 {
-  font-weight: 600;
   color: #0A88AF;
+  font-weight: 600;
   margin-bottom: .5em;
 }
 
 .course-desc .school {
-  display: block;
   color: #D79D09;
+  display: block;
   margin-bottom: .5em;
 }
 
@@ -118,8 +118,8 @@
     margin-bottom: 1em;
   }
   .edu-header .quote{
-    text-align: center;
     margin-bottom: .5em;
+    text-align: center;
   }
   .course-wrapper {
     flex-direction: column;
@@ -133,12 +133,12 @@
     width: 130px;
   }
   .course-img div {
-    width: 130px;
     height: 130px;
+    width: 130px;
   }
   .course-desc {
     margin-top: 1em;
-    width: 280px;
     text-align: center;
+    width: 280px;
   }
 }

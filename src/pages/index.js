@@ -1,15 +1,17 @@
 import React, {useContext, useEffect} from 'react'
-import {AppData} from '../context'
-import {Anim} from '../utils/animations'
 import {motion} from 'framer-motion'
-import Navigation from '../components/Navigation'
-import Headers from '../components/Headers/Dark'
+
+import {Anim} from '../utils/animations'
+import {AppData} from '../context'
+
 import ArtWork from '../components/Artwork/Single'
-import WebDev from '../components/Projects/WebDev'
-import WebLinks from '../components/GlobalComponents/WebLinks'
-import QuickLink from '../components/GlobalComponents/Footer/QuickLinks'
 import Footer from '../components/GlobalComponents/Footer/Footer'
 import Head from '../components/Head'
+import Headers from '../components/Headers/Dark'
+import Navigation from '../components/Navigation'
+import QuickLink from '../components/GlobalComponents/Footer/QuickLinks'
+import WebDev from '../components/Projects/WebDev'
+import WebLinks from '../components/GlobalComponents/WebLinks'
 import page from '../mockdata/pages/home'
 
 
@@ -30,13 +32,13 @@ export default function Home() {
       <Head data={page.metadata}/>
       <Navigation data={page}/>
       <motion.div 
-        variants={Anim.TransitionSliders.slidetoexit(
-          AppState.menuTransitions.delay)}
-        initial="initial" 
         animate={{opacity: 1}} 
-        exit="exit" 
+        className="body-wrapper"
         id='body-wrapper'
-        className="body-wrapper">
+        initial="initial" 
+        exit="exit" 
+        variants={Anim.TransitionSliders.slidetoexit(
+          AppState.menuTransitions.delay)} >
         <div className="scroll-body">
           <Headers data={page.header}/>
           <ArtWork data={page.artWork[0]}/>

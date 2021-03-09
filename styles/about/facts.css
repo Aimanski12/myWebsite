@@ -1,8 +1,8 @@
 
 .profile-facts {
-  width: 100%;
   min-height: 1em;
   padding: 13em 0;
+  width: 100%;
 }
 
 .profile-facts-wrapper {
@@ -15,21 +15,21 @@
 }
 
 .profile-facts-desc {
-  width: 500px;
   margin-left: 50px;
+  width: 500px;
 }
 
 .profile-facts-desc h2 {
-  font-weight: 600;
   color: #126985;
+  font-weight: 600;
   margin-bottom: .5em;
 }
 
 .profile-facts-desc p {
+  color: #04C2FF;
   font-weight: 300;
   letter-spacing: 0.01em;
   line-height: 2.4em;
-  color: #04C2FF
 }
 
 .rev {
@@ -74,12 +74,12 @@
     width: 360px;
   }
   .profile-facts-desc {
-    width: 650px;
-    margin: 2em 0 0 0;
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    margin: 2em 0 0 0;
+    width: 650px;
   }
   .profile-facts-desc h2{
     text-align: center;

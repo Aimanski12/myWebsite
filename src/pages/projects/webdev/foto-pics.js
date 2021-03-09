@@ -1,13 +1,15 @@
 import React, {useContext, useEffect} from 'react'
-import {AppData} from '../../../context'
-import {Anim} from '../../../utils/animations'
 import {motion} from 'framer-motion'
+
+import {Anim} from '../../../utils/animations'
+import {AppData} from '../../../context'
+
 import Head from '../../../components/Head'
-import Navigation from '../../../components/Navigation'
 import Header from '../../../components/Headers/Project'
+import Footer from '../../../components/GlobalComponents/Footer/Footer'
+import Navigation from '../../../components/Navigation'
 import ProjectDetails from '../../../components/Individuals'
 import QuickLink from '../../../components/GlobalComponents/Footer/QuickLinks'
-import Footer from '../../../components/GlobalComponents/Footer/Footer'
 import projects from '../../../mockdata/pages/projects'
 
 export default function Home() {

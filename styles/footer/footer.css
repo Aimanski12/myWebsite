@@ -1,66 +1,66 @@
 
 .footer-wrapper {
-  width: 100%;
-  min-height: 3em;
   background: #116783;
   clip-path: polygon(0 0, 100% 100px, 100% 100%, 0 100%);
+  min-height: 3em;
   padding-top: 140px;
+  width: 100%;
 }
 
 .footer-wrapper .header-wrapper {
-  margin: 0 auto;
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  margin: 0 auto;
 }
 
 .lets-work {
+  height: 400px;
   padding-left: 5%;
   width: 45%;
-  height: 400px;
 }
 
 .lets-work h3 {
-  font-weight: 600;
   color: #FFC01D;
-  margin-bottom: 0.4em;
+  font-weight: 600;
   letter-spacing: -0.04em;
+  margin-bottom: 0.4em;
 }
 
 .lets-work p {
   color: #59ACC6;
   font-weight: 500;
-  width: 20em;
   line-height: 1.8em;
   margin-bottom: 4.5em;
+  width: 20em;
 }
 
 .lets-work a {
-  color: #6DB4CA;
-  padding: 15px 28px;
   background: #0E5267;
   border-radius: 30px;
+  color: #6DB4CA;
+  padding: 15px 28px;
   transition: all 0.25s ease-in;
 }
 
 .lets-work a:hover {
+  box-shadow: 0px 0px 6px rgb(151,230,255);
   color: #FFCB45;
   transition: all 0.25s ease-in;
-  box-shadow: 0px 0px 6px rgb(151,230,255)
 }
 
 .hit-me {
-  width: 30%;
-  padding-left: 20%;
   height: 400px;
+  padding-left: 20%;
+  width: 30%;
 }
 
 .hit-me h3 {
-  font-weight: 600;
   color: #FFC01D;
-  margin-bottom: 0.9em;
+  font-weight: 600;
   letter-spacing: -0.04em;
+  margin-bottom: 0.9em;
 }
 
 .hit-me ul {
@@ -69,16 +69,16 @@
 
 .hit-me ul li{
   height: 38px;
-  width: 180px;
   margin-bottom: 25px;
+  width: 180px;
 }
 
 .hit-me li a{
-  height: 38px;
+  align-items: center;
   display: flex;
   flex-direction: row;
+  height: 38px;
   justify-content: flex-start;
-  align-items: center;
 }
 
 .hit-me .svg-wrapper {
@@ -93,14 +93,14 @@
 }
 
 .hit-me li a span:nth-child(2) {
-  margin-left: 15px;
   color: #8BB4C0;
+  margin-left: 15px;
   transition: all 0.35s ease-in;
 }
 
 .hit-me li a:hover span {
-  transition: all 0.35s ease-in;
   color: #FFCB45;
+  transition: all 0.35s ease-in;
 }
 
 @media (max-width: 1468px) {
@@ -141,13 +141,13 @@
     flex-direction: column;
   }
   .lets-work {
-    width: 75%;
-    padding-left: 0;
     height: 280px;
+    padding-left: 0;
+    width: 75%;
   }
   .hit-me {
-    width: 75%;
     padding-left: 0%;
+    width: 75%;
   }
 }
 

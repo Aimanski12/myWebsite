@@ -5,14 +5,26 @@ export default function componentName() {
   return (
     <div className="swipe-wrapper content-center font-2 s5b">
       <motion.span 
-        animate={{ x: -35, opacity: 0 }}
-        transition={{ repeat: Infinity, duration: 2 }}
-        className='swipe-left'>←</motion.span>
+        animate={{ 
+          opacity: 0, 
+          x: -35, 
+        }}
+        className='swipe-left'
+        transition={{ 
+          duration: 2, 
+          repeat: Infinity
+        }} >←</motion.span>
       <span>Swipe</span>
       <motion.span 
-        animate={{ x: 35, opacity: 0 }}
-        transition={{ repeat: Infinity, duration: 2 }}
-        className='swipe-right'>→</motion.span>
+        animate={{ 
+          opacity: 0, 
+          x: 35, 
+        }}
+        className='swipe-right'
+        transition={{ 
+          duration: 2, 
+          repeat: Infinity
+        }} >→</motion.span>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {Anim} from '../../../../../utils/animations'
 
 export default function Figure({img}) {
@@ -7,11 +8,13 @@ export default function Figure({img}) {
       return (
         <>
           <figure 
-            onMouseMove={(e)=>Anim.Helpers.zoomFigureImage(e)}
             className="modal-image content-center"
+            onMouseMove={(e)=>Anim.Helpers.zoomFigureImage(e)}
             style={{
               backgroundImage: `url(${img.link})`}}>
-            <img src={img.link} alt={img.alt}/>
+            <img 
+              alt={img.alt}
+              src={img.link} />
           </figure>
           <div className="image-caption content-center">
             <h4 className='font-1 s4a'>{img.name}</h4>
@@ -20,7 +23,6 @@ export default function Figure({img}) {
         </>)
       } 
     }
-  
   return (
     <>
       {figure()}

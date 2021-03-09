@@ -1,109 +1,96 @@
 
 .navigation-logo {
+  height: 50px;
   position: fixed;
   top: 58px;
-  z-index: 800;
   width: 50px;
-  height: 50px;
-  /* mix-blend-mode: difference; */
+  z-index: 800;
 }
 
 .menu-logo-container {
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 .menu-logo-container a {
-  width: 100%;
   height: 100%;
-}
+  width: 100%;
+}                                                 
 
 .aiman-logo {
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 .logo-line-1 {
+  animation: line-1 3s ease-in forwards infinite;
   stroke-dasharray: 490;
   stroke-dashoffset: 490;
-  animation: line-1 3s ease-in forwards infinite;
   -webkit-animation: line-1 3s ease-in forwards infinite;
 }
 
 .logo-line-2 {
+  animation: line-2 3s ease-in forwards infinite;
   stroke-dasharray: 460;
   stroke-dashoffset: 460;
-  animation: line-2 3s ease-in forwards infinite;
   -webkit-animation: line-2 3s ease-in forwards infinite;
 }
 
 .logo-line-3 {
+  animation: line-3 3s ease-in forwards infinite;
   stroke-dasharray: 485;
   stroke-dashoffset: 485;
-  animation: line-3 3s ease-in forwards infinite;
   -webkit-animation: line-3 3s ease-in forwards infinite;
 }
 
 @keyframes line-1 {
   0% {
+    fill: #004E66;
     stroke-dashoffset: 0;
-    fill: #004E66
   }
   50% {
-    stroke-dashoffset: 490;
     fill: #6FDCFE;
+    stroke-dashoffset: 490;
   }
   100% {
+    fill: #004E66;
     stroke-dashoffset: 980;
-    fill: #004E66
   }
 }
 
 @keyframes line-2 {
   0% {
+    fill: #004E66;
     stroke-dashoffset: 0;
-    fill: #004E66
   }
 
   50% {
+    fill: #6FDCFE;
     stroke-dashoffset: 460;
-    fill: #6FDCFE
   }
 
   100% {
+    fill: #004E66;
     stroke-dashoffset: 920;
-    fill: #004E66
   }
 }
 
 @keyframes line-3 {
   0% {
+    fill: #004E66;
     stroke-dashoffset: 0;
-    fill: #004E66
   }
 
   50% {
+    fill: #6FDCFE;
     stroke-dashoffset: 485;
-    fill: #6FDCFE
   }
 
   100% {
+    fill: #004E66;
     stroke-dashoffset: 970;
-    fill: #004E66
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @media (max-width: 1268px) {
@@ -114,17 +101,17 @@
 
 @media (max-width: 1068px) {
   .navigation-logo {
+    height: 42px;
     top: 36px;
     width: 42px;
-    height: 42px;
   }
 }
 
 @media (max-width: 868px) {
   .navigation-logo {
+    height: 36px;
     top: 30px;
     width: 36px;
-    height: 36px;
   }
 }
 

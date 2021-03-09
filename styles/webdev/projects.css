@@ -1,9 +1,9 @@
 
 .featured-project {
-  padding: 7em 0 7em 0;
-  min-height: 200px;
   flex-direction: row;
+  min-height: 200px;
   overflow: hidden;
+  padding: 7em 0 7em 0;
 }
 
 .featured-project:last-child {
@@ -19,17 +19,17 @@
 }
 
 .project-image-wrapper {
-  width: 85%;
+  cursor: zoom-in;
   margin: 0 5% 0 10%;
   height: auto;
-  cursor: zoom-in;
+  width: 85%;
 }
 
 .project-image-wrapper img {
   border-radius: 12px;
-  width: 100%;
   height: auto;
   transition: all 0.4s ease-in;
+  width: 100%;
 }
 
 .project-image-wrapper img:hover {
@@ -42,9 +42,9 @@
 }
 
 .project-content-wrapper {
-  width: 85%;
-  margin: 0% 10% 0% 5%;
   align-items: flex-start;
+  margin: 0% 10% 0% 5%;
+  width: 85%;
 }
 
 .row-reverse .project-image-wrapper {
@@ -56,18 +56,18 @@
 }
 
 .project-content-wrapper h2 {
+  color: #16728F;
   font-weight: 600;
   letter-spacing: -0.04em;
   margin-bottom: 15px;
-  color: #16728F
 }
 
 .project-content-wrapper p {
+  color: #78BACE;
   font-weight: 400;
   letter-spacing: 0.03em;
-  margin-bottom: 45px;
   line-height: 1.9em;
-  color: #78BACE
+  margin-bottom: 45px;
 }
 
 .project-content-wrapper ul {
@@ -76,17 +76,17 @@
 }
 
 .project-content-wrapper li {
+  color: #5E7A83;
   flex-direction: row;
   justify-content: flex-start;
-  margin-bottom: 25px;
   letter-spacing: 0.03em;
-  color: #5E7A83
+  margin-bottom: 25px;
 }
 
 .project-content-wrapper li svg {
-  width: 30px;
   height: 30px;
   margin-right: 12px;
+  width: 30px;
 }
 
 
@@ -167,16 +167,16 @@
     padding-bottom: 7.5em;
   }
   .project-content-wrapper {
-    width: 94%;
     margin: 0% 3% 0% 3%;
+    width: 94%;
   }
   .row-reverse .project-content-wrapper {
     margin: 0% 3% 0 3%;
   }
   .project-content-wrapper li svg {
-    width: 26px;
     height: 26px;
     margin-right: 10px;
+    width: 26px;
   }
 }
 
@@ -195,8 +195,8 @@
     width: 80%;
   }
   .featured-project-content {
-    width: 76%;
     margin-top: 2.2em;
+    width: 76%;
   }
 }
 
@@ -208,18 +208,18 @@
     width: 84%;
   }
   .project-image-wrapper img {
-    filter: drop-shadow(8px 8px 8px rgba(146, 146, 146, 0.5));
     border-radius: 8px;
+    filter: drop-shadow(8px 8px 8px rgba(146, 146, 146, 0.5));
   }
   .featured-project-content {
     width: 80%;
   }
   .featured-btn-wrapper {
-    width: 100%;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    width: 100%;
   }
 }
 

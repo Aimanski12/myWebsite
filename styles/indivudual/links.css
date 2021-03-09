@@ -8,20 +8,20 @@
 }
 
 .project-links-qrwrapper a {
-  width: 200px;
   height: 200px;
+  width: 200px;
 }
 
 .project-links-qrwrapper a img{
-  width: 100%;
-  height: auto;
   border-radius: 15px;
+  height: auto;
+  width: 100%;
 }
 
 
 .project-links-qrwrapper span {
+  color: #2093B8;
   display: block;
-  color: #2093B8
 }
 
 .project-links {
@@ -29,13 +29,13 @@
 }
 
 .project-links-wrapper {
-  width: 100%;
   padding: 1em 0 2em 0;
+  width: 100%;
 }
 
 .other-links span {
+  color: #9EA5A9;
   display: block;
-  color: #9EA5A9
 } 
 
 .project-btn-wrapper {
@@ -44,9 +44,9 @@
 }
 
 .project-btn {
-  width: 250px;
   height: auto;
   margin: 0 25px;
+  width: 250px;
 }
 
 
@@ -64,8 +64,8 @@
 
 @media (max-width: 868px) {
   .project-links-qrwrapper a {
-    width: 180px;
     height: 180px;
+    width: 180px;
   }
   .project-btn {
     width: 224px;
@@ -74,17 +74,17 @@
 
 @media (max-width: 668px) {
   .project-links-qrwrapper a {
-    width: 160px;
     height: 160px;
+    width: 160px;
   }
   .project-btn-wrapper {
     flex-direction: column;
     padding: 2em 0 2em 0;
   }
   .project-btn {
+    display: flex;
     margin: 0px;
     padding: 4em 0 3em 0;
-    display: flex;
   }
   .project-btn:last-child {
     padding-bottom: 1em;

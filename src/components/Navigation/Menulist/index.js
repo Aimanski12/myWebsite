@@ -1,11 +1,13 @@
 import React, {useContext} from 'react';
-import Sliders from './Sliders'
-import MenuItems from './MenuItems'
-import Socials from './SocialIcons'
-import CopyRight from './CopyRight'
+import {motion, AnimatePresence} from 'framer-motion'
+
 import {Anim} from '../../../utils/animations'
 import {AppData} from '../../../context'
-import {motion, AnimatePresence} from 'framer-motion'
+
+import CopyRight from './CopyRight'
+import MenuItems from './MenuItems'
+import Sliders from './Sliders'
+import Socials from './SocialIcons'
 
 export default function MenuList({data}) {
   const {AppState} = useContext(AppData)
@@ -14,14 +16,16 @@ export default function MenuList({data}) {
     <AnimatePresence>
        { AppState.menuTransitions.isOpen && (
         <motion.div 
-          variants={Anim.MenuButton.showMenu}
-          initial='initial'
           animate='animate'
+          className="menu-list-container content-center"
           exit='exit'
-          className="menu-list-container content-center">
+          initial='initial'
+          variants={Anim.MenuButton.showMenu} >
           <Sliders />
           <div className="menu-container content-center">
-            <MenuItems data={data.menuItems.menu} current={data.index}/>
+            <MenuItems 
+              data={data.menuItems.menu} 
+              current={data.index}/>
             <Socials data={data.menuItems.socialIcons}/>
             <CopyRight />
           </div>

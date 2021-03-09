@@ -1,14 +1,15 @@
 import React from 'react';
-import Copyright from '../../GlobalComponents/Copyright'
-import {Anim} from '../../../utils/animations'
 import {motion} from 'framer-motion'
+
+import {Anim} from '../../../utils/animations'
+import Copyright from '../../GlobalComponents/Copyright'
 
 export default function CopyRight() {
   return (
     <div className="menu-copyright">
       <motion.div 
-        variants={Anim.MenuButton.showCopyRight}
-        className="menu-copyright-wrapper font-1">
+        className="menu-copyright-wrapper font-1"
+        variants={Anim.MenuButton.showCopyRight} >
         <Copyright />
       </motion.div>
     </div>

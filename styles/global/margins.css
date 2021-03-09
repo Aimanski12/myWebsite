@@ -8,9 +8,9 @@
 }
 
 .header-wrapper {
-  width: 1400px;
   height: inherit;
   position: relative;
+  width: 1400px;
 }
 
 @media (max-width: 1668px) {

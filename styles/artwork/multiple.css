@@ -1,14 +1,14 @@
 
 .all-artwork {
   min-height: 10em;
-  width: 100%;
   position: relative;
+  width: 100%;
 }
 
 .art-desc {
-  width: 100%;
-  height: 18em;
   background: rgba(210,210,210,0.04);
+  height: 18em;
+  width: 100%;
 }
 
 .art-desc h2 {
@@ -17,13 +17,13 @@
 }
 
 .art-desc p {
-  line-height: 2em;
   color: #E5B22A;
+  line-height: 2em;
 }
 
 .art-desc a {
-  margin-top: 2em;
   flex-direction: row;
+  margin-top: 2em;
   position: relative;
 }
 
@@ -38,21 +38,21 @@
 }
 
 .art-desc a::after {
+  background: linear-gradient(90deg, #FFC01D 0%, #C4372F 55.73%, #8E04B0 100%);
   content: '';
+  height: 2px;
   position: absolute;
   width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, #FFC01D 0%, #C4372F 55.73%, #8E04B0 100%);
 }
 
 .art-desc a::after {
-  width: 100%;
   bottom: -7px;
   border-radius: 1px;
   left: 0;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.6s;
+  width: 100%;
 }
 
 .art-desc a:hover::after {
@@ -61,24 +61,24 @@
 }
 
 .art-img {
-  width: 100%;
   height: 85vh;
   overflow: hidden;
+  width: 100%;
 }
 
 .art-img-wrapper {
-  height: 85vh;
-  width: 100vw;
+  align-items: center;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  height: 85vh;
   justify-content: center;
   overflow: hidden;
+  width: 100vw;
 }
 
 .art-img-wrapper img {
-  width: 540px;
   transition: all 0.25s ease-in;
+  width: 540px;
 }
 
 .art-img-wrapper img:hover {
@@ -94,9 +94,6 @@
   .art-img-wrapper img {
     width: 510px;
   }
-  /* .art-img:last-child {
-    margin-bottom: 7em;
-  } */
 }
 
 @media screen and (max-width: 896px) and (orientation: landscape) {
@@ -108,8 +105,8 @@
 
 @media(max-width: 868px) {
   .art-desc h2, .art-desc p {
-    width: 92%;
     text-align: center;
+    width: 92%;
   }
   .art-img-wrapper img {
     width: 490px;

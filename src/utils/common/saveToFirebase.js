@@ -5,7 +5,6 @@ import {CheckFunction} from './checker'
 // firebase url
 const furl = 'firebaselink'
 
-
 export const SaveToFirebase = (function(){
 
   const _saveDataToFirebase = async (extUrl, message) => {

@@ -1,15 +1,15 @@
 
 
 .profile-travels {
-  width: 100%;
   min-height: 10em;
   padding: 11em 0 8em 0;
+  width: 100%;
 }
 
 .profile-travels-wrapper {
-  width: 900px;
   margin: 0 auto;
   min-height: 10em;
+  width: 900px;
 }
 
 .profile-travels-wrapper h2 {
@@ -19,25 +19,25 @@
 }
 
 .travels-img {
-  margin-top: 2em;
+  column-gap: 6px;
   display: grid;
   grid-template-columns: 175.2px 175.2px 175.2px 175.2px 175.2px;
   grid-template-rows: 162.7px 162.7px 162.7px;
-  column-gap: 6px;
   row-gap: 6px;
+  margin-top: 2em;
 }
 
 .travels-img-wrapper {
-  width: 175.2px;
   height: 162.7px;
   overflow: hidden;
+  width: 175.2px;
 }
 
 .travels-img-wrapper img {
-  width: 100%;
-  height: 100%;
   border-radius: 3px;
   cursor: zoom-in;
+  height: 100%;
+  width: 100%;
 }
 
 
@@ -49,14 +49,14 @@
     width: 820px;
   }
   .travels-img {
+    column-gap: 4px;
     grid-template-columns: 160.8px 160.8px 160.8px 160.8px 160.8px;
     grid-template-rows: 149.3px 149.3px 149.3px;
-    column-gap: 4px;
     row-gap: 4px;
   }
   .travels-img-wrapper {
-    width: 160.8px;
     height: 149.3px;
+    width: 160.8px;
   }
 }
 
@@ -68,14 +68,14 @@
     width: 720px;
   }
   .travels-img {
+    column-gap: 4px;
     grid-template-columns: 140.8px 140.8px 140.8px 140.8px 140.8px;
     grid-template-rows: 130.78px 130.78px 130.78px;
-    column-gap: 4px;
     row-gap: 4px;
   }
   .travels-img-wrapper {
-    width: 140.8px;
     height: 130.78px;
+    width: 140.8px;
   }
 }
 
@@ -87,14 +87,14 @@
     width: 620px;
   }
   .travels-img {
+    column-gap: 4px;
     grid-template-columns: 121.6px 121.6px 121.6px 121.6px 121.6px;
     grid-template-rows: 112.95px 112.95px 112.95px;
-    column-gap: 4px;
     row-gap: 4px;
   }
   .travels-img-wrapper {
-    width: 121.6px;
     height: 112.95px;
+    width: 121.6px;
   }
 }
 
@@ -106,14 +106,14 @@
     width: 445px;
   }
   .travels-img {
+    column-gap: 5px;
     grid-template-columns: 145px 145px 145px;
     grid-template-rows: 134.6px 134.6px 134.6px 134.6px 134.6px;
-    column-gap: 5px;
     row-gap: 5px;
   }
   .travels-img-wrapper {
-    width: 145px;
     height: 134.6px;
+    width: 145px;
   }
 }
 
@@ -125,14 +125,14 @@
     width: 411px;
   }
   .travels-img {
+    column-gap: 3px;
     grid-template-columns: 135px 135px 135px;
     grid-template-rows: 125.39px 125.39px 125.39px 125.39px 125.39px;
-    column-gap: 3px;
     row-gap: 3px;
   }
   .travels-img-wrapper {
-    width: 135px;
     height: 125.39px;
+    width: 135px;
   }
 }
 
@@ -141,14 +141,14 @@
     width: 80%;
   }
   .travels-img {
+    column-gap: .5%;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: auto auto auto auto auto;
-    column-gap: .5%;
     row-gap: .5%;
   }
   .travels-img-wrapper {
-    width: 100%;
     height: auto;
+    width: 100%;
   }
 }
 

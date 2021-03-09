@@ -1,8 +1,10 @@
 import React, {useContext} from 'react';
 import Link from 'next/link'
-import Svg from '../../Svgs'
+
 import {AppData} from '../../../context'
 import {Anim} from '../../../utils/animations'
+
+import Svg from '../../Svgs'
 
 export default function Logo() {
   const {AppState, SetAppState} = useContext(AppData)
@@ -14,9 +16,9 @@ export default function Logo() {
     SetAppState.setMenuAndButtonState({
       isOpened: !AppState.buttonMenu.isOpened
     }, {
+      delay: 1600,
       isOpen: false,
       isTransitioning: true,
-      delay: 1600
     })
   }
 
@@ -24,15 +26,17 @@ export default function Logo() {
   // menu is closed/
   const updateSome = () => {
     SetAppState.setMenuTransitions({
+      delay: 800,
       isTransitioning: true,
-      delay: 800
     })
   }
 
   return (
     <div className="navigation-logo align-left">
       <div className="navigation-logo-container">
-        <Link href='/' scroll={false}>
+        <Link 
+          href='/' 
+          scroll={false}>
           <a onClick={()=>{
             if(window.location.pathname != '/') {
               // set body over flow to hidden for the transition

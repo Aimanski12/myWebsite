@@ -14,12 +14,13 @@ export default function Image({data}) {
       <figure>
         <div className="project-image-wrapper">
           <img 
+            alt={data.image.alt}
             onClick={()=> SetAppState.setImageModalState({
+              images: data.image,
               isOpen: true,
               isSingle: true,
-              images: data.image
             })}
-            src={data.image.link} alt={data.image.alt}/>
+            src={data.image.link} />
         </div>
       </figure>
     </Fade>

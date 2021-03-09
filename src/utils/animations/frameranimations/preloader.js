@@ -20,18 +20,18 @@ export const Preloader = (function (){
   // animates the logo
   const _animatelogo = {
     initial: {
-      y: 15,
+      opacity: 0,
       scale: 1.1,
-      opacity: 0
+      y: 15,
     },
     animate: {
-      y: 0,
-      scale: 1,
       opacity: 1,
+      scale: 1,
       transition: {
         duration: 1,
         ease: 'easeInOut'
-      }
+      },
+      y: 0,
     }
   }
 
@@ -54,19 +54,19 @@ export const Preloader = (function (){
   const _textanimate = {
     initial: {
       letterSpacing: '3px',
-      y: 15,
+      opacity: 0,
       scale: 2,
-      opacity: 0
+      y: 15,
     },
     animate: {
       letterSpacing: '10px',
-      y: 0,
-      scale: 1,
       opacity: 1,
+      scale: 1,
       transition: {
         duration: 1,
         ease: 'easeInOut'
-      }
+      },
+      y: 0,
     }
   }
 
@@ -76,19 +76,19 @@ export const Preloader = (function (){
       width: '0px'
     }, 
     animate: {
-      width: '120px',
       transition: {
         duration: 4,
         type: "tween",
-      }
+      },
+      width: '120px',
     }
   }
 
   return {
-    closeintro: _closeintro,
     animatelogo: _animatelogo,
+    closeintro: _closeintro,
+    loader: _loader,
     removeloader: _removeloader,
     textanimate: _textanimate,
-    loader: _loader,
   }
 })()

@@ -1,6 +1,7 @@
 import React from 'react';
-import ButtonLink from '../ButtonLink'
 import Fade from 'react-reveal/Fade'
+
+import ButtonLink from '../ButtonLink'
 
 export default function WebLinks({data}) {
   

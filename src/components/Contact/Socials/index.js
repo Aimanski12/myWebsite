@@ -5,10 +5,15 @@ export default function Socials({data}) {
 
   const socialIcons = data.icons.icons.map((a, i) => {
     return (
-      <a href={a.link} key={i}
-        target='_blank'
-        rel="noreferrer noopener">
-        <Icons svg={a.svg} front={data.icons.front} back={data.icons.back}/>
+      <a 
+        href={a.link} 
+        key={i}
+        rel="noreferrer noopener"
+        target='_blank'>
+        <Icons 
+          back={data.icons.back}
+          front={data.icons.front} 
+          svg={a.svg} />
       </a>
     )
   })

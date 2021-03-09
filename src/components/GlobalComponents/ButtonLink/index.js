@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
-import {AppData} from '../../../context'
-import {Anim} from '../../../utils/animations'
 import Link from 'next/link'
+
+import {AppData} from '../../../context'
 
 export default function ButtonLink({data}) {
   const {SetAppState} = useContext(AppData)

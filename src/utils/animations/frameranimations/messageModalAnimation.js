@@ -4,39 +4,39 @@ export const MessageModalAnim = (function (){
   // stagger child in message modal
  const _staggerMessage = {
    initial: {
+     opacity: 0,
      y: 50,
-     opacity: 0
    },
    animate: {
-     y: 0,
      opacity: 1,
      transition: {
        ease: 'easeInOut'
-     }
+      },
+     y: 0,
    }
  }
 
   // opens the message modal
   const _openMessage = {
     initial: {
+      opacity: 0,
       y: -120,
-      opacity: 0
     },
     animate: {
-      y: 0,
       opacity: 1,
       transition: {
         ease: 'easeInOut',
         staggerChildren: 0.1
-      }
+      },
+      y: 0,
     },
     exit: {
-      y: -120,
       opacity: 0,
       transition: {
         duration: .4,
         ease: 'easeInOut'
-      }
+      },
+      y: -120,
     }
   }
 

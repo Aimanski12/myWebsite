@@ -1,8 +1,8 @@
 .webdev-wrapper {
-  min-height: 500px;
-  width: 100%;
   background: #F4F4F4;
+  min-height: 500px;
   padding-top: 6em;
+  width: 100%;
 }
 
 .webdev-title {
@@ -12,8 +12,8 @@
 }
 
 .webdev-caption {
-  font-weight: 400;
   color: #04C2FF;
+  font-weight: 400;
   letter-spacing: 0.14em;
   line-height: 2em;
   margin-bottom: 2.5em;
@@ -36,24 +36,14 @@
     padding-top: 5em;
   }
   .webdev-title {
-    width: 95%;
     text-align: center;
     margin-top: 2em;
+    width: 95%;
   }
   .webdev-caption {
     margin-bottom: 1.5em;
     margin-top: 8px;
-    width: 95%;
     text-align: center;
-  }
-}
-
-
-@media (max-width: 468px) {
-  .webdev-wrapper {
-    /* padding-top: 5em; */
-  }
-  .webdev-title {
-    /* margin-top: 7em; */
+    width: 95%;
   }
 }

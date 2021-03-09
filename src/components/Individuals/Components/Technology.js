@@ -9,12 +9,13 @@ export default function Technology({data}) {
         <div className="tech-used-wrapper">
           { data.map((tech, i) => {
             return (
-              <div key={i} className='content-center'>
+              <div 
+                className='content-center'
+                key={i} >
                 <span className='font-2 s5b'>{tech}</span>
               </div>
-              
-              )}
-              )}
+            )}
+          )}
         </div>
       </div>
     </Fade>

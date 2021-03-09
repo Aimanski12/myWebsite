@@ -1,25 +1,25 @@
 
 .featured-artwork {
-  width: 100%;
   height: 100vh;
-  position: relative;
   overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 .featured-artwork img {
-  width: 540px;
   height: auto;
   transition: all 0.2s ease-in;
+  width: 540px;
 }
 
 .featured-artwork img:hover {
-  transition: all 0.2s ease-in;
   filter: drop-shadow(8px 8px 8px rgba(0,0,0,0.5));
+  transition: all 0.2s ease-in;
 }
 
 .art-link-caption {
-  position: absolute;
   bottom: 45px;
+  position: absolute;
 }
 
 .art-link-caption a {
@@ -27,22 +27,22 @@
 }
 
 .art-link-caption a::after {
+  background: #DFF7FF;
   content: '';
+  height: 2px;
   position: absolute;
   width: 100%;
-  height: 2px;
-  background: #DFF7FF;
 }
 
 
 .art-link-caption a::after {
-  width: 100%;
   bottom: -7px;
   border-radius: 1px;
   left: 0;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.6s;
+  width: 100%;
 }
 
 .art-link-caption a:hover::after {
@@ -52,9 +52,9 @@
 
 .art-link-caption span {
   color: #DFF7FF;
-  margin-right: 8px;
-  letter-spacing: -0.05em;
   font-weight: 500;
+  letter-spacing: -0.05em;
+  margin-right: 8px;
 }
 
 
@@ -130,7 +130,7 @@
 }
 @media (max-width: 368px) {
   .featured-artwork img {
-    margin: 0 7.5%;
     width: 85%;
+    margin: 0 7.5%;
   }
 }

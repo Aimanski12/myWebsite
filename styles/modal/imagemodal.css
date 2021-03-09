@@ -1,31 +1,31 @@
 .modal-container {
-  position: fixed;
-  width: 100%;
   height: 100vh;
+  position: fixed;
   z-index: 1100;
+  width: 100%;
 }
 
 .modal-background {
-  width: 100%;
-  height: 100%;
   background: rgba(64,64,64,0.95);
+  height: 100%;
   position: relative;
+  width: 100%;
 }
 
 .modal-image-wrapper{
-  width: 100%;
   height: 100vh;
   position: absolute;
+  width: 100%;
 }
 
 .modal-image {
   background-position: 50% 50%;
-  position: relative;
-  width: 520px;
+  border-radius: 5px;
+  cursor: zoom-in;
   height: auto;
   overflow: hidden;
-  cursor: zoom-in;
-  border-radius: 5px;
+  position: relative;
+  width: 520px;
 }
 
 .modal-image img:hover {
@@ -33,14 +33,14 @@
 }
 
 .modal-image img {
-  transition: opacity 0.5s;
   display: block;
+  transition: opacity 0.5s;
   width: 100%;
 }
 
 .image-caption {
-  width: 520px;
   margin-top: 25px;
+  width: 520px;
 }
 
 .image-caption h4 {
@@ -49,16 +49,16 @@
 }
 
 .image-caption span {
+  color: #C8C8C8;
   display: block;
   margin-top: 10px;
   text-align: center;
-  color: #C8C8C8;
   font-weight: 400;
 }
 
 .modal-svg-wrapper, .modal-svg-wrapper button, .modal-svg-wrapper svg {
-  width: 42px;
   height: 42px;
+  width: 42px;
 }
 
 .modal-svg-wrapper {
@@ -66,9 +66,9 @@
 }
 
 .modal-svg-wrapper button {
-  cursor: pointer;
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .modal-svg-wrapper button:focus {
@@ -76,17 +76,17 @@
 }
 
 .modal-next-btn, .modal-prev-btn {
-  top: calc(50% -16px);
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  z-index: 5;
   cursor: pointer;
+  height: 32px;
+  position: absolute;
+  top: calc(50% -16px);
+  width: 32px;
+  z-index: 5;
 }
 
 .modal-next-btn svg, .modal-prev-btn svg{
-  width: 32px;
   height: 32px;
+  width: 32px;
 }
 
 .modal-next-btn {
@@ -100,8 +100,8 @@
 .swipe-wrapper {
   position: absolute;
   flex-direction: row;
+  top: 11vh;
   z-index: 10;
-  top: 11vh
 }
 
 .swipe-wrapper span {
@@ -125,12 +125,12 @@
 
 @media (max-width: 1268px) {
   .modal-svg-wrapper, .modal-svg-wrapper button, .modal-svg-wrapper svg {
-    width: 38px;
     height: 38px;
+    width: 38px;
   }
   .modal-next-btn, .modal-prev-btn, .modal-next-btn svg, .modal-prev-btn svg{
-    width: 28px;
     height: 28px;
+    width: 28px;
   }
   .modal-next-btn {
     right: 95px;
@@ -187,12 +187,12 @@
 
 @media (max-width: 668px) {
   .modal-image {
-    width: 380px;
     border-radius: 0px;
+    width: 380px;
   }
   .image-caption {
-    width: 380px;
     margin-top: 15px;
+    width: 380px;
   }
   .modal-next-btn {
     right: 40px;

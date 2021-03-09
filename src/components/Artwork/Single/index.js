@@ -1,7 +1,8 @@
 import React, {useEffect} from 'react';
+import Fade from 'react-reveal/Fade'
+
 import {Anim} from '../../../utils/animations'
 import Svg from '../../Svgs'
-import Fade from 'react-reveal/Fade'
 
 export default function ArtWorkSingle({data}) {
   useEffect(()=>{
@@ -9,21 +10,24 @@ export default function ArtWorkSingle({data}) {
   })
 
   return (
-    <section className="featured-artwork content-center"
+    <section 
+      className="featured-artwork content-center"
       style={{background: data.background}}>
         <figure>
           <img src={data.image} alt={data.alt}/>
         </figure>
         <div className="art-link-caption font-1 s7a">
         <Fade bottom>
-          <a href={data.link} 
-            target='_blank' rel="noreferrer noopener"
-            className='content-center'>
+          <a 
+            className='content-center'
+            href={data.link} 
+            rel="noreferrer noopener"
+            target='_blank' >
             <span>View artwork on:</span>
             <Svg svg='coloredinsta'/>
           </a>
-          </Fade>
-        </div>  
+        </Fade>
+      </div>  
     </section>
   )
 }

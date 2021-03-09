@@ -1,37 +1,37 @@
 
 
 .header-socials {
-  position: absolute;
   list-style: none;
+  position: absolute;
+  right: 0;
   top: 48vh;
-  right: 0
 }
 
 .header-socials li {
-  margin: 10px 0;
-  width: 46px;
   height: 46px;
+  margin: 10px 0;
   overflow: hidden;
+  width: 46px;
 }
 
 @media (max-width: 1268px) {
   .header-socials li {
-    width: 42px;
     height: 42px;
+    width: 42px;
   }
 }
 
 @media (max-width: 1068px) {
   .header-socials li {
-    width: 38px;
     height: 38px;
+    width: 38px;
   }
 }
 
 @media (max-width: 768px) {
   .header-socials li {
-    width: 34px;
     height: 34px;
+    width: 34px;
   }
 }
 

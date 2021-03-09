@@ -11,12 +11,13 @@ export default function AboutHeader({data}) {
         <div className="about-text-header">
           <div className="about-text-runner">
             <img 
+              alt={data.profile.alt}
               onClick={()=> SetAppState.setImageModalState({
+                images: data.profile,
                 isOpen: true,
                 isSingle: true,
-                images: data.profile
               })}
-              src={data.profile.link1} alt={data.profile.alt}/>
+              src={data.profile.link1} />
           </div>
         </div>
 

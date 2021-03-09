@@ -1,14 +1,16 @@
 import React, {useContext, useEffect} from 'react'
-import {AppData} from '../context'
-import {Anim} from '../utils/animations'
 import {motion} from 'framer-motion'
+
+import {Anim} from '../utils/animations'
+import {AppData} from '../context'
+
+import Footer from '../components/GlobalComponents/Footer/Footer'
 import Head from '../components/Head/index'
-import Navigation from '../components/Navigation'
 import Headers from '../components/Headers/Dark'
 import Message from '../components/Contact/Message'
-import Socials from '../components/Contact/Socials'
+import Navigation from '../components/Navigation'
 import QuickLink from '../components/GlobalComponents/Footer/QuickLinks'
-import Footer from '../components/GlobalComponents/Footer/Footer'
+import Socials from '../components/Contact/Socials'
 import page from '../mockdata/pages/contact'
 
 export default function Contact() {
@@ -28,13 +30,13 @@ export default function Contact() {
       <Head data={page.metadata} />
       <Navigation data={page}/>
       <motion.div 
-        variants={Anim.TransitionSliders.slidetoexit(
-          AppState.menuTransitions.delay)}
-        initial="initial" 
         animate={{opacity: 1}} 
+        className="body-wrapper"
         exit="exit" 
         id='body-wrapper'
-        className="body-wrapper">
+        initial="initial" 
+        variants={Anim.TransitionSliders.slidetoexit(
+          AppState.menuTransitions.delay)}>
         <div className="scroll-body">
           <Headers data={page.header}/>
           <Message data={page.labels}/>

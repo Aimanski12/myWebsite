@@ -1,7 +1,8 @@
 import React from 'react';
-import {motion} from 'framer-motion'
-import ButtonLink from '../../GlobalComponents/ButtonLink'
 import Fade from 'react-reveal/Fade'
+import {motion} from 'framer-motion'
+
+import ButtonLink from '../../GlobalComponents/ButtonLink'
 
 export default function Links({data}) {
 
@@ -25,13 +26,16 @@ export default function Links({data}) {
       <div className="project-links-qr">
         <div className="project-links-qrwrapper content-center">
           <Fade botom>
-            <a href={data.qrcode.link} 
-              target='_blank' rel="noreferrer noopener">
+            <a 
+              href={data.qrcode.link} 
+              rel="noreferrer noopener"
+              target='_blank' >
               <motion.img 
+                alt={data.qrcode.alt}
+                src={data.qrcode.image} 
                 whileHover={{
                   scale: 1.05, opacity: 0.85, transition: { duration: .25 }
-                }}
-                src={data.qrcode.image} alt={data.qrcode.alt}/>
+                }} />
             </a>
           </Fade>
           <Fade bottom>

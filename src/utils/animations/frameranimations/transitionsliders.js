@@ -3,26 +3,6 @@
 export const TransitionSliders = (function (){
   const easing = [0.6, -0.05, 0.01, 0.99];
   
-  // const _showmenu = {
-  //   initial: {
-  //     width: 0,
-  //   },
-  //   animate: {
-  //     width: '100%',
-  //     transition: {
-  //       duration: .8,
-  //       ease: easing
-  //     }
-  //   },
-  //   exit: {
-  //     width: '0%',
-  //     transition: {
-  //       duration: .8,
-  //       ease: easing
-  //     }
-  //   }
-  // }
-  
   const _frontslider = (isFirstTime, isDoneAnimating) => {
     let timing;
     if(isFirstTime) {
@@ -43,14 +23,14 @@ export const TransitionSliders = (function (){
         width: '100vw'
       },
       animate: {
-        width: 0,
         transition: {
           // add a delay of 5.75ms to wait for the
           // preloader to finish animating
           delay: timing,
           duration: 1,
           ease: easing
-        }
+        },
+        width: 0,
       }
     }
   }
@@ -61,12 +41,12 @@ export const TransitionSliders = (function (){
         opacity: 1
       },
       exit: {
-        x: '100%',
         transition: {
           delay: delay === 1600 ? .8 : 0,
           duration: .8,
           ease: easing
-        }
+        },
+        x: '100%',
       }
     }
   }

@@ -2,9 +2,8 @@ import React from 'react';
 import Head from 'next/head'
 
 export default function HeadTag({ data }) {
-  const siteName = 'Aimanadlawan.com'
-  const baseUrl = 'https://webs-rho.vercel.app'
-  console.log(`${baseUrl}${data.url}`)
+  const siteName = 'aimanadlawan.com'
+  const baseUrl = 'https://aimanadlawan.com'
 
   return (
     <Head>
@@ -21,17 +20,17 @@ export default function HeadTag({ data }) {
       <meta property="og:url" content={`${baseUrl}${data.url}`} />
       <meta property="og:type" content="website"/>
       <meta property="og:description" content={data.desc} />
-      <meta property="og:image" content={`${baseUrl}/images/thumbnail_v1.jpg`} />
+      <meta property="og:image" content={`${baseUrl}${data.thumbnail}`} />
 
       <meta itemProp="name" content={data.title} />
       <meta itemProp="url" content={`${baseUrl}${data.url}`} />
       <meta itemProp="description" content={data.desc} />
-      <meta itemProp="thumbnailUrl" content={`${baseUrl}/images/thumbnail_v1.jpg`} />
-      <link rel="image_src" href={`${baseUrl}/images/thumbnail_v1.jpg`} />
-      <meta itemProp="image" content={`${baseUrl}/images/thumbnail_v1.jpg`} />
+      <meta itemProp="thumbnailUrl" content={`${baseUrl}${data.thumbnail}`} />
+      <link rel="image_src" href={`${baseUrl}${data.thumbnail}`} />
+      <meta itemProp="image" content={`${baseUrl}${data.thumbnail}`} />
 
       <meta name="twitter:title" content={data.title} />
-      <meta name="twitter:image" content={`${baseUrl}/images/thumbnail_v1.jpg`} />
+      <meta name="twitter:image" content={`${baseUrl}${data.thumbnail}`} />
       <meta name="twitter:url" content={`${baseUrl}${data.url}`} />
       <meta name="twitter:creator" content='@Aimanski12' />
       <meta name="twitter:card" content="summary_large_image" />
@@ -40,7 +39,10 @@ export default function HeadTag({ data }) {
       <meta name="description" content={data.desc} />
       <meta name="author" content="Aiman Adlawan"/>
       <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="thumbnail" content={`${baseUrl}/images/thumbnail_v1.jpg`}/>
+      <meta name="thumbnail" content={`${baseUrl}${data.thumbnail}`}/>
+
+      <link rel="manifest" href="/manifest.json"/>
+      
     </Head>
   );
 }

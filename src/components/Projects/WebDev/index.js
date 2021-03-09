@@ -1,6 +1,7 @@
 import React from 'react';
-import Projects from './Projects'
 import Fade from 'react-reveal/Fade'
+
+import Projects from './Projects'
 
 export default function WebDev({data, title}) {
   

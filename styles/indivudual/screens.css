@@ -1,19 +1,14 @@
-
-.screens {
-  /* overflow: hidden; */
-}
-
 .screens h3 {
   margin-bottom: 0.5em;
 }
 
 .screens img {
-  width: 100%;
-  height: auto;
-  margin: 1em 0 2em 0;
   border-radius: 6px;
   cursor: zoom-in;
+  height: auto;
+  margin: 1em 0 2em 0;
   transition: all 0.2s ease-in;
+  width: 100%;
 }
 
 .screens img:hover {

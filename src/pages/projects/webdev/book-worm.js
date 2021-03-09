@@ -1,13 +1,15 @@
 import React, {useContext, useEffect} from 'react'
-import {AppData} from '../../../context'
-import {Anim} from '../../../utils/animations'
 import {motion} from 'framer-motion'
+
+import {Anim} from '../../../utils/animations'
+import {AppData} from '../../../context'
+
+import Footer from '../../../components/GlobalComponents/Footer/Footer'
 import Head from '../../../components/Head'
-import Navigation from '../../../components/Navigation'
 import Header from '../../../components/Headers/Project'
+import Navigation from '../../../components/Navigation'
 import ProjectDetails from '../../../components/Individuals'
 import QuickLink from '../../../components/GlobalComponents/Footer/QuickLinks'
-import Footer from '../../../components/GlobalComponents/Footer/Footer'
 import projects from '../../../mockdata/pages/projects'
 
 export default function Home() {
@@ -28,13 +30,13 @@ export default function Home() {
       <Head data={page.metadata}/>
       <Navigation data={page}/>
       <motion.div 
-        variants={Anim.TransitionSliders.slidetoexit(
-          AppState.menuTransitions.delay)}
-        initial="initial" 
         animate={{opacity: 1}} 
+        className="body-wrapper"
         exit="exit" 
         id='body-wrapper'
-        className="body-wrapper">
+        initial="initial" 
+        variants={Anim.TransitionSliders.slidetoexit(
+          AppState.menuTransitions.delay)} >
         <div className="scroll-body">
           <Header data={page}/>
           <ProjectDetails data={page}/>

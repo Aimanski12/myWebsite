@@ -1,15 +1,18 @@
 import React, {useContext, useEffect} from 'react'
-import {AppData} from '../../../context'
-import {Anim} from '../../../utils/animations'
 import {motion} from 'framer-motion'
-import Head from '../../../components/Head'
-import Navigation from '../../../components/Navigation'
-import Headers from '../../../components/Headers/Dark'
-import ArtWork from '../../../components/Artwork/Multiple'
-import WebLinks from '../../../components/GlobalComponents/WebLinks'
-import QuickLink from '../../../components/GlobalComponents/Footer/QuickLinks'
-import Footer from '../../../components/GlobalComponents/Footer/Footer'
+
+import {Anim} from '../../../utils/animations'
+import {AppData} from '../../../context'
+
 import page from '../../../mockdata/pages/artwork'
+
+import ArtWork from '../../../components/Artwork/Multiple'
+import Footer from '../../../components/GlobalComponents/Footer/Footer'
+import Head from '../../../components/Head'
+import Headers from '../../../components/Headers/Dark'
+import Navigation from '../../../components/Navigation'
+import QuickLink from '../../../components/GlobalComponents/Footer/QuickLinks'
+import WebLinks from '../../../components/GlobalComponents/WebLinks'
 
 export default function Home() {
   const {AppState, SetAppState} = useContext(AppData)
@@ -28,13 +31,13 @@ export default function Home() {
       <Head data={page.metadata} />
       <Navigation data={page}/>
       <motion.div 
-        variants={Anim.TransitionSliders.slidetoexit(
-          AppState.menuTransitions.delay)}
-        initial="initial" 
         animate={{opacity: 1}} 
+        className="body-wrapper samps"
         exit="exit" 
         id='body-wrapper'
-        className="body-wrapper samps">
+        initial="initial" 
+        variants={Anim.TransitionSliders.slidetoexit(
+          AppState.menuTransitions.delay)} >
         <div className="scroll-body">
           <Headers data={page.header}/>
           <ArtWork data={page.artWork}/>

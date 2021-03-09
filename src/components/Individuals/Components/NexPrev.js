@@ -11,10 +11,12 @@ export default function NextPrev({data}) {
         <Fade bottom>
           <div className="proj-next-img">
             <motion.img 
+              src={d.image.link} alt={d.image.alt}
               whileHover={{
-                scale: 1.3, opacity: 0.7, transition: { duration: .25 }
-              }}
-              src={d.image.link} alt={d.image.alt}/>
+                opacity: 0.7, 
+                scale: 1.3, 
+                transition: { duration: .25 }
+              }} />
           </div>
         </Fade>
 

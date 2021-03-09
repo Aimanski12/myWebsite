@@ -1,7 +1,8 @@
 import React, {useContext} from 'react';
+import {motion} from 'framer-motion'
+
 import {Anim} from '../../../utils/animations'
 import {AppData} from '../../../context'
-import {motion} from 'framer-motion'
 
 export default function Sliders() {
   const {AppState} = useContext(AppData)
@@ -11,15 +12,15 @@ export default function Sliders() {
       { AppState.sessionData.isChecked ? 
         <div className="front-slider">
           <motion.div 
+            animate="animate" 
+            className="front-slider-wrapper"
+            initial="initial" 
+            onAnimationComplete={()=>Anim.Helpers.removeintroslider()}
+            onAnimationStart={()=>Anim.Helpers.hidshowbody('auto')}
             variants={
               Anim.TransitionSliders.frontslider(
                 AppState.sessionData.isFirstTime, 
-                AppState.sessionData.isDoneAnimating)} 
-              initial="initial" 
-              animate="animate" 
-              onAnimationStart={()=>Anim.Helpers.hidshowbody('auto')}
-              onAnimationComplete={()=>Anim.Helpers.removeintroslider()}
-              className="front-slider-wrapper">
+                AppState.sessionData.isDoneAnimating)} >
             <div className="front-slider-content content-center">
               <span className='font-1 s5a'>aiman adlawan</span>
             </div>  

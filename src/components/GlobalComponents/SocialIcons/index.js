@@ -6,12 +6,16 @@ export default function SocialIcons({svg, front, back}) {
     <div className="social-icon">
       <div className="icon-front" style={{backgroundColor: back}}>
         <div className="contents">
-          <Svg svg={svg} fill={front}/>
+          <Svg 
+            fill={front}
+            svg={svg} />
         </div>
       </div>
       <div className="icon-back" style={{backgroundColor: front}}>
         <div className="contents">
-          <Svg svg={svg} fill={back}/>
+          <Svg 
+            fill={back}
+            svg={svg} />
         </div>
       </div>
     </div>

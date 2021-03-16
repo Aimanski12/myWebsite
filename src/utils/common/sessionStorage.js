@@ -12,10 +12,10 @@ export const SessionStorage = (function(){
       let data = JSON.parse(session)
       // if there is check if expired
       if(CheckFunction.checkIfExp(data._timestamp)) {
-        // const _id = await SaveToFirebase.saveDataToFirebase('visitor', false)
-        // saveSession(_id)
+        const _id = await SaveToFirebase.saveDataToFirebase('visitor', false)
+        saveSession(_id)
         // // return true to say that the browser has not been visited
-        return false
+        return true
       } else {
         // we will return false to say that the site has
         // been seen already
@@ -23,10 +23,10 @@ export const SessionStorage = (function(){
       }
     } else {
       // save a new session
-      // const _id = await SaveToFirebase.saveDataToFirebase('visitor', false)
-      // saveSession(_id)
+      const _id = await SaveToFirebase.saveDataToFirebase('visitor', false)
+      saveSession(_id)
       // return true to say that the browser has not been visited
-      return false
+      return true
     }
   }
 
@@ -42,7 +42,7 @@ const saveSession = (_id) => {
   // create new set of data
   let data = {
     _token: _id,
-    _timestamp: SessionHelpers.gettime('now'),
+    _timestamp: CheckFunction.getTime('now'),
     _appname: 'aimanski'
   }
   // save to session storage

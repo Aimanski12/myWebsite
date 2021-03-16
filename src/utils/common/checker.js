@@ -5,7 +5,7 @@ export const CheckFunction = (function(){
 
   // check if the session has expired
   const _checkIfExp = (time) => {
-    let now = _gettime('now')
+    let now = _getTime('now')
     let runTime = Math.floor(((now - time) / 1000) / 60)
     if (runTime >= 60) {
       return true

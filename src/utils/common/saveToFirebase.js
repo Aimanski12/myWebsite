@@ -3,7 +3,7 @@ import axios from 'axios'
 import {CheckFunction} from './checker'
 
 // firebase url
-const furl = 'firebaselink'
+const furl = ''
 
 export const SaveToFirebase = (function(){
 

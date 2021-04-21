@@ -52,6 +52,21 @@ export const Form = (function(){
       return true
     }
   }
+
+  // format name to capitalize first letter
+  const _formatName = (name) => {
+    let b = []
+    // split name to array
+    let a = name.split(' ')
+    // loop to the text
+    for (let x = 0; x < a.length; x++) {
+      let c = a[x].split('')
+      c[0] = c[0].toUpperCase()
+      b.push(c.join(''))
+    }
+    return b.join(' ')
+  }
+
   
   return {
     alertMsg(text, color){
@@ -66,6 +81,9 @@ export const Form = (function(){
     validateForm(){
       return _validateForm()
     }, 
+    formatName(name){
+      return _formatName(name)
+    }
   }
 })()
 

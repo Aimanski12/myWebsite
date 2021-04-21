@@ -1,7 +1,6 @@
 import React, {useState, useContext, useEffect} from 'react';
 
 import Input from './Input'
-import sendEmail from '../../../utils/common/sendEmail'
 import {AppData} from '../../../context'
 import {Helpers} from '../../../utils/common/index'
 
@@ -39,7 +38,6 @@ export default function Message({data}) {
     Helpers.Form.alertMsg('Sending...', 'green')
     // validate form if all values are valid
     const isValid = await Helpers.Form.validateForm()
-    
 
     if(isValid) {
       // check if message is saved to firebase
@@ -47,10 +45,12 @@ export default function Message({data}) {
       if(status === 200 ) {
         // timeout to set a time gap to open the confirmation modal
         setTimeout(() => {
+          const formattedName = Helpers.Form.formatName(value.name)
+
           // open modal
-          SetAppState.setMessageModalState({isOpen: true, sender: value.name})
+          SetAppState.setMessageModalState({isOpen: true, sender: formattedName})
           // send smtp email
-          sendEmail(value.name, value.email, value.subject, value.mes)
+          Helpers.SendEmail.send(formattedName, value.email, value.subject, value.mes)
           // reset state input values
           setValue({ name: "", email: "", subject: "Just say'n Hi!", mes: "" })
           // reset the alert message
